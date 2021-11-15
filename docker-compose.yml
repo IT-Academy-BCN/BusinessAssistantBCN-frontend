@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nginxUADfrontend:
+  nginxBABCNfrontend:
     build: ""
     image: business-assistant-bcn-frontend
     container_name: business-assistant-bcn-frontend

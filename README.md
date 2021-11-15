@@ -18,6 +18,11 @@ Necesario instalar [Adobe Creative Cloud](https://creativecloud.adobe.com/apps/d
 - Branches para pull request:
     - fixture/login/[idTask]
 
+### Proceso para ejecución sobre Docker
+
+- Descargar imagen Docker: **Docker pull nginx**
+- Ejecución por cmd: **docker run -it -p 80:80 nginx:alpine**
+- TODO: Dockerfile config
 
 <hr/>
 
