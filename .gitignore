@@ -39,6 +39,7 @@ cmake-build-debug/
 tmp
 tmp/
 .angular/
+conf/
 .metadata/
 .plugins/
 .settings/
