@@ -11,6 +11,12 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
+  public loginForm = this.fb.group({
+    email: [ localStorage.getItem('email') || '' , [ Validators.required, Validators.email ] ],
+    password: ['', Validators.required ],
+    remember: [false]
+  });
+
   constructor( private router: Router, 
                private fb: FormBuilder, 
                private userService: UserService ) { }
