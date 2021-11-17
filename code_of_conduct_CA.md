@@ -1,4 +1,3 @@
-
 # Codi de Conducta acordat pels Col·laboradors
 
 ## El nostre compromís
@@ -11,19 +10,19 @@ Ens comprometem a actuar i interactuar de maneres que contribueixin a una comuni
 
 Exemples de comportament que contribueixen a crear un ambient positiu per a la nostra comunitat:
 
-* Demostrar empatia i amabilitat davant d'altres persones
-* Respectar les diferents opinions, punts de vista, i experiències
-* Donar i acceptar de forma elegant qualsevol crítica constructiva
-* Acceptar la responsabilitat i disculpar-se davant els que es vegin afectats pels nostres errors, aprenent de l'experiència
-* Centrar-se en el que sigui millor no sols per a nosaltres com a individus, sinó per a la comunitat en general
+- Demostrar empatia i amabilitat davant d'altres persones
+- Respectar les diferents opinions, punts de vista, i experiències
+- Donar i acceptar de forma elegant qualsevol crítica constructiva
+- Acceptar la responsabilitat i disculpar-se davant els que es vegin afectats pels nostres errors, aprenent de l'experiència
+- Centrar-se en el que sigui millor no sols per a nosaltres com a individus, sinó per a la comunitat en general
 
 Exemples de comportament inapropiat:
 
-* L'ús de llenguatge o imatges sexualitzades, i atencions o aproximacions sexuals de qualsevol tipus
-* Comentaris provocadors (_trolling_), insultants o despectius, i atacs personals o polítics
-* L'assetjament en públic o en privat
-* Publicar informació privada d'altres persones, com adreces físiques o de correu electrònic, sense el seu permís explícit
-* Altres conductes que puguin ser raonablement considerades com a inapropiades en un entorn professional
+- L'ús de llenguatge o imatges sexualitzades, i atencions o aproximacions sexuals de qualsevol tipus
+- Comentaris provocadors (_trolling_), insultants o despectius, i atacs personals o polítics
+- L'assetjament en públic o en privat
+- Publicar informació privada d'altres persones, com adreces físiques o de correu electrònic, sense el seu permís explícit
+- Altres conductes que puguin ser raonablement considerades com a inapropiades en un entorn professional
 
 ## Aplicació de les responsabilitats
 
@@ -61,13 +60,13 @@ Els administradors de la comunitat seguiran aquestes Pautes d'Impacte en la Comu
 
 **Impacte en la Comunitat**: Una sèrie d'incompliments dels estàndards de la comunitat, incloent comportament inapropiat continuat.
 
-**Conseqüència**: Una restricció (__ban__) temporal de qualsevol forma d'interacció o comunicació pública amb la comunitat durant un interval de temps especificat. No es permet interactuar de manera pública o privada amb les persones involucrades, incloent interaccions no sol·licitades amb els qui es troben aplicant el Codi de Conducta durant aquest període. Incomplir aquests termes pot conduir a una expulsió permanent.
+**Conseqüència**: Una restricció (**ban**) temporal de qualsevol forma d'interacció o comunicació pública amb la comunitat durant un interval de temps especificat. No es permet interactuar de manera pública o privada amb les persones involucrades, incloent interaccions no sol·licitades amb els qui es troben aplicant el Codi de Conducta durant aquest període. Incomplir aquests termes pot conduir a una expulsió permanent.
 
 ### 4. Expulsió permanent
 
 **Impacte en la Comunitat**: Demostrar un patró sistemàtic d'incompliments dels estàndards de la comunitat, incloent conductes inapropiades prolongades en el temps, assetjament d'individus, agressions o menyspreu a grups d'individus.
 
-**Conseqüència**: Una restricció (__ban__) permanent de qualsevol forma d'interacció pública amb la comunitat del projecte.
+**Conseqüència**: Una restricció (**ban**) permanent de qualsevol forma d'interacció pública amb la comunitat del projecte.
 
 ## Atribució
 
@@ -79,3 +78,6 @@ Les Guies d'Impacte en la Comunitat estan inspirades en l'[escala d'aplicació d
 
 Per a trobar resposta a les preguntes freqüents d'aquest codi de conducta pots consultar les FAQ a https://www.contributor-covenant.org/faq. Hi ha traduccions disponibles a https://www.contributor-covenant.org/translations
 
+## Signature:
+
+consent read and accept
