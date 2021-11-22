@@ -4,34 +4,42 @@
         <div class="container py-4">
             <div class="row gy-4 gx-5 text-center d-flex justify-content-between">
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Sobre Nosotros</h5>
+                    <a routerLink='/about' routerLinkActive="active" class="nav-link  " aria-current="page">
+                        <h5 class="text-white mb-3">Quiénes
+                            somos</h5>
+                    </a>
                     <ul class="list-unstyled text-muted">
-                        <li><a href="#">Directorio</a></li>
+                        <li><a routerLink='/home'>Directorio</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Contactar</h5>
+                    <a routerLink='/home' routerLinkActive="active" class="nav-link  " aria-current="page">
+                        <h5 class="text-white mb-3">Contactar</h5>
+                    </a>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Recursos</h5>
+                    <a routerLink='/home' routerLinkActive="active" class="nav-link  " aria-current="page">
+                        <h5 class="text-white mb-3">Recursos</h5>
+                    </a>
                     <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a routerLink='/commonQuestions'>FAQs</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Legal</h5>
+                    <a routerLink='/home' routerLinkActive="active" class="nav-link  " aria-current="page">
+                        <h5 class="text-white mb-3">Legal</h5>
+                    </a>
                     <ul class="list-unstyled text-muted">
-                        <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved.
+                        <li><a routerLink='/commonQuestions'>Términos de servicio</a></li>
+                    </ul>
+                    <ul class="list-unstyled text-muted">
+                        <li><a routerLink='/commonQuestions'>Políticas de seguridad</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Síguenos</h5>
-                    <ul class="list-unstyled text-muted">
-                        <!-- <li><a href="#">Home</a></li> -->
-                    </ul>
+                    <a routerLink='/home' routerLinkActive="active" class="nav-link  " aria-current="page">
+                        <h5 class="text-white mb-3">Síguenos</h5>
+                    </a>
                 </div>
             </div>
         </div>

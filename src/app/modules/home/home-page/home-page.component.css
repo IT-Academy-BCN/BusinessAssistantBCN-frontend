@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     display: flex;
-
 }
 
 .text-container {
@@ -53,20 +52,9 @@
     }
 
     .img-size {
-        width: 100%;
+        width: 99%;
         height: auto;
     }
-
-    /* .main-container {
-        height: 300px;
-        width: 100%;
-    }
-
-    .text-container {}
-
-    .p-size {
-        font-size: 0.9em;
-    } */
 }
 
 @media (max-width: 768px) {
@@ -78,9 +66,6 @@
     .text {
         margin: 0;
         width: 100%;
-        /* padding-left: 2%; */
-        /* padding-bottom: 0; */
-        ;
     }
 
     .p-size {
