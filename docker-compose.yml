@@ -2,7 +2,7 @@ version: '3'
 services:
   nginxBABCNfrontend:
     build: ""
-    image: business-assistant-bcn-frontend
+    image: nginx-uad-frontend
     container_name: business-assistant-bcn-frontend
     restart: "no"
     ports:
@@ -10,4 +10,4 @@ services:
     environment:
       - NGINX_HOST=localhost
       - NGINX_PORT=80
-    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/uad-docker.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
+    #command: /bin/bash -c "envsubst < /etc/nginx/conf.d/businessassistantbcn-docker.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
