@@ -15,7 +15,7 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   exports: [
-    LoginComponent,
+    LoginComponent
    
   ],
   imports: [
