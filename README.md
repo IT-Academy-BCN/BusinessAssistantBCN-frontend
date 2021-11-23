@@ -1,3 +1,32 @@
+# Business Assistant Barcelona Frontend Project
+
+
+### Diseño / maquetación
+
+- **Resources/BusinessAssistantBarcelona_design.pdf**
+- **Resources/AdobeXD_templates/BusinessAssistantBarcelona.xd**
+
+Necesario instalar [Adobe Creative Cloud](https://creativecloud.adobe.com/apps/download/creative-cloud)
+
+### Instalaciones necesarias
+
+- Angular CLI 13.0.2
+
+
+### Nomenclatura
+
+- Branches para pull request:
+    - fixture/login/[idTask]
+
+### Proceso para ejecución sobre Docker
+
+- Descargar imagen Docker: **Docker pull nginx**
+- Ejecución por cmd: **docker run -it -p 80:80 nginx:alpine**
+- TODO: Dockerfile config
+
+<hr/>
+
+
 # BusinessAssistantBCNFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
