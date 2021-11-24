@@ -8,12 +8,10 @@ import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
 
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
-import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './helpers/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -25,14 +23,17 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
     AppRoutingModule,
     PagesModule,
     AuthModule,
-    FontAwesomeModule,
-    SweetAlert2Module.forRoot()
+    
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(library: FaIconLibrary) {
-    library.addIcons(fasStar, farStar);
-  }
+ 
 }
