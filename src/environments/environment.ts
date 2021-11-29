@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  base_url: 'http://businessassistantbcn/v1/api'
+  BACKEND_BASE_URL: 'http://businessassistantbcn/v1/api'
 };
 
 /*

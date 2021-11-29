@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthRoutingModule } from './auth/auth.routing';
-import { PagesRoutingModule } from './pages/pages.routing';
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {JwtInterceptor} from "./helpers/JwtInterceptor";
 
-import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 const routes: Routes = [
-
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: NopagefoundComponent }
-
-
-
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
-    AuthRoutingModule,
-    PagesRoutingModule
+    RouterModule.forRoot(routes)
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    }
+  ]
 })
 export class AppRoutingModule { }
