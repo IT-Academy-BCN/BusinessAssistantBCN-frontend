@@ -53,6 +53,7 @@ tmp/
 .vagrant
 .idea
 *.iml
+.angular/
 
 # Logs and databases #
 ######################
