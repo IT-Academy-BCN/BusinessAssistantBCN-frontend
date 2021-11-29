@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { PagesModule } from './pages/pages.module';
+
+import { AuthModule } from './auth/auth.module';
+
 import { AppComponent } from './app.component';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -16,13 +20,18 @@ import { HomeModule } from './modules/home/home.module';
 
 
 
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NopagefoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    PagesModule,
+    AuthModule,
     FontAwesomeModule,
     SweetAlert2Module.forRoot(),
     SharedModule,

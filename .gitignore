@@ -1,4 +1,3 @@
-
 # ignore files for git
 
 # Compiled source #
@@ -28,7 +27,6 @@
 
 # Directories & config files #
 ##############################
-.angular/
 CVS/
 bin/
 build/
