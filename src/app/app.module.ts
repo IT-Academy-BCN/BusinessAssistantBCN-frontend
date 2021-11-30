@@ -12,6 +12,13 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './modules/home/home.module';
+// import { AboutComponent } from './modules/components/about/about.component';
+// import { OfferComponent } from './modules/components/offer/offer.component';
+// import { CommonQuestionsComponent } from './modules/components/common-questions/common-questions.component';
+
+
 
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
@@ -26,7 +33,9 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
     PagesModule,
     AuthModule,
     FontAwesomeModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    SharedModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
