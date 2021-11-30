@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { tap, map, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+
 import { environment } from '../../environments/environment';
 
 import { LoginForm } from '../interfaces/login-form';
@@ -32,7 +33,7 @@ export class UsuarioService {
 
   }
 
-  //obtenerUsuarios() {}
+  //crearUsuarios() {}
 
   
   logout() {

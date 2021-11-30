@@ -29,9 +29,24 @@ export class LoginComponent {
   ngOnInit(): void {
   }
 
-  login() {
 
-    this.router.navigateByUrl('/');
+  
+
+  login() {
+    
+    console.log(this.loginForm.value);
+    //this.router.navigateByUrl('/');
+
+    this.usuarioService.login(this.loginForm.value)
+      .subscribe( res => {
+        if( this.loginForm.get('remember')?.value) {
+          localStorage.setItem('email', this.loginForm.get('email')?.value);
+        }else{
+          localStorage.removeItem('email');
+        }
+      }, (err) =>{
+        Swal.fire('Error', err.error.msg, 'error')
+      });
 
 
   }
