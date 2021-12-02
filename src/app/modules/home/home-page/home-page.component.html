@@ -1,1 +1,38 @@
-<p>home-page works!</p>
+<!--Header/Navbar-->
+<app-header></app-header>
+
+<div class="container-fluid mt-0 main-container">
+    <div class="row align-items">
+        <div class="col-lg-6 col-md-12 main-content">
+            <div class="h-100  text-white bg-dark text-container ">
+                <section class="text">
+                    <div class="">
+                        <h2>Haz que ocurra.</h2>
+                        <h2>Te ayudamos con ello.</h2>
+                        <p class="p-size">Buscamos gente proactiva que quiera emprender, que cree oportunidades, que las
+                            haga brotar. Te
+                            damos
+                            toda la información que necesitas.</p>
+                    </div>
+                    <div class="bt-container">
+                        <button class="button-l" type="button">Business Assistant</button>
+                        <button class="button-r" type="button">Mi entorno</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 main-content">
+            <div class="h-100 bg-light">
+                <img class=" img-size img-fluid" [src]=" mainHomeImage">
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--Aditional information Nav for clients-->
+<app-information-nav></app-information-nav>
+
+<app-virtual-asisstant></app-virtual-asisstant>
+
+<!--Footer-->
+<app-footer></app-footer>

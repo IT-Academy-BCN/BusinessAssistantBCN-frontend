@@ -1,0 +1,30 @@
+.nav-spacing {
+    padding-left: 5%;
+}
+
+.language-link {
+    width: 30%;
+    padding-left: 10%;
+}
+
+.language-link a {
+    padding: 3px;
+}
+
+.login-spacing {
+    margin-left: 70px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    .login-spacing {
+        margin-left: 0;
+    }
+}
+
+@media(max-width:768px) {
+    .language-link {
+        width: 30%;
+        padding-left: 0;
+    }
+}

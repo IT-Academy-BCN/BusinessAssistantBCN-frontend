@@ -9,6 +9,7 @@
 
 .text-container {
     width: 100%;
+    padding-right: 0;
 }
 
 .title-info {
@@ -50,7 +51,7 @@
     }
 
     .virtual-container {
-        margin-top: 40%;
+        margin-top: 20%;
     }
 
     .icon-span {
