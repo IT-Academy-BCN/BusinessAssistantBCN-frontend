@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyEnvironmentPageComponent implements OnInit {
 
+
+  bigStablihsments = "assets/img/shopping-mall.png";
+  shoppingMall = "assets/img/market.png";
+  shoppingCart = "assets/img/mall-shopping-cart.png";
+  comercialMarket = "assets/img/shop.png";
+  fairMarkets = "assets/img/cans.png"
+
   constructor() { }
 
   ngOnInit(): void {
