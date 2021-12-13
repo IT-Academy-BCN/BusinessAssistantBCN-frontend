@@ -4,7 +4,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './my-environment-page/my-environment-page.component';
 import { BigStablishmentsPageComponent } from './big-stablishments-page/big-stablishments-page.component';
 import { BigStablishmentsDetailPageComponent } from './big-stablishments-detail-page/big-stablishments-detail-page.component';
-
+import { SharedModule } from 'src/app/shared/shared.module';
+import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
+import { VirtualAsisstantComponent } from './home-components/virtual-asisstant/virtual-asisstant.component';
 
 
 @NgModule({
@@ -12,10 +14,16 @@ import { BigStablishmentsDetailPageComponent } from './big-stablishments-detail-
     HomePageComponent,
     MyEnvironmentPageComponent,
     BigStablishmentsPageComponent,
-    BigStablishmentsDetailPageComponent
+    BigStablishmentsDetailPageComponent,
+    InformationNavComponent,
+    VirtualAsisstantComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
+  ],
+  exports: [
+    HomePageComponent
   ]
 })
 export class HomeModule { }
