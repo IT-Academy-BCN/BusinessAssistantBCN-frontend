@@ -24,7 +24,7 @@
      height: 100px;
      display: flex;
      flex-direction: row;
-     /* justify-content: center; */
+     justify-content: center;
      align-items: center;
 
  }
@@ -38,14 +38,12 @@
      font-size: 1.3em;
      color: #FFFFFF;
      margin-bottom: 0;
-     padding-top: 3%;
-     width: 60%;
+     /* width: 60%; */
      padding-left: 2%;
  }
 
  .middle-section {
      background-color: #DDDDDD;
-     height: 225px;
  }
 
  @media(max-width:768px) {
@@ -56,5 +54,12 @@
          justify-content: center;
          align-items: center;
 
+     }
+
+ }
+
+ @media(max-width:767px) {
+     .icon-text {
+         width: 60%;
      }
  }

@@ -1,0 +1,42 @@
+.virtual-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    width: 100%;
+    padding-right: 0;
+}
+
+.icon-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.icon-span {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 260px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 3%;
+}
+
+.icon-size {
+    height: 125px;
+}
+
+.icon-text {
+    font-weight: 700;
+    font-size: 1.2em;
+}
