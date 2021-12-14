@@ -8,6 +8,8 @@ import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
+import { LoginModule } from './modules/login/login.module';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { HomeModule } from './modules/home/home.module';
     FontAwesomeModule,
     SweetAlert2Module.forRoot(),
     SharedModule,
-    HomeModule
+    HomeModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
