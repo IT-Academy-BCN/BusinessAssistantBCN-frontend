@@ -7,6 +7,7 @@ import { BigStablishmentsDetailPageComponent } from './big-stablishments-detail-
 import { SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAsisstantComponent } from './home-components/virtual-asisstant/virtual-asisstant.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { VirtualAsisstantComponent } from './home-components/virtual-asisstant/v
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [
     HomePageComponent

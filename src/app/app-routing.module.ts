@@ -9,7 +9,7 @@ import { MyEnvironmentPageComponent } from './modules/home/my-environment-page/m
 const routes: Routes = [
   { path: "", redirectTo: 'home', pathMatch: 'full' },
   { path: "home", component: HomePageComponent },
-  { path: "directory", component: MyEnvironmentPageComponent }
+  { path: "myEnvironment", component: MyEnvironmentPageComponent }
 ];
 
 @NgModule({
