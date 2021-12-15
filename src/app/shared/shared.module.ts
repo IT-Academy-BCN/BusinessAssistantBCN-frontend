@@ -5,7 +5,9 @@ import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+
 
 
 
@@ -15,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent
   ]
 })
 export class SharedModule { }
