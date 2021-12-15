@@ -1,1 +1,33 @@
-<p>login-form works!</p>
+<div class="modal-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <h4 class="modal-title text-center">Login</h4>
+                <button type="button" class="btn-close mt-0" data-dismiss="modal" aria-label="Close"
+                    (click)="activeModal.dismiss('Cross click')">
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-column text-center">
+                    <form>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-start" for="email">Email</label>
+                            <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-start" for="password">Password</label>
+                            <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-info btn-round mt-3">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+            </div>
+        </div>
+    </div>
+</div>

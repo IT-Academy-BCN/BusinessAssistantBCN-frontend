@@ -23,8 +23,12 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
+<<<<<<< Updated upstream
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+=======
+    "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+>>>>>>> Stashed changes
     "@popperjs/core": "^2.10.2",
     "@sweetalert2/ngx-sweetalert2": "^10.0.0",
     "bootstrap": "^5.1.3",

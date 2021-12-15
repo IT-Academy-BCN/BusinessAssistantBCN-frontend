@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -16,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     AppRoutingModule,
+    NgbModule
 
 
   ],
