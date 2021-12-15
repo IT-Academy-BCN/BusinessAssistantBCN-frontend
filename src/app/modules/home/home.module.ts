@@ -10,6 +10,7 @@ import { VirtualAsisstantComponent } from './home-components/virtual-asisstant/v
 import { RouterModule } from '@angular/router';
 
 
+
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     BigStablishmentsPageComponent,
     BigStablishmentsDetailPageComponent,
     InformationNavComponent,
-    VirtualAsisstantComponent
+    VirtualAsisstantComponent,
+ 
   ],
   imports: [
     CommonModule,

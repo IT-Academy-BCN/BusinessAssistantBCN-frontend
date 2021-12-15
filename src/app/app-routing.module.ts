@@ -17,7 +17,9 @@ const routes: Routes = [
   { path: "myEnvironment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAsisstantComponent },
   { path: "bis-stablishments", component: BigStablishmentsPageComponent },
-  { path: "big-stablishments-detail", component: BigStablishmentsDetailPageComponent }
+  { path: "big-stablishments-detail", component: BigStablishmentsDetailPageComponent },
+
+
 ];
 
 @NgModule({
