@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +12,7 @@ import { HomeModule } from './modules/home/home.module';
 import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoginModule } from './modules/login/login.module';
 
 
 // AoT requires an exported function for factories
@@ -36,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FontAwesomeModule,
     SweetAlert2Module.forRoot(),
     SharedModule,
-    HomeModule
+    HomeModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { JwtInterceptor } from "./helpers/JwtInterceptor";
+
+import { LoginRoutingModule } from './modules/login/login.routing';
 import { HomePageComponent } from './modules/home/home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './modules/home/my-environment-page/my-environment-page.component';
 
@@ -14,7 +16,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    LoginRoutingModule
   ],
   exports: [RouterModule],
   providers: [
