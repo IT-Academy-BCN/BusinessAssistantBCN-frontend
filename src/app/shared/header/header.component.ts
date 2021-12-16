@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap"
+import { ActivatedRoute, Router } from '@angular/router';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
 
 @Component({
@@ -15,7 +15,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openLoginForm(): any {
+  // This function opens login component modal service
+  public openLoginForm() {
     const modalRef = this.modalService.open(LoginFormComponent);
   }
 

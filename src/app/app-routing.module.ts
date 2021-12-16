@@ -13,7 +13,7 @@ import { VirtualAsisstantComponent } from './modules/home/home-components/virtua
 const routes: Routes = [
   { path: "", redirectTo: 'home', pathMatch: 'full' },
   { path: "home", component: HomePageComponent },
-  { path: "login", component: LoginFormComponent },
+  // { path: "login", component: LoginFormComponent },
   { path: "myEnvironment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAsisstantComponent },
   { path: "bis-stablishments", component: BigStablishmentsPageComponent },
