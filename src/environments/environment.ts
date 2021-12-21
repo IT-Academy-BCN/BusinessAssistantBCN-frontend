@@ -4,14 +4,8 @@
 
 export const environment = {
   production: false,
-  BACKEND_BASE_URL: 'http://businessassistantbcn/v1/api'
+  BACKEND_BASE_URL: 'http://businessassistantbcn/v1/api',
+  BACKEND_BIG_STABLISHMENTS_ZONES_URL: './dummy/zones_dummy.json',
+  BACKEND_BIG_STABLISHMENTS_ACTIVITIES_URL: './dummy/activities_dummy.json',
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
