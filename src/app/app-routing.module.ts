@@ -5,8 +5,8 @@ import { JwtInterceptor } from "./helpers/JwtInterceptor";
 import { HomePageComponent } from './modules/home/home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './modules/home/my-environment-page/my-environment-page.component';
 import { LoginFormComponent } from './modules/login/login-form/login-form.component';
-import { BigStablishmentsDetailPageComponent } from './modules/home/big-stablishments-detail-page/big-stablishments-detail-page.component';
-import { BigStablishmentsPageComponent } from './modules/home/big-stablishments-page/big-stablishments-page.component';
+import { LargeStablishmentsDetailPageComponent } from './modules/home/large-stablishments-detail-page/large-stablishments-detail-page.component';
+import { LargeStablishmentsPageComponent } from './modules/home/large-stablishments-page/large-stablishments-page.component';
 import { VirtualAsisstantComponent } from './modules/home/home-components/virtual-asisstant/virtual-asisstant.component';
 
 
@@ -16,8 +16,8 @@ const routes: Routes = [
   // { path: "login", component: LoginFormComponent },
   { path: "myEnvironment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAsisstantComponent },
-  { path: "big-stablishments", component: BigStablishmentsPageComponent },
-  { path: "big-stablishments-detail", component: BigStablishmentsDetailPageComponent },
+  { path: "big-stablishments", component: LargeStablishmentsPageComponent },
+  { path: "big-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
 
 
 ];

@@ -7,7 +7,7 @@ import {environment} from "../../environments/environment";
   providedIn: 'root'
 })
 
-export class BigStablishmentsService {
+export class LargeStablishmentsService {
 
   constructor(private router:Router,
               private http: HttpClient) {
@@ -15,7 +15,7 @@ export class BigStablishmentsService {
 
   getZonesBigStablishmentsToSearch(){
     return this.http.get(
-      `${ environment.BACKEND_BASE_URL }${ environment.BACKEND_BIG_STABLISHMENTS_ZONES_URL }`,
+      `${ environment.BACKEND_BASE_URL }${ environment.BACKEND_LARGE_STABLISHMENTS_ZONES_URL }`,
       {
         headers: {
           'Content-Type': 'application/json'

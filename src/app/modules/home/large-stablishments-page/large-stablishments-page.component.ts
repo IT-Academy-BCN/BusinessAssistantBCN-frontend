@@ -1,14 +1,14 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
-import {BigStablishmentsService} from "../../../services/big-stablishments.service";
+import {LargeStablishmentsService} from "../../../services/large-stablishments.service";
 
 @Component({
-  selector: 'app-big-stablishments-page',
-  templateUrl: './big-stablishments-page.component.html',
-  styleUrls: ['./big-stablishments-page.component.css']
+  selector: 'app-large-stablishments-page',
+  templateUrl: './large-stablishments-page.component.html',
+  styleUrls: ['./large-stablishments-page.component.css']
 })
-export class BigStablishmentsPageComponent implements OnInit, OnDestroy {
+export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
 
   zones$!: Subscription;
@@ -16,7 +16,7 @@ export class BigStablishmentsPageComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
-              private bigstablishmentsservice: BigStablishmentsService) { }
+              private bigstablishmentsservice: LargeStablishmentsService) { }
 
   ngOnInit(): void {
     this.loadMasterData();
