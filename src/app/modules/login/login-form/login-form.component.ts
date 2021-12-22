@@ -67,7 +67,6 @@ export class LoginFormComponent implements OnInit {
       this.auth.login(this.loginForm.value).subscribe(() => {
         console.log('User is log');
       });
-      console.log("Auth Error, Token Unavailable");
       this.resetForm();
       return this.loginForm.value;
     }
