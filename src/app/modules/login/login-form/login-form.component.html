@@ -28,6 +28,9 @@
                                 <div *ngIf="submitted && getControl['password'].errors" class="invalid-feedback">Debe
                                     ingresar el password
                                 </div>
+                                <div *ngIf="submitted && getControl['password'].errors || getControl['email'].errors"
+                                    class="invalid-feedback">Usuario y/o contraseña incorrectos
+                                </div>
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-info btn-round mt-3">Login</button>

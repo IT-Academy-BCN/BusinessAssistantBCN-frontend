@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
+import { AuthenticationService } from 'src/app/shared/service/authentication.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginFormComponent implements OnInit {
 
 
   constructor(public activeModal: NgbActiveModal, private router: Router,
-    private f: FormBuilder) {
+    private f: FormBuilder, private auth: AuthenticationService) {
   }
 
   loginForm!: FormGroup;
@@ -57,9 +58,16 @@ export class LoginFormComponent implements OnInit {
 
   //Submit Login form
   public submitForm() {
+
     this.submitted = true;
-    if (this.loginForm.valid) {
-      console.log(this.loginForm.value);
+
+    const val = this.loginForm.value;
+
+    if (val.email && val.password) {
+      this.auth.login(this.loginForm.value).subscribe(() => {
+        console.log('User is log');
+      });
+      console.log("Auth Error, Token Unavailable");
       this.resetForm();
       return this.loginForm.value;
     }
