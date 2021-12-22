@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   BACKEND_BASE_URL: 'http://businessassistantbcn/v1/api',
+  BACKEND_LOGIN_URL: '/login',
   BACKEND_LARGE_STABLISHMENTS_ZONES_URL: './dummy/zones_dummy.json',
   BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL: './dummy/activities_dummy.json',
 };

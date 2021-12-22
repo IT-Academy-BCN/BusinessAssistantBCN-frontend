@@ -12,7 +12,7 @@ import { LoginRequest } from 'src/entities/auth';
 export class AuthenticationService {
 
   auth_api: any = environment.BACKEND_BASE_URL;
-  endpoint: string = '/login';
+  endpoint: string = environment.BACKEND_LOGIN_URL;
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
