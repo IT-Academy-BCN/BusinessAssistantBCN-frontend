@@ -8,9 +8,10 @@ import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
-import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoginModule } from './modules/login/login.module';
 
 
 
@@ -38,7 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FontAwesomeModule,
     SweetAlert2Module.forRoot(),
     SharedModule,
-    HomeModule
+    HomeModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
