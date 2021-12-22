@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
-import { AuthenticationService } from 'src/app/shared/service/authentication.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 
 @Component({
