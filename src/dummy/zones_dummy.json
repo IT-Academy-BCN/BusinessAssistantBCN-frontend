@@ -1,0 +1,48 @@
+{
+    "count": 96,
+    "offset": 0,
+    "limit": 0,
+    "results":
+    [
+        {
+            "id": 1,
+            "name": "Ciutat Vella"
+        },
+        {
+            "id": 2,
+            "name": "Eixample"
+        },
+        {
+            "id": 3,
+            "name": "Sants-Montjuïc"
+        },
+        {
+            "id": 4,
+            "name": "Les Corts"
+        },
+        {
+            "id": 5,
+            "name": "Sarrià-Sant Gervasi"
+        },
+        {
+            "id": 6,
+            "name": "Gràcia"
+        },
+        {
+            "id": 7,
+            "name": "Horta-Guinardó"
+        },
+        {
+            "id": 8,
+            "name": "Nou Barris"
+        },
+        {
+            "id": 9,
+            "name": "Sant Andreu"
+        },
+        {
+            "id": 10,
+            "name": "Sant Martí"
+        }
+    ]
+}
