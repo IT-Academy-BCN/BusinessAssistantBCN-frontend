@@ -16,8 +16,8 @@ const routes: Routes = [
   // { path: "login", component: LoginFormComponent },
   { path: "myEnvironment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAsisstantComponent },
-  { path: "big-stablishments", component: LargeStablishmentsPageComponent },
-  { path: "big-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
+  { path: "large-stablishments", component: LargeStablishmentsPageComponent },
+  { path: "large-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
 
 
 ];
