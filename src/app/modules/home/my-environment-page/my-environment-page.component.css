@@ -22,6 +22,7 @@
 
 .icon-span {
     display: flex;
+    color: grey;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -29,7 +30,12 @@
     width: 260px;
     height: 200px;
     border: 1px solid black;
-    margin: 3%;
+    margin: 2%;
+    transition: all 0.3s;
+}
+
+.icon-span:hover {
+    color: black;
 }
 
 .icon-text {
