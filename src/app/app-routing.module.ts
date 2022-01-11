@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: "", redirectTo: 'home', pathMatch: 'full' },
   { path: "home", component: HomePageComponent },
   // { path: "login", component: LoginFormComponent },
-  { path: "myEnvironment", component: MyEnvironmentPageComponent },
+  { path: "my-environment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAsisstantComponent },
   { path: "large-stablishments", component: LargeStablishmentsPageComponent },
   { path: "large-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
