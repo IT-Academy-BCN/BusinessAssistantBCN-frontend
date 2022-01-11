@@ -5,8 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LanguageChangerComponent } from './language-changer-component/language-changer/language-changer.component';
+import { LanguageChangerComponent } from './language-changer/language-changer.component';
 
 
 
@@ -22,10 +21,7 @@ import { LanguageChangerComponent } from './language-changer-component/language-
   imports: [
     CommonModule,
     AppRoutingModule,
-    RouterModule,
-    
-
-
+    RouterModule
   ],
   exports: [
     HeaderComponent,
