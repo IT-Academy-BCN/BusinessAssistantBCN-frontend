@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LanguageChangerComponent } from './language-changer-component/language-changer/language-changer.component';
 
 
 
@@ -15,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
+    LanguageChangerComponent
   ],
   imports: [
     CommonModule,

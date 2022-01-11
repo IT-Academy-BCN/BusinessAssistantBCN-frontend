@@ -1,0 +1,33 @@
+{
+    "components": {
+        "footer": {
+            "section1": {
+                "title": "About",
+                "item1": "Directory"
+            },
+            "section2": {
+                "title": "Contact"
+            },
+            "section3": {
+                "title": "Resources",
+                "item1": "FAQs"
+            },
+            "section4": {
+                "title": "Legal",
+                "item1": "Terms & Conditions",
+                "item2": "Safety policies"
+            }
+        },
+        "header": {
+            "section1": {
+                "title": "About"
+            },
+            "section2": {
+                "title": "What we do"
+            },
+            "section3": {
+                "title": "FAQs"
+            }
+        }
+    }
+}
