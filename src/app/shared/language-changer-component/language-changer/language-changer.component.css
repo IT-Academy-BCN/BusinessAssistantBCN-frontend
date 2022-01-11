@@ -1,0 +1,14 @@
+.language-link a {
+    padding: 3px;
+}
+@media screen and (max-width: 1280px) {
+    .login-spacing {
+        margin-left: 0;
+    }
+    .language-link a {
+        padding: 0px;
+    }
+     .login-spacing{
+        padding:0;
+    }
+}
