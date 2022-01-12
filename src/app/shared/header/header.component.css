@@ -4,7 +4,6 @@
 
 .language-link {
     width: 30%;
-    padding-left: 10%;
 }
 
 .language-link a {
@@ -14,12 +13,16 @@
 .login-spacing {
     margin-left: 70px;
     width: 100%;
+    /* padding: 8px; */
 }
 
 @media screen and (max-width: 1280px) {
     .login-spacing {
         margin-left: 0;
     }
+    .language-link a {
+        padding: 0px;
+    } 
 }
 
 @media(max-width:768px) {

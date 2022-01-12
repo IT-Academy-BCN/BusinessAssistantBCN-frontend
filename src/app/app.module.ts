@@ -15,10 +15,6 @@ import { LoginModule } from './modules/login/login.module';
 
 
 
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
 
 @NgModule({
   declarations: [
@@ -40,13 +36,20 @@ export function HttpLoaderFactory(http: HttpClient) {
     SweetAlert2Module.forRoot(),
     SharedModule,
     HomeModule,
-    LoginModule
+    LoginModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    TranslateModule
+  ]
+
+
 })
 export class AppModule {
-  constructor(library: FaIconLibrary) {
-    library.addIcons(fasStar, farStar);
-  }
+
+}
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
 }

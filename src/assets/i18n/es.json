@@ -1,0 +1,41 @@
+{
+    "components": {
+        "footer": {
+            "section1": {
+                "title": "Quiénes somos",
+                "item1": "Directorio"
+            },
+            "section2": {
+                "title": "Contactar"
+            },
+            "section3": {
+                "title": "Recursos",
+                "item1": "FAQs"
+            },
+            "section4": {
+                "title": "Legal",
+                "item1": "Términos de servicio",
+                "item2": "Políticas de seguridad"
+            },
+            "section5": {
+                "title": "Síguenos"
+            }
+        },
+        "header": {
+            "section1": {
+                "title": "Quiénes somos"
+            },
+            "section2": {
+                "title": "Qué hacemos"
+            },
+            "section3": {
+                "title": "FAQs"
+            },
+            "section4": {
+                "title": "Legal",
+                "item1": "Términos de servicio",
+                "item2": "Políticas de seguridad"
+            }
+        }
+    }
+}

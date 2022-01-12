@@ -1,0 +1,36 @@
+{
+    "components": {
+        "footer": {
+            "section1": {
+                "title": "Qui som ",
+                "item1": "Directori"
+            },
+            "section2": {
+                "title": "Contactar"
+            },
+            "section3": {
+                "title": "Recursos",
+                "item1": "FAQs"
+            },
+            "section4": {
+                "title": "Legal",
+                "item1": "Termes de servei",
+                "item2": "Polítiques de seguretat"
+            },
+            "section5": {
+                "title": "Segueix-nos"
+            }
+        },
+        "header": {
+            "section1": {
+                "title": "Qui som "
+            },
+            "section2": {
+                "title": "Què fem"
+            },
+            "section3": {
+                "title": "FAQs"
+            }
+        }
+    }
+}
