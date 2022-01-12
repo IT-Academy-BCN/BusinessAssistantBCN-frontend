@@ -9,6 +9,7 @@ a {
   transition: all 0.2s ease;
   cursor: pointer;
   border: 1px solid rgb(197, 191, 191);
+  margin: 25px;
 }
 
 .cards:hover {

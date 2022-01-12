@@ -1,0 +1,15 @@
+.form-check-label {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-left: 3px;
+}
+
+.form-check {
+  margin-left: 70px;
+}
+
+.form-check-input {
+  background-color: chartreuse;
+}

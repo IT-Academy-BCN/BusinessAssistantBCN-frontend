@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -22,6 +22,7 @@
 
 .icon-size {
   height: 125px;
+  padding: 12px;
 }
 
 .icon-text {
