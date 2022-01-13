@@ -23,12 +23,15 @@
         },
         "header": {
             "section1": {
-                "title": "About"
+                "title": "Business Assitant BCN"
             },
             "section2": {
-                "title": "What we do"
+                "title": "About "
             },
             "section3": {
+                "title": "Service"
+            },
+            "section4": {
                 "title": "FAQs"
             }
         }

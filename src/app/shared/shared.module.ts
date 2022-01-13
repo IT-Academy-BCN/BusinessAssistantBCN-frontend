@@ -44,8 +44,8 @@ export class SharedModule {
 
   constructor( translate: TranslateService) {
     translate.addLangs(['en', 'es','ca']);
-    translate.setDefaultLang('ca');
-    translate.use('en');
+    // translate.setDefaultLang('ca');
+    translate.use('ca');
   }
 
 }
