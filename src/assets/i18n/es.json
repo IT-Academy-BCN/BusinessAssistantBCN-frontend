@@ -49,6 +49,17 @@
                 "button1": "Business Assistant",
                 "button2": "Mi Entorno"
             }
+        },
+        "info-nav": {
+            "section1": {
+                "title": "Consigue una planificación eficaz"
+            },
+            "section2": {
+                "title": "Respaldo de expertos"
+            },
+            "section3": {
+                "title": "Con experiencia en gestión de equipos"
+            }
         }
     }
 }

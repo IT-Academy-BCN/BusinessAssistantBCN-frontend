@@ -49,6 +49,17 @@
                 "button1": "Business Assistant",
                 "button2": "El meu entorn"
             }
+        },
+        "info-nav": {
+            "section1": {
+                "title": "Aconsegueix una planificació eficaç"
+            },
+            "section2": {
+                "title": "Respatller d'experts"
+            },
+            "section3": {
+                "title": "Amb experiència en gestió d'equips"
+            }
         }
     }
 }

@@ -49,6 +49,17 @@
                 "button1": "Business Assistant",
                 "button2": "My environment"
             }
+        },
+        "info-nav": {
+            "section1": {
+                "title": "Get effective planning"
+            },
+            "section2": {
+                "title": "Expert support"
+            },
+            "section3": {
+                "title": "Experience in team management"
+            }
         }
     }
 }
