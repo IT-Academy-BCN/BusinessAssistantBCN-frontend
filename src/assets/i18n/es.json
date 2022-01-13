@@ -23,18 +23,16 @@
         },
         "header": {
             "section1": {
-                "title": "Quiénes somos"
+                "title": "Business Assitant BCN"
             },
             "section2": {
-                "title": "Qué hacemos"
+                "title": "Quiénes somos"
             },
             "section3": {
-                "title": "FAQs"
+                "title": "Qué hacemos"
             },
             "section4": {
-                "title": "Legal",
-                "item1": "Términos de servicio",
-                "item2": "Políticas de seguridad"
+                "title": "FAQs"
             }
         }
     }

@@ -23,12 +23,15 @@
         },
         "header": {
             "section1": {
-                "title": "Qui som "
+                "title": "Business Assitant BCN"
             },
             "section2": {
-                "title": "Què fem"
+                "title": "Qui som "
             },
             "section3": {
+                "title": "Què fem"
+            },
+            "section4": {
                 "title": "FAQs"
             }
         }

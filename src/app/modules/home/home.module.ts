@@ -8,6 +8,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAsisstantComponent } from './home-components/virtual-asisstant/virtual-asisstant.component';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+
 
 
 
@@ -24,10 +27,12 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   exports: [
-    HomePageComponent
+    HomePageComponent,
+    TranslateModule
   ]
 })
 export class HomeModule { }
