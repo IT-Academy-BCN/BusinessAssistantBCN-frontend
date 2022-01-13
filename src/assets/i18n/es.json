@@ -34,6 +34,21 @@
             "section4": {
                 "title": "FAQs"
             }
+        },
+        "home-page": {
+            "section1": {
+                "title": "Haz que ocurra. "
+            },
+            "section2": {
+                "title": "Te ayudamos con ello."
+            },
+            "section3": {
+                "title": "Buscamos gente proactiva que quiera emprender, que cree oportunidades, que las haga brotar. Te damos toda la información que necesitas."
+            },
+            "section4": {
+                "button1": "Business Assistant",
+                "button2": "Mi Entorno"
+            }
         }
     }
 }

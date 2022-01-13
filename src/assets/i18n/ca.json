@@ -34,6 +34,21 @@
             "section4": {
                 "title": "FAQs"
             }
+        },
+        "home-page": {
+            "section1": {
+                "title": "Fes que passi."
+            },
+            "section2": {
+                "title": "T'ajudem amb això."
+            },
+            "section3": {
+                "title": "Busquem gent proactiva que vulgui emprendre,que creï oportunitats, que les faci brollar.Et donem tota la informació que necessites.."
+            },
+            "section4": {
+                "button1": "Business Assistant",
+                "button2": "El meu entorn"
+            }
         }
     }
 }

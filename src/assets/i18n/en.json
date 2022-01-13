@@ -34,6 +34,21 @@
             "section4": {
                 "title": "FAQs"
             }
+        },
+        "home-page": {
+            "section1": {
+                "title": "Make it happen."
+            },
+            "section2": {
+                "title": "We help you with it."
+            },
+            "section3": {
+                "title": " We are looking for proactive people who want to undertake, who create opportunities, who make them sprout. We give you all the information you need."
+            },
+            "section4": {
+                "button1": "Business Assistant",
+                "button2": "My environment"
+            }
         }
     }
 }

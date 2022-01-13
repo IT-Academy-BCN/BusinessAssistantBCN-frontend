@@ -7,18 +7,23 @@
             <div class="h-100  text-white bg-dark text-container ">
                 <section class="text">
                     <div class="">
-                        <h2>Haz que ocurra.</h2>
-                        <h2>Te ayudamos con ello.</h2>
-                        <p class="p-size">Buscamos gente proactiva que quiera emprender, que cree oportunidades, que las
-                            haga brotar. Te
-                            damos
-                            toda la información que necesitas.</p>
+                        <h2>{{'components.home-page.section1.title'| translate}}</h2>
+                        <h2>{{'components.home-page.section2.title'| translate}}</h2>
+                        <p class="p-size">{{'components.home-page.section3.title'| translate}}
+                        </p>
                     </div>
                     <div class="bt-container">
+<<<<<<< Updated upstream
                         <button routerLink="/virtual-assistant"
                                 class="button-l"        type="button">Business Assistant</button>
                         <button [routerLink]="['/my-environment']" class="button-r" type="button">Mi
                             entorno</button>
+=======
+                        <button routerLink="/virtual-assistant" class="button-l"
+                            type="button">{{'components.home-page.section4.button1'| translate}}</button>
+                        <button [routerLink]="['/myEnvironment']" class="button-r"
+                            type="button">{{'components.home-page.section4.button2'| translate}}</button>
+>>>>>>> Stashed changes
                     </div>
                 </section>
             </div>

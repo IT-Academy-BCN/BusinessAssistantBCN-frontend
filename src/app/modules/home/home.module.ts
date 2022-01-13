@@ -4,11 +4,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './my-environment-page/my-environment-page.component';
 import { LargeStablishmentsPageComponent } from './large-stablishments-page/large-stablishments-page.component';
 import { LargeStablishmentsDetailPageComponent } from './large-stablishments-detail-page/large-stablishments-detail-page.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAsisstantComponent } from './home-components/virtual-asisstant/virtual-asisstant.component';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -27,12 +26,10 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule,
-    TranslateModule
+    RouterModule
   ],
   exports: [
-    HomePageComponent,
-    TranslateModule
+    HomePageComponent
   ]
 })
 export class HomeModule { }
