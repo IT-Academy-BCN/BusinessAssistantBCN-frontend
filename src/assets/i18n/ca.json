@@ -35,21 +35,6 @@
                 "title": "FAQs"
             }
         },
-        "home-page": {
-            "section1": {
-                "title": "Fes que passi."
-            },
-            "section2": {
-                "title": "T'ajudem amb això."
-            },
-            "section3": {
-                "title": "Busquem gent proactiva que vulgui emprendre,que creï oportunitats, que les faci brollar.Et donem tota la informació que necessites.."
-            },
-            "section4": {
-                "button1": "Business Assistant",
-                "button2": "El meu entorn"
-            }
-        },
         "info-nav": {
             "section1": {
                 "title": "Aconsegueix una planificació eficaç"
@@ -68,6 +53,39 @@
             "section2": {
                 "title": "Perquè sabem que tens una ment inquieta, posem a la teva disposició un assistent virtual, eines de recerca i muntanyes de suggeriments. Presencial o e-commmererce? Prestashop, Wordpress o Shopify? Tens molt per fer!!"
             }
+        }
+    },
+    "pages": {
+        "home-page": {
+            "section1": {
+                "title": "Fes que passi."
+            },
+            "section2": {
+                "title": "T'ajudem amb això."
+            },
+            "section3": {
+                "title": "Busquem gent proactiva que vulgui emprendre,que creï oportunitats, que les faci brollar.Et donem tota la informació que necessites.."
+            }
+        },
+        "big-stablish": {
+            "section1": {
+                "title": "Cerca per zona"
+            },
+            "section2": {
+                "title": "Activitat econòmica"
+            }
+        }
+    },
+    "common": {
+        "button": {
+            "search": "Buscar",
+            "my-enviroment": "El meu entorn",
+            "assistant": "Business Assistant",
+            "big-stablish": "Grans Establiments",
+            "gallery-market": "Galeries Comercials",
+            "mall": "Centres Comerciales",
+            "public-market": "Mercats Municipals",
+            "market-fair": "Mercats i Fires"
         }
     }
 }

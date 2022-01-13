@@ -65,11 +65,27 @@
             },
             "section3": {
                 "title": " We are looking for proactive people who want to undertake, who create opportunities, who make them sprout. We give you all the information you need."
-            },
-            "section4": {
-                "button1": "Business Assistant",
-                "button2": "My environment"
             }
+        },
+        "big-stablish": {
+            "section1": {
+                "title": "Search by zone"
+            },
+            "section2": {
+                "title": "Economic activity"
+            }
+        }
+    },
+    "common": {
+        "button": {
+            "search": "Buscar",
+            "my-enviroment": "My environment",
+            "assistant": "Business Assistant",
+            "big-stablish": "Large Establishments",
+            "gallery-market": "Commercial Galleries",
+            "mall": "Malls",
+            "public-market": "Municipal Markets",
+            "market-fair": "Markets and Fairs"
         }
     }
 }
