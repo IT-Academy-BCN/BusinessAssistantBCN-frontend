@@ -60,6 +60,14 @@
             "section3": {
                 "title": "Con experiencia en gestión de equipos"
             }
+        },
+        "virtual-assistant": {
+            "section1": {
+                "title": "¿Necesitas ayuda para emprender tu negocio?"
+            },
+            "section2": {
+                "title": "Porque sabemos que tienes una mente inquieta, ponemos a tu disposición un asistente virtual, herramientas de investigación y montañas de sugerencias.¿Presencial o e-commmererce?¿Prestashop, Wordpress o Shopify?¡¡Tienes mucho por hacer!!"
+            }
         }
     }
 }

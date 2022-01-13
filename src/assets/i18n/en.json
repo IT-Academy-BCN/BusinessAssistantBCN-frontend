@@ -35,6 +35,27 @@
                 "title": "FAQs"
             }
         },
+        "info-nav": {
+            "section1": {
+                "title": "Get effective planning"
+            },
+            "section2": {
+                "title": "Expert support"
+            },
+            "section3": {
+                "title": "Experience in team management"
+            }
+        },
+        "virtual-assistant": {
+            "section1": {
+                "title": "Do you need help to start your business?"
+            },
+            "section2": {
+                "title": "Because we know you have a restless mind, we put at your disposal a virtual assistant, research tools and mountains of suggestions. Face-to-face or e-commmererce? Prestashop, Wordpress or Shopify? You have a lot to do !!"
+            }
+        }
+    },
+    "pages": {
         "home-page": {
             "section1": {
                 "title": "Make it happen."
@@ -48,17 +69,6 @@
             "section4": {
                 "button1": "Business Assistant",
                 "button2": "My environment"
-            }
-        },
-        "info-nav": {
-            "section1": {
-                "title": "Get effective planning"
-            },
-            "section2": {
-                "title": "Expert support"
-            },
-            "section3": {
-                "title": "Experience in team management"
             }
         }
     }
