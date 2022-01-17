@@ -1,5 +1,27 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid nav-spacing border-bottom">
+        <div class="navbar-toggler-icon toggler-icon d-none d-lg-block">
+            <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark border-start-0 m-0
+            " aria-labelledby="navbarDropdown">
+                <li class="nav-list"><a class="nav-link" (click)="openLoginForm()">Login</a></li>
+                <li class="nav-list"><a routerLink='home' routerLinkActive="active" class="nav-link"
+                        aria-current="page">{{'components.header.section2.title' | translate}}</a></li>
+                <li class="nav-list"><a class=" nav-link" routerLink=''>{{'components.footer.section1.item1' |
+                        translate}}
+                    </a></li>
+                <li class="nav-list"> <a routerLink='' routerLinkActive="active"
+                        class="nav-link">{{'components.header.section3.title'
+                        | translate}}</a></li>
+                <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section3.item1' |
+                        translate}}</a>
+                </li>
+                <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section4.title' |
+                        translate}}</a>
+                </li>
+            </ul>
+        </div>
         <div class="container-fluid nav-spacing">
             <a routerLink='/home' class="navbar-brand">{{'components.header.section1.title' | translate}}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

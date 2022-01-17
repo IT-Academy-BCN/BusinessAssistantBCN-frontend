@@ -1,3 +1,17 @@
+.toggler-icon{
+    padding-left: 10px;
+    width: 40px;
+}
+.dropdown-menu {
+    background-color: 	#000000;
+    width: 15%;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    border-radius: 0;
+}
+.nav-list{
+    padding-left: 25%;
+}
 .nav-spacing {
     padding-left: 5%;
 }
