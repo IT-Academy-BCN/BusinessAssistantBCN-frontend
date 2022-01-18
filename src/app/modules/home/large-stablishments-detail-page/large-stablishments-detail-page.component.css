@@ -1,0 +1,12 @@
+.result-container{
+    padding-left: 22%;
+}
+.details{
+    padding-left: 15%;
+}
+
+@media (max-width:768px) {
+    .ps-5{
+        padding-left: 1.1rem !important;
+    }
+}
