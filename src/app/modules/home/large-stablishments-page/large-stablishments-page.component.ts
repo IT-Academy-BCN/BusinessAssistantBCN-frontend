@@ -3,6 +3,7 @@ import {Subscription} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
 import {LargeStablishmentsService} from "../../../services/large-stablishments.service";
 import { CommonService} from "../../../services/common.service";
+import {ZoneModel} from "../../../models/common/zone.model";
 
 @Component({
   selector: 'app-large-stablishments-page',
@@ -12,8 +13,12 @@ import { CommonService} from "../../../services/common.service";
 export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
 
+  //Subscriptions
   zones$!: Subscription;
   activities$!: Subscription;
+
+  //Other elements
+  bcnZones: ZoneModel [] = [];
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
@@ -29,7 +34,10 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   loadMasterData(){
     this.zones$ = this.commonservice.getZones().subscribe( resp => {
-
+      resp.forEach ( (element:any) => {
+        const bcnZone:ZoneModel = new ZoneModel(element);
+        this.bcnZones.push(bcnZone);
+      });
     });
   }
 
