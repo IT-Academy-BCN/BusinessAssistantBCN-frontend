@@ -13,4 +13,26 @@ export class LargeStablishmentsService {
               private http: HttpClient) {
   }
 
+<<<<<<< Updated upstream
+=======
+  getZonesBigStablishmentsToSearch(){
+    return this.http.get(
+      `dummy\zones_dummy.json`,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  }
+
+  getEconomicActivitiesToSearch() {
+    return this.http.get(
+      `${ environment.BACKEND_BASE_URL }${ environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL }`,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  }
+>>>>>>> Stashed changes
 }
