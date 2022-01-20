@@ -13,7 +13,7 @@
     padding-left: 25%;
 }
 .nav-spacing {
-    padding-left: 5%;
+    padding-left: 3%;
 }
 
 .language-link {
@@ -43,5 +43,11 @@
     .language-link {
         width: 30%;
         padding-left: 0;
+    }
+}
+
+@media(min-width:985px) {
+    .dropdown-menu {
+        width: 200px;
     }
 }
