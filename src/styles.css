@@ -17,6 +17,20 @@ a {
   transform: scale(1.02);
   background-color: rgb(92, 197, 98);
 }
+.virtual-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  align-items: center;
+  justify-content: center;
+}
+.text-container {
+  width: 100%;
+  padding-right: 0;
+}
+
 .nav-link{
   color:grey;
   transition: 0.2s all;
@@ -24,3 +38,5 @@ a {
 .nav-link:hover{
   color:white;
 }
+
+
