@@ -18,7 +18,7 @@
 .text {
     width: 60%;
     padding-left: 5%;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .bt-container {
@@ -73,3 +73,12 @@
         padding-bottom: 5%;
     }
 }
+
+@media (max-width: 767px){
+    .button-r {
+        padding:0;
+    }
+    .button-l {
+        padding:0;
+    }
+} 

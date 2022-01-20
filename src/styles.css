@@ -17,6 +17,17 @@ a {
   transform: scale(1.02);
   background-color: rgb(92, 197, 98);
 }
+.btn-effect-r{
+  transition: all .3s ease-in-out;
+}
+.btn-effect-r:hover{
+  background-image: linear-gradient(to right, #034f84, #035f86, #1084aa, #034f84);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.btn-effect-l:hover{
+  background-image: linear-gradient(to right,  #77b73b, #78b75b, #78b75b, #64bd10);
+  box-shadow: 0 4px 15px 0 rgba(133, 234, 65, 0.75);
+}
 .virtual-container {
   display: flex;
   width: 100%;
@@ -36,7 +47,15 @@ a {
   transition: 0.2s all;
 }
 .nav-link:hover{
-  color:white;
+  color:#ffff;
 }
+.navbar-dark .navbar-nav .nav-item .nav-link {
 
+  color:grey;
+  transition: 0.2s all;
+
+}
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+  color:#ffff;
+}
 
