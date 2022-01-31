@@ -8,6 +8,7 @@ import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAsisstantComponent } from './home-components/virtual-asisstant/virtual-asisstant.component';
 import { RouterModule } from '@angular/router';
+import { MapboxComponent } from './mapbox/mapbox.component';
 
 
 
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     LargeStablishmentsDetailPageComponent,
     InformationNavComponent,
     VirtualAsisstantComponent,
+    MapboxComponent,
 
   ],
   imports: [
