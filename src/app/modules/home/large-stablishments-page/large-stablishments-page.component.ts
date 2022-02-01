@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service';
 import { CommonService} from "../../../services/common.service";
 import {ZoneModel} from "../../../models/common/zone.model";
+import { ActivityModel } from '../../../models/common/activity.model';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   //Other elements
   bcnZones: ZoneModel [] = [];
+  bcnActivities: ActivityModel[] = [];
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
@@ -32,7 +34,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     if( this.zones$ != undefined ) this.zones$.unsubscribe();
-    /*if( this.activities$ != undefined ) this.activities$.unsubscribe();*/
+    if( this.activities$ != undefined ) this.activities$.unsubscribe();
   }
 
   loadMasterData(){
@@ -43,6 +45,15 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
         console.log(bcnZone);
       });
     });
+
+    this.activities$ = this.commonservice.getEconomicActivities().subscribe( (resp) => {
+      resp.results.forEach ( (element:any) => {
+        const bcnActivities:ActivityModel = new ActivityModel(element);
+        this.bcnActivities.push(bcnActivities);
+        console.log(bcnActivities);
+      });
+    });
+    
     
 
   }

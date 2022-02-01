@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   BACKEND_BASE_URL: 'http://businessassistantbcn/v1/api',
   BACKEND_LOGIN_URL: '/login',
-  BACKEND_ZONES_URL: './dummy/zones_dummy.json',
-  BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL: './dummy/activities_dummy.json',
+  BACKEND_ZONES_URL: 'opendata/large-stablishments',
+  BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL: 'opendata/large-stablishments/activity',
   MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A'
 };
 

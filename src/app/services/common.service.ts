@@ -10,13 +10,15 @@ import {Observable} from "rxjs";
 
 export class CommonService {
 
+  
+
   constructor(private router:Router,
               private http: HttpClient) {
   }
 
   getZones(): Observable<any>{
     return this.http.get(
-      `${ environment.BACKEND_ZONES_URL }`,
+      `${ environment.BACKEND_BASE_URL }/${ environment.BACKEND_ZONES_URL }`,
       {
         headers: {
           'Content-Type': 'application/json'
@@ -24,6 +26,13 @@ export class CommonService {
       });
   }
 
-  getEconomicActivities() {
+  getEconomicActivities(): Observable<any> {
+    return this.http.get(
+      `${ environment.BACKEND_BASE_URL }/${ environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL }`,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
   }
 }
