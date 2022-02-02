@@ -16,7 +16,7 @@ export class CommonService {
 
   getZones(): Observable<any>{
     return this.http.get(
-      `${ environment.BACKEND_BASE_URL }${ environment.BACKEND_ZONES_URL }`,
+      `${ environment.BACKEND_BASE_URL }/${ environment.BACKEND_ZONES_URL }`,
       {
         headers: {
           'Content-Type': 'application/json'
