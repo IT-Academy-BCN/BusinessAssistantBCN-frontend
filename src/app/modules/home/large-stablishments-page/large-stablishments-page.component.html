@@ -83,9 +83,12 @@
 
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button style="background: #5CB85C;"
-              class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder"
-              type="button">{{'common.button.search' | translate}}</button>
+            <button (click)="largeStablishmentSearch()"
+                    style="background: #5CB85C;"
+                    class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder"
+                    type="button">
+                    {{'common.button.search' | translate}}
+            </button>
 
           </div>
 
@@ -173,8 +176,11 @@
         </div>
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-lg btn-primary me-md-2 mt-4 me-4 justify-content-center fw-bolder "
-            type="button">{{'common.button.search' | translate}}</button>
+          <button (click)="largeStablishmentActivitySearch()"
+                  class="btn btn-lg btn-primary me-md-2 mt-4 me-4 justify-content-center fw-bolder "
+                  type="button">
+                  {{'common.button.search' | translate}}
+          </button>
 
         </div>
 
