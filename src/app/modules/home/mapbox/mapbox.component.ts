@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { Map } from 'mapbox-gl';
+import { Map, Popup, Marker } from 'mapbox-gl';
 
 @Component({
   selector: 'app-mapbox',
@@ -17,10 +17,25 @@ export class MapboxComponent implements AfterViewInit {
 
     const map = new Map({
       container: this.mapDivElement.nativeElement,
-      style: 'mapbox://styles/mapbox/streets-v11', // style URL
+      style: 'mapbox://styles/mapbox/light-v10', // style URL
       center: [ 2.19516507807684, 41.40250915633661 ], // starting position [lng, lat]
       zoom: 14 // starting zoom
       });
+    
+    const popup = new Popup()
+    .setHTML(`
+      <h6>The name of the result</h6>
+      <span>The activity</span>
+    `);
+
+    new Marker({color: 'red'})
+    .setLngLat([ 2.19516507807684, 41.40250915633661 ])
+    .setPopup( popup )
+    .addTo( map )
+
+
+
+
       
   }
 
