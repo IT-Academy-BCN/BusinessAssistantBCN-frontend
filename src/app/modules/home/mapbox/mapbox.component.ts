@@ -23,10 +23,7 @@ export class MapboxComponent implements AfterViewInit {
       });
     
     const popup = new Popup()
-    .setHTML(`
-      <h6>The name of the result</h6>
-      <span>The activity</span>
-    `);
+    
 
     new Marker({color: 'red'})
     .setLngLat([ 2.19516507807684, 41.40250915633661 ])
