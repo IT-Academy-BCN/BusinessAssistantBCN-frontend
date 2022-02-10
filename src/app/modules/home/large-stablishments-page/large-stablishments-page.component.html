@@ -3,7 +3,7 @@
 <div class="container mb-lg-5 main-container">
   <div class="row ">
     <div class="col m-5">
-      <div class="p-3 ms-8 border bg-light">
+      <div class="p-3 ms-8 border bg-light pb-5">
         <h2 class=" ps-5 pt-4 fw-bold mb-3" style="color: #5CB85C;">{{'pages.big-stablish.section1.title'| translate}}
         </h2>
         <div class="">
@@ -80,17 +80,6 @@
             </label>
           </div>
 
-
-
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button (click)="largeStablishmentSearch()"
-                    style="background: #5CB85C;"
-                    class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder"
-                    type="button">
-                    {{'common.button.search' | translate}}
-            </button>
-
-          </div>
 
 
         </div>
@@ -177,6 +166,7 @@
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button (click)="largeStablishmentActivitySearch()"
+                  routerLink="/large-stablishments-detail"
                   class="btn btn-lg btn-primary me-md-2 mt-4 me-4 justify-content-center fw-bolder "
                   type="button">
                   {{'common.button.search' | translate}}
