@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import Mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
 import { Map, Popup, Marker } from 'mapbox-gl';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-mapbox',
@@ -14,7 +16,7 @@ export class MapboxComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-
+    Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
     const map = new Map({
       container: this.mapDivElement.nativeElement,
       style: 'mapbox://styles/mapbox/light-v10', // style URL
