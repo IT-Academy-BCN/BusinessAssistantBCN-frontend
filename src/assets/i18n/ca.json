@@ -23,7 +23,7 @@
         },
         "header": {
             "section1": {
-                "title": "Business Assitant BCN"
+                "title": "Business Assistant BCN"
             },
             "section2": {
                 "title": "Qui som "
@@ -80,7 +80,7 @@
         "button": {
             "search": "Buscar",
             "my-enviroment": "El meu entorn",
-            "assistant": "BusinessAssistant",
+            "assistant": "Business Assistant",
             "big-stablish": "Grans Establiments",
             "gallery-market": "Galeries Comercials",
             "mall": "Centres Comerciales",
