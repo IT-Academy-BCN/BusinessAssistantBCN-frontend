@@ -16,7 +16,7 @@
 }
 
 .text {
-    width: 60%;
+    width: 80%;
     padding-left: 5%;
     margin-top: 10%;
 }
@@ -27,22 +27,28 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    gap:1.2rem;
+}
+
+button{
+    border: none;
+    width:45%;
+}
+
+.button-l,.button-r{
+    font-size: 0.875rem;
+    padding: 15px 20px;
+    color: white;
+    margin: 5px;
+    font-weight:700;
 }
 
 .button-l {
-    font-size: 1em;
-    padding: 10px 20px;
-    background-color: #82b74b;
-    color: white;
-    margin: 5px;
+    background-color: #5CB85C;
 }
 
 .button-r {
-    font-size: 1em;
-    padding: 10px 20px;
-    background-color: #034f84;
-    color: white;
-    margin: 5px;
+    background-color: #3B79BF;
 }
 
 .p-size {
