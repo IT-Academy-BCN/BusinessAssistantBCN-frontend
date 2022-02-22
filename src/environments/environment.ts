@@ -6,8 +6,11 @@ export const environment = {
   production: false,
   BACKEND_BASE_URL: 'http://businessassistantbcn/v1/api',
   BACKEND_LOGIN_URL: '/login',
-  BACKEND_ZONES_URL: '/opendata/common/zones',
-  BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL: '/opendata/large-stablishments/activities',
+  BACKEND_ZONES_URL: 'opendata/common/zones',
+  BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL: 'opendata/large-stablishments/activities',
+  BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL: 'opendata/large-establishments/district  ',
+  BACKEND_LARGE_STABLISHMENTS_DISTRICT_URL: 'opendata/large-stablishments/district',
   MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A'
 };
+
 
