@@ -31,7 +31,6 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadMasterData();
-    this.loadActivityData();
   }
 
   ngOnDestroy() {
@@ -47,9 +46,6 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
         this.bcnZones.push(bcnZone);
       });*/
     });
-  }
-
-  loadActivityData () {
     this.activities$ = this.commonservice.getEconomicActivities().subscribe( resp => {
 
       console.log(resp);
@@ -59,6 +55,8 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
       });*/
     });
   }
+
+
 
   largeStablishmentSearch() {
     console.log( this.bcnZones );
