@@ -2,8 +2,9 @@ import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import { environment } from '../../environments/environment';
-import { Observable } from "rxjs";
+import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
+import { BigMallsModel } from "../models/big-malls.model";
 
 
 @Injectable({
@@ -24,6 +25,17 @@ export class LargeStablishmentsService {
   getActivityBySearch(term: string): Observable<any> {
     return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL}/${term}`);
 
+  }
+
+  getBigMalls(): Observable<any> {
+    return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment. BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL }`,
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).pipe(map((response: any) =>
+    <BigMallsModel>response
+    ))
   }
 
 }
