@@ -22,7 +22,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   bcnZones: ZoneModel [] = [];
   largeStablishmentActivities: EconomicActivityModel [] = [];
 
-  
+
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
@@ -40,25 +40,29 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   loadMasterData(){
     this.zones$ = this.commonservice.getZones().subscribe( resp => {
-      resp.forEach ( (element:any) => {
+
+      console.log(resp);
+/*      resp.forEach ( (element:any) => {
         const bcnZone:ZoneModel = new ZoneModel(element);
         this.bcnZones.push(bcnZone);
-      });
+      });*/
     });
   }
 
   loadActivityData () {
     this.activities$ = this.commonservice.getEconomicActivities().subscribe( resp => {
-      resp.forEach ( (element:any) => {
+
+      console.log(resp);
+/*      resp.forEach ( (element:any) => {
         const largeStablishmentActivity:EconomicActivityModel = new EconomicActivityModel(element);
         this.largeStablishmentActivities.push(largeStablishmentActivity);
-      });
+      });*/
     });
   }
 
   largeStablishmentSearch() {
     console.log( this.bcnZones );
-    
+
   }
 
   largeStablishmentActivitySearch() {
