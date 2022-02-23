@@ -7,18 +7,19 @@ import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  constructor(private modalService: NgbModal) {}
 
-  constructor(private modalService: NgbModal) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // This function opens login component modal service
   public openLoginForm() {
-    const modalRef = this.modalService.open(LoginFormComponent);
+    const modalRef = this.modalService.open(LoginFormComponent, {
+      windowClass: 'modal-holder',
+      modalDialogClass:'modal-sizer',
+      centered: true,
+    });
   }
-
 }
