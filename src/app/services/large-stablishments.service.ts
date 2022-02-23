@@ -4,8 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import { environment } from '../../environments/environment';
 import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
-import { BigMallsModel } from "../models/big-malls.model";
-
+import { LargeStablishmentModel } from '../models/large-stablishment.model';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +33,7 @@ export class LargeStablishmentsService {
         'Content-Type': 'application/json'
       }
     }).pipe(map((response: any) =>
-    <BigMallsModel>response
+    <LargeStablishmentModel>response
     ))
   }
 

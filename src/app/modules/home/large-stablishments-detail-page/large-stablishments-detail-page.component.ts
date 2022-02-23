@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { BigMallsModel } from 'src/app/models/big-malls.model'
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
+import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 
 @Component({
   selector: 'app-large-stablishments-detail-page',
@@ -8,13 +8,13 @@ import { LargeStablishmentsService } from 'src/app/services/large-stablishments.
   styleUrls: ['./large-stablishments-detail-page.component.css'],
 })
 export class LargeStablishmentsDetailPageComponent implements OnInit {
-  BigMallData: BigMallsModel[] = []
+  LSData: LargeStablishmentModel[] = []
 
   constructor(private lSservice: LargeStablishmentsService) {}
 
   ngOnInit(): void {
     this.lSservice.getBigMalls().subscribe((data) => {
-      this.BigMallData = data.results
+      this.LSData = data.results
     })
   }
 }
