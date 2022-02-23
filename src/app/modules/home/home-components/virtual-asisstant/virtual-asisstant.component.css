@@ -12,18 +12,29 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width:80%;
+    gap:2rem;
 }
 
 
 .icon-span {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    width: 250px;
-    height: 200px;
-    border: 1px solid black;
-    margin: 5%;
+    padding-top:1rem;
+    width: 21rem;
+    height: 15rem;
+    border: 0.5px solid black;
+    margin: 5% 0;
+
+}
+
+.icon-title{
+    font-size:1rem;
+    font-weight:bold;
+    margin-top:1.5rem;
 }
 
 
