@@ -16,6 +16,30 @@
     gap:2rem;
 }
 
+span{
+    cursor: pointer;
+    position: relative;
+}
+
+span:after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #8cd7ff;
+    height:0;
+    width:100%;
+    z-index:1;
+    top:0;
+    opacity: 0.3;
+    transition: all 0.6s ease-in-out;
+}
+span:hover:after{
+    background-color: #8cd7ff;
+    opacity: 0.3;
+    height:100%;
+    transition: all 0.6s ease-in-out;
+}
+
 
 .icon-span {
     display: flex;
