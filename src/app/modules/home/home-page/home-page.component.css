@@ -41,6 +41,7 @@ button{
     color: white;
     margin: 5px;
     font-weight:700;
+    position: relative;
 }
 
 .button-l {
@@ -50,6 +51,26 @@ button{
 .button-r {
     background-color: #3B79BF;
 }
+
+.button-l:after,.button-r:after{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background-color: #000;
+    content:"";
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-l:hover:after,.button-r:hover:after{
+    height:100%;
+    opacity:0.2;
+}
+
+
 
 .p-size {
     font-size: 1.15em;
