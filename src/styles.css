@@ -33,12 +33,16 @@ a {
   padding-right: 0;
 }
 
+.nav-link h5{
+  color: #fff;
+  transition: 0.2s all;
+}
 .nav-link {
-  color: grey;
+  color: #808080;
   transition: 0.2s all;
 }
 .nav-link:hover {
-  color: #ffff;
+  color: #fff;
 }
 .navbar-dark .navbar-nav .nav-item .nav-link {
   color: grey;
