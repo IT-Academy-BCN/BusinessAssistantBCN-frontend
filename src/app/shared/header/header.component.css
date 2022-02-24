@@ -82,6 +82,10 @@
     font-weight:700;
 }
 
+.collapse a.nav-link:hover{
+    color:#808080;
+}
+
 
 
 
