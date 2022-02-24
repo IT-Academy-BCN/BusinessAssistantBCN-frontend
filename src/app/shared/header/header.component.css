@@ -73,6 +73,16 @@
     transform:rotate(-135deg);
 }
 
+.navbar-brand{
+    font-weight:700;
+}
+
+.collapse a.nav-link{
+    color:#fff;
+    font-weight:700;
+}
+
+
 
 
 
