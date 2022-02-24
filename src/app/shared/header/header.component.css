@@ -47,8 +47,7 @@
 }
 
 .navbar-toggler .middle-bar{
-    opacity:1;
-    filter:alpha(opacity=100);
+
     
 }
 
@@ -60,17 +59,20 @@
 /* Hamburger Icon state change on click*/
 .navbar-toggler.show .top-bar{
     margin-top:0;
-    transform:rotate(135deg);
+    transform:rotate(90deg);
+    margin-left:20px;
 }
 
 .navbar-toggler.show .middle-bar{
-    opacity:0;
-    filter:alpha(opacity=0);
+    margin-left:10px;
+    transform: rotate(90deg);
 }
 
 .navbar-toggler.show .bottom-bar{
     margin-top:0;
-    transform:rotate(-135deg);
+    transform:rotate(90deg);
+    margin-right:20px;
+
 }
 
 .navbar-brand{
