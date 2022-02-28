@@ -1,7 +1,98 @@
-.toggler-icon{
-    padding-left: 10px;
-    width: 40px;
+/* reset any default icon outlines and shadows */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
 }
+/* reset any padding or margin for bar icons */
+.navbar-toggler span{
+    margin:0;
+    padding:0;
+}
+
+.navbar-toggler{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+/* basic properties of menu icon elements */
+.toggler-icon{
+    display: block;
+    position: absolute;
+    height:5px;
+    width: 100%;
+    background: #fff;
+    border-radius:1px;
+    opacity:1;
+    left:0;
+    transform:rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar{
+    margin-top:0;
+}
+
+/* Hamburger Icon initial state */
+
+.navbar-toggler .top-bar{
+    
+    margin-top:-20px;
+    transform:rotate(0deg);
+}
+
+.navbar-toggler .middle-bar{
+
+    
+}
+
+.navbar-toggler .bottom-bar{
+    margin-top:20px;
+    transform:rotate(0deg);
+}
+
+/* Hamburger Icon state change on click*/
+.navbar-toggler.show .top-bar{
+    margin-top:0;
+    transform:rotate(90deg) translateY(-2px);
+    margin-left:20px;
+}
+
+.navbar-toggler.show .middle-bar{
+    margin-left:10px;
+    margin-right:10px;
+    transform: rotate(90deg);
+}
+
+.navbar-toggler.show .bottom-bar{
+    margin-top:0;
+    transform:rotate(90deg) translateY(2px);
+    margin-right:20px;
+
+}
+
+.navbar-brand{
+    font-weight:700;
+}
+
+.collapse a.nav-link{
+    color:#fff;
+    font-weight:700;
+}
+
+.collapse a.nav-link:hover{
+    color:#808080;
+}
+
+
+
+
+
 .dropdown-menu {
     background-color: 	#000000;
     width: 15%;

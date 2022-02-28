@@ -10,9 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
-
-
+import {ObserverIntersectionDirective} from "./directives/observer-interceptor.directive";
 
 
 @NgModule({
@@ -20,7 +18,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    LanguageChangerComponent
+    LanguageChangerComponent,
+      ObserverIntersectionDirective,
   ],
   imports: [
     CommonModule,
@@ -37,7 +36,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
   exports: [
     HeaderComponent,
     FooterComponent,
-    TranslateModule
+    TranslateModule,
+    ObserverIntersectionDirective
   ]
 })
 export class SharedModule { 

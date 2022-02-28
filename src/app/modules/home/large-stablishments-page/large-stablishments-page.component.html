@@ -1,10 +1,10 @@
 <app-header></app-header>
 
-<div class="container mb-lg-5 main-container">
+<div class=" main-container">
   <div class="row ">
-    <div class="col m-5">
-      <div class="p-3 ms-8 border bg-light pb-5">
-        <h2 class=" ps-5 pt-4 fw-bold mb-3" style="color: #5CB85C;">{{'pages.big-stablish.section1.title'| translate}}
+    <div class="col box">
+      <div class="p-3 ms-8 border bg-light card-contents">
+        <h2 class=" ps-5 pt-4 fw-bold mb-3 title-left">{{'pages.big-stablish.section1.title'| translate}}
         </h2>
         <div class="" *ngFor="let zone of bcnZones">
           <div class="form-check">
@@ -17,9 +17,9 @@
       </div>
     </div>
 
-    <div class="col m-5">
+    <div class="col  box">
       <div class="p-3 border bg-light">
-        <h2 class=" text-primary ps-5 pt-4 fw-bold mb-3">{{'pages.big-stablish.section2.title' | translate}}</h2>
+        <h2 class=" title-right ps-5 pt-4 fw-bold mb-3">{{'pages.big-stablish.section2.title' | translate}}</h2>
 
         <div *ngFor="let activity of largeStablishmentActivities">
           <div class="form-check">
@@ -31,9 +31,11 @@
         </div>
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button (click)="largeStablishmentActivitySearch()" routerLink="/large-stablishments-detail"
-            class="btn btn-lg btn-primary me-md-2 mt-4 me-4 justify-content-center fw-bolder " type="button">
-            {{'common.button.search' | translate}}
+          <button (click)="largeStablishmentActivitySearch()"
+                  routerLink="/large-stablishments-detail"
+                  class="search-button"
+                  type="button">
+                  {{'common.button.search' | translate}}
           </button>
 
         </div>

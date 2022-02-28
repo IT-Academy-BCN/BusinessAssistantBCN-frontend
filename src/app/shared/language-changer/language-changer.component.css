@@ -1,6 +1,11 @@
 .language-link a {
     padding: 3px;
 }
+
+.nav-item a.nav-link{
+    color: #fff;
+    font-weight: 700;
+}
 @media screen and (max-width: 1280px) {
     .login-spacing {
         margin-left: 0;

@@ -44,10 +44,15 @@ export class LoginFormComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  redirectSignUp(){
+    this.activeModal.close(LoginFormComponent);
+    this.router.navigate(['/signup']);
+  }
+
   public createLoginForm() {
     this.loginForm = this.f.group({
       email: [" ", [Validators.required, Validators.email]],
-      password: [" ", [Validators.required]]
+      password: ["", [Validators.required]]
     }, { updateOn: 'submit' });
   }
 
