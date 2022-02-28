@@ -1,8 +1,14 @@
 .result-container{
-    padding-left: 22%;
+    padding-left: 14%;
 }
 .details{
-    padding-left: 15%;
+    padding-left: 12%;
+}
+
+.data{
+    overflow-y: scroll;
+    overflow-x: visible;
+    max-height:350px;
 }
 
 @media (max-width:768px) {
