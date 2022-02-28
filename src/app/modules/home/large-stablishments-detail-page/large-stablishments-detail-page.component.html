@@ -12,8 +12,8 @@
                         </h5>
                         <ul class="result-container list-unstyled" *ngFor = "let address of ls.addresses ">
                             <!--*ngFor must be added!-->
-                            <li >{{address.address_name}}</li>
-                            <li>{{address.zip_code}}, {{address.town}}</li>
+                            <li *ngIf ="address.street_name" >{{address.street_name}}, {{address.number}}</li>
+                            <li *ngIf = "address.town">{{address.zip_code}} {{address.town}}</li>
                             <li *ngIf = "ls.email">{{ls.email}}</li>
                             <li *ngIf = "ls.web">{{ls.web}}</li>
                             <li *ngIf = "ls.phone">{{ls.phone}}</li>
