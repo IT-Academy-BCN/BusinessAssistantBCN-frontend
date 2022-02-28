@@ -16,12 +16,12 @@
     gap:2rem;
 }
 
-span{
+picture{
     cursor: pointer;
     position: relative;
 }
 
-span:after{
+picture:after{
     content: "";
     position: absolute;
     display: block;
@@ -33,7 +33,7 @@ span:after{
     opacity: 0.3;
     transition: all 0.6s ease-in-out;
 }
-span:hover:after{
+picture:hover:after{
     background-color: #8cd7ff;
     opacity: 0.3;
     height:100%;
