@@ -11,8 +11,8 @@ export interface LargeStablishmentModel {
 }
 
   interface Address{
-    address_name:string;
-    street_number: string;
+    street_name:string;
+    number: string;
     zip_code: string;
     district_id: string;
     town: string;
