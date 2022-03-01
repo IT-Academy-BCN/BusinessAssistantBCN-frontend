@@ -26,7 +26,7 @@ export class LargeStablishmentsService {
 
   }
 
-  getBigMalls(): Observable<any> {
+  getLgSt(): Observable<any> {
     return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment. BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL }`,
     {
       headers: {
