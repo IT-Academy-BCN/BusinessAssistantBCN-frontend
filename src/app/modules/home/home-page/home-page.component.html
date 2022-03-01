@@ -22,9 +22,11 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-12 main-content">
-            <div class="h-100 bg-light">
-                <img class=" img-size img-fluid" [src]=" mainHomeImage">
-            </div>
+            <picture class="h-100 bg-light">
+                <source class="img-size img-fluid" intersect-obs data-srcset="/assets/img/woman_coworking.jpg" media="(min-width: 501px)">
+                <source class="img-size img-fluid" intersect-obs data-srcset="/assets/img/womanCoworking.jpg" media="(max-width:500px)">
+                <img class="img-size img-fluid" data-src="/assets/img/woman_coworking.jpg" alt="image"/>
+            </picture>
         </div>
 
     </div>
