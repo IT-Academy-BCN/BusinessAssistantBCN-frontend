@@ -20,15 +20,17 @@
     <div class="col  box">
       <div class="p-3 border bg-light">
         <h2 class=" title-right ps-5 pt-4 fw-bold mb-3">{{'pages.big-stablish.section2.title' | translate}}</h2>
+  <div class="data">
+    <div *ngFor="let activity of largeStablishmentActivities">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-activity" [checked]="false" (change)="largeStablishmentActivitySelected(activity, $event.target)">
+        <label class="form-check-label" for="flexCheckDefault">
+          {{ activity.activityName}}
+        </label>
+      </div>
+    </div>
+  </div>
 
-        <div *ngFor="let activity of largeStablishmentActivities">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="checkbox-activity" [checked]="false" (change)="largeStablishmentActivitySelected(activity, $event.target)">
-            <label class="form-check-label" for="flexCheckDefault">
-              {{ activity.activityName}}
-            </label>
-          </div>
-        </div>
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button (click)="largeStablishmentActivitySearch()"
