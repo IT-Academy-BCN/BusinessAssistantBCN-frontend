@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core'
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
 import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 import jsPDF from "jspdf"
+import {EconomicActivityModel} from "../../../models/common/economic-activity.model";
+import {ZoneModel} from "../../../models/common/zone.model";
 
 
 @Component({
@@ -12,6 +14,9 @@ import jsPDF from "jspdf"
 export class LargeStablishmentsDetailPageComponent implements OnInit {
   LSData: LargeStablishmentModel[] = []
   file = new jsPDF();
+  selectedActivities:EconomicActivityModel[] =[];
+  selectedZones:ZoneModel[] = [];
+
 
 
   constructor(private lSservice: LargeStablishmentsService) {}
@@ -19,9 +24,20 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
   ngOnInit(): void {
     this.lSservice.getLgSt().subscribe((data) => {
       this.LSData = data.results
+      this.selectedActivities=this.activitiiesSelected;
+      this.selectedZones = this.bcnZonesSelected;
 
     })
   }
+
+  get bcnZonesSelected() {
+    return this.lSservice.bcnZonesSelected;
+  }
+
+  get activitiiesSelected(){
+    return this.lSservice.activitiesSelected;
+  }
+
 
   openPDF(): void {
       /*Simplify object array to match data on view*/
