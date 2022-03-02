@@ -12,6 +12,12 @@ import { LargeStablishmentModel } from '../models/large-stablishment.model';
 
 export class LargeStablishmentsService {
 
+  //Options checked
+  private _bcnZonesSelected: ZoneModel[] = [];
+
+  get bcnZonesSelected(): ZoneModel[] {
+    return [...this._bcnZonesSelected];
+  }  
 
   constructor(private router:Router,
               private http: HttpClient) {
@@ -26,7 +32,7 @@ export class LargeStablishmentsService {
 
   }
 
-  getBigMalls(): Observable<any> {
+  getLgSt(): Observable<any> {
     return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment. BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL }`,
     {
       headers: {
@@ -36,5 +42,23 @@ export class LargeStablishmentsService {
     <LargeStablishmentModel>response
     ))
   }
+
+
+  addZonesSelected(zoneSelected: ZoneModel) {
+    this._bcnZonesSelected.push(zoneSelected)
+  }
+
+  deleteZoneSelected(zoneSelected: ZoneModel){
+    this._bcnZonesSelected.map((zone, index)=> {
+      if(zone === zoneSelected){
+        this._bcnZonesSelected.splice(index,1);
+      }
+    });
+  }
+
+  initializeZonesSelected() {
+    this._bcnZonesSelected = [];
+  }
+
 
 }

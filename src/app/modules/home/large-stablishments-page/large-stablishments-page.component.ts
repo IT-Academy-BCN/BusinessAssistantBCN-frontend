@@ -22,7 +22,12 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   bcnZones: ZoneModel [] = [];
   largeStablishmentActivities: EconomicActivityModel [] = [];
 
+  //Options checked
+  largeStablishmentActivitiesSelected: EconomicActivityModel [] = [];
 
+  get bcnZonesSelected() {
+    return this.largeStablishmentsService.bcnZonesSelected;
+  }
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
@@ -31,6 +36,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadMasterData();
+    this.largeStablishmentsService.initializeZonesSelected();
   }
 
   ngOnDestroy() {
@@ -40,22 +46,47 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   loadMasterData(){
     this.zones$ = this.commonservice.getZones().subscribe( resp => {
 
-      console.log(resp);
-/*      resp.forEach ( (element:any) => {
+      // console.log(resp);
+      resp.results.forEach ( (element:any) => {
         const bcnZone:ZoneModel = new ZoneModel(element);
         this.bcnZones.push(bcnZone);
-      });*/
+      });
     });
     this.activities$ = this.commonservice.getEconomicActivities().subscribe( resp => {
 
-      console.log(resp);
-/*      resp.forEach ( (element:any) => {
+      // console.log(resp);
+      resp.results.forEach ( (element:any) => {
         const largeStablishmentActivity:EconomicActivityModel = new EconomicActivityModel(element);
         this.largeStablishmentActivities.push(largeStablishmentActivity);
-      });*/
+      });
     });
   }
 
+  largeStablishmentZonesSelected(zoneSelected: ZoneModel, event: any) {
+    if(event.checked){
+      this.largeStablishmentsService.addZonesSelected(zoneSelected);
+    }else{
+      this.largeStablishmentsService.deleteZoneSelected(zoneSelected);
+    }
+    console.log(this.bcnZonesSelected);
+  }
+
+  largeStablishmentActivitySelected(activitySelected: EconomicActivityModel, event: any) {
+    if(event.checked){
+      this.largeStablishmentActivitiesSelected.push(activitySelected);
+    }else{
+      this.deleteActivitySelected(activitySelected);
+    }
+    console.log(this.largeStablishmentActivitiesSelected);
+  }
+
+  deleteActivitySelected(activitySelected: EconomicActivityModel){
+    this.largeStablishmentActivitiesSelected.map((activity, index)=> {
+      if(activity === activitySelected){
+        this.largeStablishmentActivitiesSelected.splice(index,1);
+      }
+    });
+  }
 
 
   largeStablishmentSearch() {
