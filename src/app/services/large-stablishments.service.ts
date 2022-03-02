@@ -6,12 +6,16 @@ import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
 import { LargeStablishmentModel } from '../models/large-stablishment.model';
 import { EconomicActivityModel } from "../models/common/economic-activity.model";
+import { FilteredDataModel } from "../models/common/filtered-data.model";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class LargeStablishmentsService {
+
+  errorMessage:string = '';
+
 
   //Options checked
   private _bcnZonesSelected: ZoneModel[] = [];
@@ -44,7 +48,17 @@ export class LargeStablishmentsService {
     ))
   }
 
- 
+ sendSelectedData(selectedData:any){
+  this.http.post<FilteredDataModel>(selectedData, { title: 'Selected data' }).subscribe({
+    next: data => {
+       console.log(data)
+    },
+    error: error => {
+        this.errorMessage = error.message;
+        console.error('There was an error!', error);
+    }
+})
+ }
 
   addZonesSelected(zoneSelected: ZoneModel) {
     this._bcnZonesSelected.push(zoneSelected)
