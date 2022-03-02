@@ -5,6 +5,8 @@ import { LargeStablishmentsService } from '../../../services/large-stablishments
 import { CommonService} from "../../../services/common.service";
 import {ZoneModel} from "../../../models/common/zone.model";
 import { EconomicActivityModel } from 'src/app/models/common/economic-activity.model';
+import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
+import { FilteredDataModel } from 'src/app/models/common/filtered-data.model';
 
 @Component({
   selector: 'app-large-stablishments-page',
@@ -24,6 +26,10 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   //Options checked
   largeStablishmentActivitiesSelected: EconomicActivityModel [] = [];
+  idZonaSelected: number[]= [];
+  idActivitySelected: number[] = [];
+ largeStablishmentselected: FilteredDataModel = new FilteredDataModel(this.idZonaSelected, this.idActivitySelected)
+  largeStablishmentSelectedJSON = '';
 
   get bcnZonesSelected() {
     return this.largeStablishmentsService.bcnZonesSelected;
@@ -69,6 +75,8 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
       this.largeStablishmentsService.deleteZoneSelected(zoneSelected);
     }
     console.log(this.bcnZonesSelected);
+    this.idZonaSelected = this.bcnZonesSelected.map(data => data.idZone);
+    console.log(this.idZonaSelected);
   }
 
   largeStablishmentActivitySelected(activitySelected: EconomicActivityModel, event: any) {
@@ -77,7 +85,9 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     }else{
       this.deleteActivitySelected(activitySelected);
     }
-    console.log(this.largeStablishmentActivitiesSelected);
+   // console.log(this.largeStablishmentActivitiesSelected);
+    this.idActivitySelected = this.largeStablishmentActivitiesSelected.map(data => data.idActivity);
+    console.log(this.idActivitySelected)
   }
 
   deleteActivitySelected(activitySelected: EconomicActivityModel){
@@ -90,7 +100,13 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
 
   largeStablishmentSearch() {
-    console.log( this.bcnZones );
+  //  console.log( this.bcnZones );
+  this.largeStablishmentselected.activities = this.idActivitySelected;
+  this.largeStablishmentselected.zones = this.idZonaSelected;
+ // console.log(this.largeStablishmentselected)
+  this.largeStablishmentSelectedJSON = JSON.stringify(this.largeStablishmentselected);
+  console.log(this.largeStablishmentSelectedJSON)
+
 
   }
 

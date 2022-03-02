@@ -1,6 +1,6 @@
 export class ZoneModel {
 
-  idZone: Number;
+  idZone: number;
   zoneName: string;
 
   constructor(element: any) {
