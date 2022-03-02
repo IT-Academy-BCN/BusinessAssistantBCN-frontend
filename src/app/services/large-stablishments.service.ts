@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
 import { LargeStablishmentModel } from '../models/large-stablishment.model';
+import {EconomicActivityModel} from "../models/common/economic-activity.model";
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +15,15 @@ export class LargeStablishmentsService {
 
   //Options checked
   private _bcnZonesSelected: ZoneModel[] = [];
+  private _activitiesSelected:EconomicActivityModel[]=[];
 
   get bcnZonesSelected(): ZoneModel[] {
     return [...this._bcnZonesSelected];
-  }  
+  }
+
+  get activitiesSelected():EconomicActivityModel[]{
+    return [...this._activitiesSelected]
+  }
 
   constructor(private router:Router,
               private http: HttpClient) {
@@ -44,6 +50,8 @@ export class LargeStablishmentsService {
   }
 
 
+
+
   addZonesSelected(zoneSelected: ZoneModel) {
     this._bcnZonesSelected.push(zoneSelected)
   }
@@ -54,6 +62,16 @@ export class LargeStablishmentsService {
         this._bcnZonesSelected.splice(index,1);
       }
     });
+  }
+
+  addActivitiesSelected(activitySelected:EconomicActivityModel){
+    this._activitiesSelected.push(activitySelected)
+  }
+
+  deleteActivitySelected(activitySelected:EconomicActivityModel){
+    this._activitiesSelected.map((activity,index)=>{
+      activity===activitySelected?this._activitiesSelected.splice(index,1):null;
+    })
   }
 
   initializeZonesSelected() {
