@@ -1,12 +1,91 @@
-import {Injectable} from "@angular/core";
-import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+// import {Injectable} from "@angular/core";
+// import {Router} from "@angular/router";
+// import {HttpClient, HttpParams} from "@angular/common/http";
+// import { environment } from '../../environments/environment';
+// import { map, Observable } from "rxjs";
+// import { ZoneModel } from "../models/common/zone.model";
+// import { LargeStablishmentModel } from '../models/large-stablishment.model';
+// import { EconomicActivityModel } from "../models/common/economic-activity.model";
+// import { FilteredDataModel } from "../models/common/filtered-data.model";
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+
+// export class LargeStablishmentsService {
+
+//   errorMessage:string = '';
+
+
+//   //Options checked
+//   private _bcnZonesSelected: ZoneModel[] = [];
+
+
+//   get bcnZonesSelected(): ZoneModel[] {
+//     return [...this._bcnZonesSelected];
+//   }  
+
+//   constructor(private router:Router,
+//               private http: HttpClient) {
+//   }
+
+//   getZoneBySearch(term: string): Observable<any> {
+//     return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_ZONES_URL}/${term}`);
+//   }
+
+//   getActivityBySearch(term: string): Observable<any> {
+//     return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
+
+//   }
+
+//   getLgSt(): Observable<any> {   
+//     return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`,  
+//     {
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//     },).pipe(map((response: any) =>
+//     <LargeStablishmentModel>response
+//     ))
+//   }
+
+//  sendSelectedData(){
+//   let  params = new HttpParams();
+//   params = params.append('activities', 'activitiesArray');
+//   params = params.append('zone', 'zoneArray');
+
+//   this.http.get(`${ environment.BACKEND_BASE_URL }${ environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`, {params:params}
+// )
+//  }
+
+//   addZonesSelected(zoneSelected: ZoneModel) {
+//     this._bcnZonesSelected.push(zoneSelected)
+//   }
+
+//   deleteZoneSelected(zoneSelected: ZoneModel){
+//     this._bcnZonesSelected.map((zone, index)=> {
+//       if(zone === zoneSelected){
+//         this._bcnZonesSelected.splice(index,1);
+//       }
+//     });
+//   }
+
+//   initializeZonesSelected() {
+//     this._bcnZonesSelected = [];
+//   }
+
+
+
+
+// }
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { environment } from '../../environments/environment';
 import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
 import { LargeStablishmentModel } from '../models/large-stablishment.model';
 import { EconomicActivityModel } from "../models/common/economic-activity.model";
-import { FilteredDataModel } from "../models/common/filtered-data.model";
 
 @Injectable({
   providedIn: 'root'
@@ -14,69 +93,83 @@ import { FilteredDataModel } from "../models/common/filtered-data.model";
 
 export class LargeStablishmentsService {
 
-  errorMessage:string = '';
-
-
   //Options checked
-  private _bcnZonesSelected: ZoneModel[] = [];
+  private _bcnZonesSelected: number[] = [];
+  private _activitiesSelected: number[] = [];
 
-  get bcnZonesSelected(): ZoneModel[] {
+  get bcnZonesSelected(): number[] {
     return [...this._bcnZonesSelected];
-  }  
-
-  constructor(private router:Router,
-              private http: HttpClient) {
   }
 
-  getZoneBySearch(term: string): Observable<any> {
-    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_ZONES_URL}/${term}`);
+  get activitiesSelected(): number[] {
+    return [...this._activitiesSelected]
   }
 
-  getActivityBySearch(term: string): Observable<any> {
-    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
-
+  constructor(private router: Router,
+    private http: HttpClient) {
   }
+
+  // getZoneBySearch(term: string): Observable<any> {
+  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
+  // }
+
+  // getActivityBySearch(term: string): Observable<any> {
+  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL}/${term}`);
+
+  // }
 
   getLgSt(): Observable<any> {
-    return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`,
-    {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).pipe(map((response: any) =>
-    <LargeStablishmentModel>response
-    ))
+    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).pipe(map((response: any) =>
+        <LargeStablishmentModel>response
+      ))
   }
-
- sendSelectedData(selectedData:any){
-  this.http.post<FilteredDataModel>(selectedData, { title: 'Selected data' }).subscribe({
-    next: data => {
-       console.log(data)
-    },
-    error: error => {
-        this.errorMessage = error.message;
-        console.error('There was an error!', error);
-    }
-})
- }
 
   addZonesSelected(zoneSelected: ZoneModel) {
-    this._bcnZonesSelected.push(zoneSelected)
+    this._bcnZonesSelected.push(zoneSelected.idZone)
   }
 
-  deleteZoneSelected(zoneSelected: ZoneModel){
-    this._bcnZonesSelected.map((zone, index)=> {
-      if(zone === zoneSelected){
-        this._bcnZonesSelected.splice(index,1);
+  deleteZoneSelected(zoneSelected: ZoneModel) {
+    this._bcnZonesSelected.map((zone, index) => {
+      if (zone === zoneSelected.idZone) {
+        this._bcnZonesSelected.splice(index, 1);
       }
     });
+  }
+
+  addActivitiesSelected(activitySelected: EconomicActivityModel) {
+    this._activitiesSelected.push(activitySelected.idActivity);
+    console.log(JSON.stringify([...this._activitiesSelected]))
+  }
+
+  deleteActivitySelected(activitySelected: EconomicActivityModel) {
+    this._activitiesSelected.map((activity, index) => {
+      activity === activitySelected.idActivity ? this._activitiesSelected.splice(index, 1) : null;
+    })
   }
 
   initializeZonesSelected() {
     this._bcnZonesSelected = [];
   }
 
+  // la funcion de pasar data a backend, para conseguir que funciona
+  sendSelectedData() {
+    let params = new HttpParams();
+    this._activitiesSelected.forEach((el: number) => {
+      params = params.append('activities', el);
+    })
 
+    this.bcnZonesSelected.forEach((el: number) => {
+      params = params.append('zone', el);
+    })
 
+    console.log(params)
+    this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`, { params: params }
+    )
+  }
 
 }

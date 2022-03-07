@@ -15,6 +15,7 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
   ngOnInit(): void {
     this.lSservice.getLgSt().subscribe((data) => {
       this.LSData = data.results
+      //console.log(this.LSData)
     })
   }
 }
