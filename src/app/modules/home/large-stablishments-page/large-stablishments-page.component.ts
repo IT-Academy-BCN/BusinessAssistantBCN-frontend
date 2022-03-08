@@ -156,7 +156,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadMasterData();
-    this.largeStablishmentsService.initializeZonesSelected();
+    this.largeStablishmentsService.initializeSelected();
   }
 
   ngOnDestroy() {
@@ -205,7 +205,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   largeStablishmentSearch() {
    // console.log( this.bcnZones );
  this.largeStablishmentsService.sendSelectedData();
-
+ this.largeStablishmentsService.initializeSelected();
   }
 
   largeStablishmentActivitySearch() {

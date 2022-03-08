@@ -152,20 +152,23 @@ export class LargeStablishmentsService {
     })
   }
 
-  initializeZonesSelected() {
+  initializeSelected() {
     this._bcnZonesSelected = [];
+    this._activitiesSelected = [];
   }
 
   // la funcion de pasar data a backend, para conseguir que funciona
   sendSelectedData() {
     let params = new HttpParams();
-    this._activitiesSelected.forEach((el: number) => {
-      params = params.append('activities', el);
-    })
+    // this._activitiesSelected.forEach((el: number) => {
+    //   params = params.append('activities', el);
+    // })
 
-    this.bcnZonesSelected.forEach((el: number) => {
-      params = params.append('zone', el);
-    })
+    // this.bcnZonesSelected.forEach((el: number) => {
+    //   params = params.append('zone', el);
+    // })
+    params = params.append('activities', JSON.stringify(this.activitiesSelected));
+    params = params.append('zone', JSON.stringify(this.bcnZonesSelected))
 
     console.log(params)
     this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`, { params: params }
