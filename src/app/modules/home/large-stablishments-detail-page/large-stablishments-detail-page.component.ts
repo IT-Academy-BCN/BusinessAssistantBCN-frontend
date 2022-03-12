@@ -10,12 +10,13 @@ import { LargeStablishmentModel } from '../../../models/large-stablishment.model
 export class LargeStablishmentsDetailPageComponent implements OnInit {
   LSData: LargeStablishmentModel[] = []
 
-  constructor(private lSservice: LargeStablishmentsService) {}
+  constructor(private lSservice: LargeStablishmentsService) { }
 
   ngOnInit(): void {
-    this.lSservice.getLgSt().subscribe((data) => {
-      this.LSData = data.results
-      //console.log(this.LSData)
-    })
+    this.lSservice.sendSelectedData()
+      .subscribe((resp: any) => {
+        this.LSData = resp.results;
+        console.log(resp.results)
+      });
   }
 }
