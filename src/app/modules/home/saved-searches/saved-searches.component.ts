@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SaveSearchesService } from '../../../services/saved-searches.service';
 
 @Component({
   selector: 'app-saved-searches',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SavedSearchesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private savedSearchesService: SaveSearchesService) { }
 
   ngOnInit(): void {
   }
