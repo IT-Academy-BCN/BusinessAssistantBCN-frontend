@@ -30,16 +30,16 @@ export class LargeStablishmentsService {
   }
 
   getZoneBySearch(term: string): Observable<any> {
-    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_DISTRICT_URL}/${term}`);
+    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_ZONES_URL}/${term}`);
   }
 
   getActivityBySearch(term: string): Observable<any> {
-    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL}/${term}`);
+    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
 
   }
 
   getLgSt(): Observable<any> {
-    return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment. BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL }`,
+    return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment. BACKEND_LARGE_STABLISHMENTS_SEARCH_URL }`,
     {
       headers: {
         'Content-Type': 'application/json'
