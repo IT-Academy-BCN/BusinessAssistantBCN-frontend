@@ -29,6 +29,10 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     return this.largeStablishmentsService.bcnZonesSelected;
   }
 
+  get activitiiesSelected(){
+    return this.largeStablishmentsService.activitiesSelected;
+  }
+
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
               private largeStablishmentsService: LargeStablishmentsService,
@@ -73,20 +77,13 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   largeStablishmentActivitySelected(activitySelected: EconomicActivityModel, event: any) {
     if(event.checked){
-      this.largeStablishmentActivitiesSelected.push(activitySelected);
+      this.largeStablishmentsService.addActivitiesSelected(activitySelected)
     }else{
-      this.deleteActivitySelected(activitySelected);
+      this.largeStablishmentsService.deleteActivitySelected(activitySelected)
     }
-    console.log(this.largeStablishmentActivitiesSelected);
+    console.log(this.activitiiesSelected);
   }
 
-  deleteActivitySelected(activitySelected: EconomicActivityModel){
-    this.largeStablishmentActivitiesSelected.map((activity, index)=> {
-      if(activity === activitySelected){
-        this.largeStablishmentActivitiesSelected.splice(index,1);
-      }
-    });
-  }
 
 
   largeStablishmentSearch() {
