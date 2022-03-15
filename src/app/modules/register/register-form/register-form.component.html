@@ -1,0 +1,46 @@
+<div class="modal-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <h4 class="modal-title text-center">Nuevo Usuario</h4>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-column text-center">
+                    <form id="loginForm" [formGroup]="registerForm" (ngSubmit)="submitForm()">
+                        <div class="form-group">
+                            <label class="d-flex justify-content-start" for="email">Email</label>
+                            <input type="email" 
+                                   class="form-control" 
+                                   formControlName="email" 
+                                   id="email"
+                                   placeholder="Your email address..."
+                                   [ngClass]="{'is-invalid':submitted && getControl['email'].errors}" 
+                                   required>
+                            <div *ngIf="submitted && getControl['email'].errors" class="invalid-feedback">Formato de email inválido / El usuario introducido ya existe
+                            </div>
+                            <div class="form-group">
+                                <label class="d-flex justify-content-start" for="password">Password</label>
+                                <input type="password" 
+                                       class="form-control" formControlName="password" 
+                                       id="password"
+                                       placeholder="Your password.."
+                                       minlength="8"
+                                       >
+                                <div *ngIf="submitted && getControl['password'].errors" class="invalid-feedback">La contraseña debe tener al menos 8 caracteres alfanuméricos
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" 
+                                        class="register-button mt-3"
+                                        (click)="submitForm()" >Crear usuario</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-end">
+                <div  (click)="redirectLogin()" class="login-section">¿Ya eres usuario registrado? <span>Log in</span></div>
+            </div>
+        </div>
+    </div>
+</div>

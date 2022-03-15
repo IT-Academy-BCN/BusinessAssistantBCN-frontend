@@ -9,7 +9,7 @@
             <a class="nav-link" id="navbarDropdown" >
             </a>
             <ul class="dropdown-menu dropdown-menu-dark border-start-0 m-0">
-                <li class="nav-list"><a class="nav-link" (click)="openLoginForm()">Login</a></li>
+
                 <li class="nav-list"><a routerLink='home' routerLinkActive="" class="nav-link"
                         aria-current="page">{{'components.header.section2.title' | translate}}</a></li>
                 <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section1.item1' |
@@ -24,6 +24,9 @@
                 <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section4.title' |
                         translate}}</a>
                 </li>
+                <hr>
+                <li class="nav-list"><a class="nav-link" (click)="openLoginForm()">Login</a></li>
+                <li class="nav-list"><a class="nav-link" (click)="openRegisterForm()">Register</a></li>
             </ul>
         </div>
         <div class="container-fluid nav-spacing">
@@ -58,6 +61,9 @@
 
                     <li class="nav-link login-spacing pt-1">
                         <a class="nav-link language-link" (click)="openLoginForm()">Login</a>
+                    </li>
+                    <li class="nav-link pt-1">
+                        <a class="nav-link language-link btn btn-outline-light px-2" (click)="openRegisterForm()">Register</a>
                     </li>
                 </ul>
             </div>

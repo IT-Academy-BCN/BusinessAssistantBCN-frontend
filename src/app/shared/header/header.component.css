@@ -46,10 +46,10 @@
     transform:rotate(0deg);
 }
 
-.navbar-toggler .middle-bar{
+/* .navbar-toggler .middle-bar{
 
     
-}
+} */
 
 .navbar-toggler .bottom-bar{
     margin-top:20px;
@@ -111,9 +111,9 @@
     padding-left: 3%;
 }
 
-.language-link {
+/* .language-link {
     width: 30%;
-}
+} */
 
 .language-link a {
     padding: 3px;
