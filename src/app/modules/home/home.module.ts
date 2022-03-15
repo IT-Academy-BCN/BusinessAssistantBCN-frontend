@@ -9,6 +9,7 @@ import { InformationNavComponent } from './home-components/information-nav/infor
 import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
 import { MapboxComponent } from './mapbox/mapbox.component';
+import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
 
 
 
@@ -23,7 +24,7 @@ import { MapboxComponent } from './mapbox/mapbox.component';
     InformationNavComponent,
     VirtualAssistantComponent,
     MapboxComponent,
-
+    SavedSearchesComponent
   ],
   imports: [
     CommonModule,

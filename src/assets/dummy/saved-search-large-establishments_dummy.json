@@ -7,9 +7,9 @@
     {
       "search_uuid": "search_uuid",
       "user_uuid": "user_uuid",
-      "search_date": "search_date",
-      "search_name": "search_name",
-      "search_detail": "search_detail",
+      "search_date": "25/02/22",
+      "search_name": "Busqueda 1",
+      "search_detail": "Zapaterias Nou Barris",
       "search_result":
       [
         {
@@ -1929,9 +1929,10 @@
     {
       "search_uuid": "search_uuid",
       "user_uuid": "user_uuid",
-      "search_date": "search_date",
-      "search_name": "search_name",
-      "search_detail":
+      "search_date": "22/02/22",
+      "search_name": "Busqueda 2",
+      "search_detail": "Cinema Sant Andreu",
+      "search_result":
       [
         {
           "name": "Compañia Roca Sanitario",

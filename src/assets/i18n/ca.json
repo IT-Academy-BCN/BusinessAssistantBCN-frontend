@@ -53,6 +53,13 @@
             "section2": {
                 "title": "Perquè sabem que tens una ment inquieta, posem a la teva disposició un assistent virtual, eines de recerca i muntanyes de suggeriments. Presencial o e-commmererce? Prestashop, Wordpress o Shopify? Tens molt per fer!!"
             }
+        },
+        "saved-searches":{
+            "title": "Les meves recerques",
+            "item-1": "Veure al mapa",
+            "item-2": "Nom",
+            "item-3": "Data",
+            "item-4": "Detalls"
         }
     },
     "pages": {
