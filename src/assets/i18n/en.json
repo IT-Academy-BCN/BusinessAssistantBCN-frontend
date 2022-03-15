@@ -86,6 +86,9 @@
             "mall": "Malls",
             "public-market": "Municipal Markets",
             "market-fair": "Markets and Fairs"
+        },
+        "title": {
+            "results": "Results"
         }
     }
 }

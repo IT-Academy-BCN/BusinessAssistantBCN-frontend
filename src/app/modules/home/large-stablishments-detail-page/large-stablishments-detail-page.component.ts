@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
 import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
+import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-large-stablishments-detail-page',
@@ -10,11 +13,24 @@ import { LargeStablishmentModel } from '../../../models/large-stablishment.model
 export class LargeStablishmentsDetailPageComponent implements OnInit {
   LSData: LargeStablishmentModel[] = []
 
-  constructor(private lSservice: LargeStablishmentsService) {}
+  constructor(private lSservice: LargeStablishmentsService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
     this.lSservice.getLgSt().subscribe((data) => {
       this.LSData = data.results
     })
+  }
+
+  ngOnDestroy() {
+    // if( this.zones$ != undefined ) this.zones$.unsubscribe();
+  }
+
+  // This function opens login component modal service
+  public openLoginForm() {
+    const modalRef = this.modalService.open(LoginFormComponent, {
+      windowClass: 'modal-holder',
+      modalDialogClass:'modal-sizer',
+      centered: true,
+    });
   }
 }

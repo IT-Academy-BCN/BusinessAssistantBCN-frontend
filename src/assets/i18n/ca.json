@@ -86,6 +86,9 @@
             "mall": "Centres Comerciales",
             "public-market": "Mercats Municipals",
             "market-fair": "Mercats i Fires"
+        },
+        "title": {
+            "results": "Resultats"
         }
     }
 }

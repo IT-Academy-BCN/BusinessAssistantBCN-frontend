@@ -4,7 +4,7 @@
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col m-5 me-0 ms-3 results-card">
             <div class="p-3 ms-8 border bg-light" >
-                <h2 class=" ps-5 pt-4 fw-bold mb-3">Resultados</h2>
+                <h2 class=" ps-5 pt-4 fw-bold mb-3">{{'common.title.results' | translate}}</h2>
                 <div class="data" *ngIf="true" id="pdfData">
                     <div class="d-flex flex-column mb-4" *ngFor = "let ls of LSData">
                         <h5 class="details">{{ls.name}}
@@ -23,6 +23,7 @@
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button style="background: #2c5e8f;"
                             class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0"
+                            (click)="openLoginForm()"
                             type="button">Guardar Resultados</button>
                     <button style="background: #5CB85C;"
                             class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0"

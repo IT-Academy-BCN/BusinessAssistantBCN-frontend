@@ -86,6 +86,9 @@
             "mall": "Centros Comerciales",
             "public-market": "Mercados Municipales",
             "market-fair": "Mercados y Ferias"
+        },
+        "title": {
+            "results": "Resultados"
         }
     }
 }
