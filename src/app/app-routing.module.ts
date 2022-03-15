@@ -8,6 +8,7 @@ import { LoginFormComponent } from './modules/login/login-form/login-form.compon
 import { LargeStablishmentsDetailPageComponent } from './modules/home/large-stablishments-detail-page/large-stablishments-detail-page.component';
 import { LargeStablishmentsPageComponent } from './modules/home/large-stablishments-page/large-stablishments-page.component';
 import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
+import { BusinessAssistantComponent } from './modules/home/business-assistant/business-assistant.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   // { path: "login", component: LoginFormComponent },
   { path: "my-environment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAssistantComponent },
+  { path: "business-assistant", component: BusinessAssistantComponent},
   { path: "large-stablishments", component: LargeStablishmentsPageComponent },
   { path: "large-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
 
