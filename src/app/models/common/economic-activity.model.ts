@@ -1,10 +1,10 @@
 export class EconomicActivityModel {
 
-    codeActivity: Number;
+    idActivity: number ;
     activityName: string;
   
     constructor(element: any) {
-      this.codeActivity = element.codeActivity;
+      this.idActivity = element.idActivity;
       this.activityName = element.activityName;
     }
   
