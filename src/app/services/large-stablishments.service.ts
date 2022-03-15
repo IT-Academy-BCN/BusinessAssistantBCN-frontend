@@ -1,4 +1,5 @@
 
+
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { HttpClient, HttpParams } from "@angular/common/http";
@@ -18,12 +19,19 @@ export class LargeStablishmentsService {
   private _bcnZonesSelected: number[] = [];
   private _activitiesSelected: number[] = [];
 
+  // Large Stablishments
+  private _largeStablishments: LargeStablishmentModel[] = []
+
   get bcnZonesSelected(): number[] {
     return [...this._bcnZonesSelected];
   }
 
   get activitiesSelected(): number[] {
     return [...this._activitiesSelected]
+  }
+
+  get largeStablishments(): LargeStablishmentModel[] {
+    return [...this._largeStablishments];
   }
 
   constructor(private router: Router,
@@ -65,18 +73,24 @@ export class LargeStablishmentsService {
   initializeSelected() {
     this._bcnZonesSelected = [];
     this._activitiesSelected = [];
+    this._largeStablishments = [];
   }
 
   // la funcion de pasar data a backend, para conseguir que funciona
   sendSelectedData() {
     let params = new HttpParams();
 
+    params = params.append('zones', JSON.stringify(this.bcnZonesSelected))
+
     params = params.append('activities', JSON.stringify(this.activitiesSelected));
-    params = params.append('zone', JSON.stringify(this.bcnZonesSelected))
 
     console.log(params)
-    this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`, { params: params }
+    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`, { params: params },
     )
+  }
+
+  addLargeStablishment(element: LargeStablishmentModel) {
+    this._largeStablishments.push(element);
   }
 
 }
