@@ -16,9 +16,11 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
   constructor(private lSservice: LargeStablishmentsService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.lSservice.getLgSt().subscribe((data) => {
-      this.LSData = data.results
-    })
+    this.lSservice.sendSelectedData()
+      .subscribe((resp: any) => {
+        this.LSData = resp.results;
+        console.log(resp.results)
+      });
   }
 
   ngOnDestroy() {
