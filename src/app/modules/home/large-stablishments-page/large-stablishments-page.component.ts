@@ -1,6 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from "rxjs";
-import { ActivatedRoute, Router } from "@angular/router";
+
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from "rxjs";
+import {ActivatedRoute, Router} from "@angular/router";
+
 import { LargeStablishmentsService } from '../../../services/large-stablishments.service';
 import { CommonService } from "../../../services/common.service";
 import { ZoneModel } from "../../../models/common/zone.model";

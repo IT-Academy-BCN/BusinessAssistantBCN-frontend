@@ -21,7 +21,6 @@ const routes: Routes = [
   { path: "large-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
   { path: "saved-searches", component: SavedSearchesComponent },
 
-
 ];
 
 @NgModule({
