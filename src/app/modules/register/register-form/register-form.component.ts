@@ -19,7 +19,6 @@ export class RegisterFormComponent implements OnInit {
               private modalService: NgbModal) { }
 
     registerForm!: FormGroup;
-    submitted = false;
 
   ngOnInit(): void {
     this.changingRegisterQueryParams();
@@ -56,33 +55,29 @@ export class RegisterFormComponent implements OnInit {
     this.registerForm = this.f.group({
       email: [" ", [Validators.required, Validators.email]],
       password: ["", [Validators.required, Validators.minLength(8)]]
-    }, { updateOn: 'submit' });
+    });
   }
 
-    // Getter method to access formcontrols
-    get getControl(): { [key: string]: AbstractControl; } {
-      return this.registerForm.controls;
-    }
-
-      //Submit Login form
   public submitForm() {
-
-    this.submitted = true;
-
-    const val = this.registerForm.value;
-
-    if (val.email && val.password) {
-      this.auth.register(this.registerForm.value).subscribe(() => {
-        console.log('User is registered');
-      });
-      this.resetForm();
-      return this.registerForm.value;
+    if(this.registerForm.invalid){
+      this.registerForm.markAllAsTouched();
+      return
     }
+
+    const body = this.registerForm.value;
+
+    this.auth.register(body)
+      .subscribe(resp => {
+        console.log(resp);
+      })
+      this.registerForm.reset();
+      this.activeModal.close(RegisterFormComponent);
+
   }
 
-  //Reset Login Form
-  public resetForm() {
-    this.registerForm.reset();
-    this.submitted = false;
+  public validField(inputField:string){
+    return this.registerForm.controls[inputField].errors && this.registerForm.controls[inputField].touched;
   }
 }
+
+

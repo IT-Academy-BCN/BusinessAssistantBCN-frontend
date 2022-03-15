@@ -1,3 +1,5 @@
+
+
 <div class="modal-dialog" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -6,31 +8,25 @@
             </div>
             <div class="modal-body">
                 <div class="d-flex flex-column text-center">
-                    <form id="loginForm" [formGroup]="registerForm" (ngSubmit)="submitForm()">
+                    <form id="registerForm" [formGroup]="registerForm">
                         <div class="form-group">
                             <label class="d-flex justify-content-start" for="email">Email</label>
                             <input type="email" 
                                    class="form-control" 
                                    formControlName="email" 
-                                   id="email"
-                                   placeholder="Your email address..."
-                                   [ngClass]="{'is-invalid':submitted && getControl['email'].errors}" 
-                                   required>
-                            <div *ngIf="submitted && getControl['email'].errors" class="invalid-feedback">Formato de email inválido / El usuario introducido ya existe
-                            </div>
+                                   placeholder="Your email address...">
+                            <span *ngIf="validField('email')" class="text-danger">Formato de email inválido / El usuario introducido ya existe
+                            </span>
                             <div class="form-group">
                                 <label class="d-flex justify-content-start" for="password">Password</label>
                                 <input type="password" 
                                        class="form-control" formControlName="password" 
-                                       id="password"
-                                       placeholder="Your password.."
-                                       minlength="8"
-                                       >
-                                <div *ngIf="submitted && getControl['password'].errors" class="invalid-feedback">La contraseña debe tener al menos 8 caracteres alfanuméricos
-                                </div>
+                                       placeholder="Your password..">
+                                <span *ngIf="validField('email')"  class="text-danger">La contraseña debe tener al menos 8 caracteres alfanuméricos
+                                </span>
                             </div>
                             <div class="d-grid gap-2">
-                                <button type="submit" 
+                                <button type="button" 
                                         class="register-button mt-3"
                                         (click)="submitForm()" >Crear usuario</button>
                             </div>
