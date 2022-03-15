@@ -1,6 +1,8 @@
-import {Injectable} from "@angular/core";
-import {Router} from "@angular/router";
-import {HttpClient, HttpParams} from "@angular/common/http";
+
+
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { environment } from '../../environments/environment';
 import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
@@ -45,7 +47,6 @@ export class LargeStablishmentsService {
 
   // }
 
-
   addZonesSelected(zoneSelected: ZoneModel) {
     this._bcnZonesSelected.push(zoneSelected.idZone)
   }
@@ -80,6 +81,7 @@ export class LargeStablishmentsService {
     let params = new HttpParams();
 
     params = params.append('zones', JSON.stringify(this.bcnZonesSelected))
+
     params = params.append('activities', JSON.stringify(this.activitiesSelected));
 
     console.log(params)
