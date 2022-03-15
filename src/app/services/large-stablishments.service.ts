@@ -39,17 +39,6 @@ export class LargeStablishmentsService {
 
   // }
 
-  getLgSt(): Observable<any> {
-    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`,
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).pipe(map((response: any) =>
-        <LargeStablishmentModel>response
-      ))
-  }
-
   addZonesSelected(zoneSelected: ZoneModel) {
     this._bcnZonesSelected.push(zoneSelected.idZone)
   }

@@ -9,9 +9,12 @@ export class SavedSearchesModel {
 
     name: string;
     data:  Date;
-    detail: LargeStablishmentModel[] | BigMallModel[] | CommercialGalleryModel[] | MarketFairModel[] |MunicipalMarketModel[]
+    detail: string;
+   // detail: LargeStablishmentModel[] | BigMallModel[] | CommercialGalleryModel[] | MarketFairModel[] |MunicipalMarketModel[]
   
-    constructor(name: string, data: Date, detail: LargeStablishmentModel[] | BigMallModel[] | CommercialGalleryModel[] | MarketFairModel[] |MunicipalMarketModel[]) {
+    constructor(name: string, data: Date, detail:string
+      //detail: LargeStablishmentModel[] | BigMallModel[] | CommercialGalleryModel[] | MarketFairModel[] |MunicipalMarketModel[]
+      ) {
       this.name = name;
       this.data = data;
       this.detail = detail; 
