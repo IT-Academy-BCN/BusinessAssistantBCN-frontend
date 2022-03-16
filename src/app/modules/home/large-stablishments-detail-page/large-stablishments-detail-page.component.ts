@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core'
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
 import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 
 @Component({
   selector: 'app-large-stablishments-detail-page',
@@ -21,6 +25,12 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
   }
 
   generateDocument(){
-
+    const clone = this.LSData.map(ls=>{
+      const simpleLS:any = Object.assign({},ls);
+      delete simpleLS.activities;
+      return simpleLS;
+    })
+    const docDefinition = {content:JSON.stringify(clone,null,"\t")}
+    pdfMake.createPdf(docDefinition).open();
   }
 }
