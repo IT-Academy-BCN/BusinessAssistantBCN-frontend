@@ -74,6 +74,18 @@
             "section2": {
                 "title": "Activitat econòmica"
             }
+        },
+        "big-stablish-detail": {
+            "saveSearchModal":{
+                "title": "Guardar búsqueda",
+                "name": "Nom",
+                "detail": "Detalls de la búsqueda",
+                "msgError": "Aquest camp no pot estar buit",
+                "button":{
+                    "discard":"Cancel·lar",
+                    "save": "Guardar"
+                }
+            }
         }
     },
     "common": {
