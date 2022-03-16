@@ -80,7 +80,12 @@
                 "title": "Business Assistant"
             },
             "section2":{
-                 "title": "1. Industry Analysis"
+                 "title": "1. Industry Analysis",
+                 "title1": "Catalog of services and products to undertake",
+                 "item1": "Catalan classification of economic activities",
+                 "item2": "Services to undertake",
+                 "item3": "Catalan participation in programs financed by the EU",
+                 "title2": "Economy"
                 },
             "section3": {
                 "title": "2. Analysis of consumption habits"   

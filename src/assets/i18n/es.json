@@ -80,7 +80,12 @@
                 "title": "Business Assistant"
             },
             "section2":{
-                 "title": "1. Análisis del Sector"
+                 "title": "1. Análisis del Sector",
+                 "title1": "Catálogo de servicios y productos para emprender",
+                 "item1": "Clasificación catalana de actividaes económicas",
+                 "item2": "Servicios para emprender",
+                 "item3": "Participación catalana en programas financiados por la UE",
+                 "title2": "Economía"
                 },
             "section3": {
                 "title": "2. Análisis de hábitos de consumo"   
