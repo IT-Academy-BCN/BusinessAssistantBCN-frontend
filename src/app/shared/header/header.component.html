@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid nav-spacing border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid nav-spacing">
         <div class=" d-none d-lg-block">
             <button class="navbar-toggler collapsed d-flex flex-column justify-content-around" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-labelledby="navbarDropdown">
                 <span class="toggler-icon top-bar"></span>
@@ -8,7 +8,7 @@
             </button>
             <a class="nav-link" id="navbarDropdown" >
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark border-start-0 m-0">
+            <ul class="dropdown-menu dropdown-menu-dark border-start-0 m-0" id="navigation">
                 <li class="nav-list"><a class="nav-link" (click)="openLoginForm()">Login</a></li>
                 <li class="nav-list"><a routerLink='home' routerLinkActive="" class="nav-link"
                         aria-current="page">{{'components.header.section2.title' | translate}}</a></li>
@@ -24,6 +24,21 @@
                 <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section4.title' |
                         translate}}</a>
                 </li>
+            </ul>
+            <ul *ngIf="user" class="dropdown-menu dropdown-menu-dark border-start-0 m-0">
+                <li class="nav-list"><a class="nav-link searches" routerLink="">{{'components.header.section5.title' |
+                    translate}}</a></li>
+
+                <li class="nav-list"> <h6>{{'components.header.section6.title' |
+                    translate}}</h6><li>
+                <li class="nav-list"> <a routerLink='home' routerLinkActive="" class="nav-link "
+                                         aria-current="page">{{'components.header.section2.title' | translate}}</a></li>
+                <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section3.item1' |
+                    translate}}</a>
+                </li>
+                <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section4.title' |
+                    translate}}</a>
+                <li class="nav-list log-out"><a class="nav-link" routerLink="">Log Out</a></li>
             </ul>
         </div>
         <div class="container-fluid nav-spacing">
@@ -56,8 +71,11 @@
 
                     </app-language-changer>
 
-                    <li class="nav-link login-spacing pt-1">
+                    <li *ngIf="!user" class="nav-link login-spacing pt-1">
                         <a class="nav-link language-link" (click)="openLoginForm()">Login</a>
+                    </li>
+                    <li *ngIf="user" class="nav-link login-spacing pt-1">
+                        <a class="nav-link language-link" (click)="openLoginForm()">Logout</a>
                     </li>
                 </ul>
             </div>
