@@ -7,9 +7,9 @@
         <h2 class=" ps-5 pt-4 fw-bold mb-3 title-left">{{'pages.big-stablish.section1.title'| translate}}
         </h2>
         <div class="" *ngFor="let zone of bcnZones">
-          <div class="form-check">
+          <div class="form-check">  
+            <label class="form-check-label" >
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="false" (change)="largeStablishmentZonesSelected(zone, $event.target)">
-            <label class="form-check-label" for="flexCheckDefault">
               {{ zone.zoneName }}
             </label>
           </div>
@@ -20,21 +20,20 @@
     <div class="col  box">
       <div class="p-3 border bg-light">
         <h2 class=" title-right ps-5 pt-4 fw-bold mb-3">{{'pages.big-stablish.section2.title' | translate}}</h2>
-
         <div *ngFor="let activity of largeStablishmentActivities">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="checkbox-activity" [checked]="false" (change)="largeStablishmentActivitySelected(activity, $event.target)">
-            <label class="form-check-label" for="flexCheckDefault">
+          <div class="form-check">          
+              <label class="form-check-label" >
+            <input class="form-check-input" type="checkbox" value="" id="checkbox-activity"  [checked]="false" (change)="largeStablishmentActivitySelected(activity, $event.target)">
               {{ activity.activityName}}
             </label>
           </div>
         </div>
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button (click)="largeStablishmentActivitySearch()"
+          <button (click)="largeStablishmentSearch()"
                   routerLink="/large-stablishments-detail"
                   class="search-button"
-                  type="button">
+                  type="submit">
                   {{'common.button.search' | translate}}
           </button>
 
