@@ -10,14 +10,14 @@ import { SaveSearchesService } from '../../../services/saved-searches.service';
 })
 export class SavedSearchesComponent implements OnInit {
 
+
   constructor(private savedSearchesService: SaveSearchesService) { }
 
   savedSearchesData: SavedSearchesModel[] = []
   ngOnInit(): void {
     this.savedSearchesService.getSavedSearches().subscribe((resp: any) => {
-
       this.savedSearchesData = resp.results;
-console.log(this.savedSearchesData)
+      console.log(this.savedSearchesData)
     })
   }
 

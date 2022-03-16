@@ -4,19 +4,18 @@ import { environment } from '../../environments/environment';
 import { SavedSearchesModel } from "../models/saved-searches.model";
 
 @Injectable({
-    providedIn: 'root'
-  })
-  
-  export class SaveSearchesService {
+  providedIn: 'root'
+})
 
-    constructor(private http: HttpClient){
-        
-    }
+export class SaveSearchesService {
 
-    getSavedSearches(){
+  constructor(private http: HttpClient) {
 
-return this.http.get<SavedSearchesModel>(`${environment.BACKEND_BASE_URL}${environment.BACKEND_SAVED_SEARCHES_URL}`
-        )
-      
-    }
   }
+
+  getSavedSearches() {
+    return this.http.get<SavedSearchesModel>(`${environment.BACKEND_BASE_URL}${environment.BACKEND_SAVED_SEARCHES_URL}`
+    )
+
+  }
+}
