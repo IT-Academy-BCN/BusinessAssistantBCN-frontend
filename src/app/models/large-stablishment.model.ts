@@ -6,7 +6,7 @@ export interface LargeStablishmentModel {
   web: string;
   email: string;
   phone: number| null;
-  activities: EconomicActivityModel;
+  activities: EconomicActivityModel[];
   addresses:Address[]
 }
 
