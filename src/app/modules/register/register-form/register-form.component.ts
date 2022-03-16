@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Params, Router } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { LoginFormComponent } from '../../login/login-form/login-form.component';
 
@@ -19,6 +20,7 @@ export class RegisterFormComponent implements OnInit {
               private modalService: NgbModal) { }
 
     registerForm!: FormGroup;
+    submitted = false;
 
   ngOnInit(): void {
     this.changingRegisterQueryParams();
@@ -53,12 +55,19 @@ export class RegisterFormComponent implements OnInit {
 
   public createRegisterForm() {
     this.registerForm = this.f.group({
-      email: [" ", [Validators.required, Validators.email]],
-      password: ["", [Validators.required, Validators.minLength(8)]]
+      email: [" ", [Validators.required, Validators.pattern(/^[^@\s]+@[^@\s]+\.[^@\s]{2,3}$/)]],
+      password: ["", [Validators.required, Validators.minLength(8), Validators.pattern(/^[a-zA-Z0-9]+$/)]]
     });
   }
 
+    // Getter method to access formcontrols
+    get getControl(): { [key: string]: AbstractControl; } {
+      return this.registerForm.controls;
+    }
+
   public submitForm() {
+    this.submitted = true;
+
     if(this.registerForm.invalid){
       this.registerForm.markAllAsTouched();
       return
@@ -70,14 +79,12 @@ export class RegisterFormComponent implements OnInit {
       .subscribe(resp => {
         console.log(resp);
       })
-      this.registerForm.reset();
-      this.activeModal.close(RegisterFormComponent);
 
+    this.registerForm.reset();
+    this.submitted = false;
+    this.activeModal.close(RegisterFormComponent);
   }
 
-  public validField(inputField:string){
-    return this.registerForm.controls[inputField].errors && this.registerForm.controls[inputField].touched;
-  }
 }
 
 

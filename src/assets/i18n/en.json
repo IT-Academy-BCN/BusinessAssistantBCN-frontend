@@ -87,5 +87,19 @@
             "public-market": "Municipal Markets",
             "market-fair": "Markets and Fairs"
         }
+    },
+    "user": {
+        "register": {
+            "title": "New user",
+            "email-placeholder": "Your email...",
+            "email-error": "Email address not valid / User already exists",
+            "password-title": "Password",
+            "password-placeholder": "Your password...",
+            "password-error": "Password needs to be 8 alphanumeric characters",
+            "submit-register": "Create user",
+            "registered": "Are you already a registered user?",
+            "link-login": "Login"
+        }
     }
+
 }
