@@ -74,11 +74,35 @@
             "section2": {
                 "title": "Actividad económica"
             }
+        },
+        "business-assistant": {
+            "section1": {
+                "title": "Business Assistant"
+            },
+            "section2":{
+                 "title": "1. Análisis del Sector"
+                },
+            "section3": {
+                "title": "2. Análisis de hábitos de consumo"   
+            },
+            "section4": {
+                "title": "3. Encuestas"
+            },
+            "section5": {
+                "title": "4. Análisis de la competencia"
+            },
+            "section6": {
+                "title": "5. Localización de target"
+            },
+            "section7": {
+                "title": "6. Generación de informe"
+            }
         }
     },
     "common": {
         "button": {
             "search": "Buscar",
+            "save": "Guardar",
             "my-enviroment": "Mi Entorno",
             "assistant": "Business Assistant",
             "big-stablish": "Grandes Establecimentos",
