@@ -19,4 +19,8 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
         console.log(resp.results)
       });
   }
+
+  generateDocument(){
+
+  }
 }
