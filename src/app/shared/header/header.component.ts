@@ -10,6 +10,7 @@ import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  user:string|null="user";
   constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
