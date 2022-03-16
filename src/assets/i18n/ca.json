@@ -74,11 +74,40 @@
             "section2": {
                 "title": "Activitat econòmica"
             }
+        },
+        "business-assistant": {
+            "section1": {
+                "title": "Business Assistant"
+            },
+            "section2":{
+                 "title": "1. Anàlisi del Sector",
+                 "title1": "Catàleg de serveis i productes per emprendre",
+                 "item1": "Classificació catalana d'activitats econòmiques",
+                 "item2": "Serveis per emprendre",
+                 "item3": "Participació catalana en programes finançats per la UE",
+                 "title2": "Economia"
+                },
+            "section3": {
+                "title": "2. Anàlisi d'hàbits de consum"   
+            },
+            "section4": {
+                "title": "3. Enquestes"
+            },
+            "section5": {
+                "title": "4. Anàlisi de la competència"
+            },
+            "section6": {
+                "title": "5. Localització de target"
+            },
+            "section7": {
+                "title": "6. Generació d'informe"
+            }
         }
     },
     "common": {
         "button": {
             "search": "Buscar",
+            "save": "Guardar",
             "my-enviroment": "El meu entorn",
             "assistant": "Business Assistant",
             "big-stablish": "Grans Establiments",

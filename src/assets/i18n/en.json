@@ -74,11 +74,40 @@
             "section2": {
                 "title": "Economic activity"
             }
+        },
+        "business-assistant": {
+            "section1": {
+                "title": "Business Assistant"
+            },
+            "section2":{
+                 "title": "1. Industry Analysis",
+                 "title1": "Catalog of services and products to undertake",
+                 "item1": "Catalan classification of economic activities",
+                 "item2": "Services to undertake",
+                 "item3": "Catalan participation in programs financed by the EU",
+                 "title2": "Economy"
+                },
+            "section3": {
+                "title": "2. Analysis of consumption habits"   
+            },
+            "section4": {
+                "title": "3. Surveys"
+            },
+            "section5": {
+                "title": "4. Competitor Analysis"
+            },
+            "section6": {
+                "title": "5. Target location"
+            },
+            "section7": {
+                "title": "6. Report generation"
+            }
         }
     },
     "common": {
         "button": {
             "search": "Search",
+            "save": "Save",
             "my-enviroment": "My environment",
             "assistant": "Business Assistant",
             "big-stablish": "Large Establishments",
