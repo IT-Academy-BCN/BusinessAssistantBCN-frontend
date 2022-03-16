@@ -71,8 +71,8 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("després dels canvis: ", this.LargeEstablishmentsFilteredData);
-    console.log("els changes:", changes);
+    // console.log("després dels canvis: ", this.LargeEstablishmentsFilteredData);
+    // console.log("els changes:", changes);
 
     // PER PROVES NOMÉS!
     // new Marker({ color: "green" })

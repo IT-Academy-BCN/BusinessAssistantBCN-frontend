@@ -11,15 +11,15 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./large-stablishments-detail-page.component.css'],
 })
 export class LargeStablishmentsDetailPageComponent implements OnInit {
-  LSData: LargeStablishmentModel[] = []
+  LargeEstablishmentsData: LargeStablishmentModel[] = []
 
-  constructor(private lSservice: LargeStablishmentsService, private modalService: NgbModal) {}
+  constructor(private LargeEstablishmentService: LargeStablishmentsService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.lSservice.sendSelectedData()
+    this.LargeEstablishmentService.sendSelectedData()
       .subscribe((resp: any) => {
-        this.LSData = resp.results;
-        console.log(resp.results)
+        this.LargeEstablishmentsData = resp.results;
+        console.log("resp desde detail page: ",resp.results)
       });
   }
 

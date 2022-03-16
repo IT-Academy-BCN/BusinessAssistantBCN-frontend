@@ -6,7 +6,7 @@
             <div class="p-3 ms-8 border bg-light" >
                 <h2 class=" ps-5 pt-4 fw-bold mb-3">{{'common.title.results' | translate}}</h2>
                 <div class="data" *ngIf="true" id="pdfData">
-                    <div class="d-flex flex-column mb-4" *ngFor = "let ls of LSData">
+                    <div class="d-flex flex-column mb-4" *ngFor = "let ls of LargeEstablishmentsData">
                         <h5 class="details">{{ls.name}}
                         </h5>
                         <ul class="result-container list-unstyled" *ngFor = "let address of ls.addresses ">
@@ -36,7 +36,7 @@
         <div class="col m-5 mx-3">
             <div class="p-3 border bg-light text-center">
                 <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
-                <app-mapbox [LargeEstablishmentsFilteredData]="LSData"></app-mapbox>
+                <app-mapbox [LargeEstablishmentsFilteredData]="LargeEstablishmentsData"></app-mapbox>
             </div>
         </div>
     </div>
