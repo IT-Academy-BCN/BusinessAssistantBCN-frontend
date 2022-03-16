@@ -1,7 +1,6 @@
-import { Component, OnInit, TemplateRef } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgbActiveModal, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { Subscription } from 'rxjs';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
 import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 
