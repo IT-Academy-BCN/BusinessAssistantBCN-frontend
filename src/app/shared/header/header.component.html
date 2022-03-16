@@ -8,7 +8,7 @@
             </button>
             <a class="nav-link" id="navbarDropdown" >
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark border-start-0 m-0" id="navigation">
+            <ul *ngIf="!user" class="dropdown-menu dropdown-menu-dark border-start-0 m-0" id="navigation">
                 <li class="nav-list"><a class="nav-link" (click)="openLoginForm()">Login</a></li>
                 <li class="nav-list"><a routerLink='home' routerLinkActive="" class="nav-link"
                         aria-current="page">{{'components.header.section2.title' | translate}}</a></li>
