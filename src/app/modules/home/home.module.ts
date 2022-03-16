@@ -9,6 +9,8 @@ import { InformationNavComponent } from './home-components/information-nav/infor
 import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
 import { MapboxComponent } from './mapbox/mapbox.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,13 +24,14 @@ import { MapboxComponent } from './mapbox/mapbox.component';
     LargeStablishmentsDetailPageComponent,
     InformationNavComponent,
     VirtualAssistantComponent,
-    MapboxComponent,
-
+    MapboxComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    NgbModule,
+    ReactiveFormsModule
   ],
   exports: [
     HomePageComponent

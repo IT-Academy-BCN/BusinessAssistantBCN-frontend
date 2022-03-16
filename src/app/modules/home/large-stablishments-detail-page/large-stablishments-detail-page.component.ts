@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, TemplateRef } from '@angular/core'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbActiveModal, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Subscription } from 'rxjs';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
 import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 
@@ -10,11 +13,46 @@ import { LargeStablishmentModel } from '../../../models/large-stablishment.model
 export class LargeStablishmentsDetailPageComponent implements OnInit {
   LSData: LargeStablishmentModel[] = []
 
-  constructor(private lSservice: LargeStablishmentsService) {}
+  constructor(
+    private lSservice: LargeStablishmentsService,
+    private modalService: NgbModal,
+    private fb:FormBuilder
+    ) {}
 
   ngOnInit(): void {
     this.lSservice.getLgSt().subscribe((data) => {
       this.LSData = data.results
     })
+  }
+
+  // Save Search Modal Form
+  saveSearchForm: FormGroup = this.fb.group({
+    nombre: ['', Validators.required],
+    detalles: ['', Validators.required]
+  })
+  private submitted: boolean = false;
+
+  // Save Search Modal Behavior
+  open( modal: any ){
+    this.submitted = false;
+    this.saveSearchForm.reset()
+    this.modalService.open(modal, { centered: true,})
+  }
+
+  closeModal(){
+    this.modalService.dismissAll();
+  }
+
+  inputInvalid( input: string ): boolean {
+    return  this.saveSearchForm.controls[input].invalid && this.submitted
+  }
+
+  onSubmit(){
+    if( this.saveSearchForm.invalid ){
+      this.submitted = true
+      return
+    }
+    console.log( this.saveSearchForm.value );
+    this.closeModal()
   }
 }
