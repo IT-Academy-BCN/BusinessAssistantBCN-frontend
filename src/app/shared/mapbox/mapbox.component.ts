@@ -1,90 +1,103 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import Mapboxgl from 'mapbox-gl';
-import { Map, Popup, Marker } from 'mapbox-gl';
-import { environment } from 'src/environments/environment';
-import {LargeStablishmentModel} from "../../models/large-stablishment.model"
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  Input,
+  SimpleChanges,
+} from "@angular/core";
+import Mapboxgl from "mapbox-gl";
+import { Map, Popup, Marker } from "mapbox-gl";
+import { environment } from "src/environments/environment";
+import { LargeStablishmentModel } from "../../models/large-stablishment.model";
 
 @Component({
-  selector: 'app-mapbox',
-  templateUrl: './mapbox.component.html',
-  styleUrls: ['./mapbox.component.css']
+  selector: "app-mapbox",
+  templateUrl: "./mapbox.component.html",
+  styleUrls: ["./mapbox.component.css"],
 })
 export class MapboxComponent implements AfterViewInit {
+  @ViewChild("mapDiv")
+  mapDivElement!: ElementRef;
+  @Input() LargeEstablishmentsFilteredData!: LargeStablishmentModel[];
+  map!: Map;
 
-  @ViewChild('mapDiv')
-  mapDivElement!: ElementRef
+  constructor() {}
 
-  constructor() { }
-
-  example:LargeStablishmentModel = {
-    "name": "Compañia Roca Sanitario",
-    "web": "http://www.roca.es",
-    "email": "infosan@roca.net",
-    "phone": null,
-    "activities": [
+  ITAcademy: LargeStablishmentModel = {
+    name: "IT Academy",
+    web: "bcn.cat/barcelonactiva",
+    email: "itacademy@barcelonactiva.cat",
+    phone: 932917610,
+    activities: [
       {
-        "idActivity": 1008031,
-        "activityName": "Delegacions - oficines comercials"
+        idActivity: 107007,
+        activityName: "Informàtica i telecomunicació",
       },
-      {
-        "idActivity": 32805741,
-        "activityName": "Sanitaris"
-      },
-      {
-        "idActivity": 29302310,
-        "activityName": "Com.may. materiales construccion"
-      },
-      {
-        "idActivity": 30699721,
-        "activityName": "Alquiler locales industriales"
-      }
     ],
-    "addresses": [
+    addresses: [
       {
-        "street_name": "Av Diagonal",
-        "number": "513",
-        "zip_code": "08029",
-        "district_id": "04",
-        "town": "BARCELONA",
-        "location": {
-          "x": 2.1409409554701795,
-          "y": 41.39149590578569
-
-        }
-      }
-    ]
-  }
+        street_name: "Roc Boronat",
+        number: "117-127",
+        zip_code: "08018",
+        district_id: "04",
+        town: "BARCELONA",
+        location: {
+          x: 2.194060007737955,
+          y: 41.40389733660671,
+        },
+      },
+    ],
+  };
 
   ngAfterViewInit(): void {
-    this.generateMap(this.example);
-
-
-
-
-
+    this.generateMap(this.ITAcademy);
   }
 
-  generateMap(business:LargeStablishmentModel){//TODO Add other establishments models to business type whenever they are defined
+  generateMap(business: LargeStablishmentModel) {
+    //TODO Add other establishments models to business type whenever they are defined
     Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
-    const map = new Map({
+    this.map = new Map({
       container: this.mapDivElement.nativeElement,
-      style: 'mapbox://styles/mapbox/light-v10', // style URL
-      center: [ business.addresses[0].location.x, business.addresses[0].location.y ], // starting position [lng, lat]
-      zoom: 14 // starting zoom
+      style: "mapbox://styles/mapbox/light-v10", // style URL
+      center: [
+        business.addresses[0].location.x,
+        business.addresses[0].location.y,
+      ], // starting position [lng, lat]
+      zoom: 11, // starting zoom
     });
 
-    const popup = new Popup()
-
-
-    new Marker({color: 'red'})
-        .setLngLat([ business.addresses[0].location.x, business.addresses[0].location.y ])
-        .setPopup( popup )
-        .addTo( map )
-
-
-
-
-
+    this.createANewMarker(business, "red");
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    console.log("després dels canvis: ", this.LargeEstablishmentsFilteredData);
+    console.log("els changes:", changes);
+
+    // PER PROVES NOMÉS!
+    // new Marker({ color: "green" })
+    //   .setLngLat([3.8909097, 38.0554455])
+    //   .addTo(this.map);
+
+    this.LargeEstablishmentsFilteredData.forEach((element) => {
+
+      // Create a marker for each element and add it to the map
+      this.createANewMarker(element, "orange");
+    });
+  }
+
+  // Create a maker for a single LargeEstablishment (with the marker colour) 
+  createANewMarker(element: LargeStablishmentModel, markerColor: string): void {
+    const popup = new Popup().setHTML(
+      `<b>${element.name}</b> </br> ${element.addresses[0].street_name} , ${element.addresses[0].number}`
+    );
+
+    new Marker({ color: markerColor })
+      .setLngLat([
+        element.addresses[0].location.x,
+        element.addresses[0].location.y,
+      ])
+      .setPopup(popup)
+      .addTo(this.map);
+  }
 }
