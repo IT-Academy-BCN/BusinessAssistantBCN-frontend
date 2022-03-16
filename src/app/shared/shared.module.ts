@@ -11,12 +11,14 @@ import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-transla
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {ObserverIntersectionDirective} from "./directives/observer-interceptor.directive";
+import {MapboxComponent} from "./mapbox/mapbox.component";
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
+      MapboxComponent,
     MenuComponent,
     LanguageChangerComponent,
       ObserverIntersectionDirective,
@@ -37,7 +39,8 @@ import {ObserverIntersectionDirective} from "./directives/observer-interceptor.d
     HeaderComponent,
     FooterComponent,
     TranslateModule,
-    ObserverIntersectionDirective
+    ObserverIntersectionDirective,
+      MapboxComponent
   ]
 })
 export class SharedModule { 
