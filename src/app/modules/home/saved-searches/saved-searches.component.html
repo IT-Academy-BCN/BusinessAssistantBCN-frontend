@@ -1,32 +1,33 @@
-
 <app-header></app-header>
-<div class=" main-container">
-    <div class="row ">
-      <div class="col box">
-        <div class="p-3 ms-8 border bg-light card-contents">
-          <h2 class=" ps-3 pt-4 fw-bold mb-3 title-left">
-              {{'components.saved-searches.title'| translate}}
-              <!-- Mis Búsquedas -->
-          </h2>
-          <div class="card-contents border ps-4 pt-2 m-3"   *ngFor = "let savedSearch of savedSearchesData">
-              <div class="row">
-                  <div class="col-3 ">
-                      <div class="row fw-light"> {{'components.saved-searches.item-2'| translate}}</div>
-                      <div class="row fw-bold ps-2">{{savedSearch.search_name}}</div>
-                  </div>
-                  <div class="col-2 ">
-                    <div class="row fw-light"> {{'components.saved-searches.item-3'| translate}}</div>
-                    <div class="row fw-bold ps-2">{{savedSearch.search_date}}</div>
-                  </div>
-                  <div class="col-4 ">
-                    <div class="row fw-light"> {{'components.saved-searches.item-4'| translate}}</div>
-                    <div class="row fw-bold ps-2">{{savedSearch.search_detail}}</div>
-                  </div>
-                  <div class="col-3 "><button class="search-button"> {{'components.saved-searches.item-1'| translate}}</button></div>
-              </div>
-       
+<div class="container mb-lg-5 mt-lg-5 main-container">
+  <div class="row ">
+    <div class="col box">
+      <div class="p-3 ms-8 border bg-light card-contents">
+        <h2 class=" ps-3 pt-4 fw-bold mb-3 title-left">
+          {{'components.saved-searches.title'| translate}}
+          <!-- Mis Búsquedas -->
+        </h2>
+        <div class="card-contents border ps-4 pt-2 m-3" *ngFor="let savedSearch of savedSearchesData">
+          <div class="row">
+            <div class="col-3 ">
+              <div class="row fw-light"> {{'components.saved-searches.item-2'| translate}}</div>
+              <div class="row fw-bold ps-2">{{savedSearch.search_name}}</div>
+            </div>
+            <div class="col-2 ">
+              <div class="row fw-light"> {{'components.saved-searches.item-3'| translate}}</div>
+              <div class="row fw-bold ps-2">{{savedSearch.search_date}}</div>
+            </div>
+            <div class="col-4 ">
+              <div class="row fw-light"> {{'components.saved-searches.item-4'| translate}}</div>
+              <div class="row fw-bold ps-2">{{savedSearch.search_detail}}</div>
+            </div>
+            <div class="col-3 "><button class="search-button" routerLink="/large-stablishments-detail">
+                {{'components.saved-searches.item-1'| translate}}</button></div>
           </div>
+
         </div>
       </div>
-      </div></div>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>
