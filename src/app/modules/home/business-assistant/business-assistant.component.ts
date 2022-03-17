@@ -8,17 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessAssistantComponent implements OnInit {
 
-  listado: string[] =[
-    'pages.business-assistant.section2.title',
-    'pages.business-assistant.section3.title',
-    'pages.business-assistant.section4.title',
-    'pages.business-assistant.section5.title',
-    'pages.business-assistant.section6.title',
-    'pages.business-assistant.section7.title',
-  ]
+
+
+  // listado: object= {
+  //   title1: 'pages.business-assistant.section2.title',
+  //   subcat1: 'pages.business-assistant.section3.title',
+  //   subcat2: 'pages.business-assistant.section4.title',
+  //   subcat3: 'pages.business-assistant.section5.title',
+  //   subcat4: 'pages.business-assistant.section6.title',
+  //   title12: 'pages.business-assistant.section7.title'
+  // }
+
+  
+
 
   item: string = ''
-  activo: boolean = false
+  active: boolean = false
 
   constructor() { }
 
@@ -27,10 +32,7 @@ export class BusinessAssistantComponent implements OnInit {
 
   isOpen(activo: string){
     this.item = activo
-  }
-
-  cambioClase(item: string): string{
-    return (item === this.item) ? 'active': ''
+    this.active = true
   }
 
 }
