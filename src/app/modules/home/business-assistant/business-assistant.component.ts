@@ -16,14 +16,16 @@ export class BusinessAssistantComponent implements OnInit {
     'pages.business-assistant.section6.title',
     'pages.business-assistant.section7.title',
   ]
+
   item: string = ''
   activo: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  open(activo: string){
+  isOpen(activo: string){
     this.item = activo
   }
 

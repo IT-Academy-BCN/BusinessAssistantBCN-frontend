@@ -1,28 +1,26 @@
 <app-header></app-header>
 
 <div class="container mb-5 pb-3">
-    
+
     <h4 class="m-3 fw-bold">{{'pages.business-assistant.section1.title' | translate}}</h4>
 
     <div class="row">
         <div class="col-6">
 
             <div class="ms-5 ps-3" *ngFor="let list of listado">
-                <div class="lista fw-bold p-3"
-                    (click)="open(list)"
-                    [class]="cambioClase(list)">
+                <div class="lista fw-bold p-3" (click)="isOpen(list)" [class]="cambioClase(list)">
                     <span class="ms-4">
                         {{list | translate}}        
                     </span>
                 </div>
-                
+
                 <div class="container" *ngIf="item === list">
                     <div class="row">
                         <div class="col">
                             <p class="fw-bold m-4 pointer">{{'pages.business-assistant.section2.title1' | translate}}</p>
                             <p class="m-4 ps-3 pointer">{{'pages.business-assistant.section2.item1' | translate}}</p>
                             <p class="m-4 ps-3 pointer">{{'pages.business-assistant.section2.item2' | translate}}</p>
-                            <p class="m-4 ps-3 pointer">{{'pages.business-assistant.section2.item3' | translate}}</p>  
+                            <p class="m-4 ps-3 pointer">{{'pages.business-assistant.section2.item3' | translate}}</p>
                             <p class="fw-bold m-4 pointer">{{'pages.business-assistant.section2.title2' | translate}}</p>
                         </div>
                     </div>
@@ -32,7 +30,7 @@
         <div class="col-6">
             <div class="card h-100">
                 <div class="card-body">
-                  This is some text within a card body.
+                    This is some text within a card body.
                 </div>
                 <div>
                     <button class="btn btn-success float-end m-4 px-5">{{'common.button.save' | translate}}</button>
