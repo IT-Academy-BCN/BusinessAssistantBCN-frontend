@@ -6,7 +6,7 @@ import {
   Input,
   SimpleChanges,
 } from "@angular/core";
-import Mapboxgl from "mapbox-gl";
+import Mapboxgl, { NavigationControl } from "mapbox-gl";
 import { Map, Popup, Marker } from "mapbox-gl";
 import { environment } from "src/environments/environment";
 import { LargeStablishmentModel } from "../../models/large-stablishment.model";
@@ -66,27 +66,18 @@ export class MapboxComponent implements AfterViewInit {
       ], // starting position [lng, lat]
       zoom: 11, // starting zoom
     });
-
+    this.map.addControl(new NavigationControl());
     this.createANewMarker(business, "red");
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    // console.log("després dels canvis: ", this.LargeEstablishmentsFilteredData);
-    // console.log("els changes:", changes);
-
-    // PER PROVES NOMÉS!
-    // new Marker({ color: "green" })
-    //   .setLngLat([3.8909097, 38.0554455])
-    //   .addTo(this.map);
-
+  ngOnChanges() {
     this.LargeEstablishmentsFilteredData.forEach((element) => {
-
       // Create a marker for each element and add it to the map
       this.createANewMarker(element, "orange");
     });
   }
 
-  // Create a maker for a single LargeEstablishment (with the marker colour) 
+  // Function to create a maker for a single LargeEstablishment (with the marker's colour)
   createANewMarker(element: LargeStablishmentModel, markerColor: string): void {
     const popup = new Popup().setHTML(
       `<b>${element.name}</b> </br> ${element.addresses[0].street_name} , ${element.addresses[0].number}`
