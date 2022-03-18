@@ -1,13 +1,5 @@
-import {
-  Component,
-  AfterViewInit,
-  ViewChild,
-  ElementRef,
-  Input,
-  SimpleChanges,
-} from "@angular/core";
-import Mapboxgl, { NavigationControl } from "mapbox-gl";
-import { Map, Popup, Marker } from "mapbox-gl";
+import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
+import Mapboxgl, { GeolocateControl, NavigationControl, Map, Popup, Marker, Coordinate, LngLat } from "mapbox-gl";
 import { environment } from "src/environments/environment";
 import { LargeStablishmentModel } from "../../models/large-stablishment.model";
 
@@ -22,73 +14,72 @@ export class MapboxComponent implements AfterViewInit {
   @Input() LargeEstablishmentsFilteredData!: LargeStablishmentModel[];
   map!: Map;
 
-  constructor() {}
-
-  ITAcademy: LargeStablishmentModel = {
-    name: "IT Academy",
-    web: "bcn.cat/barcelonactiva",
-    email: "itacademy@barcelonactiva.cat",
-    phone: 932917610,
-    activities: [
-      {
-        idActivity: 107007,
-        activityName: "Informàtica i telecomunicació",
-      },
-    ],
-    addresses: [
-      {
-        street_name: "Roc Boronat",
-        number: "117-127",
-        zip_code: "08018",
-        district_id: "04",
-        town: "BARCELONA",
-        location: {
-          x: 2.194060007737955,
-          y: 41.40389733660671,
-        },
-      },
-    ],
-  };
+  constructor() { }
 
   ngAfterViewInit(): void {
-    this.generateMap(this.ITAcademy);
+    // Generate map with basic config
+    this.generateMap();
+    // Depending on if the user accepts to share their location, center the map into the user, or into the default location (IT Academy)
+    navigator.geolocation.getCurrentPosition(
+      // Success callback function (if user has accepted to share their location)
+      (pos) => {
+        this.map.flyTo({ center: [pos.coords.longitude, pos.coords.latitude], zoom: 13 })
+        this.createANewMarker("blue", undefined, pos.coords);
+      },
+      // Error callback function (if user hasn't accepted to share their location)
+      () => {
+        this.map.flyTo(
+          { center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], zoom: 13 })
+        this.createANewMarker("red", environment.MAPBOX_ITAcademy_OBJECT,);
+      });
   }
 
-  generateMap(business: LargeStablishmentModel) {
+  generateMap() {
     //TODO Add other establishments models to business type whenever they are defined
     Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
     this.map = new Map({
       container: this.mapDivElement.nativeElement,
-      style: "mapbox://styles/mapbox/light-v10", // style URL
-      center: [
-        business.addresses[0].location.x,
-        business.addresses[0].location.y,
-      ], // starting position [lng, lat]
-      zoom: 11, // starting zoom
+      style: "mapbox://styles/mapbox/light-v10", // style URL }
     });
+
     this.map.addControl(new NavigationControl());
-    this.createANewMarker(business, "red");
+
+    // Add geolocate control to the map.
+    this.map.addControl(
+      new GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true,
+        },
+        // When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+      })
+    );
   }
 
   ngOnChanges() {
     this.LargeEstablishmentsFilteredData.forEach((element) => {
       // Create a marker for each element and add it to the map
-      this.createANewMarker(element, "orange");
+      this.createANewMarker("orange", element);
     });
   }
 
   // Function to create a maker for a single LargeEstablishment (with the marker's colour)
-  createANewMarker(element: LargeStablishmentModel, markerColor: string): void {
+  createANewMarker(markerColor: string, element?: LargeStablishmentModel, coord?: GeolocationCoordinates): void {
+
+    // Create a popup with the businesse's basic information
     const popup = new Popup().setHTML(
-      `<b>${element.name}</b> </br> ${element.addresses[0].street_name} , ${element.addresses[0].number}`
+      `<b>${element?.name}</b> </br> ${element?.addresses[0].street_name} , ${element?.addresses[0].number}`
     );
 
-    new Marker({ color: markerColor })
-      .setLngLat([
-        element.addresses[0].location.x,
-        element.addresses[0].location.y,
-      ])
-      .setPopup(popup)
-      .addTo(this.map);
+    if (coord) { // If user has accepted to share their location
+      new Marker({ color: markerColor })
+        .setLngLat([coord.longitude, coord.latitude])
+        .addTo(this.map);
+    } else { // If user hasn't accepted to share their location
+      new Marker({ color: markerColor })
+        .setLngLat([element!.addresses[0].location.x, element!.addresses[0].location.y])
+        .setPopup(popup)
+        .addTo(this.map);
+    }
   }
 }
