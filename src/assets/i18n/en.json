@@ -33,6 +33,12 @@
             },
             "section4": {
                 "title": "FAQs"
+            },
+            "section5": {
+                "title": "My Searches"
+            },
+            "section6": {
+                "title":"Directory"
             }
         },
         "info-nav": {
@@ -93,6 +99,9 @@
             "mall": "Malls",
             "public-market": "Municipal Markets",
             "market-fair": "Markets and Fairs"
+        },
+        "title": {
+            "results": "Results"
         }
     }
 }

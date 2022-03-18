@@ -8,12 +8,8 @@ import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
-import { MapboxComponent } from './mapbox/mapbox.component';
 import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
-
-
-
-
+import { MapboxComponent } from '../../shared/mapbox/mapbox.component';
 
 @NgModule({
   declarations: [
