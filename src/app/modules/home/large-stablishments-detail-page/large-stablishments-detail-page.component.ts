@@ -4,6 +4,10 @@ import { LargeStablishmentModel } from '../../../models/large-stablishment.model
 import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 
 @Component({
   selector: 'app-large-stablishments-detail-page',
@@ -34,5 +38,15 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
       modalDialogClass:'modal-sizer',
       centered: true,
     });
+  }
+
+  generateDocument(){
+    const clone = this.LargeEstablishmentsData.map(ls=>{
+      const simpleLS:any = Object.assign({},ls);
+      delete simpleLS.activities;
+      return simpleLS;
+    })
+    const docDefinition = {content:JSON.stringify(clone,null,"\t")}
+    pdfMake.createPdf(docDefinition).open();
   }
 }
