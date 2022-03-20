@@ -10,6 +10,7 @@ import { VirtualAssistantComponent } from './home-components/virtual-assistant/v
 import { RouterModule } from '@angular/router';
 import { MapboxComponent } from './mapbox/mapbox.component';
 import { BusinessAssistantComponent } from './business-assistant/business-assistant.component';
+import { BusinessAssitantDataSaveComponent } from './business-assitant-data-save/business-assitant-data-save.component';
 
 
 
@@ -25,7 +26,7 @@ import { BusinessAssistantComponent } from './business-assistant/business-assist
     VirtualAssistantComponent,
     MapboxComponent,
     BusinessAssistantComponent,
-
+    BusinessAssitantDataSaveComponent
   ],
   imports: [
     CommonModule,

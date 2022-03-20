@@ -12,13 +12,15 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginModule } from './modules/login/login.module';
+import { BusinessAssitantDataSaveComponent } from './modules/home/business-assitant-data-save/business-assitant-data-save.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
 
   ],
   imports: [

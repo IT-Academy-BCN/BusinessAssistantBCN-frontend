@@ -3,34 +3,31 @@
 <div class="container mb-5 pb-3">
 
     <h4 class="m-3 fw-bold">{{'pages.business-assistant.section1.title' | translate}}</h4>
-
     <div class="row">
         <div class="col-6">
-
             <div class="accordion ms-5 ps-3">
-
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         {{'pages.business-assistant.section2.title1' | translate}}
                       </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                                <p class="fw-bold m-4 pointer">{{'pages.business-assistant.section2.title1' | translate}}</p>
-                                <p class="m-4 ps-3 pointer">{{'pages.business-assistant.section2.item1' | translate}}</p>
-                                <p class="m-4 ps-3 pointer">{{'pages.business-assistant.section2.item2' | translate}}</p>
-                                <p class="m-4 ps-3 pointer">{{'pages.business-assistant.section2.item3' | translate}}</p>
-                                <p class="fw-bold m-4 pointer">{{'pages.business-assistant.section2.title2' | translate}}</p>
+                            <p class="baItem fw-bold m-4">{{'pages.business-assistant.section2.title1' | translate}}</p>
+                            <p class="baItem m-4 ps-3">{{'pages.business-assistant.section2.item1' | translate}}</p>
+                            <p class="baItem m-4 ps-3">{{'pages.business-assistant.section2.item2' | translate}}</p>
+                            <p class="baItem m-4 ps-3">{{'pages.business-assistant.section2.item3' | translate}}</p>
+                            <p class="baItem fw-bold m-4">{{'pages.business-assistant.section2.title2' | translate}}</p>
                         </div>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
         <div class="col-6">
             <div class="card h-100">
                 <div class="card-body">
-                    This is some text within a card body.
+                    <app-business-assitant-data-save></app-business-assitant-data-save>
                 </div>
                 <div>
                     <button class="btn btn-success float-end m-4 px-5">{{'common.button.save' | translate}}</button>

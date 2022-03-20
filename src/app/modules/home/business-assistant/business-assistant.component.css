@@ -1,4 +1,4 @@
-.lista{
+.lista {
     cursor: pointer;
     padding-left: 35px;
     margin: 3px;
@@ -7,12 +7,14 @@
     font-size: larger;
 }
 
-.lista:hover{
+.lista:hover {
     background-color: #0D6EFD;
 }
-.active{
+
+.active {
     background-color: #0D6EFD;
 }
-.pointer{
+
+.baItem {
     cursor: pointer;
 }

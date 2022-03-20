@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BusinessAssistantDataService } from 'src/app/services/business-assistant-data.service';
 
 
 @Component({
@@ -8,31 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessAssistantComponent implements OnInit {
 
+@Input() data:any;
 
+public listado:Array<any>= [];
 
-  // listado: object= {
-  //   title1: 'pages.business-assistant.section2.title',
-  //   subcat1: 'pages.business-assistant.section3.title',
-  //   subcat2: 'pages.business-assistant.section4.title',
-  //   subcat3: 'pages.business-assistant.section5.title',
-  //   subcat4: 'pages.business-assistant.section6.title',
-  //   title12: 'pages.business-assistant.section7.title'
-  // }
+ngOnInit(): void {
+  this.listado= [
+    {title: 'pages.business-assistant.section2.title'},
+    {title: 'pages.business-assistant.section3.title'},
+    {title: 'pages.business-assistant.section4.title'},
+    {title: 'pages.business-assistant.section5.title'},
+    {title: 'pages.business-assistant.section6.title'},
+    {title: 'pages.business-assistant.section7.title'}
+  ]
+}
 
-  
 
 
   item: string = ''
   active: boolean = false
 
-  constructor() { }
+  constructor(private businessAssistantData : BusinessAssistantDataService) { }
 
-  ngOnInit(): void {
-  }
+
 
   isOpen(activo: string){
     this.item = activo
     this.active = true
   }
+
+  // saveData(){
+  //   this.businessAssistantData.dataSaver.emit()
+  // }
 
 }
