@@ -19,7 +19,7 @@ import { MapboxComponent } from '../../shared/mapbox/mapbox.component';
     LargeStablishmentsDetailPageComponent,
     InformationNavComponent,
     VirtualAssistantComponent,
-    MapboxComponent,
+   // MapboxComponent,
     SavedSearchesComponent
   ],
   imports: [
