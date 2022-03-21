@@ -14,6 +14,8 @@ export const environment = {
 
   BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS: '../../assets/dummy/large_establishments_fake_filtered_results.json',
 
+
+ 
   MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A'
 };
 
