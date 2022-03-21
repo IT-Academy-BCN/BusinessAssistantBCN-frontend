@@ -70,6 +70,7 @@ export class LoginFormComponent implements OnInit {
 
     if (val.email && val.password) {
       this.auth.login(this.loginForm.value).subscribe(() => {
+        this.auth.setUserLogged(true)   // To be replaced when user login works
         console.log('User is log');
       });
       this.resetForm();

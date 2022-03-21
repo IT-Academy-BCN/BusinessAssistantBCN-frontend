@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
 import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 
 @Component({
@@ -14,7 +15,12 @@ import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.
 export class LargeStablishmentsDetailPageComponent implements OnInit {
   LargeEstablishmentsData: LargeStablishmentModel[] = []
 
-  constructor(private LargeEstablishmentService: LargeStablishmentsService, private modalService: NgbModal, private fb:FormBuilder) {}
+  constructor(
+    private LargeEstablishmentService: LargeStablishmentsService,
+    private auth: AuthenticationService,
+    private modalService: NgbModal, 
+    private fb:FormBuilder,
+  ) {}
 
   ngOnInit(): void {
     this.LargeEstablishmentService.sendSelectedData()
@@ -46,9 +52,19 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
 
   // Save Search Modal Behavior
   open( modal: any ){
+    if( !this.userLogged() ){ return }   // To be replaced when user login works
     this.submitted = false;
     this.saveSearchForm.reset()
     this.modalService.open(modal, { centered: true,})
+  }
+
+  // To be replaced when user login works
+  userLogged():boolean {
+    if( !this.auth.userLogged ){
+      this.openLoginForm()
+      return false;
+    }
+    return true
   }
 
   closeModal(){
