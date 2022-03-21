@@ -2,19 +2,23 @@
   "count": 96,
   "offset": 0,
   "limit": 0,
-  "results": [
+  "results":
+  [
     {
       "search_uuid": "search_uuid",
       "user_uuid": "user_uuid",
       "search_date": "search_date",
       "search_name": "search_name",
-      "search_detail": [
+      "search_detail": "search_detail",
+      "search_result":
+      [
         {
           "name": "Compañia Roca Sanitario",
           "web": "http://www.roca.es",
           "email": "infosan@roca.net",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -32,16 +36,18 @@
               "name": "Alquiler locales industriales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "513",
               "zip_code": "08029",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
-                "x": 428171.7030365344,
-                "y": 4582566.444676705
+              "location":
+              {
+                "x": 41.391424,
+                        "y": 2.140835
               }
             }
           ]
@@ -51,7 +57,8 @@
           "web": "http://www.inoxcrom.com",
           "email": "inoxcrom@inoxcrom.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -97,14 +104,16 @@
               "name": "Fab. art. escritorio"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "T Estadella",
               "number": "46*54",
               "zip_code": "08030",
               "district_id": "09",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 433134.09787419107,
                 "y": 4587261.391920368
               }
@@ -116,7 +125,8 @@
           "web": "http://www.basf.com/es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -138,14 +148,16 @@
               "name": "Alquiler locales industriales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Can Ràbia",
               "number": "3*5",
               "zip_code": "08017",
               "district_id": "05",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427646.2461106456,
                 "y": 4582718.832077941
               }
@@ -157,7 +169,8 @@
           "web": "http://www.fujifilm.eu/es/",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -199,14 +212,16 @@
               "name": "Venda Pel.lícula Verge"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Aragó",
               "number": "180",
               "zip_code": "08011",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429620.0300793953,
                 "y": 4581997.003537545
               }
@@ -218,7 +233,8 @@
           "web": null,
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -244,14 +260,16 @@
               "name": "Com.may. libros, periodicos y revistas"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Aribau",
               "number": "200",
               "zip_code": "08036",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429106.26689227845,
                 "y": 4582857.248036841
               }
@@ -263,7 +281,8 @@
           "web": "http://fontvellaencasa.es",
           "email": "fontvellaencasa@danone.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -289,14 +308,16 @@
               "name": "Prep. y envasado de aguas minerales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Buenos Aires",
               "number": "21",
               "zip_code": "08029",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428558.32828020985,
                 "y": 4582560.480816803
               }
@@ -308,7 +329,8 @@
           "web": "http://www.dell.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -326,14 +348,16 @@
               "name": "Informàtica i telecomunicació"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": null,
               "number": null,
               "zip_code": null,
               "district_id": "00",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": -80.8040026142844,
                 "y": -121.32318377961765
               }
@@ -345,7 +369,8 @@
           "web": "http://www.lallavedeoro.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -363,14 +388,16 @@
               "name": "Promocion de edificaciones"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Manuel Girona",
               "number": "62*64",
               "zip_code": "08034",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 426945.1999562205,
                 "y": 4582569.163387396
               }
@@ -382,7 +409,8 @@
           "web": "http://www.ibm.com/es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -416,14 +444,16 @@
               "name": "Enseñanza form. profesional superior"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "571",
               "zip_code": "08029",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427675.4938963018,
                 "y": 4582393.626257071
               }
@@ -435,7 +465,8 @@
           "web": "http://www.oracle.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -449,14 +480,16 @@
               "name": "Informàtica i telecomunicació"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "615",
               "zip_code": "08028",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427160.5599373811,
                 "y": 4582226.312779045
               }
@@ -468,7 +501,8 @@
           "web": "http://www.cedro.org",
           "email": "cedrocat@cedro.org",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -482,14 +516,16 @@
               "name": "Dret"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Pau Claris",
               "number": "94",
               "zip_code": "08010",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430649.8899804966,
                 "y": 4582423.576588005
               }
@@ -501,7 +537,8 @@
           "web": "http://www.henkel.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -519,14 +556,16 @@
               "name": "Fab. jabones comunes, detergentes, lejia"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Bilbao",
               "number": "72*84",
               "zip_code": "08005",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 433249.38040645653,
                 "y": 4583977.496953015
               }
@@ -538,7 +577,8 @@
           "web": "http://www.mahou-sanmiguel.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -552,14 +592,16 @@
               "name": "Alimentació i begudes"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Comte d'Urgell",
               "number": "240",
               "zip_code": "08036",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428769.2812551021,
                 "y": 4582441.724019986
               }
@@ -571,7 +613,8 @@
           "web": null,
           "email": "asc@asc.cat",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -585,14 +628,16 @@
               "name": "Hospitales especializados"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Josep Tarradellas",
               "number": "123*127",
               "zip_code": "08029",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428356.3902873575,
                 "y": 4582351.395814085
               }
@@ -604,7 +649,8 @@
           "web": "http://www.llongueras.com",
           "email": "llongueras@llongueras.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -618,14 +664,16 @@
               "name": "Salones e institutos de belleza"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Berlín",
               "number": "39*41",
               "zip_code": "08014",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427951.7003733909,
                 "y": 4581638.689682821
               }
@@ -637,7 +685,8 @@
           "web": "http://www.kenwoodworld.com/es-es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -655,14 +704,16 @@
               "name": "Fab. receptores radio, tv, y sonido"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Ports d'Europa",
               "number": "100",
               "zip_code": "08040",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427607.1451767299,
                 "y": 4574886.673572175
               }
@@ -674,7 +725,8 @@
           "web": "http://www.elcorteingles.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -688,14 +740,16 @@
               "name": "Enseñanza formacion prof. no superior"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Bolívia",
               "number": "234",
               "zip_code": "08020",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 433256.04620980687,
                 "y": 4584642.622468389
               }
@@ -707,7 +761,8 @@
           "web": "http://www.konicaminolta.es",
           "email": "barcelona@konicaminolta.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -733,14 +788,16 @@
               "name": "Com.may.apar.y mat. electronico"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Rbla Brasil",
               "number": "38*40",
               "zip_code": "08028",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427249.8023204471,
                 "y": 4581067.895103516
               }
@@ -752,7 +809,8 @@
           "web": "http://www.ree.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -770,14 +828,16 @@
               "name": "Treball, industria, comerç i serveis"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Paral.lel",
               "number": "55",
               "zip_code": "08004",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430682.8510178235,
                 "y": 4580687.514538063
               }
@@ -789,7 +849,8 @@
           "web": "http://www.cafesnovell.com",
           "email": "info@cafesnovell.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -799,14 +860,16 @@
               "name": "Cafès"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Marina",
               "number": "179",
               "zip_code": "08013",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 431482.462682784,
                 "y": 4583432.998910287
               }
@@ -818,7 +881,8 @@
           "web": "http://www.bcn.cat/cultura/merce/PlanolEspai_Fabrica_Damm.jpg",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -876,14 +940,16 @@
               "name": "Fab. cerveza y malta de cerveza"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Carrer del Rosselló",
               "number": "515",
               "zip_code": "08025",
               "district_id": "02",
               "town": "Barcelona",
-              "location": {
+              "location":
+              {
                 "x": 431312.5701154573,
                 "y": 4584501.630454083
               }
@@ -895,7 +961,8 @@
           "web": "http://www.lavazza.es",
           "email": "info@lavazza.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -917,14 +984,16 @@
               "name": "Com.may.otro ptos.alimenticios,hel.,etc"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Gràcia",
               "number": "50",
               "zip_code": "08007",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430247.2618546888,
                 "y": 4582612.372663155
               }
@@ -936,7 +1005,8 @@
           "web": "http://www.vichycatalan.com",
           "email": "consumidor@pmg1881.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -950,14 +1020,16 @@
               "name": "Com.may.bebidas y tabaco"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Roger de Llúria",
               "number": "126",
               "zip_code": "08037",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430004.8610725182,
                 "y": 4583276.000139087
               }
@@ -969,7 +1041,8 @@
           "web": "http://elconsorci.es",
           "email": "czfb@el-consorci.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -983,14 +1056,16 @@
               "name": "Oficines - Despatxos"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Parc Logístic",
               "number": "2*10",
               "zip_code": "08040",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427163.07203201123,
                 "y": 4577059.11523842
               }
@@ -1002,7 +1077,8 @@
           "web": "http://www.majorica.com",
           "email": "info@majorica.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1016,14 +1092,16 @@
               "name": "Articles de joieria"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Gràcia",
               "number": "74",
               "zip_code": "08008",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430078.0044613312,
                 "y": 4582796.937827548
               }
@@ -1035,7 +1113,8 @@
           "web": "http://www.hpe.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1077,14 +1156,16 @@
               "name": "Tte. mercancias por carretera"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Tànger",
               "number": "66",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432396.1657684077,
                 "y": 4583613.986328858
               }
@@ -1096,7 +1177,8 @@
           "web": "http://www.kodak.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1118,14 +1200,16 @@
               "name": "Venda Pel.lícula Verge"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Milanesat",
               "number": "25",
               "zip_code": "08017",
               "district_id": "05",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427334.81399900955,
                 "y": 4583359.188764439
               }
@@ -1137,7 +1221,8 @@
           "web": "http://www.pastasgallo.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1159,14 +1244,16 @@
               "name": "Com.may.ptos.alimentic.bebidas y tabacos"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "468",
               "zip_code": "08006",
               "district_id": "06",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429479.60722065554,
                 "y": 4583064.608092035
               }
@@ -1178,7 +1265,8 @@
           "web": "http://www.triodos.es",
           "email": "sac@triodos.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1192,14 +1280,16 @@
               "name": "Oficines centrals"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "418",
               "zip_code": "08037",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430120.46795027424,
                 "y": 4583270.712214579
               }
@@ -1211,7 +1301,8 @@
           "web": "http://www.solvayquimica.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1229,14 +1320,16 @@
               "name": "Com.may.ptos. quimicos industriales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Gràcia",
               "number": "21",
               "zip_code": "08007",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430324.7841383802,
                 "y": 4582433.0954282945
               }
@@ -1248,7 +1341,8 @@
           "web": "http://www.novartis.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1262,14 +1356,16 @@
               "name": "Alimentació i begudes"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "G.V. Corts Catalanes",
               "number": "764*766",
               "zip_code": "08013",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 431511.43242964963,
                 "y": 4583293.693274976
               }
@@ -1281,7 +1377,8 @@
           "web": "http://www.kidilizgroup.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1347,14 +1444,16 @@
               "name": "Moda nens"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Mallorca",
               "number": "318",
               "zip_code": "08037",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430463.3786189869,
                 "y": 4583267.060320887
               }
@@ -1366,7 +1465,8 @@
           "web": "http://www.aenor.cat",
           "email": "dct@aenor.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1384,14 +1484,16 @@
               "name": "Com.men.libros,periodicos,revistas."
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Tànger",
               "number": "98",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432560.421140685,
                 "y": 4583772.760813083
               }
@@ -1403,7 +1505,8 @@
           "web": "http://www.grupbalana.com",
           "email": "info@grupbalana.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1429,14 +1532,16 @@
               "name": "Empreses Exhibició"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Provença",
               "number": "266",
               "zip_code": "08008",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429735.8537983976,
                 "y": 4582739.788314174
               }
@@ -1448,7 +1553,8 @@
           "web": "http://www.planeta.es/es/editorial-espasa",
           "email": "sugerencias@espasa.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1462,14 +1568,16 @@
               "name": "Com.may. libros, periodicos y revistas"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "662",
               "zip_code": "08034",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427166.063858634,
                 "y": 4582342.958642082
               }
@@ -1481,7 +1589,8 @@
           "web": "http://www.cinesa.es",
           "email": "info@cinesa.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1511,14 +1620,16 @@
               "name": "Empreses Exhibició"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Rosselló i Porcel",
               "number": "21",
               "zip_code": "08016",
               "district_id": "08",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 431566.9980147745,
                 "y": 4587597.930328518
               }
@@ -1530,7 +1641,8 @@
           "web": "http://www.textura-interiors.com",
           "email": "info@textura-interiors.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1548,14 +1660,16 @@
               "name": "Com.men.ptos.textiles para el hogar"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Còrsega",
               "number": "299",
               "zip_code": "08008",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429500.1820452663,
                 "y": 4582947.439239335
               }
@@ -1567,20 +1681,23 @@
           "web": "http://shop.mango.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Almogàvers",
               "number": "119",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432291.0868778118,
                 "y": 4583174.325596361
               }
@@ -1592,7 +1709,8 @@
           "web": "http://www.pompadour.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1606,14 +1724,16 @@
               "name": "Alimentació i begudes"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Sicília",
               "number": "372*374",
               "zip_code": "08025",
               "district_id": "06",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430590.99021257926,
                 "y": 4584073.954477238
               }
@@ -1625,7 +1745,8 @@
           "web": null,
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1643,14 +1764,16 @@
               "name": "Com.may.ptos.textiles,confecc, y calzado"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pl Catalunya",
               "number": "9",
               "zip_code": "08002",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430512.9743719395,
                 "y": 4582129.672427653
               }
@@ -1662,7 +1785,8 @@
           "web": "http://grow-with-us.netsuite.com/barcelona",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1676,14 +1800,16 @@
               "name": "Informàtica i telecomunicació"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "211",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432257.8250562069,
                 "y": 4583893.794572184
               }
@@ -1695,20 +1821,23 @@
           "web": "http://www.atresmediapublicidad.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "662",
               "zip_code": "08034",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427166.0568587024,
                 "y": 4582342.956642098
               }
@@ -1720,7 +1849,8 @@
           "web": "http://www.kumon.es",
           "email": "info@kumon.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1738,14 +1868,16 @@
               "name": "Ensenyament no reglat"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Carrer de Balmes",
               "number": "195",
               "zip_code": "08006",
               "district_id": "05",
               "town": "Barcelona",
-              "location": {
+              "location":
+              {
                 "x": 428980.74005540286,
                 "y": 4583126.193386869
               }
@@ -1757,7 +1889,8 @@
           "web": null,
           "email": "barcelona@juveycamps.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1775,14 +1908,16 @@
               "name": "Com.may.bebidas y tabaco"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Londres",
               "number": "69",
               "zip_code": "08036",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428844.6334793984,
                 "y": 4582646.627036698
               }
@@ -1796,13 +1931,15 @@
       "user_uuid": "user_uuid",
       "search_date": "search_date",
       "search_name": "search_name",
-      "search_detail": [
+      "search_detail":
+      [
         {
           "name": "Compañia Roca Sanitario",
           "web": "http://www.roca.es",
           "email": "infosan@roca.net",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1820,14 +1957,16 @@
               "name": "Alquiler locales industriales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "513",
               "zip_code": "08029",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428171.7030365344,
                 "y": 4582566.444676705
               }
@@ -1839,7 +1978,8 @@
           "web": "http://www.inoxcrom.com",
           "email": "inoxcrom@inoxcrom.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1885,14 +2025,16 @@
               "name": "Fab. art. escritorio"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "T Estadella",
               "number": "46*54",
               "zip_code": "08030",
               "district_id": "09",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 433134.09787419107,
                 "y": 4587261.391920368
               }
@@ -1904,7 +2046,8 @@
           "web": "http://www.basf.com/es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1926,14 +2069,16 @@
               "name": "Alquiler locales industriales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Can Ràbia",
               "number": "3*5",
               "zip_code": "08017",
               "district_id": "05",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427646.2461106456,
                 "y": 4582718.832077941
               }
@@ -1945,7 +2090,8 @@
           "web": "http://www.fujifilm.eu/es/",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -1987,14 +2133,16 @@
               "name": "Venda Pel.lícula Verge"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Aragó",
               "number": "180",
               "zip_code": "08011",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429620.0300793953,
                 "y": 4581997.003537545
               }
@@ -2006,7 +2154,8 @@
           "web": null,
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2032,14 +2181,16 @@
               "name": "Com.may. libros, periodicos y revistas"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Aribau",
               "number": "200",
               "zip_code": "08036",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429106.26689227845,
                 "y": 4582857.248036841
               }
@@ -2051,7 +2202,8 @@
           "web": "http://fontvellaencasa.es",
           "email": "fontvellaencasa@danone.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2077,14 +2229,16 @@
               "name": "Prep. y envasado de aguas minerales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Buenos Aires",
               "number": "21",
               "zip_code": "08029",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428558.32828020985,
                 "y": 4582560.480816803
               }
@@ -2096,7 +2250,8 @@
           "web": "http://www.dell.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2114,14 +2269,16 @@
               "name": "Informàtica i telecomunicació"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": null,
               "number": null,
               "zip_code": null,
               "district_id": "00",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": -80.8040026142844,
                 "y": -121.32318377961765
               }
@@ -2133,7 +2290,8 @@
           "web": "http://www.lallavedeoro.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2151,14 +2309,16 @@
               "name": "Promocion de edificaciones"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Manuel Girona",
               "number": "62*64",
               "zip_code": "08034",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 426945.1999562205,
                 "y": 4582569.163387396
               }
@@ -2170,7 +2330,8 @@
           "web": "http://www.ibm.com/es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2204,14 +2365,16 @@
               "name": "Enseñanza form. profesional superior"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "571",
               "zip_code": "08029",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427675.4938963018,
                 "y": 4582393.626257071
               }
@@ -2223,7 +2386,8 @@
           "web": "http://www.oracle.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2237,14 +2401,16 @@
               "name": "Informàtica i telecomunicació"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "615",
               "zip_code": "08028",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427160.5599373811,
                 "y": 4582226.312779045
               }
@@ -2256,7 +2422,8 @@
           "web": "http://www.cedro.org",
           "email": "cedrocat@cedro.org",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2270,14 +2437,16 @@
               "name": "Dret"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Pau Claris",
               "number": "94",
               "zip_code": "08010",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430649.8899804966,
                 "y": 4582423.576588005
               }
@@ -2289,7 +2458,8 @@
           "web": "http://www.henkel.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2307,14 +2477,16 @@
               "name": "Fab. jabones comunes, detergentes, lejia"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Bilbao",
               "number": "72*84",
               "zip_code": "08005",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 433249.38040645653,
                 "y": 4583977.496953015
               }
@@ -2326,7 +2498,8 @@
           "web": "http://www.mahou-sanmiguel.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2340,14 +2513,16 @@
               "name": "Alimentació i begudes"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Comte d'Urgell",
               "number": "240",
               "zip_code": "08036",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428769.2812551021,
                 "y": 4582441.724019986
               }
@@ -2359,7 +2534,8 @@
           "web": null,
           "email": "asc@asc.cat",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2373,14 +2549,16 @@
               "name": "Hospitales especializados"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Josep Tarradellas",
               "number": "123*127",
               "zip_code": "08029",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428356.3902873575,
                 "y": 4582351.395814085
               }
@@ -2392,7 +2570,8 @@
           "web": "http://www.llongueras.com",
           "email": "llongueras@llongueras.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2406,14 +2585,16 @@
               "name": "Salones e institutos de belleza"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Berlín",
               "number": "39*41",
               "zip_code": "08014",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427951.7003733909,
                 "y": 4581638.689682821
               }
@@ -2425,7 +2606,8 @@
           "web": "http://www.kenwoodworld.com/es-es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2443,14 +2625,16 @@
               "name": "Fab. receptores radio, tv, y sonido"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Ports d'Europa",
               "number": "100",
               "zip_code": "08040",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427607.1451767299,
                 "y": 4574886.673572175
               }
@@ -2462,7 +2646,8 @@
           "web": "http://www.elcorteingles.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2476,14 +2661,16 @@
               "name": "Enseñanza formacion prof. no superior"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Bolívia",
               "number": "234",
               "zip_code": "08020",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 433256.04620980687,
                 "y": 4584642.622468389
               }
@@ -2495,7 +2682,8 @@
           "web": "http://www.konicaminolta.es",
           "email": "barcelona@konicaminolta.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2521,14 +2709,16 @@
               "name": "Com.may.apar.y mat. electronico"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Rbla Brasil",
               "number": "38*40",
               "zip_code": "08028",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427249.8023204471,
                 "y": 4581067.895103516
               }
@@ -2540,7 +2730,8 @@
           "web": "http://www.ree.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2558,14 +2749,16 @@
               "name": "Treball, industria, comerç i serveis"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Paral.lel",
               "number": "55",
               "zip_code": "08004",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430682.8510178235,
                 "y": 4580687.514538063
               }
@@ -2577,7 +2770,8 @@
           "web": "http://www.cafesnovell.com",
           "email": "info@cafesnovell.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2587,14 +2781,16 @@
               "name": "Cafès"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Marina",
               "number": "179",
               "zip_code": "08013",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 431482.462682784,
                 "y": 4583432.998910287
               }
@@ -2606,7 +2802,8 @@
           "web": "http://www.bcn.cat/cultura/merce/PlanolEspai_Fabrica_Damm.jpg",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2664,14 +2861,16 @@
               "name": "Fab. cerveza y malta de cerveza"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Carrer del Rosselló",
               "number": "515",
               "zip_code": "08025",
               "district_id": "02",
               "town": "Barcelona",
-              "location": {
+              "location":
+              {
                 "x": 431312.5701154573,
                 "y": 4584501.630454083
               }
@@ -2683,7 +2882,8 @@
           "web": "http://www.lavazza.es",
           "email": "info@lavazza.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2705,14 +2905,16 @@
               "name": "Com.may.otro ptos.alimenticios,hel.,etc"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Gràcia",
               "number": "50",
               "zip_code": "08007",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430247.2618546888,
                 "y": 4582612.372663155
               }
@@ -2724,7 +2926,8 @@
           "web": "http://www.vichycatalan.com",
           "email": "consumidor@pmg1881.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2738,14 +2941,16 @@
               "name": "Com.may.bebidas y tabaco"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Roger de Llúria",
               "number": "126",
               "zip_code": "08037",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430004.8610725182,
                 "y": 4583276.000139087
               }
@@ -2757,7 +2962,8 @@
           "web": "http://elconsorci.es",
           "email": "czfb@el-consorci.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2771,14 +2977,16 @@
               "name": "Oficines - Despatxos"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Parc Logístic",
               "number": "2*10",
               "zip_code": "08040",
               "district_id": "03",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427163.07203201123,
                 "y": 4577059.11523842
               }
@@ -2790,7 +2998,8 @@
           "web": "http://www.majorica.com",
           "email": "info@majorica.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2804,14 +3013,16 @@
               "name": "Articles de joieria"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Gràcia",
               "number": "74",
               "zip_code": "08008",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430078.0044613312,
                 "y": 4582796.937827548
               }
@@ -2823,7 +3034,8 @@
           "web": "http://www.hpe.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2865,14 +3077,16 @@
               "name": "Tte. mercancias por carretera"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Tànger",
               "number": "66",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432396.1657684077,
                 "y": 4583613.986328858
               }
@@ -2884,7 +3098,8 @@
           "web": "http://www.kodak.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2906,14 +3121,16 @@
               "name": "Venda Pel.lícula Verge"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Milanesat",
               "number": "25",
               "zip_code": "08017",
               "district_id": "05",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427334.81399900955,
                 "y": 4583359.188764439
               }
@@ -2925,7 +3142,8 @@
           "web": "http://www.pastasgallo.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2947,14 +3165,16 @@
               "name": "Com.may.ptos.alimentic.bebidas y tabacos"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "468",
               "zip_code": "08006",
               "district_id": "06",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429479.60722065554,
                 "y": 4583064.608092035
               }
@@ -2966,7 +3186,8 @@
           "web": "http://www.triodos.es",
           "email": "sac@triodos.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -2980,14 +3201,16 @@
               "name": "Oficines centrals"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "418",
               "zip_code": "08037",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430120.46795027424,
                 "y": 4583270.712214579
               }
@@ -2999,7 +3222,8 @@
           "web": "http://www.solvayquimica.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3017,14 +3241,16 @@
               "name": "Com.may.ptos. quimicos industriales"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pg Gràcia",
               "number": "21",
               "zip_code": "08007",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430324.7841383802,
                 "y": 4582433.0954282945
               }
@@ -3036,7 +3262,8 @@
           "web": "http://www.novartis.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3050,14 +3277,16 @@
               "name": "Alimentació i begudes"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "G.V. Corts Catalanes",
               "number": "764*766",
               "zip_code": "08013",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 431511.43242964963,
                 "y": 4583293.693274976
               }
@@ -3069,7 +3298,8 @@
           "web": "http://www.kidilizgroup.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3135,14 +3365,16 @@
               "name": "Moda nens"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Mallorca",
               "number": "318",
               "zip_code": "08037",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430463.3786189869,
                 "y": 4583267.060320887
               }
@@ -3154,7 +3386,8 @@
           "web": "http://www.aenor.cat",
           "email": "dct@aenor.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3172,14 +3405,16 @@
               "name": "Com.men.libros,periodicos,revistas."
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Tànger",
               "number": "98",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432560.421140685,
                 "y": 4583772.760813083
               }
@@ -3191,7 +3426,8 @@
           "web": "http://www.grupbalana.com",
           "email": "info@grupbalana.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3217,14 +3453,16 @@
               "name": "Empreses Exhibició"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Provença",
               "number": "266",
               "zip_code": "08008",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429735.8537983976,
                 "y": 4582739.788314174
               }
@@ -3236,7 +3474,8 @@
           "web": "http://www.planeta.es/es/editorial-espasa",
           "email": "sugerencias@espasa.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3250,14 +3489,16 @@
               "name": "Com.may. libros, periodicos y revistas"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "662",
               "zip_code": "08034",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427166.063858634,
                 "y": 4582342.958642082
               }
@@ -3269,7 +3510,8 @@
           "web": "http://www.cinesa.es",
           "email": "info@cinesa.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3299,14 +3541,16 @@
               "name": "Empreses Exhibició"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Rosselló i Porcel",
               "number": "21",
               "zip_code": "08016",
               "district_id": "08",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 431566.9980147745,
                 "y": 4587597.930328518
               }
@@ -3318,7 +3562,8 @@
           "web": "http://www.textura-interiors.com",
           "email": "info@textura-interiors.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3336,14 +3581,16 @@
               "name": "Com.men.ptos.textiles para el hogar"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Còrsega",
               "number": "299",
               "zip_code": "08008",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 429500.1820452663,
                 "y": 4582947.439239335
               }
@@ -3355,20 +3602,23 @@
           "web": "http://shop.mango.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Almogàvers",
               "number": "119",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432291.0868778118,
                 "y": 4583174.325596361
               }
@@ -3380,7 +3630,8 @@
           "web": "http://www.pompadour.es",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3394,14 +3645,16 @@
               "name": "Alimentació i begudes"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "C Sicília",
               "number": "372*374",
               "zip_code": "08025",
               "district_id": "06",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430590.99021257926,
                 "y": 4584073.954477238
               }
@@ -3413,7 +3666,8 @@
           "web": null,
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3431,14 +3685,16 @@
               "name": "Com.may.ptos.textiles,confecc, y calzado"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Pl Catalunya",
               "number": "9",
               "zip_code": "08002",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 430512.9743719395,
                 "y": 4582129.672427653
               }
@@ -3450,7 +3706,8 @@
           "web": "http://grow-with-us.netsuite.com/barcelona",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3464,14 +3721,16 @@
               "name": "Informàtica i telecomunicació"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "211",
               "zip_code": "08018",
               "district_id": "10",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 432257.8250562069,
                 "y": 4583893.794572184
               }
@@ -3483,20 +3742,23 @@
           "web": "http://www.atresmediapublicidad.com",
           "email": null,
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Av Diagonal",
               "number": "662",
               "zip_code": "08034",
               "district_id": "04",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 427166.0568587024,
                 "y": 4582342.956642098
               }
@@ -3508,7 +3770,8 @@
           "web": "http://www.kumon.es",
           "email": "info@kumon.es",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3526,14 +3789,16 @@
               "name": "Ensenyament no reglat"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Carrer de Balmes",
               "number": "195",
               "zip_code": "08006",
               "district_id": "05",
               "town": "Barcelona",
-              "location": {
+              "location":
+              {
                 "x": 428980.74005540286,
                 "y": 4583126.193386869
               }
@@ -3545,7 +3810,8 @@
           "web": null,
           "email": "barcelona@juveycamps.com",
           "phone": null,
-          "activities": [
+          "activities":
+          [
             {
               "id": 1008031,
               "name": "Delegacions - oficines comercials"
@@ -3563,14 +3829,16 @@
               "name": "Com.may.bebidas y tabaco"
             }
           ],
-          "addresses": [
+          "addresses":
+          [
             {
               "street_name": "Londres",
               "number": "69",
               "zip_code": "08036",
               "district_id": "02",
               "town": "BARCELONA",
-              "location": {
+              "location":
+              {
                 "x": 428844.6334793984,
                 "y": 4582646.627036698
               }
@@ -3581,4 +3849,3 @@
     }
   ]
 }
-

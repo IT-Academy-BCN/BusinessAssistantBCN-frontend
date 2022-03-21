@@ -1,10 +1,11 @@
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import { environment } from '../../environments/environment';
 import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
 import { LargeStablishmentModel } from '../models/large-stablishment.model';
+import { EconomicActivityModel } from "../models/common/economic-activity.model";
 
 @Injectable({
   providedIn: 'root'
@@ -13,52 +14,82 @@ import { LargeStablishmentModel } from '../models/large-stablishment.model';
 export class LargeStablishmentsService {
 
   //Options checked
-  private _bcnZonesSelected: ZoneModel[] = [];
+  private _bcnZonesSelected: number[] = [];
+  private _activitiesSelected: number[] = [];
 
-  get bcnZonesSelected(): ZoneModel[] {
+  // Large Stablishments
+  private _largeStablishments: LargeStablishmentModel[] = []
+
+  get bcnZonesSelected(): number[] {
     return [...this._bcnZonesSelected];
   }
 
-  constructor(private router:Router,
-              private http: HttpClient) {
+  get activitiesSelected(): number[] {
+    return [...this._activitiesSelected]
   }
 
-  getZoneBySearch(term: string): Observable<any> {
-    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_ZONES_URL}/${term}`);
+  get largeStablishments(): LargeStablishmentModel[] {
+    return [...this._largeStablishments];
   }
 
-  getActivityBySearch(term: string): Observable<any> {
-    return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
-
+  constructor(private router: Router,
+    private http: HttpClient) {
   }
 
-  getLgSt(): Observable<any> {
-    return this.http.get(`${ environment.BACKEND_BASE_URL }${ environment. BACKEND_LARGE_STABLISHMENTS_SEARCH_URL }`,
-    {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).pipe(map((response: any) =>
-    <LargeStablishmentModel>response
-    ))
-  }
+  // getZoneBySearch(term: string): Observable<any> {
+  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
+  // }
+
+  // getActivityBySearch(term: string): Observable<any> {
+  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL}/${term}`);
+
+  // }
 
 
   addZonesSelected(zoneSelected: ZoneModel) {
-    this._bcnZonesSelected.push(zoneSelected)
+    this._bcnZonesSelected.push(zoneSelected.idZone)
   }
 
-  deleteZoneSelected(zoneSelected: ZoneModel){
-    this._bcnZonesSelected.map((zone, index)=> {
-      if(zone === zoneSelected){
-        this._bcnZonesSelected.splice(index,1);
+  deleteZoneSelected(zoneSelected: ZoneModel) {
+    this._bcnZonesSelected.map((zone, index) => {
+      if (zone === zoneSelected.idZone) {
+        this._bcnZonesSelected.splice(index, 1);
       }
     });
   }
 
-  initializeZonesSelected() {
-    this._bcnZonesSelected = [];
+  addActivitiesSelected(activitySelected: EconomicActivityModel) {
+    this._activitiesSelected.push(activitySelected.idActivity);
+    console.log(JSON.stringify([...this._activitiesSelected]))
   }
 
+  deleteActivitySelected(activitySelected: EconomicActivityModel) {
+    this._activitiesSelected.map((activity, index) => {
+      activity === activitySelected.idActivity ? this._activitiesSelected.splice(index, 1) : null;
+    })
+  }
+
+  initializeSelected() {
+    this._bcnZonesSelected = [];
+    this._activitiesSelected = [];
+    this._largeStablishments = [];
+  }
+
+  // la funcion de pasar data a backend, para conseguir que funciona
+  sendSelectedData() {
+    let params = new HttpParams();
+
+    params = params.append('zones', JSON.stringify(this.bcnZonesSelected))
+    params = params.append('activities', JSON.stringify(this.activitiesSelected));
+
+    console.log(params)
+    // Fake-filtered to check that it works. Will have to be substituted for actual backend response.
+    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS}`, { params: params },
+    )
+  }
+
+  addLargeStablishment(element: LargeStablishmentModel) {
+    this._largeStablishments.push(element);
+  }
 
 }
