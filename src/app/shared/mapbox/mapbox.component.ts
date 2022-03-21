@@ -6,10 +6,10 @@ import {
   Input,
   SimpleChanges,
 } from "@angular/core";
-import Mapboxgl, { NavigationControl } from "mapbox-gl";
+import Mapboxgl, { LngLatBounds, NavigationControl } from "mapbox-gl";
 import { Map, Popup, Marker } from "mapbox-gl";
 import { environment } from "src/environments/environment";
-import { LargeStablishmentModel } from "../../models/large-stablishment.model";
+import { LargeStablishmentModel } from '../../models/large-stablishment.model';
 
 @Component({
   selector: "app-mapbox",
@@ -19,12 +19,13 @@ import { LargeStablishmentModel } from "../../models/large-stablishment.model";
 export class MapboxComponent implements AfterViewInit {
   @ViewChild("mapDiv")
   mapDivElement!: ElementRef;
-  @Input() LargeEstablishmentsFilteredData!: LargeStablishmentModel[];
-  map!: Map;
+  @Input() filteredResultsToPrintOnMap!: LargeStablishmentModel[];
+  private map!: Map;
+  private currentMarkers: Marker[] = [];
 
-  constructor() {}
+  constructor() { }
 
-  ITAcademy: LargeStablishmentModel = {
+  ITAcademy: LargeStablishmentModel = { // Will be substituted by either the user's location or the default business (the IT Academy)
     name: "IT Academy",
     web: "bcn.cat/barcelonactiva",
     email: "itacademy@barcelonactiva.cat",
@@ -55,7 +56,6 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   generateMap(business: LargeStablishmentModel) {
-    //TODO Add other establishments models to business type whenever they are defined
     Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
     this.map = new Map({
       container: this.mapDivElement.nativeElement,
@@ -71,24 +71,39 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   ngOnChanges() {
-    this.LargeEstablishmentsFilteredData.forEach((element) => {
-      // Create a marker for each element and add it to the map
-      this.createANewMarker(element, "orange");
+    this.filteredResultsToPrintOnMap.forEach((result) => {
+      // Create a marker for each result and add it to the map
+      this.createANewMarker(result, "orange");
     });
+
+    // Map limits
+    const bounds = new LngLatBounds(
+      // TO DO: UPDATE WITH THE USER'S LOCATION, ONCE WE HAVE IT (BABCN-41)
+      [this.ITAcademy.addresses[0].location.x, this.ITAcademy.addresses[0].location.y], // southwestern corner of the bounds
+      [this.ITAcademy.addresses[0].location.x, this.ITAcademy.addresses[0].location.y] // northeastern corner of the bounds
+    )
+    // Take all the markers into account for the fitBounds.
+    this.currentMarkers.forEach(marker => {
+      bounds.extend(marker.getLngLat());
+    })
+    // Adjust the zoom in order to see all the existing markers
+    this.map.fitBounds(bounds, { padding: 75 });
   }
 
-  // Function to create a maker for a single LargeEstablishment (with the marker's colour)
+  // Function to create a maker for a single establishment (with the establishment and the marker's colour as parameters)
   createANewMarker(element: LargeStablishmentModel, markerColor: string): void {
     const popup = new Popup().setHTML(
       `<b>${element.name}</b> </br> ${element.addresses[0].street_name} , ${element.addresses[0].number}`
     );
 
-    new Marker({ color: markerColor })
+    const newIndividualMarker = new Marker({ color: markerColor })
       .setLngLat([
         element.addresses[0].location.x,
         element.addresses[0].location.y,
       ])
       .setPopup(popup)
       .addTo(this.map);
+
+    this.currentMarkers.push(newIndividualMarker);
   }
 }
