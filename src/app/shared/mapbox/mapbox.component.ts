@@ -20,18 +20,14 @@ export class MapboxComponent implements AfterViewInit {
     // Generate map with basic config
     this.generateMap();
     // Depending on if the user accepts to share their location, center the map into the user, or into the default location (IT Academy)
-    navigator.geolocation.getCurrentPosition(
-      // Success callback function (if user has accepted to share their location)
-      (pos) => {
-        this.map.flyTo({ center: [pos.coords.longitude, pos.coords.latitude], zoom: 13 })
-        this.createANewMarker("blue", undefined, pos.coords);
-      },
-      // Error callback function (if user hasn't accepted to share their location)
-      () => {
-        this.map.flyTo(
-          { center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], zoom: 13 })
-        this.createANewMarker("red", environment.MAPBOX_ITAcademy_OBJECT,);
-      });
+    this.getUsersLocation();
+  }
+
+  ngOnChanges() {
+    this.LargeEstablishmentsFilteredData.forEach((element) => {
+      // Create a marker for each element and add it to the map
+      this.createANewMarker("orange", element);
+    });
   }
 
   generateMap() {
@@ -40,6 +36,8 @@ export class MapboxComponent implements AfterViewInit {
     this.map = new Map({
       container: this.mapDivElement.nativeElement,
       style: "mapbox://styles/mapbox/light-v10", // style URL }
+      center : [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y],
+      zoom: 6
     });
 
     this.map.addControl(new NavigationControl());
@@ -54,13 +52,6 @@ export class MapboxComponent implements AfterViewInit {
         trackUserLocation: true,
       })
     );
-  }
-
-  ngOnChanges() {
-    this.LargeEstablishmentsFilteredData.forEach((element) => {
-      // Create a marker for each element and add it to the map
-      this.createANewMarker("orange", element);
-    });
   }
 
   // Function to create a maker for a single LargeEstablishment (with the marker's colour)
@@ -81,5 +72,20 @@ export class MapboxComponent implements AfterViewInit {
         .setPopup(popup)
         .addTo(this.map);
     }
+  }
+
+  getUsersLocation(): void {
+    navigator.geolocation.getCurrentPosition(
+      // Success callback function (if user has accepted to share their location)
+      (pos) => {
+        this.map.flyTo({ center: [pos.coords.longitude, pos.coords.latitude], zoom: 11 })
+        this.createANewMarker("green", undefined, pos.coords);
+      },
+      // Error callback function (if user hasn't accepted to share their location)
+      () => {
+        this.map.flyTo(
+          { center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], zoom: 11 })
+        this.createANewMarker("red", environment.MAPBOX_ITAcademy_OBJECT,);
+      });
   }
 }
