@@ -25,10 +25,16 @@
                             class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0"
                             (click)="openLoginForm()"
                             type="button">Guardar Resultados</button>
-                    <button style="background: #5CB85C;"
-                            class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0"
-                            type="button" (click)="generateDocument()">Descargar Resultados
-                    </button>
+
+                    <div class="dropdown">
+                        <button style="background: #5CB85C;" class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Descargar Resultados
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" (click)="savePdf()">Descargar archivo</a></li>
+                            <li><a class="dropdown-item" (click)="openPdf()">Abrir archivo</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
