@@ -33,6 +33,12 @@
             },
             "section4": {
                 "title": "FAQs"
+            },
+            "section5": {
+                "title": "Mis busquedas"
+            },
+            "section6": {
+                "title":"Directorio"
             }
         },
         "info-nav": {
@@ -86,6 +92,9 @@
             "mall": "Centros Comerciales",
             "public-market": "Mercados Municipales",
             "market-fair": "Mercados y Ferias"
+        },
+        "title": {
+            "results": "Resultados"
         }
     }
 }

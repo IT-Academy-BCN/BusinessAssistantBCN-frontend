@@ -33,6 +33,12 @@
             },
             "section4": {
                 "title": "FAQs"
+            },
+            "section5": {
+                "title": "Les meves cerques"
+            },
+            "section6": {
+                "title":"Directori"
             }
         },
         "info-nav": {
@@ -86,6 +92,9 @@
             "mall": "Centres Comerciales",
             "public-market": "Mercats Municipals",
             "market-fair": "Mercats i Fires"
+        },
+        "title": {
+            "results": "Resultats"
         }
     }
 }
