@@ -11,6 +11,7 @@ import { RegisterFormComponent } from 'src/app/modules/register/register-form/re
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  user:string|null="user"; //This user is a mockup to be replaced with a real user object when that exists
   constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
@@ -30,5 +31,8 @@ export class HeaderComponent implements OnInit {
       modalDialogClass:'modal-sizer',
       centered: true,
     });
+  }
+  logout(){
+    this.user=null;
   }
 }
