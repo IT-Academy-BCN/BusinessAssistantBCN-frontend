@@ -81,7 +81,18 @@
                 "title": "Activitat econòmica"
             }
         },
-<<<<<<< HEAD
+        "big-stablish-detail": {
+            "saveSearchModal":{
+                "title": "Guardar búsqueda",
+                "name": "Nombre",
+                "detail": "Detalles de la búsqueda",
+                "msgError": "Este campo no puede estar vacío",
+                "button":{
+                    "discard":"Cancelar",
+                    "save": "Guardar"
+                }
+            }
+        },
         "business-assistant": {
             "section1": {
                 "title": "Business Assistant"
@@ -156,18 +167,6 @@
             },
             "section7": {
                 "title": "6. Generació d'informe"
-=======
-        "big-stablish-detail": {
-            "saveSearchModal":{
-                "title": "Guardar búsqueda",
-                "name": "Nom",
-                "detail": "Detalls de la búsqueda",
-                "msgError": "Aquest camp no pot estar buit",
-                "button":{
-                    "discard":"Cancel·lar",
-                    "save": "Guardar"
-                }
->>>>>>> bf7d04bf6844cd344d389e9da5b1e1f2f2fb1dd2
             }
         }
     },

@@ -8,14 +8,9 @@ import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
-<<<<<<< HEAD
-import { MapboxComponent } from './mapbox/mapbox.component';
 import { BusinessAssistantComponent } from './business-assistant/business-assistant.component';
 import { BusinessAssitantDataSaveComponent } from './business-assitant-data-save/business-assitant-data-save.component';
-=======
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
->>>>>>> bf7d04bf6844cd344d389e9da5b1e1f2f2fb1dd2
 
 
 
@@ -29,20 +24,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     LargeStablishmentsDetailPageComponent,
     InformationNavComponent,
     VirtualAssistantComponent,
-<<<<<<< HEAD
-    MapboxComponent,
     BusinessAssistantComponent,
     BusinessAssitantDataSaveComponent
-=======
-
-
->>>>>>> bf7d04bf6844cd344d389e9da5b1e1f2f2fb1dd2
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
-    NgbModule,
     ReactiveFormsModule
   ],
   exports: [
