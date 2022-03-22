@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { BusinessAssistantDataService } from 'src/app/services/business-assistant-data.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-business-assitant-data-save',
@@ -8,7 +7,9 @@ import { BusinessAssistantDataService } from 'src/app/services/business-assistan
 })
 export class BusinessAssitantDataSaveComponent implements OnInit {
 
-  constructor(private businessAssistantData : BusinessAssistantDataService) { }
+  @Input() data:any []=[];
+
+  constructor() { }
 
   ngOnInit(): void {
   }

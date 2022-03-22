@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BusinessAssistantDataService } from 'src/app/services/business-assistant-data.service';
 
 @Component({
   selector: 'app-business-assistant',
@@ -8,11 +7,11 @@ import { BusinessAssistantDataService } from 'src/app/services/business-assistan
 })
 export class BusinessAssistantComponent implements OnInit {
 
-  @Input() data:any;
+  data : string[] =[];
 
   list:string = '';
   item: string = '';
-  open: boolean = false;
+  isOpen: boolean = false;
 
   titles: string[] = [
     'pages.business-assistant.section1.title',
@@ -124,16 +123,16 @@ export class BusinessAssistantComponent implements OnInit {
   
 
 
-  constructor(private businessAssistantData : BusinessAssistantDataService) { }
+  constructor() { }
   
   ngOnInit(): void {
   }
 
-  subcat(title:string){
+  collapse(title:string){
     if(title != this.list){
-      this.open = true
+      this.isOpen = true
     }else{
-      this.open = !this.open
+      this.isOpen = !this.isOpen
     }
     this.list = title
   }
@@ -146,9 +145,10 @@ export class BusinessAssistantComponent implements OnInit {
     this.item = title
   }
 
+  saveData(item: string){
+    this.data.push(item)
+    return this.data
+  }
 
-  // saveData(){
-  //   this.businessAssistantData.dataSaver.emit()
-  // }
 
 }

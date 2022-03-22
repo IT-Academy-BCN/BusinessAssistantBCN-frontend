@@ -38,7 +38,7 @@
                 "title": "Mis busquedas"
             },
             "section6": {
-                "title":"Directorio"
+                "title": "Directorio"
             }
         },
         "info-nav": {
@@ -82,13 +82,13 @@
             }
         },
         "big-stablish-detail": {
-            "saveSearchModal":{
+            "saveSearchModal": {
                 "title": "Guardar búsqueda",
                 "name": "Nombre",
                 "detail": "Detalles de la búsqueda",
                 "msgError": "Este campo no puede estar vacío",
-                "button":{
-                    "discard":"Cancelar",
+                "button": {
+                    "discard": "Cancelar",
                     "save": "Guardar"
                 }
             }

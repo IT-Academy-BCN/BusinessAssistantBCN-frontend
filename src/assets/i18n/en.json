@@ -38,7 +38,7 @@
                 "title": "My Searches"
             },
             "section6": {
-                "title":"Directory"
+                "title": "Directory"
             }
         },
         "info-nav": {
@@ -82,13 +82,13 @@
             }
         },
         "big-stablish-detail": {
-            "saveSearchModal":{
+            "saveSearchModal": {
                 "title": "Guardar búsqueda",
                 "name": "Nombre",
                 "detail": "Detalles de la búsqueda",
                 "msgError": "Este campo no puede estar vacío",
-                "button":{
-                    "discard":"Cancelar",
+                "button": {
+                    "discard": "Cancelar",
                     "save": "Guardar"
                 }
             }
@@ -165,6 +165,7 @@
             "section6": {
                 "title": "6. Report generation"
             }
+
         }
     },
     "common": {
