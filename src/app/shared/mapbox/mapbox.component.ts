@@ -47,7 +47,6 @@ export class MapboxComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     // Generate map with basic config
     this.generateMap(this.ITAcademy);
-    // Depending on if the user accepts to share their location, center the map into the user, or into the default location (IT Academy)
   }
 
   ngOnChanges() {
@@ -55,19 +54,10 @@ export class MapboxComponent implements AfterViewInit {
       // Create a marker for each result and add it to the map
       this.createANewMarker(result, "orange");
     });
+  }
 
-    // Map limits
-    const bounds = new LngLatBounds(
-      // TO DO: UPDATE WITH THE USER'S LOCATION, ONCE WE HAVE IT (BABCN-41)
-      [this.ITAcademy.addresses[0].location.x, this.ITAcademy.addresses[0].location.y], // southwestern corner of the bounds
-      [this.ITAcademy.addresses[0].location.x, this.ITAcademy.addresses[0].location.y] // northeastern corner of the bounds
-    )
-    // Take all the markers into account for the fitBounds.
-    this.currentMarkers.forEach(marker => {
-      bounds.extend(marker.getLngLat());
-    })
-    // Adjust the zoom in order to see all the existing markers
-    this.map.fitBounds(bounds, { padding: 75 });
+  ngOnDestroy() {
+    this.currentMarkers.forEach(marker => marker.remove());
   }
 
   generateMap(business: LargeStablishmentModel) {
@@ -80,6 +70,8 @@ export class MapboxComponent implements AfterViewInit {
     });
 
     this.map.addControl(new NavigationControl());
+
+    this.createANewMarker(business, "red");
   }
 
   // Function to create a maker for a single establishment (with the establishment and the marker's colour as parameters)
@@ -97,6 +89,19 @@ export class MapboxComponent implements AfterViewInit {
       .addTo(this.map);
 
     this.currentMarkers.push(newIndividualMarker);
+
+    // MAP LÍMITS
+    // Initial point 0
+    const bounds = new LngLatBounds();
+
+    // Add all the markers to the map's bounds. 
+    this.currentMarkers.forEach(marker =>
+      bounds.extend(marker.getLngLat()));
+
+    // Adjust the zoom to see all the existing markers
+    this.map.fitBounds(bounds, {
+      padding: 50
+    })
   }
 
 }
