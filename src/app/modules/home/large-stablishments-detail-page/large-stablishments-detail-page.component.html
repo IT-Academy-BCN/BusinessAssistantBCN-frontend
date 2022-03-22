@@ -2,7 +2,7 @@
 
 <div class="container mb-lg-5 main-container">
     <div class="row d-flex justify-content-center align-items-center">
-        <div class="col m-5 me-0 ms-3 results-card">
+        <div class="col-12 col-sm-6 m-5 me-0 ms-3 results-card">
             <div class="p-3 ms-8 border bg-light" >
                 <h2 class=" ps-5 pt-4 fw-bold mb-3">{{'common.title.results' | translate}}</h2>
                 <div class="data" *ngIf="true" id="pdfData">
@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <div class="col m-5 mx-3">
+        <div class="col-12 col-sm-4 m-5 mx-3">
             <div class="p-3 border bg-light text-center">
                 <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
                 <app-mapbox [LargeEstablishmentsFilteredData]="LargeEstablishmentsData"></app-mapbox>
