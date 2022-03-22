@@ -80,6 +80,18 @@
             "section2": {
                 "title": "Economic activity"
             }
+        },
+        "big-stablish-detail": {
+            "saveSearchModal":{
+                "title": "Save search",
+                "name": "Name",
+                "detail": "Search details",
+                "msgError": "This field can not be empty",
+                "button":{
+                    "discard":"Discard",
+                    "save": "Save"
+                }
+            }
         }
     },
     "common": {

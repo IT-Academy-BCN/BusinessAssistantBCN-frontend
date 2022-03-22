@@ -80,6 +80,18 @@
             "section2": {
                 "title": "Actividad económica"
             }
+        },
+        "big-stablish-detail": {
+            "saveSearchModal":{
+                "title": "Guardar búsqueda",
+                "name": "Nombre",
+                "detail": "Detalles de la búsqueda",
+                "msgError": "Este campo no puede estar vacío",
+                "button":{
+                    "discard":"Cancelar",
+                    "save": "Guardar"
+                }
+            }
         }
     },
     "common": {
