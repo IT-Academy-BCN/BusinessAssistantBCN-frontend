@@ -33,6 +33,12 @@
             },
             "section4": {
                 "title": "FAQs"
+            },
+            "section5": {
+                "title": "Mis busquedas"
+            },
+            "section6": {
+                "title":"Directorio"
             }
         },
         "info-nav": {
@@ -75,6 +81,7 @@
                 "title": "Actividad económica"
             }
         },
+<<<<<<< HEAD
         "business-assistant": {
             "section1": {
                 "title": "Business Assistant"
@@ -150,6 +157,18 @@
             },
             "section7": {
                 "title": "6. Generación de informe"
+=======
+        "big-stablish-detail": {
+            "saveSearchModal":{
+                "title": "Guardar búsqueda",
+                "name": "Nombre",
+                "detail": "Detalles de la búsqueda",
+                "msgError": "Este campo no puede estar vacío",
+                "button":{
+                    "discard":"Cancelar",
+                    "save": "Guardar"
+                }
+>>>>>>> bf7d04bf6844cd344d389e9da5b1e1f2f2fb1dd2
             }
         }
     },
@@ -164,6 +183,9 @@
             "mall": "Centros Comerciales",
             "public-market": "Mercados Municipales",
             "market-fair": "Mercados y Ferias"
+        },
+        "title": {
+            "results": "Resultados"
         }
     }
 }

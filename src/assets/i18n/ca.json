@@ -33,6 +33,12 @@
             },
             "section4": {
                 "title": "FAQs"
+            },
+            "section5": {
+                "title": "Les meves cerques"
+            },
+            "section6": {
+                "title":"Directori"
             }
         },
         "info-nav": {
@@ -75,6 +81,7 @@
                 "title": "Activitat econòmica"
             }
         },
+<<<<<<< HEAD
         "business-assistant": {
             "section1": {
                 "title": "Business Assistant"
@@ -149,6 +156,18 @@
             },
             "section7": {
                 "title": "6. Generació d'informe"
+=======
+        "big-stablish-detail": {
+            "saveSearchModal":{
+                "title": "Guardar búsqueda",
+                "name": "Nom",
+                "detail": "Detalls de la búsqueda",
+                "msgError": "Aquest camp no pot estar buit",
+                "button":{
+                    "discard":"Cancel·lar",
+                    "save": "Guardar"
+                }
+>>>>>>> bf7d04bf6844cd344d389e9da5b1e1f2f2fb1dd2
             }
         }
     },
@@ -163,6 +182,9 @@
             "mall": "Centres Comerciales",
             "public-market": "Mercats Municipals",
             "market-fair": "Mercats i Fires"
+        },
+        "title": {
+            "results": "Resultats"
         }
     }
 }

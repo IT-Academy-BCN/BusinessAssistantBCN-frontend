@@ -33,6 +33,12 @@
             },
             "section4": {
                 "title": "FAQs"
+            },
+            "section5": {
+                "title": "My Searches"
+            },
+            "section6": {
+                "title":"Directory"
             }
         },
         "info-nav": {
@@ -75,6 +81,7 @@
                 "title": "Economic activity"
             }
         },
+<<<<<<< HEAD
         "business-assistant": {
             "section1": {
                 "title": "Business Assistant"
@@ -149,6 +156,18 @@
             },
             "section7": {
                 "title": "6. Report generation"
+=======
+        "big-stablish-detail": {
+            "saveSearchModal":{
+                "title": "Save search",
+                "name": "Name",
+                "detail": "Search details",
+                "msgError": "This field can not be empty",
+                "button":{
+                    "discard":"Discard",
+                    "save": "Save"
+                }
+>>>>>>> bf7d04bf6844cd344d389e9da5b1e1f2f2fb1dd2
             }
         }
     },
@@ -163,6 +182,9 @@
             "mall": "Malls",
             "public-market": "Municipal Markets",
             "market-fair": "Markets and Fairs"
+        },
+        "title": {
+            "results": "Results"
         }
     }
 }

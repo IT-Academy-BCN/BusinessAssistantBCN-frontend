@@ -83,7 +83,8 @@ export class LargeStablishmentsService {
     params = params.append('activities', JSON.stringify(this.activitiesSelected));
 
     console.log(params)
-    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_STABLISHMENTS_SEARCH_URL}`, { params: params },
+    // Fake-filtered to check that it works. Will have to be substituted for actual backend response.
+    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS}`, { params: params },
     )
   }
 
