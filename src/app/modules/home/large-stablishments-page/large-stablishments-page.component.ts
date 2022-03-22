@@ -103,3 +103,4 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   }
 }
 
+

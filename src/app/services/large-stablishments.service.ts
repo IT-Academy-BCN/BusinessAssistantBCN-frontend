@@ -9,6 +9,7 @@ import { ZoneModel } from "../models/common/zone.model";
 import { LargeStablishmentModel } from '../models/large-stablishment.model';
 import { EconomicActivityModel } from "../models/common/economic-activity.model";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -38,14 +39,7 @@ export class LargeStablishmentsService {
     private http: HttpClient) {
   }
 
-  // getZoneBySearch(term: string): Observable<any> {
-  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
-  // }
 
-  // getActivityBySearch(term: string): Observable<any> {
-  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL}/${term}`);
-
-  // }
 
   addZonesSelected(zoneSelected: ZoneModel) {
     this._bcnZonesSelected.push(zoneSelected.idZone)
@@ -95,3 +89,8 @@ export class LargeStablishmentsService {
   }
 
 }
+
+
+
+
+
