@@ -1,11 +1,4 @@
-import {
-  Component,
-  AfterViewInit,
-  ViewChild,
-  ElementRef,
-  Input,
-  SimpleChanges,
-} from "@angular/core";
+import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
 import Mapboxgl, { LngLatBounds, NavigationControl } from "mapbox-gl";
 import { Map, Popup, Marker } from "mapbox-gl";
 import { environment } from "src/environments/environment";
@@ -52,22 +45,9 @@ export class MapboxComponent implements AfterViewInit {
   };
 
   ngAfterViewInit(): void {
+    // Generate map with basic config
     this.generateMap(this.ITAcademy);
-  }
-
-  generateMap(business: LargeStablishmentModel) {
-    Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
-    this.map = new Map({
-      container: this.mapDivElement.nativeElement,
-      style: "mapbox://styles/mapbox/light-v10", // style URL
-      center: [
-        business.addresses[0].location.x,
-        business.addresses[0].location.y,
-      ], // starting position [lng, lat]
-      zoom: 11, // starting zoom
-    });
-    this.map.addControl(new NavigationControl());
-    this.createANewMarker(business, "red");
+    // Depending on if the user accepts to share their location, center the map into the user, or into the default location (IT Academy)
   }
 
   ngOnChanges() {
@@ -90,10 +70,22 @@ export class MapboxComponent implements AfterViewInit {
     this.map.fitBounds(bounds, { padding: 75 });
   }
 
+  generateMap(business: LargeStablishmentModel) {
+    Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
+    this.map = new Map({
+      container: this.mapDivElement.nativeElement,
+      style: "mapbox://styles/mapbox/light-v10", // style URL }
+      center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y],
+      zoom: 6
+    });
+
+    this.map.addControl(new NavigationControl());
+  }
+
   // Function to create a maker for a single establishment (with the establishment and the marker's colour as parameters)
   createANewMarker(element: LargeStablishmentModel, markerColor: string): void {
     const popup = new Popup().setHTML(
-      `<b>${element.name}</b> </br> ${element.addresses[0].street_name} , ${element.addresses[0].number}`
+      `<b>${element?.name}</b> </br> ${element?.addresses[0].street_name} , ${element?.addresses[0].number}`
     );
 
     const newIndividualMarker = new Marker({ color: markerColor })
@@ -106,4 +98,5 @@ export class MapboxComponent implements AfterViewInit {
 
     this.currentMarkers.push(newIndividualMarker);
   }
+
 }

@@ -5,5 +5,25 @@ export const environment = {
   BACKEND_ZONES_URL: '',
   BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL: '',
   BACKEND_LARGE_STABLISHMENTS_SEARCH_URL: '',
-  MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A'
+  MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A',
+  MAPBOX_ITAcademy_OBJECT: {
+    name: "IT Academy",
+    web: "bcn.cat/barcelonactiva",
+    email: "itacademy@barcelonactiva.cat",
+    phone: 932917610,
+    activities: [],
+    addresses: [
+      {
+        street_name: "Roc Boronat",
+        number: "117-127",
+        zip_code: "08018",
+        district_id: "04",
+        town: "BARCELONA",
+        location: {
+          x: 2.194060007737955,
+          y: 41.40389733660671,
+        },
+      },
+    ],
+  }
 };
