@@ -12,6 +12,7 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginModule } from './modules/login/login.module';
+import { RegisterModule } from './modules/register/register.module';
 
 
 
@@ -37,6 +38,7 @@ import { LoginModule } from './modules/login/login.module';
     SharedModule,
     HomeModule,
     LoginModule,
+    RegisterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,75 +1,17 @@
 /* Some styles affecting the login modal are outside of its own component. Bootstrap generates them in the
 <body> tag. You will find them inthe main style */
 
-
-.modal-content{
-    border:none;
-    border-radius:0px !important;
-    padding-top:0;
-    
-}
-
-.modal-header{
-    border-bottom:0.5px solid #707070 !important;
-    padding-top:0;
-}
-
-.modal-title{
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-}
-
-.modal-body{
-    padding:0;
-}
-
-.modal-footer{
-    padding-top:0;
-}
-
-label{
-    font-size: 1.25rem;
-    padding: 1rem 0 0 1rem;
-    margin-bottom: 0.5rem;
-}
-
-input{
-    border-radius:0;
-    padding:1rem;
-}
-
-.login-button{
+.submit-button{
     background-color:#3B79BF;
-    color:white;
-    border-radius:0;
-    padding:1rem;
-    font-size:1.5rem;
-    font-weight:700;
-    border:none;
 }
-
-
-@media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 500px;
-    }
-
-    .modal-dialog .modal-content {
-        padding: 0 1rem 1rem 1rem;
-    }
-}
-
-
-
 
 .signup-section {
     padding: 0.3rem 0rem;
     margin-top:0;
     color:#3B79BF;
     cursor:pointer;
-}
-
+  }
+  
 .signup-section span{
     font-weight:700;
-}
+  }
