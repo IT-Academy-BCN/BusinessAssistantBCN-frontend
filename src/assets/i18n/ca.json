@@ -95,11 +95,8 @@
         },
         "business-assistant": {
             "section1": {
-                "title": "Business Assistant"
-            },
-            "section2": {
                 "title": "1. Anàlisi del Sector",
-                "subcat": "Catàleg de serveis i productes per emprendre",
+                "subcat1": "Catàleg de serveis i productes per emprendre",
                 "s1-item1": "Classificació catalana d'activitats econòmiques",
                 "s1-item2": "Serveis per emprendre",
                 "s1-item3": "Participació catalana en programes finançats per la UE",
@@ -129,7 +126,7 @@
                 "s6-item5": "Certificacion d' eficiència energetica d' edificis agrupacions segons la qualificació d' emissions de co2 i la normativa de construccions",
                 "s6-item6": "Indicadors energetics de Catalunya"
             },
-            "section3": {
+            "section2": {
                 "title": "2. Anàlisi d'hàbits de consum",
                 "subcat1": "Anàlisi de població i hàbits de consum",
                 "s1-item1": "Poblacion de Catalunya per municipi rang d' edat i sexe",
@@ -146,10 +143,10 @@
                 "subcat3": "Anàlisi d' importacions",
                 "s3-item1": "Importacions realitzades per Catalunya a nivell mundial"
             },
-            "section4": {
+            "section3": {
                 "title": "3. Entrevites i enquestes"
             },
-            "section5": {
+            "section4": {
                 "title": "4. Anàlisi de la competència",
                 "subcat1": "Visita 'El meu Entorn'",
                 "subcat2": "Registres de llicència i societats laborals",
@@ -162,10 +159,10 @@
                 "s4-item1": "Regions sanitàries de Catalunya",
                 "s4-item2": "Catàleg de farmàcies de Catalunya"
             },
-            "section6": {
+            "section5": {
                 "title": "5. Localització de target"
             },
-            "section7": {
+            "section6": {
                 "title": "6. Generació d'informe"
             }
         }

@@ -95,9 +95,6 @@
         },
         "business-assistant": {
             "section1": {
-                "title": "Business Assistant"
-            },
-            "section2": {
                 "title": "1. Análisis del Sector",
                 "subcat1": "Catálogo de servicios y productos para emprender",
                 "s1-item1": "Clasificación catalana de actividaes económicas",
@@ -130,7 +127,7 @@
                 "s6-item6": "Indicadores energeticos de Cataluña"
             },
 
-            "section3": {
+            "section2": {
                 "title": "2. Análisis de hábitos de consumo",
                 "subcat1": "Análisis de población y hábitos de consumo",
                 "s1-item1": "Poblacion de Cataluña por municipio rango de edad y sexo",
@@ -147,10 +144,10 @@
                 "subcat3": "Análisis de importaciones",
                 "s3-item1": "Importaciones realizadas por Cataluña a nivel mundial"
             },
-            "section4": {
+            "section3": {
                 "title": "3. Entrevistas y encuestas"
             },
-            "section5": {
+            "section4": {
                 "title": "4. Análisis de la competencia",
                 "subcat1": "Visita 'Mi Entorno'",
                 "subcat2": "Registros de licencia y sociedades laborales",
@@ -163,10 +160,10 @@
                 "s4-item1": "Regiones sanitarias de Cataluña",
                 "s4-item2": "Catalogo de farmacias de Cataluña"
             },
-            "section6": {
+            "section5": {
                 "title": "5. Localización de target"
             },
-            "section7": {
+            "section6": {
                 "title": "6. Generación de informe"
             }
         }
