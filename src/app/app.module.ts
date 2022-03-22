@@ -12,13 +12,15 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginModule } from './modules/login/login.module';
+import { CommercialGalleriesComponent } from './services/commercial-galleries/commercial-galleries.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CommercialGalleriesComponent
 
   ],
   imports: [

@@ -6,13 +6,13 @@ import { LargeStablishmentModel } from '../../../models/large-stablishment.model
 import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
-
 @Component({
-  selector: 'app-large-stablishments-detail-page',
-  templateUrl: './large-stablishments-detail-page.component.html',
-  styleUrls: ['./large-stablishments-detail-page.component.css'],
+  selector: 'app-my-environment-search-detail-page',
+  templateUrl: './my-environment-search-detail-page.component.html',
+  styleUrls: ['./my-environment-search-detail-page.component.css']
 })
-export class LargeStablishmentsDetailPageComponent implements OnInit {
+export class MyEnvironmentSearchDetailPageComponent implements OnInit {
+
   LargeEstablishmentsData: LargeStablishmentModel[] = []
 
   constructor(
@@ -83,4 +83,6 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
     console.log( this.saveSearchForm.value );
     this.closeModal()
   }
+
+
 }
