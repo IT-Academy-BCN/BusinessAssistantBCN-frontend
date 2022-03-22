@@ -13,6 +13,7 @@ export class AuthenticationService {
 
   auth_api: any = environment.BACKEND_BASE_URL;
   endpoint: string = environment.BACKEND_LOGIN_URL;
+  private _userLogged: boolean = false; // To be replace when user login works
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -34,5 +35,14 @@ export class AuthenticationService {
       })
       );
   }
+
+  // To be replaced when user login works
+  get userLogged(): boolean {
+    return this._userLogged
+  }
+  setUserLogged( logged: boolean ){
+    this._userLogged = logged
+  }
+
 }
 

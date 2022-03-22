@@ -1,17 +1,10 @@
 
-.main-container{
-  background-color:#EFEFEF;
-  margin:2rem 3rem;
-}
 .form-check-label {
   font-family: system-ui, sans-serif;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.1;
   margin-left: 3px;
-}
-.box{
-  min-height:100%;
 }
 
 .title-right{
@@ -30,11 +23,11 @@
 
 
 .card-contents{
-  min-height:100%;
+  min-height:480px;
 }
 
 .form-check {
-  margin-left: 90px;
+  margin-left: 30px;
   margin-top:0.25rem;
 }
 
@@ -112,4 +105,10 @@ input[type="checkbox"]:checked::before {
   font-size:1rem;
   font-weight:bold;
   margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.data{
+  overflow-y: scroll;
+  overflow-x: visible;
+  max-height:350px;
 }
