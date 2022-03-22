@@ -64,9 +64,9 @@ export class MapboxComponent implements AfterViewInit {
     Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
     this.map = new Map({
       container: this.mapDivElement.nativeElement,
-      style: "mapbox://styles/mapbox/light-v10", // style URL }
+      style: "mapbox://styles/mapbox/streets-v11", // style URL }
       center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y],
-      zoom: 6
+      zoom: 8
     });
 
     this.map.addControl(new NavigationControl());
