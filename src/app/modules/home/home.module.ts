@@ -10,7 +10,12 @@ import { VirtualAssistantComponent } from './home-components/virtual-assistant/v
 import { RouterModule } from '@angular/router';
 
 import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
-//import { MapboxComponent } from '../../shared/mapbox/mapbox.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 
 @NgModule({
@@ -27,7 +32,9 @@ import { SavedSearchesComponent } from './saved-searches/saved-searches.componen
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    NgbModule,
+    ReactiveFormsModule
   ],
   exports: [
     HomePageComponent
