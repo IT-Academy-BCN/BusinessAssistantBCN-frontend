@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
-import Mapboxgl, { GeolocateControl, NavigationControl, Map, Popup, Marker, Coordinate, LngLat } from "mapbox-gl";
+import Mapboxgl, { LngLatBounds, NavigationControl, GeolocateControl, Map, Popup, Marker } from "mapbox-gl";
 import { environment } from "src/environments/environment";
-import { LargeStablishmentModel } from "../../models/large-stablishment.model";
+import { LargeStablishmentModel } from '../../models/large-stablishment.model';
 
 @Component({
   selector: "app-mapbox",
@@ -11,8 +11,9 @@ import { LargeStablishmentModel } from "../../models/large-stablishment.model";
 export class MapboxComponent implements AfterViewInit {
   @ViewChild("mapDiv")
   mapDivElement!: ElementRef;
-  @Input() LargeEstablishmentsFilteredData!: LargeStablishmentModel[];
-  map!: Map;
+  @Input() filteredResultsToPrintOnMap!: LargeStablishmentModel[];
+  private map!: Map;
+  private currentMarkers: Marker[] = [];
 
   constructor() { }
 
@@ -24,20 +25,23 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   ngOnChanges() {
-    this.LargeEstablishmentsFilteredData.forEach((element) => {
-      // Create a marker for each element and add it to the map
-      this.createANewMarker("orange", element);
+    this.filteredResultsToPrintOnMap.forEach((result) => {
+      // Create a marker for each result and add it to the map
+      this.createANewMarker("orange", result);
     });
   }
 
+  ngOnDestroy() {
+    this.currentMarkers.forEach(marker => marker.remove());
+  }
+
   generateMap() {
-    //TODO Add other establishments models to business type whenever they are defined
     Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
     this.map = new Map({
       container: this.mapDivElement.nativeElement,
-      style: "mapbox://styles/mapbox/light-v10", // style URL }
-      center : [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y],
-      zoom: 6
+      style: "mapbox://styles/mapbox/streets-v11", // style URL }
+      center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y],
+      zoom: 8
     });
 
     this.map.addControl(new NavigationControl());
@@ -54,7 +58,7 @@ export class MapboxComponent implements AfterViewInit {
     );
   }
 
-  // Function to create a maker for a single LargeEstablishment (with the marker's colour)
+  // Function to create a single marker (with the marker's colour and the business (or user's coords) as parameters)
   createANewMarker(markerColor: string, element?: LargeStablishmentModel, coord?: GeolocationCoordinates): void {
 
     // Create a popup with the businesse's basic information
@@ -63,14 +67,31 @@ export class MapboxComponent implements AfterViewInit {
     );
 
     if (coord) { // If user has accepted to share their location
-      new Marker({ color: markerColor })
+      const newIndividualMarker = new Marker({ color: markerColor })
         .setLngLat([coord.longitude, coord.latitude])
         .addTo(this.map);
+      this.currentMarkers.push(newIndividualMarker);
     } else { // If user hasn't accepted to share their location
-      new Marker({ color: markerColor })
+      const newIndividualMarker = new Marker({ color: markerColor })
         .setLngLat([element!.addresses[0].location.x, element!.addresses[0].location.y])
         .setPopup(popup)
         .addTo(this.map);
+      this.currentMarkers.push(newIndividualMarker);
+
+      this.currentMarkers.push(newIndividualMarker);
+
+      // MAP LÍMITS
+      // Initial point 0
+      const bounds = new LngLatBounds();
+
+      // Add all the markers to the map's bounds. 
+      this.currentMarkers.forEach(marker =>
+        bounds.extend(marker.getLngLat()));
+
+      // Adjust the zoom to see all the existing markers
+      this.map.fitBounds(bounds, {
+        padding: 50
+      })
     }
   }
 
@@ -86,6 +107,7 @@ export class MapboxComponent implements AfterViewInit {
         this.map.flyTo(
           { center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], zoom: 11 })
         this.createANewMarker("red", environment.MAPBOX_ITAcademy_OBJECT,);
-      });
+      }
+    );
   }
 }
