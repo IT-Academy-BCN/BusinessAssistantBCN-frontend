@@ -12,4 +12,11 @@ export class BigMallsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //FIXME: Change type
+  zones: any[] = [];
+  activities: any[]= [];
+
+  search() {
+
+  }
 }

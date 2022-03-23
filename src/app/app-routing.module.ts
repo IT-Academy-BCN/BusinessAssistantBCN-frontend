@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: "big-malls", component: BigMallsPageComponent },
   { path: "municipal-markets", component: MunicipalMarketsPageComponent },
   { path: "market-fairs", component: MarketFairsPageComponent },
-  { path: "my-environment-search-detail", component: MyEnvironmentSearchDetailPageComponent },
+  { path: "my-enviroment-search-detail", component: MyEnvironmentSearchDetailPageComponent },
 
 
 ];

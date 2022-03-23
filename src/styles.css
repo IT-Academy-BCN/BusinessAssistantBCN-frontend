@@ -71,3 +71,114 @@ a {
 .modal-backdrop{
   background-color: rgba(255,255,255,0.5);
 }
+
+/* Enviroment Search Pages style */
+
+
+.form-check-label {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-left: 3px;
+}
+
+.title-right{
+  color:#3B79BF;
+}
+
+.title-left{
+  color:#5CB85C;
+}
+
+.card-contents{
+  min-height:480px;
+}
+
+.form-check {
+  margin-left: 30px;
+  margin-top:0.25rem;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 3;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid grey;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #5cb85c;
+  background-color: #5CB85C;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+#checkbox-activity {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 3;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid grey;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+#checkbox-activity::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #0d6efd;
+  background-color: #3B79BF;
+}
+
+#checkbox-activity:checked::before {
+  transform: scale(1);
+}
+
+.search-button{
+  background-color:#3B79BF;
+  border:none;
+  padding:0.5rem 3.5rem;
+  color:#ffffff;
+  font-size:1.25rem;
+  font-weight:bold;
+  margin-right:0.5rem;
+  margin-bottom:0.5rem;
+}
+
+.data{
+  overflow-y: scroll;
+  overflow-x: visible;
+  max-height:350px;
+}

@@ -58,23 +58,14 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     this.modalService.open(modal, { centered: true,})
   }
 
-  // To be replaced when user login works
-  userLogged():boolean {
-    if( !this.auth.userLogged ){
-      this.openLoginForm()
-      return false;
-    }
-    return true
-  }
-
   closeModal(){
     this.modalService.dismissAll();
   }
-
+  
   inputInvalid( input: string ): boolean {
     return  this.saveSearchForm.controls[input].invalid && this.submitted
   }
-
+  
   onSubmit(){
     if( this.saveSearchForm.invalid ){
       this.submitted = true
@@ -83,6 +74,14 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     console.log( this.saveSearchForm.value );
     this.closeModal()
   }
-
-
+  
+  // To be replaced when user login works
+  userLogged():boolean {
+    if( !this.auth.userLogged ){
+      this.openLoginForm()
+      return false;
+    }
+    return true
+  }
+  
 }
