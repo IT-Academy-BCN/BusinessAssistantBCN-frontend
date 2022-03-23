@@ -1,27 +1,48 @@
-.results-card{
-    min-width: 55%;
+#resultsTitle {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-
-.result-container{
-    padding-left: 14%;
-}
-.details{
-    padding-left: 12%;
+.card-body {
+    padding: 16px;
 }
 
-.data{
+.establishmentName {
+    font-weight: bold;
+}
+
+.resultsList {
     overflow-y: scroll;
     overflow-x: visible;
-    max-height:300px;
+    max-height: 380px;
 }
 
-button{
-    font-size: 1rem;
+.resultsButtons {
+    padding-top: 16px;
 }
 
-@media (max-width:768px) {
-    .ps-5{
-        padding-left: 1.1rem !important;
-    }
+button {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#saveResultsBtn {
+    background: #2c5e8f;
+}
+
+#downloadResultsBtn {
+    background: #5CB85C;
+}
+
+#saveResultsBtn:hover {
+    background: #143250;
+    color: white;
+}
+
+#downloadResultsBtn:hover {
+    background: #165716;
+    color: white;
 }

@@ -97,6 +97,8 @@
     "common": {
         "button": {
             "search": "Search",
+            "save": "Save",
+            "download": "Download",
             "my-enviroment": "My environment",
             "assistant": "Business Assistant",
             "big-stablish": "Large Establishments",

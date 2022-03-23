@@ -1,42 +1,63 @@
 <app-header></app-header>
 
-<div class="container mb-lg-5 main-container">
-    <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-12 col-sm-6 m-5 me-0 ms-3 results-card">
-            <div class="p-3 ms-8 border bg-light" >
-                <h2 class=" ps-5 pt-4 fw-bold mb-3">{{'common.title.results' | translate}}</h2>
-                <div class="data" *ngIf="true" id="pdfData">
-                    <div class="d-flex flex-column mb-4" *ngFor = "let ls of LargeEstablishmentsData">
-                        <h5 class="details">{{ls.name}}
-                        </h5>
-                        <ul class="result-container list-unstyled" *ngFor = "let address of ls.addresses ">
-                            <!--*ngFor must be added!-->
-                            <li *ngIf ="address.street_name" >{{address.street_name}}, {{address.number}}</li>
-                            <li *ngIf = "address.town">{{address.zip_code}} {{address.town}}</li>
-                            <li *ngIf = "ls.email">Email: {{ls.email}}</li>
-                            <li *ngIf = "ls.web">Web: {{ls.web}}</li>
-                            <li *ngIf = "ls.phone">Tel.:{{ls.phone}}</li>
-                            <li></li>
-                        </ul>
+<div class="container-fluid mb-lg-5 main-container">
+
+    <div class="row">
+        <div class="col">
+            <h1 class="display-3 p-3" id="resultsTitle" >{{'common.title.results' | translate}}</h1>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Results column -->
+        <div class=" col-md-5 mb-4 results-card">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="resultsList" *ngIf="true" id="pdfData">
+                        <div class="card-text" *ngFor="let ls of LargeEstablishmentsData">
+                            <h5 class="establishmentName">{{ls.name}}
+                            </h5>
+                            <ul class="result-container list-unstyled" *ngFor="let address of ls.addresses ">
+                                <!--*ngFor must be added!-->
+                                <li *ngIf="address.street_name">{{address.street_name}}, {{address.number}}</li>
+                                <li *ngIf="address.town">{{address.zip_code}} {{address.town}}</li>
+                                <li *ngIf="ls.email">Email: {{ls.email}}</li>
+                                <li *ngIf="ls.web">Web: {{ls.web}}</li>
+                                <li *ngIf="ls.phone">Tel.:{{ls.phone}}</li>
+                                <hr>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button style="background: #2c5e8f;"
-                            class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0"
-                            (click)="open(saveSearch)"
-                            type="button">Guardar Resultados</button>
-                    <button style="background: #5CB85C;"
-                            class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0"
-                            type="button">Descargar Resultados
-                    </button>
+                    <div class="resultsButtons d-flex justify-content-evenly ">
+                        <button id="saveResultsBtn" class="btn rounded-0" (click)="open(saveSearch)" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-folder-symlink" viewBox="0 0 16 16">
+                                <path
+                                    d="m11.798 8.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z" />
+                                <path
+                                    d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm.694 2.09A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09l-.636 7a1 1 0 0 1-.996.91H2.826a1 1 0 0 1-.995-.91l-.637-7zM6.172 2a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z" />
+                            </svg> {{'common.button.save' | translate}}</button>
+                        <button id="downloadResultsBtn" class="btn rounded-0" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-download" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                            </svg>
+                            {{'common.button.download' | translate}}
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-12 col-sm-4 m-5 mx-3">
-            <div class="p-3 border bg-light text-center">
-                <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
-                <app-mapbox [LargeEstablishmentsFilteredData]="LargeEstablishmentsData"></app-mapbox>
+        <!-- Map column -->
+        <div class=" col-md-7 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
+                    <app-mapbox [LargeEstablishmentsFilteredData]="LargeEstablishmentsData"></app-mapbox>
+                </div>
             </div>
         </div>
     </div>
@@ -50,35 +71,31 @@
         <hr class="mx-2">
         <form [formGroup]="saveSearchForm" (submit)="onSubmit()">
             <div class="mb-4">
-                <label for="nombre" class="ps-3 fs-5">{{'pages.big-stablish-detail.saveSearchModal.name'| translate}}</label>
-                <input type="text" 
-                        name="nombre"
-                        formControlName="nombre"
-                        [class.is-invalid]="inputInvalid('nombre')"
-                        class="form-control form-control-lg fw-bold mt-2 rounded-0">
-                <p class="text-danger" *ngIf="inputInvalid('nombre')">{{'pages.big-stablish-detail.saveSearchModal.msgError'| translate}}</p>
+                <label for="nombre" class="ps-3 fs-5">{{'pages.big-stablish-detail.saveSearchModal.name'|
+                    translate}}</label>
+                <input type="text" name="nombre" formControlName="nombre" [class.is-invalid]="inputInvalid('nombre')"
+                    class="form-control form-control-lg fw-bold mt-2 rounded-0">
+                <p class="text-danger" *ngIf="inputInvalid('nombre')">
+                    {{'pages.big-stablish-detail.saveSearchModal.msgError'| translate}}</p>
 
             </div>
             <div class="mb-4">
-                <label for="detalles" class="ps-3 fs-5">{{'pages.big-stablish-detail.saveSearchModal.detail'| translate}}</label>
-                <input type="text" 
-                        name="detalles"
-                        formControlName="detalles"
-                        [class.is-invalid]="inputInvalid('detalles')"
-                        class="form-control form-control-lg fw-bold mt-2 rounded-0">
-                <p class="text-danger" *ngIf="inputInvalid('detalles')">{{'pages.big-stablish-detail.saveSearchModal.msgError'| translate}}</p>
+                <label for="detalles" class="ps-3 fs-5">{{'pages.big-stablish-detail.saveSearchModal.detail'|
+                    translate}}</label>
+                <input type="text" name="detalles" formControlName="detalles"
+                    [class.is-invalid]="inputInvalid('detalles')"
+                    class="form-control form-control-lg fw-bold mt-2 rounded-0">
+                <p class="text-danger" *ngIf="inputInvalid('detalles')">
+                    {{'pages.big-stablish-detail.saveSearchModal.msgError'| translate}}</p>
             </div>
             <div class="d-flex justify-content-end gap-2">
-                <button type="button" 
-                        class="btn btn-lg justify-content-center text-white fw-bolder rounded-0"
-                        style="background-color:firebrick;"
-                        (click)="closeModal()">
-                        {{'pages.big-stablish-detail.saveSearchModal.button.discard'| translate}}
+                <button type="button" class="btn btn-lg justify-content-center text-white fw-bolder rounded-0"
+                    style="background-color:firebrick;" (click)="closeModal()">
+                    {{'pages.big-stablish-detail.saveSearchModal.button.discard'| translate}}
                 </button>
-                <button type="submit" 
-                        class="btn btn-lg text-white fw-bolder rounded-0"
-                        style="background-color: #2c5e8f;">
-                        {{'pages.big-stablish-detail.saveSearchModal.button.save'| translate}}
+                <button type="submit" class="btn btn-lg text-white fw-bolder rounded-0"
+                    style="background-color: #2c5e8f;">
+                    {{'pages.big-stablish-detail.saveSearchModal.button.save'| translate}}
                 </button>
             </div>
         </form>
