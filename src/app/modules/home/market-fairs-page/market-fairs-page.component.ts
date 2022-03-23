@@ -9,9 +9,9 @@ import { MarketFairModel} from './../../../models/market-fair.model';
 
 
 @Component({
-  selector: 'app-large-stablishments-page',
-  templateUrl: './large-stablishments-page.component.html',
-  styleUrls: ['./large-stablishments-page.component.css']
+  selector: 'app-market-fairs-page',
+  templateUrl: './market-fairs-page.component.html',
+  styleUrls: ['./market-fairs-page.component.css']
 })
 export class MarketFairsPageComponent implements OnInit, OnDestroy {
 
