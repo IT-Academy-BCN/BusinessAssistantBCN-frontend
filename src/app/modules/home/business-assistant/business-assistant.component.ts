@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/business-assistant.model';
 
 @Component({
   selector: 'app-business-assistant',
@@ -7,122 +8,175 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BusinessAssistantComponent implements OnInit {
 
-  data : string[] =[];
+  dataSend: any[] = []
+  data : Category[] = [
+    {
+      title: 'pages.business-assistant.section1.title',
+      subcategory: [
+        {
+          title: 'pages.business-assistant.section1.subcat1',
+          items: [
+            { item: 'pages.business-assistant.section1.s1-item1'},
+            { item: 'pages.business-assistant.section1.s1-item2'},
+            { item: 'pages.business-assistant.section1.s1-item3'}
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section1.subcat2',
+          items: [
+            {item: 'pages.business-assistant.section1.s2-item1'},
+            {item: 'pages.business-assistant.section1.s2-item2'},
+            {item: 'pages.business-assistant.section1.s2-item3'},
+            {item: 'pages.business-assistant.section1.s2-item4'},
+            {item: 'pages.business-assistant.section1.s2-item5'},
+            {item: 'pages.business-assistant.section1.s2-item6'}
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section1.subcat3',
+          items: [
+            {item: 'pages.business-assistant.section1.s3-item1'}
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section1.subcat4',
+          items: [
+            {item: 'pages.business-assistant.section1.s4-item1'},
+            {item: 'pages.business-assistant.section1.s4-item2'},
+            {item: 'pages.business-assistant.section1.s4-item3'}
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section1.subcat5',
+          items: [
+            {item: 'pages.business-assistant.section1.s5-item1'},
+            {item: 'pages.business-assistant.section1.s5-item2'},
+            {item: 'pages.business-assistant.section1.s5-item3'},
+            {item: 'pages.business-assistant.section1.s5-item4'}
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section1.subcat6',
+          items: [
+            {item: 'pages.business-assistant.section1.s6-item1'},
+            {item: 'pages.business-assistant.section1.s6-item2'},
+            {item: 'pages.business-assistant.section1.s6-item3'},
+            {item: 'pages.business-assistant.section1.s6-item4'},
+            {item: 'pages.business-assistant.section1.s6-item5'},
+            {item: 'pages.business-assistant.section1.s6-item6'}
+          ]
+        },
+      ]
+    },
+
+    {
+      title: 'pages.business-assistant.section2.title',
+      subcategory: [
+        {
+          title: 'pages.business-assistant.section2.subcat1',
+          items: [
+            {item: 'pages.business-assistant.section2.s1-item1'},
+            {item: 'pages.business-assistant.section2.s1-item2'},
+            {item: 'pages.business-assistant.section2.s1-item3'},
+            {item: 'pages.business-assistant.section2.s1-item4'},
+            {item: 'pages.business-assistant.section2.s1-item5'},
+            {item: 'pages.business-assistant.section2.s1-item6'},
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section2.subcat2',
+          items: [
+            {item: 'pages.business-assistant.section2.s2-item1'},
+            {item: 'pages.business-assistant.section2.s2-item2'},
+            {item: 'pages.business-assistant.section2.s2-item3'},
+            {item: 'pages.business-assistant.section2.s2-item4'},
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section2.subcat3',
+          items: [
+            {item: 'pages.business-assistant.section2.s3-item1'}
+          ]
+        },
+      ]
+    },
+
+    {
+      title: 'pages.business-assistant.section3.title',
+      subcategory: [
+        {
+          title: '',
+          items: [
+            {item: ''}
+          ]
+        }
+      ]
+    },
+
+    {
+      title: 'pages.business-assistant.section4.title',
+      subcategory: [
+        {
+          title: 'pages.business-assistant.section4.subcat1',
+          items: [
+            {item: 'pages.business-assistant.section4.s1-item1'},
+            {item: 'pages.business-assistant.section4.s1-item2'},
+            {item: 'pages.business-assistant.section4.s1-item3'},
+            {item: 'pages.business-assistant.section4.s1-item4'},
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section4.subcat2',
+          items: [
+            {item: 'pages.business-assistant.section4.s2-item1'},
+            {item: 'pages.business-assistant.section4.s2-item2'},
+            {item: 'pages.business-assistant.section4.s2-item3'},
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section4.subcat3',
+          items: [
+            {item: 'pages.business-assistant.section4.s3-item1'}
+          ]
+        },
+        {
+          title: 'pages.business-assistant.section4.subcat4',
+          items: [
+            {item: 'pages.business-assistant.section4.s4-item1'},
+            {item: 'pages.business-assistant.section4.s4-item2'},
+          ]
+        },
+      ]
+    },
+    {
+      title: 'pages.business-assistant.section5.title',
+      subcategory: [
+        {
+          title: '',
+          items: [
+            {item: ''}
+          ]
+        }
+      ]
+    },
+    {
+      title: 'pages.business-assistant.section6.title',
+      subcategory: [
+        {
+          title: '',
+          items: [
+            {item: ''}
+          ]
+        }
+      ]
+    },
+  ];
 
   list:string = '';
   item: string = '';
   isOpen: boolean = false;
 
-  titles: string[] = [
-    'pages.business-assistant.section1.title',
-    'pages.business-assistant.section2.title',
-    'pages.business-assistant.section3.title',
-    'pages.business-assistant.section4.title',
-    'pages.business-assistant.section5.title',
-    'pages.business-assistant.section6.title',
-   
-  ]
-
-  /// SECCION 1 (s1) -> Analisis del sector
-
-  //Subcategories:
-  subcat1: string[] = [
-    'pages.business-assistant.section1.subcat1',
-    'pages.business-assistant.section1.subcat2',
-    'pages.business-assistant.section1.subcat3',
-    'pages.business-assistant.section1.subcat4',
-    'pages.business-assistant.section1.subcat5',
-    'pages.business-assistant.section1.subcat6',
-  ]
-  // Items
-  s1s1item: string[] = [
-    'pages.business-assistant.section1.s1-item1',
-    'pages.business-assistant.section1.s1-item2',
-    'pages.business-assistant.section1.s1-item3',
-  ]
-  s1s2item: string[] = [
-    'pages.business-assistant.section1.s2-item1',
-    'pages.business-assistant.section1.s2-item2',
-    'pages.business-assistant.section1.s2-item3',
-    'pages.business-assistant.section1.s2-item4',
-    'pages.business-assistant.section1.s2-item5',
-    'pages.business-assistant.section1.s2-item6',
-  ]
-  s1s3item: string[] = [
-    'pages.business-assistant.section1.s3-item1',
-  ]
-  s1s4item: string[] = [
-    'pages.business-assistant.section1.s4-item1',
-    'pages.business-assistant.section1.s4-item2',
-    'pages.business-assistant.section1.s4-item3',
-  ]
-  s1s5item: string[] = [
-    'pages.business-assistant.section1.s5-item1',
-    'pages.business-assistant.section1.s5-item2',
-    'pages.business-assistant.section1.s5-item3',
-    'pages.business-assistant.section1.s5-item4',
-  ]
-  s1s6item: string[] = [
-    'pages.business-assistant.section1.s6-item1',
-    'pages.business-assistant.section1.s6-item2',
-    'pages.business-assistant.section1.s6-item3',
-    'pages.business-assistant.section1.s6-item4',
-    'pages.business-assistant.section1.s6-item5',
-    'pages.business-assistant.section1.s6-item6',
-  ]
-
-  /// SECCION 2 (s2) -> Analisis de habitos de consumo
-   
-  //Subcategories:
-  subcat2: string[] = [
-    'pages.business-assistant.section2.subcat1',
-    'pages.business-assistant.section2.subcat2',
-    'pages.business-assistant.section2.subcat3',
-  ]
-  // Items
-  s2s1item: string[] = [
-    'pages.business-assistant.section2.s1-item1',
-    'pages.business-assistant.section2.s1-item2',
-    'pages.business-assistant.section2.s1-item3',
-    'pages.business-assistant.section2.s1-item4',
-    'pages.business-assistant.section2.s1-item5',
-    'pages.business-assistant.section2.s1-item6',
-  ]
-  s2s2item: string[] = [
-    'pages.business-assistant.section2.s2-item1',
-    'pages.business-assistant.section2.s2-item2',
-    'pages.business-assistant.section2.s2-item3',
-    'pages.business-assistant.section2.s2-item4',
-  ]
-  s2s3item: string[] = [
-    'pages.business-assistant.section2.s3-item1',
-  ]
-
-  /// SECCION 4 (s4) -> Analisis de la competencia
-
-  //Subcategories:
-  subcat4: string[] = [
-    'pages.business-assistant.section4.subcat1',
-    'pages.business-assistant.section4.subcat2',
-    'pages.business-assistant.section4.subcat3',
-    'pages.business-assistant.section4.subcat4',
-  ]
-  // Items
-  s4s2item: string[] = [
-    'pages.business-assistant.section4.s2-item1',
-    'pages.business-assistant.section4.s2-item2',
-    'pages.business-assistant.section4.s2-item3',
-  ]
-  s4s3item: string[] = [
-    'pages.business-assistant.section4.s3-item1',
-  ]
-  s4s4item: string[] = [
-    'pages.business-assistant.section4.s4-item1',
-    'pages.business-assistant.section4.s4-item2',
-  ]
   
-
-
   constructor() { }
   
   ngOnInit(): void {
@@ -145,9 +199,17 @@ export class BusinessAssistantComponent implements OnInit {
     this.item = title
   }
 
-  saveData(item: string){
-    this.data.push(item)
-    return this.data
+  saveData(title: string, subcat: string, item: string){
+    let newObject = {
+      title: title,
+      subcategory: subcat,
+      items: item
+    }
+
+    if(!this.dataSend.includes(newObject.title)){
+      this.dataSend.push(newObject)
+    }
+
   }
 
 

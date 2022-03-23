@@ -4,128 +4,40 @@
 
     <h4 class="m-3 fw-bold"> Business Assistant </h4>
     <div class="row">
-        <div class="col-6 overflow-auto list-height">
-            <div class="baItem" *ngFor="let title of titles">
+        <div class="col-12 col-md-6 overflow-auto list-height mb-5">
+            <!-- Category -->
+            <div class="baItem" *ngFor="let category of data; let i=index">
 
-                <div class="list-group-item listStyle py-3" [class]="isActive(title)" (click)="collapse(title)">
-                    {{title | translate}}
+                <div class="list-group-item listStyle py-3" [class]="isActive(category.title)" (click)="collapse(category.title)">
+                    {{category.title | translate}}
                 </div>
 
+                <!-- Subcategories -->
+                <div class="card" *ngIf="category.title == list && isOpen">
 
-                <div class="card" *ngIf="list == titles[0] && list == title && isOpen">
-
-                    <!-- subcategories -->
                     <div class="card-body my-3 mt-1 overflow-auto sub-height">
 
-                        <!-- section 1 -->
-                        <div *ngFor="let subcat of subcat1" class="mb-4 ms-4 fw-bold">
+                        <div *ngFor="let subcat of category.subcategory" class="mb-4 ms-4 fw-bold">
 
-                            <div (click)="items(subcat)"> {{subcat | translate}} </div>
-
-                            <!-- items -->
-                            <div *ngIf="item == subcat1[0] && item == subcat">
-                                <div *ngFor="let items of s1s1item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat1[1] && item == subcat">
-                                <div *ngFor="let items of s1s2item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat1[2] && item == subcat">
-                                <div *ngFor="let items of s1s3item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat1[3] && item == subcat">
-                                <div *ngFor="let items of s1s4item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat1[4] && item == subcat">
-                                <div *ngFor="let items of s1s5item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat1[5] && item == subcat">
-                                <div *ngFor="let items of s1s6item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- section 2 -->
-
-                <div class="card" *ngIf="list == titles[1] && list == title && isOpen">
-                    <div class="card-body ms-3 fw-bold overflow-auto sub-height">
-                        <div *ngFor="let subcat of subcat2" class="mb-4 ms-4 fw-bold">
-                            <div (click)="items(subcat)">
-                                {{subcat | translate}}
-                            </div>
+                            <div (click)="items(subcat.title)"> {{subcat.title | translate}} </div>
 
                             <!-- items -->
-
-                            <div *ngIf="item == subcat2[0] && item == subcat">
-                                <div *ngFor="let items of s2s1item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
+                            <div *ngIf="item == subcat.title">
+                                <div *ngFor="let items of subcat.items" class="m-4 fw-normal" (click)="saveData(category.title, subcat.title, items.item)">
+                                    {{ items.item | translate}}
                                 </div>
                             </div>
-
-                            <div *ngIf="item == subcat2[1] && item == subcat">
-                                <div *ngFor="let items of s2s2item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat2[2] && item == subcat">
-                                <div *ngFor="let items of s2s3item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- section 4 -->
-
-                <div class="card" *ngIf="list == titles[3] && list == title && isOpen">
-                    <div class="card-body ms-3 fw-bold overflow-auto sub-height">
-                        <div *ngFor="let subcat of subcat4" class="mb-4 ms-4 fw-bold">
-                            <div (click)="items(subcat)">
-                                {{subcat | translate}}
-                            </div>
-
-                            <!-- items -->
-
-                            <div *ngIf="item == subcat4[1] && item == subcat">
-                                <div *ngFor="let items of s4s2item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat4[2] && item == subcat">
-                                <div *ngFor="let items of s4s3item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
-                            <div *ngIf="item == subcat4[3] && item == subcat">
-                                <div *ngFor="let items of s4s4item" class="m-4 fw-normal" (click)="saveData(items)">
-                                    {{ items | translate}}
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
-        <div class="col-6">
+        <div class="col-12 col-md-6">
             <div class="card list-height">
-                <div class="card-body">
-                    <app-business-assitant-data-save [data]="data"></app-business-assitant-data-save>
+                <div class="card-body overflow-auto">
+                    <app-business-assitant-data-save [data]="dataSend"></app-business-assitant-data-save>
                 </div>
                 <div>
                     <button class="btn btn-success float-end m-4 px-5">{{'common.button.save' | translate}}</button>

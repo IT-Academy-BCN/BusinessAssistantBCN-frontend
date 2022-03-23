@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BusinessAssitantDataSaveComponent implements OnInit {
 
-  @Input() data:any []=[];
+  @Input() data: any []=[];
 
   constructor() { }
 
