@@ -96,7 +96,7 @@
       [
         {
           "street_name": "Pg Valldaura",
-          "number": "186*190",
+          "number": "186-190",
           "zip_code": "08042",
           "district_id": "08",
           "town": "BARCELONA",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "name": "Fira de Llibre Vell *Plaça de Sarrià",
+      "name": "Fira de Llibre Vell -Plaça de Sarrià",
       "web": null,
       "email": null,
       "phone": null,
@@ -149,7 +149,7 @@
       ]
     },
     {
-      "name": "Fira Nova Artesania *Rambles",
+      "name": "Fira Nova Artesania -Rambles",
       "web": null,
       "email": null,
       "phone": null,
@@ -253,7 +253,7 @@
       ]
     },
     {
-      "name": "Mostra de Pintors Afeccionats *Pl Sagrada Família",
+      "name": "Mostra de Pintors Afeccionats -Pl Sagrada Família",
       "web": null,
       "email": null,
       "phone": null,
@@ -293,7 +293,7 @@
       ]
     },
     {
-      "name": "Mostra d'Art *Pl Sant Josep Oriol",
+      "name": "Mostra d'Art -Pl Sant Josep Oriol",
       "web": null,
       "email": null,
       "phone": null,
@@ -401,7 +401,7 @@
       ]
     },
     {
-      "name": "Fira Petit Artesà *Plaça Bonanova",
+      "name": "Fira Petit Artesà -Plaça Bonanova",
       "web": null,
       "email": null,
       "phone": null,
@@ -481,7 +481,7 @@
       ]
     },
     {
-      "name": "Fira de Brocanters *Plaça de Sarrià",
+      "name": "Fira de Brocanters -Plaça de Sarrià",
       "web": null,
       "email": null,
       "phone": null,
@@ -544,7 +544,7 @@
       [
         {
           "street_name": "Pg Valldaura",
-          "number": "186*190",
+          "number": "186-190",
           "zip_code": "08042",
           "district_id": "08",
           "town": "BARCELONA",
@@ -609,7 +609,7 @@
       ]
     },
     {
-      "name": "Fira d'Artesans de la Terra *Plaça Concòrdia",
+      "name": "Fira d'Artesans de la Terra -Plaça Concòrdia",
       "web": null,
       "email": "artesansdelaterra.cat@gmail.com",
       "phone": null,
@@ -676,7 +676,7 @@
       [
         {
           "street_name": "C la Rambla",
-          "number": "25*31",
+          "number": "25-31",
           "zip_code": "08002",
           "district_id": "01",
           "town": "BARCELONA",
@@ -708,7 +708,7 @@
       [
         {
           "street_name": "C Menorca",
-          "number": "19*23",
+          "number": "19-23",
           "zip_code": "08020",
           "district_id": "10",
           "town": "BARCELONA",
@@ -809,7 +809,7 @@
       ]
     },
     {
-      "name": "Mercat de Pins *Pg Lluís Companys",
+      "name": "Mercat de Pins -Pg Lluís Companys",
       "web": null,
       "email": null,
       "phone": null,
@@ -949,7 +949,7 @@
       ]
     },
     {
-      "name": "Mercat de Numismàtica i Filatèlia *Plaça Reial",
+      "name": "Mercat de Numismàtica i Filatèlia -Plaça Reial",
       "web": null,
       "email": null,
       "phone": null,
@@ -1069,7 +1069,7 @@
       ]
     },
     {
-      "name": "Fira de Brocanters *Plaça Frederic Soler",
+      "name": "Fira de Brocanters -Plaça Frederic Soler",
       "web": null,
       "email": null,
       "phone": null,
@@ -1105,7 +1105,7 @@
       ]
     },
     {
-      "name": "Fira de Productes Tradicionals Catalans *Plaça del Pi",
+      "name": "Fira de Productes Tradicionals Catalans -Plaça del Pi",
       "web": null,
       "email": null,
       "phone": null,
@@ -1153,7 +1153,7 @@
       ]
     },
     {
-      "name": "Mercat Gòtic Antiguitats *Plaça Nova",
+      "name": "Mercat Gòtic Antiguitats -Plaça Nova",
       "web": "http://www.mercatgoticbcn.com",
       "email": null,
       "phone": null,
@@ -1197,7 +1197,7 @@
       ]
     },
     {
-      "name": "Fira del Col·lectiu d'Artesans d'Alimentació *Plaça del Pi",
+      "name": "Fira del Col·lectiu d'Artesans d'Alimentació -Plaça del Pi",
       "web": null,
       "email": null,
       "phone": null,
@@ -1237,7 +1237,7 @@
       ]
     },
     {
-      "name": "Mercat de les Flors *Les Rambles",
+      "name": "Mercat de les Flors -Les Rambles",
       "web": null,
       "email": null,
       "phone": null,
@@ -1277,7 +1277,7 @@
       ]
     },
     {
-      "name": "Fira Espai d'Art  *Av Diagonal",
+      "name": "Fira Espai d'Art  -Av Diagonal",
       "web": "https://www.facebook.com/pages/ESPAI-DART-de-les-CORTS/374814855939106",
       "email": null,
       "phone": null,
@@ -1313,7 +1313,7 @@
       ]
     },
     {
-      "name": "Mostra d'Art *Plaça de Sarrià",
+      "name": "Mostra d'Art -Plaça de Sarrià",
       "web": null,
       "email": null,
       "phone": null,
@@ -1349,7 +1349,7 @@
       ]
     },
     {
-      "name": "Fira Brocanters *Moll de les Drassanes",
+      "name": "Fira Brocanters -Moll de les Drassanes",
       "web": "http://www.facebook.com/MercatdeColomBCN",
       "email": "mercatportantic@gmail.com",
       "phone": null,
@@ -1421,7 +1421,7 @@
       ]
     },
     {
-      "name": "Fira d'Artesans del Clot *Pl Font i Sagué",
+      "name": "Fira d'Artesans del Clot -Pl Font i Sagué",
       "web": null,
       "email": null,
       "phone": null,
@@ -1517,7 +1517,7 @@
       ]
     },
     {
-      "name": "Mercat del Vell *Estació de Sants",
+      "name": "Mercat del Vell -Estació de Sants",
       "web": null,
       "email": null,
       "phone": null,
@@ -1536,7 +1536,7 @@
       [
         {
           "street_name": "Pl Països Catalans",
-          "number": "1*7",
+          "number": "1-7",
           "zip_code": "08014",
           "district_id": "03",
           "town": "BARCELONA",
@@ -1549,7 +1549,7 @@
       ]
     },
     {
-      "name": "Fira d'Artesania Popular Catalana *Plaça Eivissa",
+      "name": "Fira d'Artesania Popular Catalana -Plaça Eivissa",
       "web": null,
       "email": null,
       "phone": null,
@@ -1617,7 +1617,7 @@
       ]
     },
     {
-      "name": "Fira d'Embotits Artesanals *Plaça de Sarrià",
+      "name": "Fira d'Embotits Artesanals -Plaça de Sarrià",
       "web": null,
       "email": null,
       "phone": null,

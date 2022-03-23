@@ -94,7 +94,7 @@
       "addresses": [
         {
           "street_name": "T Estadella",
-          "number": "46*54",
+          "number": "46-54",
           "zip_code": "08030",
           "district_id": "09",
           "town": "BARCELONA",
@@ -135,7 +135,7 @@
       "addresses": [
         {
           "street_name": "C Can Ràbia",
-          "number": "3*5",
+          "number": "3-5",
           "zip_code": "08017",
           "district_id": "05",
           "town": "BARCELONA",
@@ -582,7 +582,7 @@
       "addresses": [
         {
           "street_name": "Av Josep Tarradellas",
-          "number": "123*127",
+          "number": "123-127",
           "zip_code": "08029",
           "district_id": "04",
           "town": "BARCELONA",
@@ -594,7 +594,7 @@
       ]
     },
     {
-      "name": "Llongueras Perruquers *Oficines",
+      "name": "Llongueras Perruquers -Oficines",
       "web": "http://www.llongueras.com",
       "email": "llongueras@llongueras.com",
       "phone": null,
@@ -615,7 +615,7 @@
       "addresses": [
         {
           "street_name": "C Berlín",
-          "number": "39*41",
+          "number": "39-41",
           "zip_code": "08014",
           "district_id": "04",
           "town": "BARCELONA",
@@ -730,7 +730,7 @@
       "addresses": [
         {
           "street_name": "Rbla Brasil",
-          "number": "38*40",
+          "number": "38-40",
           "zip_code": "08028",
           "district_id": "03",
           "town": "BARCELONA",
@@ -980,7 +980,7 @@
       "addresses": [
         {
           "street_name": "Av Parc Logístic",
-          "number": "2*10",
+          "number": "2-10",
           "zip_code": "08040",
           "district_id": "03",
           "town": "BARCELONA",
@@ -1259,7 +1259,7 @@
       "addresses": [
         {
           "street_name": "G.V. Corts Catalanes",
-          "number": "764*766",
+          "number": "764-766",
           "zip_code": "08013",
           "district_id": "02",
           "town": "BARCELONA",
@@ -1520,7 +1520,7 @@
       ]
     },
     {
-      "name": "Textil Textura *Oficines",
+      "name": "Textil Textura -Oficines",
       "web": "http://www.textura-interiors.com",
       "email": "info@textura-interiors.com",
       "phone": null,
@@ -1603,7 +1603,7 @@
       "addresses": [
         {
           "street_name": "C Sicília",
-          "number": "372*374",
+          "number": "372-374",
           "zip_code": "08025",
           "district_id": "06",
           "town": "BARCELONA",

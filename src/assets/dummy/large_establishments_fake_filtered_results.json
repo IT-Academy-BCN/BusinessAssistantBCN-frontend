@@ -94,7 +94,7 @@
       "addresses": [
         {
           "street_name": "T Estadella",
-          "number": "46*54",
+          "number": "46-54",
           "zip_code": "08030",
           "district_id": "09",
           "town": "BARCELONA",
@@ -135,7 +135,7 @@
       "addresses": [
         {
           "street_name": "C Can Ràbia",
-          "number": "3*5",
+          "number": "3-5",
           "zip_code": "08017",
           "district_id": "05",
           "town": "BARCELONA",
