@@ -119,10 +119,7 @@ export class BusinessAssistantComponent implements OnInit {
         {
           title: 'pages.business-assistant.section4.subcat1',
           items: [
-            {item: 'pages.business-assistant.section4.s1-item1'},
-            {item: 'pages.business-assistant.section4.s1-item2'},
-            {item: 'pages.business-assistant.section4.s1-item3'},
-            {item: 'pages.business-assistant.section4.s1-item4'},
+            {item: ''}
           ]
         },
         {
@@ -192,22 +189,17 @@ export class BusinessAssistantComponent implements OnInit {
   }
 
   isActive(item: string): string{
-    return this.list == item ? 'active': ''
+    return this.list == item ? 'isActive': ''
   }
 
   items(title: string){
     this.item = title
   }
 
-  saveData(title: string, subcat: string, item: string){
-    let newObject = {
-      title: title,
-      subcategory: subcat,
-      items: item
-    }
-
-    if(!this.dataSend.includes(newObject.title)){
-      this.dataSend.push(newObject)
+  saveData( item: string){
+ 
+    if(!this.dataSend.includes(item)){
+      this.dataSend.push(item)
     }
 
   }

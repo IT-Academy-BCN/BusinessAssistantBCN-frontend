@@ -8,7 +8,7 @@
             <!-- Category -->
             <div class="baItem" *ngFor="let category of data; let i=index">
 
-                <div class="list-group-item listStyle py-3" [class]="isActive(category.title)" (click)="collapse(category.title)">
+                <div class="listStyle py-3" [class]="isActive(category.title)" (click)="collapse(category.title)">
                     {{category.title | translate}}
                 </div>
 
@@ -23,11 +23,11 @@
 
                             <!-- items -->
                             <div *ngIf="item == subcat.title">
-                                <div *ngFor="let items of subcat.items" class="m-4 fw-normal" (click)="saveData(category.title, subcat.title, items.item)">
+                                <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="saveData(items.item)">
                                     {{ items.item | translate}}
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
