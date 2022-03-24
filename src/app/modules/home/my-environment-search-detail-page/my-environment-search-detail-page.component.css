@@ -1,27 +1,27 @@
 .results-card{
     min-width: 55%;
-}
-
-
-.result-container{
+  }
+  
+  
+  .result-container{
     padding-left: 14%;
-}
-.details{
+  }
+  .details{
     padding-left: 12%;
-}
-
-.data{
+  }
+  
+  .data{
     overflow-y: scroll;
     overflow-x: visible;
     max-height:300px;
-}
-
-button{
+  }
+  
+  button{
     font-size: 1rem;
-}
-
-@media (max-width:768px) {
+  }
+  
+  @media (max-width:768px) {
     .ps-5{
         padding-left: 1.1rem !important;
     }
-}
+  }
