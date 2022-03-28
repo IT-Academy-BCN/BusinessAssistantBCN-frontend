@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+// import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
@@ -18,7 +18,8 @@ import { LoginModule } from './modules/login/login.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
 
   ],
   imports: [
@@ -33,7 +34,7 @@ import { LoginModule } from './modules/login/login.module';
       }
     }),
     FontAwesomeModule,
-    SweetAlert2Module.forRoot(),
+    // SweetAlert2Module.forRoot(),
     SharedModule,
     HomeModule,
     LoginModule,

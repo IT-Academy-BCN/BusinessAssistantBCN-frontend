@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="container mb-5 pb-3">
+
+    <h4 class="m-3 fw-bold"> Business Assistant </h4>
+    <div class="row">
+        <div class="col-12 col-md-6 overflow-auto list-height mb-5">
+            <!-- Category -->
+            <div class="baItem" *ngFor="let category of data; let i=index">
+
+                <div class="listStyle py-3" [class]="isActive(category.title)" (click)="collapse(category.title)">
+                    {{category.title | translate}}
+                </div>
+
+                <!-- Subcategories -->
+                <div class="card" *ngIf="category.title == list && isOpen">
+
+                    <div class="card-body my-3 mt-1 overflow-auto sub-height">
+
+                        <div *ngFor="let subcat of category.subcategory" class="mb-4 ms-4 fw-bold">
+
+                            <div (click)="items(subcat.title)"> {{subcat.title | translate}} </div>
+
+                            <!-- items -->
+                            <div *ngIf="item == subcat.title">
+                                <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="saveData(items.item)">
+                                    {{ items.item | translate}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card list-height">
+                <div class="card-body overflow-auto">
+                    <app-business-assitant-data-save [data]="dataSend"></app-business-assitant-data-save>
+                </div>
+                <div>
+                    <button class="btn btn-success float-end m-4 px-5">{{'common.button.save' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

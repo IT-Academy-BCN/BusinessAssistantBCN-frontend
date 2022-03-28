@@ -8,7 +8,8 @@ import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BusinessAssistantComponent } from './business-assistant/business-assistant.component';
+import { BusinessAssitantDataSaveComponent } from './business-assitant-data-save/business-assitant-data-save.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -23,14 +24,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     LargeStablishmentsDetailPageComponent,
     InformationNavComponent,
     VirtualAssistantComponent,
-
-
+    BusinessAssistantComponent,
+    BusinessAssitantDataSaveComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
-    NgbModule,
     ReactiveFormsModule
   ],
   exports: [
