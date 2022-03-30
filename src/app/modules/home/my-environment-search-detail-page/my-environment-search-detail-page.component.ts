@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, TemplateRef } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
@@ -51,7 +51,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
   private submitted: boolean = false;
 
   // Save Search Modal Behavior
-  open( modal: any ){
+  open( modal: TemplateRef<any> ){
     if( !this.userLogged() ){ return }   // To be replaced when user login works
     this.submitted = false;
     this.saveSearchForm.reset()
