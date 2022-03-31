@@ -28,7 +28,7 @@ export class MunicipalMarketsPageComponent implements OnInit {
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
               private municipalMarketsService: MunicipalMarketsService,
-              private commonservice: CommonService) { }
+              private commonService: CommonService) { }
 
   ngOnInit(): void {
     this.loadMasterData();
@@ -40,8 +40,7 @@ export class MunicipalMarketsPageComponent implements OnInit {
   }
 
   loadMasterData() {
-    this.zones$ = this.commonservice.getZones().subscribe(resp => {
-      // console.log(resp);
+    this.zones$ = this.commonService.getZones().subscribe(resp => {
       resp.results.forEach((element: any) => {
         const bcnZone: ZoneModel = new ZoneModel(element);
         this.bcnZones.push(bcnZone);
