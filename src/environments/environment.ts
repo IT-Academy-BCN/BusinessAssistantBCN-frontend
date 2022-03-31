@@ -12,6 +12,7 @@ export const environment = {
   BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS: '../../assets/dummy/large_establishments_fake_filtered_results.json',
   BACKEND_BIG_MALLS_URL: '../assets/dummy/big-malls_dummy.json',
   BACKEND_BIG_MALLS_FAKE_FILTERED_RESULTS: '../assets/dummy/big-malls_fake_filtered_results.json',
+  BACKEND_MUNICIPAL_MARKETS:'../../assets/dummy/municipal-markets_dummy.json',
   MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A'
 };
 
