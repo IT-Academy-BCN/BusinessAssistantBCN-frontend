@@ -7,6 +7,7 @@ import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { MunicipalMarketsService } from 'src/app/services/municipal-markets.service';
 import { MunicipalMarketModel } from 'src/app/models/municipal-market.model';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-my-environment-search-detail-page',
@@ -23,21 +24,25 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     private auth: AuthenticationService,
     private modalService: NgbModal, 
     private fb:FormBuilder,
-    private municipalMarketsService: MunicipalMarketsService
+    private municipalMarketsService: MunicipalMarketsService,
+    private commonService: CommonService
   ) {}
 
   ngOnInit(): void {
-    // this.LargeEstablishmentService.sendSelectedData()
-    //   .subscribe((resp: any) => {
-    //     this.LargeEstablishmentsData = resp.results;
-    //     console.log("resp desde detail page: ",resp.results)
-    //   });
-
-      this.municipalMarketsService.sendSelectedData()
+    if(this.commonService.largeStablishmentsClicked===true){
+    this.LargeEstablishmentService.sendSelectedData()
       .subscribe((resp: any) => {
-        this.municipalMarketsData = resp.results;
+        this.LargeEstablishmentsData = resp.results;
         console.log("resp desde detail page: ",resp.results)
       });
+    }
+    if(this.commonService.municipalMarketsClicked===true){
+      this.municipalMarketsService.sendSelectedData()
+      .subscribe((resp: any) => {
+        this.LargeEstablishmentsData = resp.results;
+        console.log("resp desde detail page: ",resp.results)
+      });
+    }
   }
 
   ngOnDestroy() {

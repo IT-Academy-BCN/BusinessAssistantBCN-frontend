@@ -58,7 +58,7 @@ export class MunicipalMarketsPageComponent implements OnInit {
   }
 
   municipalMarketsSearch() {
-    // this.largeStablishments$ =
+    this.commonService.municipalMarketsClicked=true;
     this.municipalMarketsService.sendSelectedData()
       .subscribe((resp: any) => {
         console.log(resp)
