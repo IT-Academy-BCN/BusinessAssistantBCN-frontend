@@ -5,7 +5,7 @@
     "results":
     [
         {
-            "name": "Centre Comercial El Corte Inglés *Avinguda Diagonal",
+            "name": "Centre Comercial El Corte Inglés - Avinguda Diagonal",
             "web": "http://www.elcorteingles.es",
             "email": "clientes@elcorteingles.es",
             "phone": null,
@@ -48,14 +48,14 @@
             [
                 {
                     "address_name": "Av Diagonal",
-                    "street_number": "617*619",
+                    "street_number": "617-619",
                     "zip_code": "08028",
                     "district_id": "04",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 427089.6056334056,
-                        "y": 4582196.984049929
+                        "x": 2.127937,
+                        "y": 41.387999 
                     }
                 }
             ]
@@ -88,20 +88,20 @@
             [
                 {
                     "address_name": "G.V. Corts Catalanes",
-                    "street_number": "373*385",
+                    "street_number": "373-385",
                     "zip_code": "08015",
                     "district_id": "02",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 428919.128134815,
-                        "y": 4580850.788577912
+                        "x": 2.149975,
+                        "y": 41.376038
                     }
                 }
             ]
         },
         {
-            "name": "Hipermercat Carrefour *La Maquinista",
+            "name": "Hipermercat Carrefour - La Maquinista",
             "web": "http://www.carrefour.es",
             "email": null,
             "phone": null,
@@ -126,8 +126,8 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 433034.39665564324,
-                        "y": 4588197.656780293
+                        "x": 2.19837,
+                        "y": 41.442562
                     }
                 }
             ]
@@ -166,14 +166,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 432939.40871910215,
-                        "y": 4582465.578640014
+                        "x": 2.197869,
+                        "y": 41.390927
                     }
                 }
             ]
         },
         {
-            "name": "Botiga FNAC *Illa Diagonal",
+            "name": "Botiga FNAC - Illa Diagonal",
             "web": "http://www.fnac.es",
             "email": "illa@fnac.es",
             "phone": null,
@@ -256,20 +256,20 @@
             [
                 {
                     "address_name": "Av Diagonal",
-                    "street_number": "555*559",
+                    "street_number": "555-559",
                     "zip_code": "08029",
                     "district_id": "04",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 427675.4938963018,
-                        "y": 4582393.626257071
+                        "x": 2.134921,
+                        "y": 41.389823
                     }
                 }
             ]
         },
         {
-            "name": "El Corte Inglés *Avinguda Portal de l'Àngel",
+            "name": "El Corte Inglés - Avinguda Portal de l'Àngel",
             "web": "http://www.elcorteingles.es",
             "email": null,
             "phone": null,
@@ -324,14 +324,14 @@
             [
                 {
                     "address_name": "Av Portal de l'Àngel",
-                    "street_number": "19*21",
+                    "street_number": "19-21",
                     "zip_code": "08002",
                     "district_id": "01",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430817.0904579748,
-                        "y": 4581924.688490288
+                        "x": 2.172547,
+                        "y": 41.385876
                     }
                 }
             ]
@@ -370,14 +370,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 434510.2090325903,
-                        "y": 4584619.5799381975
+                        "x": 2.216423,
+                        "y": 41.410457
                     }
                 }
             ]
         },
         {
-            "name": "Botiga Decathlon *Plaça Vila de Madrid",
+            "name": "Botiga Decathlon - Plaça Vila de Madrid",
             "web": "http://www.decathlon.cat",
             "email": "escuchacliente@decathlon.com",
             "phone": null,
@@ -402,14 +402,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430840.91625275905,
-                        "y": 4581796.285748212
+                        "x": 2.172847,
+                        "y": 41.384721
                     }
                 }
             ]
         },
         {
-            "name": "Botiga Bauhaus *Passeig Zona Franca",
+            "name": "Botiga Bauhaus - Passeig Zona Franca",
             "web": "http://www.bauhaus.es",
             "email": "barcelona@bauhaus.es",
             "phone": null,
@@ -458,14 +458,14 @@
                     "town": "Barcelona",
                     "location":
                     {
-                        "x": 428107.4654593939,
-                        "y": 4578830.10113759
+                        "x": 2.14051,
+                        "y": 41.357766
                     }
                 }
             ]
         },
         {
-            "name": "El Corte Inglés *Plaça Catalunya",
+            "name": "El Corte Inglés - Plaça Catalunya",
             "web": "http://www.elcorteingles.es",
             "email": null,
             "phone": null,
@@ -510,8 +510,8 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430708.5304682953,
-                        "y": 4582143.131336454
+                        "x": 2.171224,
+                        "y": 41.387834
                     }
                 }
             ]
@@ -550,8 +550,8 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 431579.0119413545,
-                        "y": 4587385.475400657
+                        "x": 2.181042,
+                        "y": 41.435124
                     }
                 }
             ]
@@ -580,14 +580,14 @@
             [
                 {
                     "address_name": "Mallorca",
-                    "street_number": "1*5",
+                    "street_number": "1-5",
                     "zip_code": "08014",
                     "district_id": "03",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 428334.7077414836,
-                        "y": 4581208.806959857
+                        "x": 2.142945,
+                        "y": 41.379211
                     }
                 }
             ]
@@ -634,8 +634,8 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 432506.888609326,
-                        "y": 4584029.356299913
+                        "x": 2.192521,
+                        "y": 41.404975
                     }
                 }
             ]
@@ -666,14 +666,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430511.2914332847,
-                        "y": 4581911.851552849
+                        "x": 2.168892,
+                        "y": 41.385734
                     }
                 }
             ]
         },
         {
-            "name": "Hipermercat Carrefour *Glòries",
+            "name": "Hipermercat Carrefour - Glòries",
             "web": "http://www.carrefour.es",
             "email": null,
             "phone": null,
@@ -702,8 +702,8 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 432506.888609326,
-                        "y": 4584029.356299913
+                        "x": 2.192521,
+                        "y": 41.404975
                     }
                 }
             ]
@@ -740,14 +740,14 @@
             [
                 {
                     "address_name": "Moll Espanya",
-                    "street_number": "5*6",
+                    "street_number": "5-6",
                     "zip_code": "08039",
                     "district_id": "01",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 431699.80410681455,
-                        "y": 4580793.35871181
+                        "x": 2.183231,
+                        "y": 41.375761
                     }
                 }
             ]
@@ -780,20 +780,20 @@
             [
                 {
                     "address_name": "Pg Zona Franca",
-                    "street_number": "191*205",
+                    "street_number": "191-205",
                     "zip_code": "08038",
                     "district_id": "03",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 427868.34868990397,
-                        "y": 4579278.164710391
+                        "x": 2.137598,
+                        "y": 41.36178
                     }
                 }
             ]
         },
         {
-            "name": "Hipercor *Avinguda Meridiana",
+            "name": "Hipercor - Avinguda Meridiana",
             "web": "http://www.hipercor.es",
             "email": null,
             "phone": null,
@@ -840,20 +840,20 @@
             [
                 {
                     "address_name": "Av Meridiana",
-                    "street_number": "350*358",
+                    "street_number": "350-358",
                     "zip_code": "08027",
                     "district_id": "09",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 431903.2719562669,
-                        "y": 4586585.460260933
+                        "x": 2.185013,
+                        "y": 41.427946
                     }
                 }
             ]
         },
         {
-            "name": "Botiga FNAC *El Triangle",
+            "name": "Botiga FNAC - El Triangle",
             "web": "http://www.fnac.es",
             "email": "triangle@fnac.es",
             "phone": null,
@@ -942,8 +942,8 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430555.64799505565,
-                        "y": 4581945.957229142
+                        "x": 2.169418,
+                        "y": 41.386045
                     }
                 }
             ]
@@ -994,14 +994,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 427715.1435128675,
-                        "y": 4582384.607353548
+                        "x": 2.135396,
+                        "y": 41.389745
                     }
                 }
             ]
         },
         {
-            "name": "Servei Estació *Aragó",
+            "name": "Servei Estació - Aragó",
             "web": "http://www.serveiestacio.com",
             "email": "info@serveiestacio.com",
             "phone": null,
@@ -1038,14 +1038,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430123.0690745961,
-                        "y": 4582550.295243172
+                        "x": 2.164175,
+                        "y": 41.39145
                     }
                 }
             ]
         },
         {
-            "name": "Botiga FNAC *La Maquinista",
+            "name": "Botiga FNAC - La Maquinista",
             "web": "http://www.fnac.es",
             "email": null,
             "phone": null,
@@ -1097,11 +1097,11 @@
                 },
                 {
                     "id": 30343758,
-                    "name": "Altres (targeta rosa) "
+                    "name": "Altres (targeta rosa)"
                 },
                 {
                     "id": 30344758,
-                    "name": "LLibreries (targeta rosa)  "
+                    "name": "LLibreries (targeta rosa)"
                 }
             ],
             "addresses":
@@ -1114,14 +1114,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 433034.3956556532,
-                        "y": 4588197.655780305
+                        "x": 2.19837,
+                        "y": 41.442562
                     }
                 }
             ]
         },
         {
-            "name": "Botiga FNAC *Arenas de Barcelona",
+            "name": "Botiga FNAC - Arenas de Barcelona",
             "web": "http://www.fnac.es",
             "email": null,
             "phone": null,
@@ -1192,20 +1192,20 @@
             [
                 {
                     "address_name": "G.V. Corts Catalanes",
-                    "street_number": "373*385",
+                    "street_number": "373-385",
                     "zip_code": "08015",
                     "district_id": "02",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 428919.128134815,
-                        "y": 4580850.788577912
+                        "x": 2.149975,
+                        "y": 41.376038
                     }
                 }
             ]
         },
         {
-            "name": "El Corte Inglés *Can Dragó",
+            "name": "El Corte Inglés - Can Dragó",
             "web": "http://www.elcorteingles.es",
             "email": null,
             "phone": null,
@@ -1238,14 +1238,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 431598.6057238942,
-                        "y": 4587519.917094888
+                        "x": 2.181261,
+                        "y": 41.436337
                     }
                 }
             ]
         },
         {
-            "name": "Hipermercat Alcampo *Diagonal Mar",
+            "name": "Hipermercat Alcampo - Diagonal Mar",
             "web": "http://www.alcampo.es",
             "email": null,
             "phone": null,
@@ -1260,20 +1260,20 @@
             [
                 {
                     "address_name": "Av Diagonal",
-                    "street_number": "33*35",
+                    "street_number": "33-35",
                     "zip_code": "08019",
                     "district_id": "10",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 434510.2090325903,
-                        "y": 4584619.5799381975
+                        "x": 2.216423,
+                        "y": 41.410457
                     }
                 }
             ]
         },
         {
-            "name": "Botiga FNAC *Glòries",
+            "name": "Botiga FNAC - Glòries",
             "web": "http://www.fnac.es",
             "email": null,
             "phone": null,
@@ -1354,14 +1354,14 @@
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 432506.888609326,
-                        "y": 4584029.356299913
+                        "x": 2.192521,
+                        "y": 41.404975
                     }
                 }
             ]
         },
         {
-            "name": "Botiga Decathlon *Illa Diagonal",
+            "name": "Botiga Decathlon - Illa Diagonal",
             "web": "http://www.decathlon.cat",
             "email": "escuchacliente@decathlon.com",
             "phone": null,
@@ -1396,14 +1396,14 @@
             [
                 {
                     "address_name": "Av Diagonal",
-                    "street_number": "555*559",
+                    "street_number": "555-559",
                     "zip_code": "08029",
                     "district_id": "04",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 427715.1435128675,
-                        "y": 4582384.607353548
+                        "x": 2.135396,
+                        "y": 41.389745
                     }
                 }
             ]
@@ -1434,8 +1434,8 @@
                     "town": "Barcelona",
                     "location":
                     {
-                        "x": 433034.3956556532,
-                        "y": 4588197.655780305
+                        "x": 2.19837,
+                        "y": 41.442562
                     }
                 }
             ]

@@ -11,7 +11,27 @@ export const environment = {
   BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL: '../../assets/dummy/activities_dummy.json',
   BACKEND_LARGE_STABLISHMENTS_SEARCH_URL: '../../assets/dummy/large-establishments_zones_activity_dummy.json',
   BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS: '../../assets/dummy/large_establishments_fake_filtered_results.json',
-  MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A'
+  MAPBOX_TOKEN: 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A',
+  MAPBOX_ITAcademy_OBJECT: {
+    name: "IT Academy",
+    web: "bcn.cat/barcelonactiva",
+    email: "itacademy@barcelonactiva.cat",
+    phone: 932917610,
+    activities: [],
+    addresses: [
+      {
+        street_name: "Roc Boronat",
+        number: "117-127",
+        zip_code: "08018",
+        district_id: "04",
+        town: "BARCELONA",
+        location: {
+          x: 2.194060007737955,
+          y: 41.40389733660671,
+        },
+      },
+    ],
+  }
 };
 
 
