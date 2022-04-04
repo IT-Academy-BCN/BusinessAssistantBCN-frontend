@@ -1,40 +1,35 @@
-import {Injectable} from "@angular/core";
-import {Router} from "@angular/router";
-import {HttpClient, HttpParams} from "@angular/common/http";
-import { environment } from '../../environments/environment';
-import { map, Observable } from "rxjs";
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { environment } from "../../environments/environment";
 import { ZoneModel } from "../models/common/zone.model";
-import { LargeStablishmentModel } from '../models/large-stablishment.model';
+import { LargeStablishmentModel } from "../models/large-stablishment.model";
 import { EconomicActivityModel } from "../models/common/economic-activity.model";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
-
 export class LargeStablishmentsService {
-
   //Options checked
   private _bcnZonesSelected: number[] = [];
   private _activitiesSelected: number[] = [];
 
   // Large Stablishments
-  private _largeStablishments: LargeStablishmentModel[] = []
+  private _largeStablishments: LargeStablishmentModel[] = [];
 
   get bcnZonesSelected(): number[] {
     return [...this._bcnZonesSelected];
   }
 
   get activitiesSelected(): number[] {
-    return [...this._activitiesSelected]
+    return [...this._activitiesSelected];
   }
 
   get largeStablishments(): LargeStablishmentModel[] {
     return [...this._largeStablishments];
   }
 
-  constructor(private router: Router,
-    private http: HttpClient) {
-  }
+  constructor(private router: Router, private http: HttpClient) {}
 
   // getZoneBySearch(term: string): Observable<any> {
   //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
@@ -45,9 +40,8 @@ export class LargeStablishmentsService {
 
   // }
 
-
   addZonesSelected(zoneSelected: ZoneModel) {
-    this._bcnZonesSelected.push(zoneSelected.idZone)
+    this._bcnZonesSelected.push(zoneSelected.idZone);
   }
 
   deleteZoneSelected(zoneSelected: ZoneModel) {
@@ -60,13 +54,15 @@ export class LargeStablishmentsService {
 
   addActivitiesSelected(activitySelected: EconomicActivityModel) {
     this._activitiesSelected.push(activitySelected.idActivity);
-    console.log(JSON.stringify([...this._activitiesSelected]))
+    console.log(JSON.stringify([...this._activitiesSelected]));
   }
 
   deleteActivitySelected(activitySelected: EconomicActivityModel) {
     this._activitiesSelected.map((activity, index) => {
-      activity === activitySelected.idActivity ? this._activitiesSelected.splice(index, 1) : null;
-    })
+      activity === activitySelected.idActivity
+      ? this._activitiesSelected.splice(index, 1)
+      : null;
+    });
   }
 
   initializeSelected() {
@@ -91,5 +87,4 @@ export class LargeStablishmentsService {
   addLargeStablishment(element: LargeStablishmentModel) {
     this._largeStablishments.push(element);
   }
-
 }
