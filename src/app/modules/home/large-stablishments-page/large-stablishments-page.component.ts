@@ -93,7 +93,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     // this.largeStablishments$ =
     this.largeStablishmentsService.sendSelectedData()
       .subscribe((resp: any) => {
-        console.log(resp)
+        console.log("largeStablishmentSearch RESPONSE: ",resp)
       });
 
   }
