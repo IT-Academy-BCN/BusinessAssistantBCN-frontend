@@ -45,7 +45,7 @@ tmp/
 .svn/
 .iml/
 .idea/
-.angular
+.angular/
 *.classpath
 *.project
 *.tern-project
