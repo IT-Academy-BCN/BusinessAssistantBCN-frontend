@@ -10,7 +10,7 @@
             </a>
             <ul *ngIf="!user" class="dropdown-menu dropdown-menu-dark border-start-0 m-0" id="navigation">
                 <li class="nav-list"><a class="nav-link" (click)="openLoginForm()">Login</a></li>
-                <li class="nav-list"><a routerLink='home' routerLinkActive="" class="nav-link"
+                <li class="nav-list"><a routerLink='' routerLinkActive="" class="nav-link"
                         aria-current="page">{{'components.header.section2.title' | translate}}</a></li>
                 <li class="nav-list"><a class="nav-link" routerLink=''>{{'components.footer.section1.item1' |
                         translate}}
@@ -26,7 +26,9 @@
                 </li>
             </ul>
             <ul *ngIf="user" class="dropdown-menu dropdown-menu-dark border-start-0 m-0">
-                <li class="nav-list"><a class="nav-link searches" routerLink="">{{'components.header.section5.title' |
+                <li class="nav-list"><a class="nav-link searches" routerLink="/saved-searches">{{'components.header.section5.title' |
+
+
                     translate}}</a></li>
 
                 <li class="nav-list"> <h6>{{'components.header.section6.title' |

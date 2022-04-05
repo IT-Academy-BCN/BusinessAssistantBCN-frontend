@@ -8,6 +8,9 @@ import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
+
+import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -23,7 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LargeStablishmentsDetailPageComponent,
     InformationNavComponent,
     VirtualAssistantComponent,
-
+    SavedSearchesComponent
 
   ],
   imports: [

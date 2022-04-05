@@ -116,3 +116,14 @@ a {
       padding: 0 1rem 1rem 1rem;
   }
 }
+  
+.search-button{
+  background-color:#3B79BF;
+  border:none;
+  padding:0.5rem 3.5rem;
+  color:#ffffff;
+  font-size:1.25rem;
+  font-weight:bold;
+  margin-right:0.5rem;
+  margin-bottom:0.5rem;
+}

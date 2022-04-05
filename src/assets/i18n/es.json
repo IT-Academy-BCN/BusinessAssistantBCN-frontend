@@ -59,6 +59,13 @@
             "section2": {
                 "title": "Porque sabemos que tienes una mente inquieta, ponemos a tu disposición un asistente virtual, herramientas de investigación y montañas de sugerencias.¿Presencial o e-commmererce?¿Prestashop, Wordpress o Shopify?¡¡Tienes mucho por hacer!!"
             }
+        },
+        "saved-searches":{
+            "title": "Mis Búsquedas",
+            "item-1": "Ver en mapa",
+            "item-2": "Nombre",
+            "item-3": "Fecha",
+            "item-4": "Detalles"
         }
     },
     "pages": {

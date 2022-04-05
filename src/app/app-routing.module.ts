@@ -8,6 +8,7 @@ import { LoginFormComponent } from './modules/login/login-form/login-form.compon
 import { LargeStablishmentsDetailPageComponent } from './modules/home/large-stablishments-detail-page/large-stablishments-detail-page.component';
 import { LargeStablishmentsPageComponent } from './modules/home/large-stablishments-page/large-stablishments-page.component';
 import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
+import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: "virtual-assistant", component: VirtualAssistantComponent },
   { path: "large-stablishments", component: LargeStablishmentsPageComponent },
   { path: "large-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
-
+  { path: "saved-searches", component: SavedSearchesComponent },
 
 ];
 
