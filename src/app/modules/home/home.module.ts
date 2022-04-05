@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -30,14 +31,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     VirtualAssistantComponent,
     BusinessAssistantComponent,
     BusinessAssitantDataSaveComponent,
-    SavedSearchesComponent
+    SavedSearchesComponent,
 
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   exports: [
     HomePageComponent
