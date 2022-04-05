@@ -1,5 +1,6 @@
 # ignore files for git
-
+node_modules
+cache
 # Compiled source #
 ###################
 *.com
