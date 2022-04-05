@@ -9,6 +9,7 @@ import { LargeStablishmentsDetailPageComponent } from './modules/home/large-stab
 import { LargeStablishmentsPageComponent } from './modules/home/large-stablishments-page/large-stablishments-page.component';
 import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
 import { BusinessAssistantComponent } from './modules/home/business-assistant/business-assistant.component';
+import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: "business-assistant", component: BusinessAssistantComponent},
   { path: "large-stablishments", component: LargeStablishmentsPageComponent },
   { path: "large-stablishments-detail", component: LargeStablishmentsDetailPageComponent },
-
+  { path: "saved-searches", component: SavedSearchesComponent },
 
 ];
 

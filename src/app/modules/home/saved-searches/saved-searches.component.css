@@ -1,0 +1,20 @@
+
+  .box{
+    min-height:60vh;
+  }
+  .card-contents{
+    min-height:100%;
+  }
+
+
+  @media (max-width: 1024px) {
+    .search-button{
+ padding:0.1rem 0.1rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .search-button{
+padding: 0.1rem 0.1rem;
+    }
+  }
