@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 node_modules
 .angular/cache/*
 
 
+=======
+node_modules
+>>>>>>> pr_118
