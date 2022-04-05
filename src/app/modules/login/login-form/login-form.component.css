@@ -15,3 +15,9 @@
 .signup-section span{
     font-weight:700;
   }
+
+label{
+  font-size: 1.25rem;
+  padding: 1rem 0 0 1rem;
+  margin-bottom: 0.5rem;
+}
