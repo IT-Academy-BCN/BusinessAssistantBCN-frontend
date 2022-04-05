@@ -28,7 +28,7 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
   ) {}
 
     ngOnInit(): void {
-        this.LargeEstablishmentService.sendSelectedData()
+        this.LargeEstablishmentService.getLargeStablishmentsData()
             .subscribe((resp: any) => {
                 this.LargeEstablishmentsData = resp.results;
                 console.log("resp desde detail page: " , resp.results)
