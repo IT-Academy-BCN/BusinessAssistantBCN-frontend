@@ -89,6 +89,10 @@
             }
         },
         "big-stablish-detail": {
+            "dropdown":{
+                "download": "Download file",
+                "open": "Open file"
+            },
             "saveSearchModal":{
                 "title": "Save search",
                 "name": "Name",
@@ -110,7 +114,9 @@
             "gallery-market": "Commercial Galleries",
             "mall": "Malls",
             "public-market": "Municipal Markets",
-            "market-fair": "Markets and Fairs"
+            "market-fair": "Markets and Fairs",
+            "save-results": "Save results",
+            "download-results": "Download results"
         },
         "title": {
             "results": "Results"
