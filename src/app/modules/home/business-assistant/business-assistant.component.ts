@@ -169,10 +169,9 @@ export class BusinessAssistantComponent implements OnInit {
     },
   ];
 
-  list:string = '';
-  item: string = '';
+  list:number = 0
+  item: number = 0
   isOpen: boolean = false;
-  isActive: string = ''
 
   
   constructor() { }
@@ -180,18 +179,17 @@ export class BusinessAssistantComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  collapse(title:string){
+  collapse(title:number){
     if(title != this.list){
       this.isOpen = true
-      this.isActive = 'align-self: flex-start;'
     }else{
       this.isOpen = !this.isOpen
     }
     this.list = title
   }
+  
 
-
-  items(title: string){
+  items(title: number){
     this.item = title
   }
 

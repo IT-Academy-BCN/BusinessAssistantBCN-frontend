@@ -4,25 +4,25 @@
 
     <h4 class="m-3 fw-bold"> Business Assistant </h4>
     <div class="row">
-        <div class="col-12 col-md-6 list-height mb-5 baList">
+        <div class="col-12 col-md-6 mb-5 baList" >
             <!-- Category -->
-            <div class="baItem" *ngFor="let category of data; let i=index" [style]="isActive">
+            <div class="list-group" *ngFor="let category of data; let i=index">
 
-                <div class="listStyle py-3 " (click)="collapse(category.title)" >
-                    {{category.title | translate}}
-                </div>
+                <a class="list-group-item py-3 ps-4" (click)="collapse(i)">
+                    <div>{{category.title | translate}}</div>
+                </a>
 
                 <!-- Subcategories -->
-                <div class="card sub-height" *ngIf="category.title == list && isOpen">
+                <div class="card" *ngIf="i == list && isOpen" [ngClass] ="isOpen ? 'openCard' : 'closeCard'" >
 
                     <div class="card-body my-3 mt-1">
 
-                        <div *ngFor="let subcat of category.subcategory" class="mb-4 ms-4 fw-bold">
+                        <div *ngFor="let subcat of category.subcategory; let e=index" class="mb-4 ms-4 fw-bold">
 
-                            <div (click)="items(subcat.title)"> {{subcat.title | translate}} </div>
+                            <div (click)="items(e)"> {{subcat.title | translate}} </div>
 
                             <!-- items -->
-                            <div *ngIf="item == subcat.title">
+                            <div *ngIf="item == e">
                                 <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="saveData(items.item)">
                                     {{ items.item | translate}}
                                 </div>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-12 col-md-6">
-            <div class="card list-height">
+            <div class="card baList">
                 <div class="card-body overflow-auto">
                     <app-business-assitant-data-save [data]="dataSend"></app-business-assitant-data-save>
                 </div>

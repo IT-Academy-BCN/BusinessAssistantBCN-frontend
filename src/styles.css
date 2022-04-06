@@ -83,55 +83,50 @@ a {
 
 /* These styles are from Business-Assistant component */
 .baList{
+    cursor: pointer;
+    height: 390px;
+    max-height: 390px;
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
-.listStyle {
-    cursor: pointer;
-    padding-left: 35px;
-    margin: 3px;
+.list-group-item {
+    margin-bottom: 2px;
     background-color: #7da8e7;
     color: #fff;
     font-size: larger;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: ease-in-out .5s;
+    scroll-snap-align: start;
 }
 
 .listStyle:hover {
     background-color: #0D6EFD;
 }
 
-.list-height {
-    height: 420px;
-    max-height: 420px;
-}
 
-.sub-height {
-    height: 290px;
-    animation-name: open;
-    animation-duration: 1.5s;
-    animation-timing-function: ease;
+.openCard{
+    height: 260px;
+    animation: open 0.8s ease-out;
+}
+.closeCard{
+    height: 0;
+    animation: close 0.8s ease;
 }
 
 @keyframes open {
-    0%{
-        height: 0px;
-    }
-    100%{
-        height: 290px;
-    }
-    
+    from { height: 0px;}
 }
+@keyframes close {
+    from { height: 260px;}
+}
+
 
 .itemSelected:hover {
     text-decoration: underline;
 }
 
-.baItem {
-    cursor: pointer;
-}
 
 .search-button {
     background-color: #3B79BF;
