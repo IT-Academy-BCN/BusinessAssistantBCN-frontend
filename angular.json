@@ -26,6 +26,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "allowedCommonJsDependencies": ["pdfmake/build/pdfmake"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
@@ -41,7 +42,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",

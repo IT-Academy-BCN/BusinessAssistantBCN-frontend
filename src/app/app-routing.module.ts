@@ -12,6 +12,7 @@ import { CommercialGalleriesPageComponent } from './modules/home/commercial-gall
 import { BigMallsPageComponent } from './modules/home/big-malls-page/big-malls-page.component';
 import { MunicipalMarketsPageComponent } from './modules/home/municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './modules/home/market-fairs-page/market-fairs-page.component';
+import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: "municipal-markets", component: MunicipalMarketsPageComponent },
   { path: "market-fairs", component: MarketFairsPageComponent },
   { path: "my-environment-search-detail", component: MyEnvironmentSearchDetailPageComponent },
-
+  { path: "saved-searches", component: SavedSearchesComponent },
 
 ];
 

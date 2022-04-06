@@ -7,6 +7,9 @@ import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
+
+import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyEnvironmentSearchDetailPageComponent } from './my-environment-search-detail-page/my-environment-search-detail-page.component';
@@ -31,6 +34,8 @@ import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.
     BigMallsPageComponent,
     MunicipalMarketsPageComponent,
     MarketFairsPageComponent,
+    SavedSearchesComponent
+
   ],
   imports: [
     CommonModule,

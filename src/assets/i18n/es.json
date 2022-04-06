@@ -59,6 +59,13 @@
             "section2": {
                 "title": "Porque sabemos que tienes una mente inquieta, ponemos a tu disposición un asistente virtual, herramientas de investigación y montañas de sugerencias.¿Presencial o e-commmererce?¿Prestashop, Wordpress o Shopify?¡¡Tienes mucho por hacer!!"
             }
+        },
+        "saved-searches":{
+            "title": "Mis Búsquedas",
+            "item-1": "Ver en mapa",
+            "item-2": "Nombre",
+            "item-3": "Fecha",
+            "item-4": "Detalles"
         }
     },
     "pages": {
@@ -107,6 +114,17 @@
         },
         "title": {
             "results": "Resultados"
+        }
+    },
+    "user": {
+        "register": {
+            "title": "Nuevo usuario",
+            "email-placeholder": "Tu email...",
+            "email-error": "Formato de email inválido / El usuario ya existe",
+            "password-title": "Contraseña",
+            "password-placeholder": "Tu contraseña...",
+            "password-error": "La contraseña debe tener almenos 8 carácteres alfanuméricos",
+            "submit-register": "Crear usuario"
         }
     }
 }
