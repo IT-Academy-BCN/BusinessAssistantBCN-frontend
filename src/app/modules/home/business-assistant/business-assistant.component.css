@@ -1,1 +1,6 @@
-
+.card {
+    border-radius: 15px;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}

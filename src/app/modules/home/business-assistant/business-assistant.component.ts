@@ -172,6 +172,7 @@ export class BusinessAssistantComponent implements OnInit {
   list:string = '';
   item: string = '';
   isOpen: boolean = false;
+  isActive: string = ''
 
   
   constructor() { }
@@ -182,15 +183,13 @@ export class BusinessAssistantComponent implements OnInit {
   collapse(title:string){
     if(title != this.list){
       this.isOpen = true
+      this.isActive = 'align-self: flex-start;'
     }else{
       this.isOpen = !this.isOpen
     }
     this.list = title
   }
 
-  isActive(item: string): string{
-    return this.list == item ? 'isActive': ''
-  }
 
   items(title: string){
     this.item = title

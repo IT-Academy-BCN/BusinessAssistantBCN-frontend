@@ -4,18 +4,18 @@
 
     <h4 class="m-3 fw-bold"> Business Assistant </h4>
     <div class="row">
-        <div class="col-12 col-md-6 overflow-auto list-height mb-5">
+        <div class="col-12 col-md-6 list-height mb-5 baList">
             <!-- Category -->
-            <div class="baItem" *ngFor="let category of data; let i=index">
+            <div class="baItem" *ngFor="let category of data; let i=index" [style]="isActive">
 
-                <div class="listStyle py-3" [class]="isActive(category.title)" (click)="collapse(category.title)">
+                <div class="listStyle py-3 " (click)="collapse(category.title)" >
                     {{category.title | translate}}
                 </div>
 
                 <!-- Subcategories -->
-                <div class="card" *ngIf="category.title == list && isOpen">
+                <div class="card sub-height" *ngIf="category.title == list && isOpen">
 
-                    <div class="card-body my-3 mt-1 overflow-auto sub-height">
+                    <div class="card-body my-3 mt-1">
 
                         <div *ngFor="let subcat of category.subcategory" class="mb-4 ms-4 fw-bold">
 
