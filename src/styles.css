@@ -80,54 +80,6 @@ a {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-
-/* These styles are from Business-Assistant component */
-.baList{
-    cursor: pointer;
-    height: 390px;
-    max-height: 390px;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-.list-group-item {
-    margin-bottom: 2px;
-    background-color: #7da8e7;
-    color: #fff;
-    font-size: larger;
-    border-radius: 10px;
-    transition: ease-in-out .5s;
-    scroll-snap-align: start;
-}
-
-.listStyle:hover {
-    background-color: #0D6EFD;
-}
-
-
-.openCard{
-    height: 260px;
-    animation: open 0.8s ease-out;
-}
-.closeCard{
-    height: 0;
-    animation: close 0.8s ease;
-}
-
-@keyframes open {
-    from { height: 0px;}
-}
-@keyframes close {
-    from { height: 260px;}
-}
-
-
-.itemSelected:hover {
-    text-decoration: underline;
-}
-
-
 .search-button {
     background-color: #3B79BF;
     border: none;
@@ -137,8 +89,4 @@ a {
     font-weight: bold;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }

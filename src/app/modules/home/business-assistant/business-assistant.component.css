@@ -1,7 +1,60 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 .card {
     border-radius: 15px;
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
+    /* scroll-snap-type: y proximity;
+    scroll-behavior: smooth; */
 }
 
+.baList {
+    cursor: pointer;
+    height: 390px;
+    max-height: 390px;
+    overflow-y: scroll;
+    /* scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; */
+}
+
+.list-group-item:hover {
+    background-color: #3B79BF;
+    transition: ease-in-out .5s;
+}
+
+.list-group-item {
+    margin-bottom: 2px;
+    background-color: #7da8e7;
+    color: #fff;
+    font-size: larger;
+    border-radius: 10px;
+    align-items: start;
+    /* scroll-snap-align: start; */
+}
+
+.itemSelected:hover {
+    text-decoration: underline;
+}
+
+.openCard {
+    height: 260px;
+    animation: open 0.8s ease-out;
+}
+
+.closeCard {
+    height: 0;
+    animation: close 0.8s ease;
+}
+
+@keyframes open {
+    from {
+        height: 0px;
+    }
+}
+
+@keyframes close {
+    from {
+        height: 260px;
+    }
+}
