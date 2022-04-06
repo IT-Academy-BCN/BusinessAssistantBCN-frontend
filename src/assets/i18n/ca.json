@@ -121,5 +121,16 @@
         "title": {
             "results": "Resultats"
         }
+    },
+    "user": {
+        "register": {
+            "title": "Nou usuari",
+            "email-placeholder": "El teu email...",
+            "email-error": "Format d'email no vàlid / L'usuari ja existeix",
+            "password-title": "Contrasenya",
+            "password-placeholder": "La teva contrasenya...",
+            "password-error": "La contrasenya ha de tenir 8 caràcters alfanumèrics",
+            "submit-register": "Crear usuari"
+        }
     }
 }

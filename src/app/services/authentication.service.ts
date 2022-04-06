@@ -13,6 +13,7 @@ export class AuthenticationService {
 
   auth_api: any = environment.BACKEND_BASE_URL;
   endpoint: string = environment.BACKEND_LOGIN_URL;
+  endpoint_register: string = environment.BACKEND_REGISTER_URL;
   private _userLogged: boolean = false; // To be replace when user login works
 
   httpOptions = {
@@ -44,5 +45,17 @@ export class AuthenticationService {
     this._userLogged = logged
   }
 
+  register(body: LoginRequest): Observable<any> {
+    console.log(body);
+    return this.http.post(this.auth_api + this.endpoint_register, { body },
+      this.httpOptions)
+      .pipe(catchError((err) => {
+        console.log('error caught in service')
+        console.error(err);
+
+        return throwError(err);    //Rethrow it back to component
+      })
+      );
+  }
 }
 
