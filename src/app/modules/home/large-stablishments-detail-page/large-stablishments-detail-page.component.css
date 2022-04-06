@@ -1,6 +1,6 @@
-.results-card{
+/* .results-card{
     min-width: 55%;
-}
+} */
 
 
 .result-container{
@@ -13,7 +13,7 @@
 .data{
     overflow-y: scroll;
     overflow-x: visible;
-    max-height:300px;
+    max-height:281px;
 }
 
 button{
@@ -24,4 +24,12 @@ button{
     .ps-5{
         padding-left: 1.1rem !important;
     }
+}
+
+.bg-blue {
+    background: #2c5e8f;
+}
+
+.bg-green {
+    background-color:#5CB85C;
 }
