@@ -178,8 +178,11 @@ export class BusinessAssistantComponent implements OnInit {
   }
 
   items(title: number){
-
-    this.isOpen = true
+    if(this.item != title){
+      this.isOpen = true
+    }else{
+      this.isOpen = !this.isOpen
+    }
     this.item = title
 
   }
