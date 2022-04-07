@@ -20,8 +20,6 @@ import { LoginModule } from './modules/login/login.module';
 @NgModule({
   declarations: [
     AppComponent,
-  
-
   ],
   imports: [
     BrowserModule,

@@ -91,7 +91,8 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   largeStablishmentSearch() {
     // this.largeStablishments$ =
-    this.largeStablishmentsService.sendSelectedData()
+    this.commonservice.largeStablishmentsClicked=true;
+    this.largeStablishmentsService.sendSelectedData(this._bcnZonesSelected, this._activitiesSelected)
       .subscribe((resp: any) => {
         console.log("largeStablishmentSearch RESPONSE: ",resp)
       });
