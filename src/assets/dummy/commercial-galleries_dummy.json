@@ -28,7 +28,7 @@
             [
                 {
                     "street_name": "Pg Gràcia",
-                    "number": "55*57",
+                    "street_number": "55*57",
                     "zip_code": "08007",
                     "district_id": "02",
                     "town": "BARCELONA",
@@ -56,7 +56,7 @@
             [
                 {
                     "street_name": "C Dos de Maig",
-                    "number": "225*227",
+                    "street_number": "225*227",
                     "zip_code": "08013",
                     "district_id": "02",
                     "town": "BARCELONA",
@@ -84,7 +84,7 @@
             [
                 {
                     "street_name": "Av República Argentina",
-                    "number": "238",
+                    "street_number": "238",
                     "zip_code": "08023",
                     "district_id": "06",
                     "town": "BARCELONA",
@@ -112,7 +112,7 @@
             [
                 {
                     "street_name": "C Portaferrissa",
-                    "number": "22",
+                    "street_number": "22",
                     "zip_code": "08002",
                     "district_id": "01",
                     "town": "BARCELONA",
