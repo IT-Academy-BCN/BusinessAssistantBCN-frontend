@@ -1,4 +1,4 @@
-import { BusinessWithAddressModel } from "./common/businessWithAddressModel.model";
+import { BasicBusinessModel } from "./common/basic-business.model";
 
-export interface LargeStablishmentModel extends BusinessWithAddressModel {
+export interface LargeStablishmentModel extends BasicBusinessModel {
 }
