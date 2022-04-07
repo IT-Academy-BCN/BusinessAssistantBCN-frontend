@@ -5,38 +5,33 @@
     <h4 class="m-3 fw-bold"> Business Assistant </h4>
     <div class="row">
         <div class="col-12 col-md-6 mb-5 baList">
-            <!-- Category -->
-            <div class="list-group" *ngFor="let category of data; let i=index">
 
-                <a class="list-group-item py-3 ps-4" (click)="collapse(i)">
-                    <div>{{category.title | translate}}</div>
-                </a>
+            <mat-accordion *ngFor="let category of data; let i=index" >
+                <mat-expansion-panel hideToggle>
+                  <mat-expansion-panel-header class="list-height fs-5 bg-primary bg-gradient" >
+                    <mat-panel-title class="text-white">
+                        {{category.title | translate}}                    
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
 
-                <!-- Subcategories -->
-                <div class="card" *ngIf="i == list && isOpen" [ngClass]="isOpen ? 'openCard' : 'closeCard'">
-
-                    <div class="card-body my-3 mt-1">
-
-                        <div *ngFor="let subcat of category.subcategory; let e=index" class="mb-4 ms-4 fw-bold">
-
-                            <div (click)="items(e)"> {{subcat.title | translate}} </div>
-
-                            <!-- items -->
-                            <div *ngIf="item == e">
-                                <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="saveData(items.item)">
-                                    {{ items.item | translate}}
-                                </div>
-                            </div>
-
+                  <div class="fw-bold fs-6 m-4" *ngFor="let subcat of category.subcategory; let e=index" >
+                        <div (click)="items(e)">
+                          {{subcat.title | translate}}
                         </div>
-                    </div>
-                </div>
-            </div>
+                        <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="saveData(items.item)">
+                            <div *ngIf="item == e && isOpen">
+                            {{ items.item | translate}}                           
+                            </div>
+                        </div>
+                  </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+              
         </div>
 
         <div class="col-12 col-md-6">
             <div class="card baList">
-                <div class="card-body overflow-auto">
+                <div class="card-body">
                     <app-business-assitant-data-save [data]="dataSend"></app-business-assitant-data-save>
                 </div>
                 <div>

@@ -169,27 +169,17 @@ export class BusinessAssistantComponent implements OnInit {
     },
   ];
 
-  list:number = 0
   item: number = 0
   isOpen: boolean = false;
 
-  
   constructor() { }
   
   ngOnInit(): void {
   }
 
-  collapse(title:number){
-    if(title != this.list){
-      this.isOpen = true
-    }else{
-      this.isOpen = !this.isOpen
-    }
-    this.list = title
-  }
-
   items(title: number){
 
+    this.isOpen = true
     this.item = title
 
   }

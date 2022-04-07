@@ -9,9 +9,7 @@ import { VirtualAssistantComponent } from './home-components/virtual-assistant/v
 import { RouterModule } from '@angular/router';
 import { BusinessAssistantComponent } from './business-assistant/business-assistant.component';
 import { BusinessAssitantDataSaveComponent } from './business-assitant-data-save/business-assitant-data-save.component';
-
 import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyEnvironmentSearchDetailPageComponent } from './my-environment-search-detail-page/my-environment-search-detail-page.component';
@@ -19,6 +17,9 @@ import { CommercialGalleriesPageComponent } from './commercial-galleries-page/co
 import { BigMallsPageComponent } from './big-malls-page/big-malls-page.component';
 import { MunicipalMarketsPageComponent } from './municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.component';
+//Angular Material
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -47,7 +48,7 @@ import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.
     SharedModule,
     RouterModule,
     ReactiveFormsModule,
-    
+    MatExpansionModule
   ],
   exports: [
     HomePageComponent

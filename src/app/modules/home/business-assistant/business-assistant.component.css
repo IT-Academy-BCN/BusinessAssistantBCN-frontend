@@ -2,10 +2,6 @@
     display: none;
 }
 
-.card {
-    border-radius: 15px;
-    overflow-y: scroll;
-}
 
 .baList {
     cursor: pointer;
@@ -14,38 +10,10 @@
     overflow-y: scroll;
 }
 
-
-.list-group-item {
-    margin-bottom: 2px;
-    background-color: #7da8e7;
-    color: #fff;
-    font-size: larger;
-    border-radius: 10px;
-    align-items: start;
+.list-height {
+    padding: 32px;
 }
 
 .itemSelected:hover {
     text-decoration: underline;
-}
-
-.openCard {
-    height: 260px;
-    animation: open 0.8s ease-out;
-}
-
-.closeCard {
-    height: 0;
-    animation: close 0.8s ease;
-}
-
-@keyframes open {
-    from {
-        height: 0px;
-    }
-}
-
-@keyframes close {
-    from {
-        height: 260px;
-    }
 }
