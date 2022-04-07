@@ -188,9 +188,6 @@ export class BusinessAssistantComponent implements OnInit {
     this.list = title
   }
 
-  
-
-
   items(title: number){
 
     this.item = title
