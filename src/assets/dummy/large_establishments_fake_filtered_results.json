@@ -29,7 +29,7 @@
       "addresses": [
         {
           "street_name": "Av Diagonal",
-          "number": "513",
+          "street_number": "513",
           "zip_code": "08029",
           "district_id": "04",
           "town": "BARCELONA",
@@ -94,7 +94,7 @@
       "addresses": [
         {
           "street_name": "T Estadella",
-          "number": "46*54",
+          "street_number": "46*54",
           "zip_code": "08030",
           "district_id": "09",
           "town": "BARCELONA",
@@ -135,7 +135,7 @@
       "addresses": [
         {
           "street_name": "C Can Ràbia",
-          "number": "3*5",
+          "street_number": "3*5",
           "zip_code": "08017",
           "district_id": "05",
           "town": "BARCELONA",
@@ -196,7 +196,7 @@
       "addresses": [
         {
           "street_name": "C Aragó",
-          "number": "180",
+          "street_number": "180",
           "zip_code": "08011",
           "district_id": "02",
           "town": "BARCELONA",
@@ -241,7 +241,7 @@
       "addresses": [
         {
           "street_name": "Aribau",
-          "number": "200",
+          "street_number": "200",
           "zip_code": "08036",
           "district_id": "02",
           "town": "BARCELONA",
@@ -286,7 +286,7 @@
       "addresses": [
         {
           "street_name": "C Buenos Aires",
-          "number": "21",
+          "street_number": "21",
           "zip_code": "08029",
           "district_id": "02",
           "town": "BARCELONA",
@@ -323,7 +323,7 @@
       "addresses": [
         {
           "street_name": "Gran Via de les Corts Catalanes",
-          "number": "630 - 1F",
+          "street_number": "630 - 1F",
           "zip_code": "08007",
           "district_id": "00",
           "town": "BARCELONA",
@@ -360,7 +360,7 @@
       "addresses": [
         {
           "street_name": "Pg Manuel Girona",
-          "number": "62-64",
+          "street_number": "62-64",
           "zip_code": "08034",
           "district_id": "04",
           "town": "BARCELONA",
@@ -413,7 +413,7 @@
       "addresses": [
         {
           "street_name": "Av Diagonal",
-          "number": "571",
+          "street_number": "571",
           "zip_code": "08029",
           "district_id": "04",
           "town": "BARCELONA",
@@ -446,7 +446,7 @@
       "addresses": [
         {
           "street_name": "Av Diagonal",
-          "number": "615",
+          "street_number": "615",
           "zip_code": "08028",
           "district_id": "04",
           "town": "BARCELONA",
