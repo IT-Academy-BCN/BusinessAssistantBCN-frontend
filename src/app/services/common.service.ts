@@ -33,4 +33,7 @@ export class CommonService {
         }
       });
   }
+
+  largeStablishmentsClicked:boolean=false;
+  municipalMarketsClicked:boolean=false;
 }
