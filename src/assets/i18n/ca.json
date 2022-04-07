@@ -89,7 +89,11 @@
             }
         },
         "big-stablish-detail": {
-            "saveSearchModal": {
+            "dropdown":{
+                "download": "Descarregar arxiu",
+                "open": "Obrir archiu"
+            },
+            "saveSearchModal":{
                 "title": "Guardar búsqueda",
                 "name": "Nombre",
                 "detail": "Detalles de la búsqueda",
@@ -184,7 +188,9 @@
             "gallery-market": "Galeries Comercials",
             "mall": "Centres Comerciales",
             "public-market": "Mercats Municipals",
-            "market-fair": "Mercats i Fires"
+            "market-fair": "Mercats i Fires",
+            "save-results": "Guardar resultats",
+            "download-results": "Descarregar resultats"
         },
         "title": {
             "results": "Resultats"

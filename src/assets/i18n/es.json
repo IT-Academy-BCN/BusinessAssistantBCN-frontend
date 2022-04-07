@@ -89,7 +89,11 @@
             }
         },
         "big-stablish-detail": {
-            "saveSearchModal": {
+            "dropdown":{
+                "download": "Descargar archivo",
+                "open": "Abrir archivo"
+            },
+            "saveSearchModal":{
                 "title": "Guardar búsqueda",
                 "name": "Nombre",
                 "detail": "Detalles de la búsqueda",
@@ -185,7 +189,9 @@
             "gallery-market": "Galerías Comerciales",
             "mall": "Centros Comerciales",
             "public-market": "Mercados Municipales",
-            "market-fair": "Mercados y Ferias"
+            "market-fair": "Mercados y Ferias",
+            "save-results": "Guardar resultados",
+            "download-results": "Descargar resultados"
         },
         "title": {
             "results": "Resultados"
