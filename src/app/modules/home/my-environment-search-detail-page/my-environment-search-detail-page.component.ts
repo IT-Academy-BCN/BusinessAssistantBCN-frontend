@@ -1,39 +1,54 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, TemplateRef } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
 import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { MunicipalMarketsService } from 'src/app/services/municipal-markets.service';
+import { MunicipalMarketModel } from 'src/app/models/municipal-market.model';
+import { CommonService } from 'src/app/services/common.service';
 
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-
 @Component({
-    selector: 'app-large-stablishments-detail-page' ,
-    templateUrl: './large-stablishments-detail-page.component.html' ,
-    styleUrls: ['./large-stablishments-detail-page.component.css'] ,
+  selector: 'app-my-environment-search-detail-page',
+  templateUrl: './my-environment-search-detail-page.component.html',
+  styleUrls: ['./my-environment-search-detail-page.component.css']
 })
-export class LargeStablishmentsDetailPageComponent implements OnInit {
-    LargeEstablishmentsData: LargeStablishmentModel[] = []
+export class MyEnvironmentSearchDetailPageComponent implements OnInit {
+
+  LargeEstablishmentsData: LargeStablishmentModel[] = []
+  municipalMarketsData: MunicipalMarketModel[]=[]
 
   constructor(
     private LargeEstablishmentService: LargeStablishmentsService,
     private auth: AuthenticationService,
     private modalService: NgbModal,
     private fb:FormBuilder,
+    private municipalMarketsService: MunicipalMarketsService,
+    private commonService: CommonService
   ) {}
 
-    ngOnInit(): void {
-        this.LargeEstablishmentService.getLargeStablishmentsData()
-            .subscribe((resp: any) => {
-                this.LargeEstablishmentsData = resp.results;
-                console.log("resp desde detail page: " , resp.results)
-            });
+  ngOnInit(): void {
+    if(this.commonService.largeStablishmentsClicked===true){
+    this.LargeEstablishmentService.getLargeStablishmentsData()
+      .subscribe((resp: any) => {
+        this.LargeEstablishmentsData = resp.results;
+        console.log("resp desde detail page: ",resp.results)
+      });
     }
+    if(this.commonService.municipalMarketsClicked===true){
+      this.municipalMarketsService.sendSelectedData()
+      .subscribe((resp: any) => {
+        this.LargeEstablishmentsData = resp.results;
+        console.log("resp desde detail page: ",resp.results)
+      });
+    }
+  }
 
     ngOnDestroy() {
         // if( this.zones$ != undefined ) this.zones$.unsubscribe();
@@ -56,36 +71,28 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
   private submitted: boolean = false;
 
   // Save Search Modal Behavior
-  open( modal: any ){
+  open( modal: TemplateRef<any> ){
     if( !this.userLogged() ){ return }   // To be replaced when user login works
     this.submitted = false;
     this.saveSearchForm.reset()
     this.modalService.open(modal, { centered: true,})
   }
 
-  // To be replaced when user login works
-  userLogged():boolean {
-    if( !this.auth.userLogged ){
-      this.openLoginForm()
-      return false;
-    }
-    return true
-  }
-
   closeModal(){
     this.modalService.dismissAll();
   }
-
+  
   inputInvalid( input: string ): boolean {
     return  this.saveSearchForm.controls[input].invalid && this.submitted
   }
 
+  
 
     generateDocument() {
         //definition of content array for the pdf table
         const dataArray: string[][] = [];
         this.LargeEstablishmentsData.forEach(element => {
-            const values = []
+            const values:any[]=[];
             values.push(element.name);
             values.push(element.web);
             values.push(element.email);
@@ -158,4 +165,14 @@ export class LargeStablishmentsDetailPageComponent implements OnInit {
     console.log( this.saveSearchForm.value );
     this.closeModal()
   }
+  
+  // To be replaced when user login works
+  userLogged():boolean {
+    if( !this.auth.userLogged ){
+      this.openLoginForm()
+      return false;
+    }
+    return true
+  }
+  
 }
