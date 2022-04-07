@@ -12,6 +12,13 @@
 
 .list-height {
     padding: 32px;
+    background-color: #3B79BF;
+}
+.list-height:hover{
+    background-color: #3B79BF !important;
+}
+.list-height:focus{
+    background-color: #3B79BF !important;
 }
 
 .itemSelected:hover {
