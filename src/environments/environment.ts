@@ -20,7 +20,7 @@ export const environment = {
     name: "IT Academy",
     web: "bcn.cat/barcelonactiva",
     email: "itacademy@barcelonactiva.cat",
-    phone: 932917610,
+    phone: "932917610",
     activities: [],
     addresses: [
       {
