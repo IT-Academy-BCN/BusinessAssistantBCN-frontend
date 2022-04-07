@@ -34,7 +34,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     return this.largeStablishmentsService.bcnZonesSelected;
   }
 
-  get activitiiesSelected() {
+  get activitiesSelected() {
     return this.largeStablishmentsService.activitiesSelected;
   }
 
@@ -84,7 +84,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     } else {
       this.largeStablishmentsService.deleteActivitySelected(activitySelected)
     }
-    console.log(this.activitiiesSelected);
+    console.log(this.activitiesSelected);
   }
 
 
@@ -92,7 +92,7 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   largeStablishmentSearch() {
     // this.largeStablishments$ =
     this.commonservice.largeStablishmentsClicked=true;
-    this.largeStablishmentsService.sendSelectedData(this._bcnZonesSelected, this._activitiesSelected)
+    this.largeStablishmentsService.sendSelectedData()
       .subscribe((resp: any) => {
         console.log("largeStablishmentSearch RESPONSE: ",resp)
       });

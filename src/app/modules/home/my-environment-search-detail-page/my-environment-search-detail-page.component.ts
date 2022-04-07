@@ -35,7 +35,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.commonService.largeStablishmentsClicked===true){
-    this.LargeEstablishmentService.getLargeStablishmentsData()
+    this.LargeEstablishmentService.sendSelectedData()
       .subscribe((resp: any) => {
         this.LargeEstablishmentsData = resp.results;
         console.log("resp desde detail page: ",resp.results)

@@ -37,7 +37,9 @@ import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.
     BigMallsPageComponent,
     MunicipalMarketsPageComponent,
     MarketFairsPageComponent,
-    SavedSearchesComponent
+    SavedSearchesComponent,
+    BusinessAssistantComponent,
+    BusinessAssitantDataSaveComponent
 
   ],
   imports: [
