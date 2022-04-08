@@ -1,0 +1,53 @@
+/* .results-card{
+    min-width: 55%;
+<<<<<<< HEAD:src/app/modules/home/large-stablishments-detail-page/large-stablishments-detail-page.component.css
+} */
+
+
+.result-container{
+=======
+  }
+  
+  
+  .result-container{
+>>>>>>> develop:src/app/modules/home/my-environment-search-detail-page/my-environment-search-detail-page.component.css
+    padding-left: 14%;
+  }
+  .details{
+    padding-left: 12%;
+  }
+  
+  .data{
+    overflow-y: scroll;
+    overflow-x: visible;
+<<<<<<< HEAD:src/app/modules/home/large-stablishments-detail-page/large-stablishments-detail-page.component.css
+    max-height:281px;
+}
+
+button{
+=======
+    max-height:300px;
+  }
+  
+  button{
+>>>>>>> develop:src/app/modules/home/my-environment-search-detail-page/my-environment-search-detail-page.component.css
+    font-size: 1rem;
+  }
+  
+  @media (max-width:768px) {
+    .ps-5{
+        padding-left: 1.1rem !important;
+    }
+<<<<<<< HEAD:src/app/modules/home/large-stablishments-detail-page/large-stablishments-detail-page.component.css
+}
+
+.bg-blue {
+    background: #2c5e8f;
+}
+
+.bg-green {
+    background-color:#5CB85C;
+}
+=======
+  }
+>>>>>>> develop:src/app/modules/home/my-environment-search-detail-page/my-environment-search-detail-page.component.css
