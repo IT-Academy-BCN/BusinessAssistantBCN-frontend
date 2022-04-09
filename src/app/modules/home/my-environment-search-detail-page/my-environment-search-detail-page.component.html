@@ -1,20 +1,24 @@
 <app-header></app-header>
 
-<div class="container mb-lg-5 main-container">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-12 col-sm-6 m-5 me-0 ms-3 results-card">
-      <div class="p-3 ms-8 border bg-light">
-        <h2 class="ps-5 pt-4 fw-bold mb-3">
+<div class="container mb-lg-5 main-container bg-succes p-md-0">
+
+  <div class="row d-flex justify-content-center align-items-center mt-5">
+
+    <!-- resultats -->
+    <div class="col-12 col-lg-5 p-0 my-3 results-card">
+      <div class="border bg-light p-3 shadow">
+        <h2>
           {{ "common.title.results" | translate }}
         </h2>
-        <div class="data" *ngIf="true" id="pdfData">
+        <hr>
+        <div class="data p-4" *ngIf="true" id="pdfData">
           <div
-            class="d-flex flex-column mb-4"
+            class="d-flex flex-column"
             *ngFor="let ls of LargeEstablishmentsData"
           >
             <h5 class="details">{{ ls.name }}</h5>
             <ul
-              class="result-container list-unstyled"
+              class="result-container list-unstyled text-sm"
               *ngFor="let address of ls.addresses"
             >
               <!--*ngFor must be added!-->
@@ -31,20 +35,24 @@
             </ul>
           </div>
         </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+
+        <div class="d-grid gap-2 d-md-flex me-4 justify-content-md-end mt-4 pt-2">
+
           <button
             style="background: #2c5e8f"
-            class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0"
+            class="btn text-white w-100 w-md-50 px-1 rounded-0"
             (click)="open(saveSearch)"
             type="button"
           >
           {{ "common.button.save-results" | translate }}
           </button>
 
-          <div class="dropdown">
+
+          <div class="dropdown w-100 w-md-50">
             <button
-              style="background: #5cb85c"
-              class="btn btn-lg me-md-2 mt-4 me-4 justify-content-center text-white fw-bolder rounded-0 dropdown-toggle"
+              class="btn px-1 text-white rounded-0 dropdown-toggle bg-green w-100"
+
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
@@ -52,7 +60,7 @@
             >
             {{ "common.button.download-results" | translate }}
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul class="dropdown-menu rounded-0 w-100 mt-1 text-sm bg-gray" aria-labelledby="dropdownMenuButton1">
               <li>
                 <a class="dropdown-item" (click)="savePdf()"
                   >{{"pages.big-stablish-detail.dropdown.download"|translate}}</a
@@ -63,18 +71,30 @@
               </li>
             </ul>
           </div>
+
         </div>
       </div>
+
     </div>
 
-    <div class="col-12 col-sm-4 m-5 mx-3">
-      <div class="p-3 border bg-light text-center">
+
+
+
+
+
+    <!-- map -->
+
+    <div class="col-12 col-lg-5 m-3 p-0 bg-light p-2 shadow">
+      <div class=" text-center">
         <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
         <app-mapbox
           [filteredResultsToPrintOnMap]="LargeEstablishmentsData"
         ></app-mapbox>
       </div>
     </div>
+
+    
+
   </div>
 </div>
 
@@ -130,8 +150,7 @@
         </button>
         <button
           type="submit"
-          class="btn btn-lg text-white fw-bolder rounded-0"
-          style="background-color: #2c5e8f"
+          class="btn btn-lg text-white fw-bolder rounded-0 bg-blue"
         >
           {{
             "pages.big-stablish-detail.saveSearchModal.button.save" | translate
