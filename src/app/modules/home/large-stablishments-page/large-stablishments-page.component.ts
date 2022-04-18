@@ -6,6 +6,7 @@ import { LargeStablishmentsService } from '../../../services/large-stablishments
 import { CommonService } from "../../../services/common.service";
 import { ZoneModel } from "../../../models/common/zone.model";
 import { EconomicActivityModel } from 'src/app/models/common/economic-activity.model';
+import { BreadcrumbService } from '../../../services/breadcrumb.service';
 
 
 
@@ -30,12 +31,16 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     public _bcnZonesSelected: number[] = [];
     public _activitiesSelected: number[] = [];
 
-
+  get breadcrumbs() {
+    return this.breadcrumbService.breadcrumbs;
+  }
 
   constructor(private router: Router,
     private activatedRoute: ActivatedRoute,
     private largeStablishmentsService: LargeStablishmentsService,
-    private commonservice: CommonService) { }
+    private commonservice: CommonService,
+    private breadcrumbService: BreadcrumbService 
+    ) { }
 
   ngOnInit(): void {
     this.loadMasterData();

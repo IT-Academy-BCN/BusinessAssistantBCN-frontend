@@ -1,24 +1,24 @@
-<!--Header/Navbar-->
+<!-- Header/Navbar -->
 <app-header></app-header>
 
-<div class="virtual-container">
+<router-outlet></router-outlet>
+
+<div class="virtual-container" *ngIf="breadcrumbs.length === 1">
     <div class="">
         <div class="col-md-6 py-0 text-container">
             <div class="">
                 <div class="container mt-1 mb-4 d-flex justify-content-center">
                     <div class="row g-0">
                         <div class="col-md-4 border-right">
-                            <div class="cards" routerLink="/large-stablishments">
-                                <div class="first bg-white p-4 text-center"> 
-                                    <img class="icon-size btn"
-                                        [src]=" largeStablihsments" 
-                                        type="button">
+                            <div class="cards" routerLink="large-stablishments">
+                                <div class="first bg-white p-4 text-center">
+                                    <img class="icon-size btn" [src]=" largeStablihsments" type="button">
                                     <h5>{{'common.button.big-stablish' | translate}}</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 border-right">
-                            <div class="cards" routerLink="/commercial-galleries">
+                            <div class="cards" routerLink="commercial-galleries">
                                 <div class=" second bg-white p-4 text-center"> <img class="icon-size"
                                         [src]=" shoppingMall">
                                     <h5>{{'common.button.gallery-market' | translate}}</h5>
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="cards" routerLink="/big-malls">
+                            <div class="cards" routerLink="big-malls">
                                 <div class=" third bg-white p-4 text-center"> <img class="icon-size"
                                         [src]=" shoppingCart">
                                     <h5>{{'common.button.mall' | translate}}</h5>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="d-md-flex justify-content-center ">
                             <div class="col-md-4">
-                                <div class="cards" routerLink="/municipal-markets">
+                                <div class="cards" routerLink="municipal-markets">
                                     <div class=" third bg-white p-4 text-center"> <img class="icon-size"
                                             [src]="   comercialMarket ">
                                         <h5>{{'common.button.public-market' | translate}}</h5>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="cards" routerLink="/market-fairs">
+                                <div class="cards" routerLink="market-fairs">
                                     <div class=" third bg-white p-4 text-center"><img class="icon-size"
                                             [src]=" fairMarkets">
                                         <h5>{{'common.button.market-fair' | translate}}</h5>

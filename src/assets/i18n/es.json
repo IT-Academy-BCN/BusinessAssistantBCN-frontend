@@ -38,7 +38,7 @@
                 "title": "Mis busquedas"
             },
             "section6": {
-                "title":"Directorio"
+                "title": "Directorio"
             }
         },
         "info-nav": {
@@ -60,7 +60,7 @@
                 "title": "Porque sabemos que tienes una mente inquieta, ponemos a tu disposición un asistente virtual, herramientas de investigación y montañas de sugerencias.¿Presencial o e-commmererce?¿Prestashop, Wordpress o Shopify?¡¡Tienes mucho por hacer!!"
             }
         },
-        "saved-searches":{
+        "saved-searches": {
             "title": "Mis Búsquedas",
             "item-1": "Ver en mapa",
             "item-2": "Nombre",
@@ -89,17 +89,17 @@
             }
         },
         "big-stablish-detail": {
-            "dropdown":{
+            "dropdown": {
                 "download": "Descargar archivo",
                 "open": "Abrir archivo"
             },
-            "saveSearchModal":{
+            "saveSearchModal": {
                 "title": "Guardar búsqueda",
                 "name": "Nombre",
                 "detail": "Detalles de la búsqueda",
                 "msgError": "Este campo no puede estar vacío",
-                "button":{
-                    "discard":"Cancelar",
+                "button": {
+                    "discard": "Cancelar",
                     "save": "Guardar"
                 }
             }
