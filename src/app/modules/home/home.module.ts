@@ -6,9 +6,7 @@ import { LargeStablishmentsPageComponent } from './large-stablishments-page/larg
 import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { RouterModule } from '@angular/router';
-
 import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyEnvironmentSearchDetailPageComponent } from './my-environment-search-detail-page/my-environment-search-detail-page.component';
@@ -16,6 +14,9 @@ import { CommercialGalleriesPageComponent } from './commercial-galleries-page/co
 import { BigMallsPageComponent } from './big-malls-page/big-malls-page.component';
 import { MunicipalMarketsPageComponent } from './municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.component';
+
+
+
 
 
 
@@ -33,14 +34,12 @@ import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.
     MunicipalMarketsPageComponent,
     MarketFairsPageComponent,
     SavedSearchesComponent
-
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
-    NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     HomePageComponent

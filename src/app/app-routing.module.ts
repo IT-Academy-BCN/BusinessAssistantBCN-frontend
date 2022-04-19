@@ -12,6 +12,7 @@ import { BigMallsPageComponent } from './modules/home/big-malls-page/big-malls-p
 import { MunicipalMarketsPageComponent } from './modules/home/municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './modules/home/market-fairs-page/market-fairs-page.component';
 import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
+import { VirtualAssistantPageComponent } from './modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: "home", component: HomePageComponent },
   // { path: "login", component: LoginFormComponent },
   { path: "my-environment", component: MyEnvironmentPageComponent },
+  { path: "virtual-assistant", component: VirtualAssistantPageComponent},
   { path: "large-stablishments", component: LargeStablishmentsPageComponent },
   { path: "commercial-galleries", component: CommercialGalleriesPageComponent },
   { path: "big-malls", component: BigMallsPageComponent },

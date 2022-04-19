@@ -2,11 +2,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
+
 import { LargeStablishmentsService } from '../../../services/large-stablishments.service';
 import { CommonService } from "../../../services/common.service";
 import { ZoneModel } from "../../../models/common/zone.model";
 import { EconomicActivityModel } from 'src/app/models/common/economic-activity.model';
-
+import { LargeStablishmentModel } from './../../../models/large-stablishment.model';
 
 
 @Component({
@@ -26,11 +27,16 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   bcnZones: ZoneModel[] = [];
   largeStablishmentActivities: EconomicActivityModel[] = [];
 
-    //Options checked
-    public _bcnZonesSelected: number[] = [];
-    public _activitiesSelected: number[] = [];
+  //Options checked
+  // largeStablishmentActivitiesSelected: EconomicActivityModel [] = [];
 
+  get bcnZonesSelected() {
+    return this.largeStablishmentsService.bcnZonesSelected;
+  }
 
+  get activitiesSelected() {
+    return this.largeStablishmentsService.activitiesSelected;
+  }
 
   constructor(private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -39,17 +45,11 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadMasterData();
-    this.initializeSelected();
+    this.largeStablishmentsService.initializeSelected();
   }
 
   ngOnDestroy() {
     if (this.zones$ != undefined) this.zones$.unsubscribe();
-  }
-
-  
-  initializeSelected() {
-    this._bcnZonesSelected = [];
-    this._activitiesSelected = [];
   }
 
   loadMasterData() {
@@ -71,26 +71,20 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
 
   largeStablishmentZonesSelected(zoneSelected: ZoneModel, event: any) {
     if (event.checked) {
-      this._bcnZonesSelected.push(zoneSelected.idZone)
+      this.largeStablishmentsService.addZonesSelected(zoneSelected);
     } else {
-      this._bcnZonesSelected.map((zone, index) => {
-        if (zone === zoneSelected.idZone) {
-          this._bcnZonesSelected.splice(index, 1);
-        }
-      });
+      this.largeStablishmentsService.deleteZoneSelected(zoneSelected);
     }
-    console.log(this._bcnZonesSelected);
+    console.log(this.bcnZonesSelected);
   }
 
   largeStablishmentActivitySelected(activitySelected: EconomicActivityModel, event: any) {
     if (event.checked) {
-      this._activitiesSelected.push(activitySelected.idActivity);
+      this.largeStablishmentsService.addActivitiesSelected(activitySelected)
     } else {
-      this._activitiesSelected.map((activity, index) => {
-        activity === activitySelected.idActivity ? this._activitiesSelected.splice(index, 1) : null;
-      })
+      this.largeStablishmentsService.deleteActivitySelected(activitySelected)
     }
-    console.log(this._activitiesSelected);
+    console.log(this.activitiesSelected);
   }
 
 
@@ -98,13 +92,16 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   largeStablishmentSearch() {
     // this.largeStablishments$ =
     this.commonservice.largeStablishmentsClicked=true;
-    this.largeStablishmentsService.sendSelectedData(this._bcnZonesSelected, this._activitiesSelected)
+    this.largeStablishmentsService.sendSelectedData()
       .subscribe((resp: any) => {
-        console.log(resp)
+        console.log("largeStablishmentSearch RESPONSE: ",resp)
       });
 
   }
 
+  largeStablishmentActivitySearch() {
+    console.log(this.largeStablishmentActivities);
+  }
 }
 
 

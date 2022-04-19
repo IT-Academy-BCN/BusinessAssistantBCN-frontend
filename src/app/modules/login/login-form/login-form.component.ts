@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { NgbActiveModal, NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { RegisterFormComponent } from '../../register/register-form/register-form.component';
+
 
 @Component({
   selector: 'app-login-form',
@@ -14,7 +14,7 @@ export class LoginFormComponent implements OnInit {
 
 
   constructor(public activeModal: NgbActiveModal, private router: Router,
-    private f: FormBuilder, private auth: AuthenticationService, private modalService: NgbModal) {
+    private f: FormBuilder, private auth: AuthenticationService) {
   }
 
   loginForm!: FormGroup;
@@ -46,11 +46,7 @@ export class LoginFormComponent implements OnInit {
 
   redirectSignUp(){
     this.activeModal.close(LoginFormComponent);
-    this.modalService.open(RegisterFormComponent, {
-      windowClass: 'modal-holder',
-      modalDialogClass:'modal-sizer',
-      centered: true,
-    });
+    this.router.navigate(['/signup']);
   }
 
   public createLoginForm() {

@@ -1,0 +1,26 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.baList {
+    cursor: pointer;
+    height: 390px;
+    max-height: 390px;
+    overflow-y: scroll;
+}
+
+.list-height {
+    padding: 32px;
+    background-color: #3B79BF;
+}
+.list-height:hover{
+    background-color: #3B79BF !important;
+}
+.list-height:focus{
+    background-color: #3B79BF !important;
+}
+
+.itemSelected:hover {
+    text-decoration: underline;
+}

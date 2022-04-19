@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+// import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginModule } from './modules/login/login.module';
-import { RegisterModule } from './modules/register/register.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VirtualAssistantPageComponent } from './modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component';
+import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
 
 
 
@@ -34,11 +36,12 @@ import { RegisterModule } from './modules/register/register.module';
       }
     }),
     FontAwesomeModule,
-    SweetAlert2Module.forRoot(),
+    // SweetAlert2Module.forRoot(),
     SharedModule,
     HomeModule,
     LoginModule,
-    RegisterModule
+    VirtualAssistantModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
