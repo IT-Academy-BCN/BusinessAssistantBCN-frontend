@@ -5,6 +5,7 @@ import { EconomicActivityModel } from 'src/app/models/common/economic-activity.m
 import { ZoneModel } from 'src/app/models/common/zone.model';
 import { BigMallsService } from 'src/app/services/big-malls.service';
 import { CommonService } from 'src/app/services/common.service';
+import { BreadcrumbService } from '../../../services/breadcrumb.service';
 
 @Component({
   selector: 'app-big-malls-page',
@@ -13,10 +14,15 @@ import { CommonService } from 'src/app/services/common.service';
 })
 export class BigMallsPageComponent implements OnInit, OnDestroy {
 
+  get breadcrumbs() {
+    return this.breadcrumbService.breadcrumbs;
+  }
+
   constructor(
     private commonService: CommonService,
     private bigMallsService: BigMallsService,
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private breadcrumbService: BreadcrumbService
   ) { }
 
   ngOnInit(): void {

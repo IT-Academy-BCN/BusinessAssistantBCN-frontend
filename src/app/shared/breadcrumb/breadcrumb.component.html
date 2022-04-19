@@ -1,0 +1,16 @@
+<ol class="breadcrumb mx-3 my-2" *ngIf='breadcrumbs.length>0'>
+    <li class="breadcrumb-item">
+        <a aria-label='Home' [routerLink]='["/home"]'><span class='icon-home'>
+                <fa-icon [icon]="faHome"></fa-icon>
+            </span></a>
+    </li>
+
+    <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs.slice(0,breadcrumbs.length-1)">
+        <a class="breadcrumb-item pointer" [routerLink]="breadcrumb.url">{{ 'common.button.'+breadcrumb.label |
+            translate}}</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{{
+        'common.button.'+breadcrumbs[breadcrumbs.length-1].label |
+        translate
+        }}</li>
+</ol>

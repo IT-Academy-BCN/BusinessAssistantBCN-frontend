@@ -27,7 +27,6 @@ import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assi
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -42,6 +41,7 @@ import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assi
     LoginModule,
     VirtualAssistantModule,
     BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],

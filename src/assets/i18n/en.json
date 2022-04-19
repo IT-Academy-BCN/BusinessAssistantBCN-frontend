@@ -60,7 +60,7 @@
                 "title": "Because we know you have a restless mind, we put at your disposal a virtual assistant, research tools and mountains of suggestions. Face-to-face or e-commmererce? Prestashop, Wordpress or Shopify? You have a lot to do !!"
             }
         },
-        "saved-searches":{
+        "saved-searches": {
             "title": "My searches",
             "item-1": "See on map",
             "item-2": "Name",
@@ -89,17 +89,17 @@
             }
         },
         "big-stablish-detail": {
-            "dropdown":{
+            "dropdown": {
                 "download": "Download file",
                 "open": "Open file"
             },
-            "saveSearchModal":{
+            "saveSearchModal": {
                 "title": "Save search",
                 "name": "Name",
                 "detail": "Search details",
                 "msgError": "This field can not be empty",
-                "button":{
-                    "discard":"Discard",
+                "button": {
+                    "discard": "Discard",
                     "save": "Save"
                 }
             }

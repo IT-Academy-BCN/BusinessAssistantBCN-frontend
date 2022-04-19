@@ -7,7 +7,8 @@ import { LargeStablishmentsService } from '../../../services/large-stablishments
 import { CommonService } from "../../../services/common.service";
 import { ZoneModel } from "../../../models/common/zone.model";
 import { EconomicActivityModel } from 'src/app/models/common/economic-activity.model';
-import { LargeStablishmentModel } from './../../../models/large-stablishment.model';
+import { BreadcrumbService } from '../../../services/breadcrumb.service';
+
 
 
 @Component({
@@ -30,18 +31,16 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
   //Options checked
   // largeStablishmentActivitiesSelected: EconomicActivityModel [] = [];
 
-  get bcnZonesSelected() {
-    return this.largeStablishmentsService.bcnZonesSelected;
-  }
-
-  get activitiesSelected() {
-    return this.largeStablishmentsService.activitiesSelected;
+  get breadcrumbs() {
+    return this.breadcrumbService.breadcrumbs;
   }
 
   constructor(private router: Router,
     private activatedRoute: ActivatedRoute,
     private largeStablishmentsService: LargeStablishmentsService,
-    private commonservice: CommonService) { }
+    private commonservice: CommonService,
+    private breadcrumbService: BreadcrumbService 
+    ) { }
 
   ngOnInit(): void {
     this.loadMasterData();
@@ -75,7 +74,6 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     } else {
       this.largeStablishmentsService.deleteZoneSelected(zoneSelected);
     }
-    console.log(this.bcnZonesSelected);
   }
 
   largeStablishmentActivitySelected(activitySelected: EconomicActivityModel, event: any) {
@@ -84,7 +82,6 @@ export class LargeStablishmentsPageComponent implements OnInit, OnDestroy {
     } else {
       this.largeStablishmentsService.deleteActivitySelected(activitySelected)
     }
-    console.log(this.activitiesSelected);
   }
 
 
