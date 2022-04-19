@@ -25,7 +25,6 @@ import { RegisterModule } from './modules/register/register.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -38,7 +37,8 @@ import { RegisterModule } from './modules/register/register.module';
     SharedModule,
     HomeModule,
     LoginModule,
-    RegisterModule
+    RegisterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
