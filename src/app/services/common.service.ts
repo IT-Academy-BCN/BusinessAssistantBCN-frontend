@@ -38,4 +38,5 @@ export class CommonService {
   municipalMarketsClicked:boolean=false;
   commercialGalleriesClicked:boolean=false;
   marketFairsClicked:boolean=false;
+  bigMalssClicked: boolean = false;
 }

@@ -12,6 +12,7 @@ import {CommercialGalleriesService} from "../../../services/commercial-galleries
 import {MarketFairsService} from "../../../services/market-fairs.service";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { BigMallsService } from 'src/app/services/big-malls.service';
 
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -34,6 +35,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     private municipalMarketsService: MunicipalMarketsService,
     private commercialGalleriesService:CommercialGalleriesService,
     private marketFairsService:MarketFairsService,
+    private bigMallsService: BigMallsService,
     private commonService: CommonService
   ) {}
 
@@ -65,6 +67,12 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
                   this.LargeEstablishmentsData = resp.results;
                   console.log("resp desde detail page: ",resp.results)
               });
+      }
+      if( this.commonService.bigMalssClicked ){
+        this.bigMallsService.sendSelectedData().subscribe( (resp: any) => {
+          this.LargeEstablishmentsData = resp.results;
+          console.log("resp desde detail page: ",resp.results)
+        })
       }
   }
 
