@@ -59,7 +59,7 @@ export class MarketFairsPageComponent implements OnInit, OnDestroy {
   }
 
   marketFairsSearch() {
-    this.commonService.municipalMarketsClicked=true;
+    this.commonService.marketFairsClicked=true;
     this.marketFairsService.sendSelectedData()
         .subscribe((resp: any) => {
           console.log(resp)
