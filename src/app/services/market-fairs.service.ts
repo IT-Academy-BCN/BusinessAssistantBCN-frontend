@@ -1,10 +1,7 @@
 import {Injectable} from "@angular/core";
-import {Router} from "@angular/router";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import { environment } from '../../environments/environment';
-import { map, Observable } from "rxjs";
 import { ZoneModel } from "../models/common/zone.model";
-import { MarketFairModel } from '../models/market-fair.model';
 import { EconomicActivityModel } from "../models/common/economic-activity.model";
 
 @Injectable({
@@ -13,83 +10,39 @@ import { EconomicActivityModel } from "../models/common/economic-activity.model"
 
 export class MarketFairsService {
 
-  //Options checked
-  private _bcnZonesSelected: number[] = [];
-  private _activitiesSelected: number[] = [];
+  constructor( private http: HttpClient ) { }
 
-  // Large Stablishments
-  private _marketFairs: MarketFairModel[] = []
+  private _zonesSelected: ZoneModel[] = [];
+  private _activitiesSelected: EconomicActivityModel[] = [];
 
-  get bcnZonesSelected(): number[] {
-    return [...this._bcnZonesSelected];
+  get zoneSelected() {
+    return [...this._zonesSelected]
   }
 
-  get activitiesSelected(): number[] {
+  get activitiesSelected(){
     return [...this._activitiesSelected]
   }
 
-  get largeStablishments(): MarketFairModel[] {
-    return [...this._marketFairs];
+  setZonesSelected( zonesArr: ZoneModel[] ){
+    this._zonesSelected = zonesArr;
   }
 
-  constructor(private router: Router,
-              private http: HttpClient) {
+  setActivitiesSelected( activitiesArr: EconomicActivityModel[] ){
+    this._activitiesSelected = activitiesArr
   }
 
-  // getZoneBySearch(term: string): Observable<any> {
-  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITIES_URL}/${term}`);
-  // }
-
-  // getActivityBySearch(term: string): Observable<any> {
-  //   return this.http.get(`${environment.BACKEND_BASE_URL}/${environment.BACKEND_LARGE_STABLISHMENTS_ACTIVITY_URL}/${term}`);
-
-  // }
-
-
-  addZonesSelected(zoneSelected: ZoneModel) {
-    this._bcnZonesSelected.push(zoneSelected.idZone)
-  }
-
-  deleteZoneSelected(zoneSelected: ZoneModel) {
-    this._bcnZonesSelected.map((zone, index) => {
-      if (zone === zoneSelected.idZone) {
-        this._bcnZonesSelected.splice(index, 1);
-      }
-    });
-  }
-
-  addActivitiesSelected(activitySelected: EconomicActivityModel) {
-    this._activitiesSelected.push(activitySelected.idActivity);
-    console.log(JSON.stringify([...this._activitiesSelected]))
-  }
-
-  deleteActivitySelected(activitySelected: EconomicActivityModel) {
-    this._activitiesSelected.map((activity, index) => {
-      activity === activitySelected.idActivity ? this._activitiesSelected.splice(index, 1) : null;
-    })
-  }
-
-  initializeSelected() {
-    this._bcnZonesSelected = [];
-    this._activitiesSelected = [];
-    this._marketFairs = [];
-  }
-
-  // la funcion de pasar data a backend, para conseguir que funciona
-  sendSelectedData() {
+  getSelectedData() {
     let params = new HttpParams();
+    const zonesId = this._zonesSelected.map( zone => zone.idZone );
+    const activitiesId = this._activitiesSelected.map( activity => activity.idActivity )
 
-    params = params.append('zones', JSON.stringify(this.bcnZonesSelected))
-    params = params.append('activities', JSON.stringify(this.activitiesSelected));
+    params = params.append( 'zones', JSON.stringify(zonesId) )
+    params = params.append( 'activities', JSON.stringify(activitiesId) );
 
     console.log(params)
-    // Fake-filtered to check that it works. Will have to be substituted for actual backend response.
-    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS}`, { params: params },
+    // Fake-filtered to check that it works. Will have to be replaced for real backend response.
+    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_MARKET_FAIRS}`, { params: params },
     )
-  }
-
-  addLargeStablishment(element: MarketFairModel) {
-    this._marketFairs.push(element);
   }
 
 }

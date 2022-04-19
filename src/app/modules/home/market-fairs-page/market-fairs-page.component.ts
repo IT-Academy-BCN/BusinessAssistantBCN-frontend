@@ -1,11 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from "rxjs";
-import { ActivatedRoute, Router } from "@angular/router";
 import { MarketFairsService } from '../../../services/market-fairs.service';
 import { CommonService } from "../../../services/common.service";
 import { ZoneModel } from "../../../models/common/zone.model";
 import { EconomicActivityModel } from 'src/app/models/common/economic-activity.model';
-import { MarketFairModel} from './../../../models/market-fair.model';
+import {FormArray , FormBuilder , FormGroup} from "@angular/forms";
 
 
 @Component({
@@ -14,89 +13,81 @@ import { MarketFairModel} from './../../../models/market-fair.model';
   styleUrls: ['./market-fairs-page.component.css']
 })
 export class MarketFairsPageComponent implements OnInit, OnDestroy {
+  constructor(
+      private commonService: CommonService,
+      private marketFairsService: MarketFairsService,
+      private fb:FormBuilder
+  ) { }
 
+  ngOnInit(): void {
+
+    this.zones$ = this.commonService.getZones().subscribe( resp => {
+      this.zones = resp.results;
+      this.addFormArr('zonesForm', resp.results)
+    })
+
+    this.activities$ = this.commonService.getEconomicActivities().subscribe( resp => {
+      this.activities = resp.results;
+      this.addFormArr('activitiesForm', resp.results)
+    })
+
+  }
+
+  ngOnDestroy(): void {
+    this.zones$.unsubscribe();
+    this.activities$.unsubscribe();
+  }
+
+  zones: ZoneModel[] = [];
+  activities: EconomicActivityModel[]= [];
 
   //Subscriptions
   zones$!: Subscription;
   activities$!: Subscription;
-  largeStablishments$!: Subscription;
 
-  //Other elements
-  bcnZones: ZoneModel[] = [];
-  largeStablishmentActivities: EconomicActivityModel[] = [];
+  //Form
+  bigMallsForm: FormGroup = this.fb.group({
+    zonesForm: this.fb.array([]),
+    activitiesForm: this.fb.array([])
+  })
 
-
-
-  get bcnZonesSelected() {
-    return this.marketFairsService.bcnZonesSelected;
+  addFormArr( form: string, itemsArr: any[] ){
+    const formArr = this.bigMallsForm.get( form ) as FormArray;
+    itemsArr.forEach( (_) => {
+      formArr.push( this.fb.control(false) )
+    })
   }
 
-  get activitiiesSelected() {
-    return this.marketFairsService.activitiesSelected;
+  getFormArr( formArr: string ){
+    return this.bigMallsForm.get( formArr ) as FormArray;
   }
 
-  constructor(private router: Router,
-              private activatedRoute: ActivatedRoute,
-              private marketFairsService: MarketFairsService,
-              private commonService: CommonService) { }
+  //
+  sendSelectedData() {
+    this.marketFairsService.setZonesSelected( this.getZonesSelected() );
+    this.marketFairsService.setActivitiesSelected( this.getActivitiesSelected() );
 
-  ngOnInit(): void {
-    this.loadMasterData();
-    this.marketFairsService.initializeSelected();
+    // Log selected results to check everything is ok! These logs should be deleted
+    console.log( 'Zones Selected: ', this.marketFairsService.zoneSelected );
+    console.log( 'Activities Selected: ', this.marketFairsService.activitiesSelected );
   }
 
-  ngOnDestroy() {
-    if (this.zones$ != undefined) this.zones$.unsubscribe();
+  getZonesSelected(): ZoneModel[]{
+    return this.zones.filter( (zone, i) => {
+      if( this.getFormArr('zonesForm').controls[i].value ){
+        return zone
+      }
+      return
+    })
   }
 
-  loadMasterData() {
-    this.zones$ = this.commonService.getZones().subscribe(resp => {
-      // console.log(resp);
-      resp.results.forEach((element: any) => {
-        const bcnZone: ZoneModel = new ZoneModel(element);
-        this.bcnZones.push(bcnZone);
-      });
-    });
-    this.activities$ = this.commonService.getEconomicActivities().subscribe(resp => {
-      // console.log(resp);
-      resp.results.forEach((element: any) => {
-        const largeStablishmentActivity: EconomicActivityModel = new EconomicActivityModel(element);
-        this.largeStablishmentActivities.push(largeStablishmentActivity);
-      });
-    });
-  }
-
-  largeStablishmentZonesSelected(zoneSelected: ZoneModel, event: any) {
-    if (event.checked) {
-      this.marketFairsService.addZonesSelected(zoneSelected);
-    } else {
-      this.marketFairsService.deleteZoneSelected(zoneSelected);
-    }
-    console.log(this.bcnZonesSelected);
-  }
-
-  largeStablishmentActivitySelected(activitySelected: EconomicActivityModel, event: any) {
-    if (event.checked) {
-      this.marketFairsService.addActivitiesSelected(activitySelected)
-    } else {
-      this.marketFairsService.deleteActivitySelected(activitySelected)
-    }
-    console.log(this.activitiiesSelected);
-  }
-
-
-
-  largeStablishmentSearch() {
-    // this.largeStablishments$ =
-    this.marketFairsService.sendSelectedData()
-        .subscribe((resp: any) => {
-          console.log(resp)
-        });
-
-  }
-
-  largeStablishmentActivitySearch() {
-    console.log(this.largeStablishmentActivities);
+  getActivitiesSelected(): EconomicActivityModel[]{
+    return this.activities.filter( (activity, i) => {
+      if( this.getFormArr('activitiesForm').controls[i].value ){
+        return activity
+      }
+      return
+    })
   }
 }
 
