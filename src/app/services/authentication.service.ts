@@ -44,5 +44,18 @@ export class AuthenticationService {
     this._userLogged = logged
   }
 
+  register(body: LoginRequest): Observable<any> {
+    console.log(body);
+    return this.http.post(this.auth_api + this.endpoint_register, { body },
+      this.httpOptions)
+      .pipe(catchError((err) => {
+        console.log('error caught in service')
+        console.error(err);
+
+        return throwError(err);    //Rethrow it back to component
+      })
+      );
+  }
+
 }
 
