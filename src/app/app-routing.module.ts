@@ -12,7 +12,7 @@ import { BigMallsPageComponent } from './modules/home/big-malls-page/big-malls-p
 import { MunicipalMarketsPageComponent } from './modules/home/municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './modules/home/market-fairs-page/market-fairs-page.component';
 import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
-import { VirtualAssistantPageComponent } from './modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component';
+import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
 
 
 // FUNCIONA 
@@ -38,7 +38,7 @@ const routes: Routes = [
       { path: "market-fairs", component: MarketFairsPageComponent, data: { breadcrumb: 'market-fair' } },
       ]
     },
-    { path: 'virtual-assistant', component: VirtualAssistantPageComponent, data: { breadcrumb: 'assistant' } },
+    { path: 'virtual-assistant', component: VirtualAssistantModule, data: { breadcrumb: 'assistant' } },
     { path: "saved-searches", component: SavedSearchesComponent, data: { breadcrumb: 'save-results' } },
     { path: '**', component: HomePageComponent }
 ];

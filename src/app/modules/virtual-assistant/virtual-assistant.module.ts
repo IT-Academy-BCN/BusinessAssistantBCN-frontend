@@ -4,7 +4,7 @@ import { VirtualAssistantDataSaveComponent } from './virtual-assistant-data-save
 //Angular Material
 import {MatExpansionModule} from '@angular/material/expansion';
 import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-assistant-page.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
