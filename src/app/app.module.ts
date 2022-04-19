@@ -15,6 +15,7 @@ import { LoginModule } from './modules/login/login.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VirtualAssistantPageComponent } from './modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component';
 import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
+import { RegisterModule } from './modules/register/register.module';
 
 
 
@@ -39,6 +40,7 @@ import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assi
     SharedModule,
     HomeModule,
     LoginModule,
+    RegisterModule,
     VirtualAssistantModule,
     BrowserAnimationsModule,
     AppRoutingModule
