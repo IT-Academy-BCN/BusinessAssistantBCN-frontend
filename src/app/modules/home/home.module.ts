@@ -5,10 +5,7 @@ import { MyEnvironmentPageComponent } from './my-environment-page/my-environment
 import { LargeStablishmentsPageComponent } from './large-stablishments-page/large-stablishments-page.component';
 import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
-import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
-import { BusinessAssistantComponent } from './business-assistant/business-assistant.component';
-import { BusinessAssitantDataSaveComponent } from './business-assitant-data-save/business-assitant-data-save.component';
 import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -17,8 +14,7 @@ import { CommercialGalleriesPageComponent } from './commercial-galleries-page/co
 import { BigMallsPageComponent } from './big-malls-page/big-malls-page.component';
 import { MunicipalMarketsPageComponent } from './municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.component';
-//Angular Material
-import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -32,23 +28,18 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MyEnvironmentPageComponent,
     LargeStablishmentsPageComponent,
     InformationNavComponent,
-    VirtualAssistantComponent,
     MyEnvironmentSearchDetailPageComponent,
     CommercialGalleriesPageComponent,
     BigMallsPageComponent,
     MunicipalMarketsPageComponent,
     MarketFairsPageComponent,
-    SavedSearchesComponent,
-    BusinessAssistantComponent,
-    BusinessAssitantDataSaveComponent
-
+    SavedSearchesComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
     ReactiveFormsModule,
-    MatExpansionModule
   ],
   exports: [
     HomePageComponent

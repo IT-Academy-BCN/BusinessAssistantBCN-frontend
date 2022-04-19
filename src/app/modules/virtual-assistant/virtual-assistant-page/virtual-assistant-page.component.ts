@@ -1,12 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/business-assistant.model';
 
 @Component({
-  selector: 'app-business-assistant',
-  templateUrl: './business-assistant.component.html',
-  styleUrls: ['./business-assistant.component.css']
+  selector: 'app-virtual-assistant-page',
+  templateUrl: './virtual-assistant-page.component.html',
+  styleUrls: ['./virtual-assistant-page.component.css']
 })
-export class BusinessAssistantComponent implements OnInit {
+export class VirtualAssistantPageComponent implements OnInit {
 
   dataSend: any[] = []
   data : Category[] = [
@@ -194,6 +194,5 @@ export class BusinessAssistantComponent implements OnInit {
     }
 
   }
-
 
 }

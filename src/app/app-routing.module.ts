@@ -6,14 +6,13 @@ import { HomePageComponent } from './modules/home/home-page/home-page.component'
 import { MyEnvironmentPageComponent } from './modules/home/my-environment-page/my-environment-page.component';
 import { LoginFormComponent } from './modules/login/login-form/login-form.component';
 import { LargeStablishmentsPageComponent } from './modules/home/large-stablishments-page/large-stablishments-page.component';
-import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
-import { BusinessAssistantComponent } from './modules/home/business-assistant/business-assistant.component';
 import { MyEnvironmentSearchDetailPageComponent } from './modules/home/my-environment-search-detail-page/my-environment-search-detail-page.component';
 import { CommercialGalleriesPageComponent } from './modules/home/commercial-galleries-page/commercial-galleries-page.component';
 import { BigMallsPageComponent } from './modules/home/big-malls-page/big-malls-page.component';
 import { MunicipalMarketsPageComponent } from './modules/home/municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './modules/home/market-fairs-page/market-fairs-page.component';
 import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
+import { VirtualAssistantPageComponent } from './modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component';
 
 
 const routes: Routes = [
@@ -21,8 +20,7 @@ const routes: Routes = [
   { path: "home", component: HomePageComponent },
   // { path: "login", component: LoginFormComponent },
   { path: "my-environment", component: MyEnvironmentPageComponent },
-  { path: "virtual-assistant", component: VirtualAssistantComponent },
-  { path: "business-assistant", component: BusinessAssistantComponent},
+  { path: "virtual-assistant", component: VirtualAssistantPageComponent},
   { path: "large-stablishments", component: LargeStablishmentsPageComponent },
   { path: "commercial-galleries", component: CommercialGalleriesPageComponent },
   { path: "big-malls", component: BigMallsPageComponent },
