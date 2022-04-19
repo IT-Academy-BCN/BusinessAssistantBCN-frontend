@@ -46,7 +46,7 @@ export class LoginFormComponent implements OnInit {
 
   redirectSignUp(){
     this.activeModal.close(LoginFormComponent);
-    this.router.navigate(['/signup']);
+    this.router.navigate(['/register']);
   }
 
   public createLoginForm() {

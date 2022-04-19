@@ -13,7 +13,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginModule } from './modules/login/login.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VirtualAssistantPageComponent } from './modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component';
 import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
 import { RegisterModule } from './modules/register/register.module';
 
