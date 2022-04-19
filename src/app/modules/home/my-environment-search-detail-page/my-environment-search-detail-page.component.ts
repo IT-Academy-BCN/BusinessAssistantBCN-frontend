@@ -8,9 +8,11 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 import { MunicipalMarketsService } from 'src/app/services/municipal-markets.service';
 import { MunicipalMarketModel } from 'src/app/models/municipal-market.model';
 import { CommonService } from 'src/app/services/common.service';
-
+import {CommercialGalleriesService} from "../../../services/commercial-galleries.service";
+import {MarketFairsService} from "../../../services/market-fairs.service";
 import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
+import pdfFonts from 'pdfmake/build/vfs_fonts';
+
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -30,6 +32,8 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     private modalService: NgbModal,
     private fb:FormBuilder,
     private municipalMarketsService: MunicipalMarketsService,
+    private commercialGalleriesService:CommercialGalleriesService,
+    private marketFairsService:MarketFairsService,
     private commonService: CommonService
   ) {}
 
@@ -48,6 +52,20 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
         console.log("resp desde detail page: ",resp.results)
       });
     }
+      if(this.commonService.commercialGalleriesClicked===true){
+          this.commercialGalleriesService.sendSelectedData()
+              .subscribe((resp: any) => {
+                  this.LargeEstablishmentsData = resp.results;
+                  console.log("resp desde detail page: ",resp.results)
+              });
+      }
+      if(this.commonService.marketFairsClicked===true){
+          this.marketFairsService.sendSelectedData()
+              .subscribe((resp: any) => {
+                  this.LargeEstablishmentsData = resp.results;
+                  console.log("resp desde detail page: ",resp.results)
+              });
+      }
   }
 
     ngOnDestroy() {

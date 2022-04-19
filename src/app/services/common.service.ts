@@ -37,4 +37,5 @@ export class CommonService {
   largeStablishmentsClicked:boolean=false;
   municipalMarketsClicked:boolean=false;
   commercialGalleriesClicked:boolean=false;
+  marketFairsClicked:boolean=false;
 }

@@ -55,7 +55,7 @@ export class MarketFairsService {
 
     console.log(params)
     // Fake-filtered to check that it works. Will have to be substituted for actual backend response.
-    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_MUNICIPAL_MARKETS}`, { params: params },
+    return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_MARKET_FAIRS}`, { params: params },
     )
   }
 
