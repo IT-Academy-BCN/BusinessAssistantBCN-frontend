@@ -10,8 +10,12 @@
     overflow-y: scroll;
 }
 
+.margin-list{
+    margin: 1px;
+}
+
 .list-height {
-    padding: 31px;
+    padding: 17px;
     background-color: #3B79BF;
 }
 .list-height:hover{
