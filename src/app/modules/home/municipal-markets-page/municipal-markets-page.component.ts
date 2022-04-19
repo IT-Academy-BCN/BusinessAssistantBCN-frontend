@@ -5,6 +5,7 @@ import { MunicipalMarketsService } from './../../../services/municipal-markets.s
 import { CommonService } from "../../../services/common.service";
 import { ZoneModel } from "../../../models/common/zone.model";
 import { MunicipalMarketModel } from 'src/app/models/municipal-market.model';
+import { BreadcrumbService } from '../../../services/breadcrumb.service';
 
 
 @Component({
@@ -24,11 +25,16 @@ export class MunicipalMarketsPageComponent implements OnInit {
   get bcnZonesSelected() {
     return this.municipalMarketsService.bcnZonesSelected;
   }
+
+  get breadcrumbs() {
+    return this.breadcrumbService.breadcrumbs;
+  }
   
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
               private municipalMarketsService: MunicipalMarketsService,
-              private commonService: CommonService) { }
+              private commonService: CommonService,
+              private breadcrumbService: BreadcrumbService) { }
 
   ngOnInit(): void {
     this.loadMasterData();

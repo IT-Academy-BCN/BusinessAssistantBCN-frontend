@@ -1,9 +1,9 @@
-<app-header></app-header>
+<router-outlet></router-outlet>
 
-<div class="container-lg my-5">
+<div class="container-lg my-5" *ngIf="breadcrumbs.length === 2">
   <div class="row">
     <div class="col">
-        <h1 class="display-3 p-3 text-center" id="resultsTitle">{{'common.button.public-market' | translate}}</h1>
+      <h1 class="display-3 p-3 text-center" id="resultsTitle">{{'common.button.public-market' | translate}}</h1>
     </div>
   </div>
   <div class="row">
@@ -13,20 +13,19 @@
       <div class="p-3 ms-8 border bg-light card-contents">
 
         <div class="" *ngFor="let zone of bcnZones">
-          <div class="form-check">  
-            <label class="form-check-label" >
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="false" (change)="municipalMarketsZonesSelected(zone, $event.target)">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="false"
+                (change)="municipalMarketsZonesSelected(zone, $event.target)">
               {{ zone.zoneName }}
             </label>
           </div>
         </div>
       </div>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end pt-4">
-        <button (click)="municipalMarketsSearch()"
-                routerLink="/my-environment-search-detail"
-                class="search-button"
-                type="submit">
-                {{'common.button.search' | translate}}
+        <button (click)="municipalMarketsSearch()" routerLink="my-environment-search-detail" class="search-button"
+          type="submit">
+          {{'common.button.search' | translate}}
         </button>
 
       </div>
@@ -35,6 +34,3 @@
 
   </div>
 </div>
-
-<app-footer></app-footer>
-
