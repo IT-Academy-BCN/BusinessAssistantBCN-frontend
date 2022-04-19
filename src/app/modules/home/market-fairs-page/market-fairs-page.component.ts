@@ -5,6 +5,8 @@ import { CommonService } from "../../../services/common.service";
 import { ZoneModel } from "../../../models/common/zone.model";
 import { EconomicActivityModel } from 'src/app/models/common/economic-activity.model';
 import {FormArray , FormBuilder , FormGroup} from "@angular/forms";
+import {ActivatedRoute , Router} from "@angular/router";
+import {MunicipalMarketsService} from "../../../services/municipal-markets.service";
 
 
 @Component({
@@ -13,81 +15,56 @@ import {FormArray , FormBuilder , FormGroup} from "@angular/forms";
   styleUrls: ['./market-fairs-page.component.css']
 })
 export class MarketFairsPageComponent implements OnInit, OnDestroy {
-  constructor(
-      private commonService: CommonService,
-      private marketFairsService: MarketFairsService,
-      private fb:FormBuilder
-  ) { }
-
-  ngOnInit(): void {
-
-    this.zones$ = this.commonService.getZones().subscribe( resp => {
-      this.zones = resp.results;
-      this.addFormArr('zonesForm', resp.results)
-    })
-
-    this.activities$ = this.commonService.getEconomicActivities().subscribe( resp => {
-      this.activities = resp.results;
-      this.addFormArr('activitiesForm', resp.results)
-    })
-
-  }
-
-  ngOnDestroy(): void {
-    this.zones$.unsubscribe();
-    this.activities$.unsubscribe();
-  }
-
-  zones: ZoneModel[] = [];
-  activities: EconomicActivityModel[]= [];
-
   //Subscriptions
   zones$!: Subscription;
-  activities$!: Subscription;
+  marketFairs$!: Subscription;
 
-  //Form
-  bigMallsForm: FormGroup = this.fb.group({
-    zonesForm: this.fb.array([]),
-    activitiesForm: this.fb.array([])
-  })
+  //Other elements
+  bcnZones: ZoneModel[] = [];
 
-  addFormArr( form: string, itemsArr: any[] ){
-    const formArr = this.bigMallsForm.get( form ) as FormArray;
-    itemsArr.forEach( (_) => {
-      formArr.push( this.fb.control(false) )
-    })
+  get bcnZonesSelected() {
+    return this.marketFairsService.bcnZonesSelected;
   }
 
-  getFormArr( formArr: string ){
-    return this.bigMallsForm.get( formArr ) as FormArray;
+  constructor(private router: Router,
+              private activatedRoute: ActivatedRoute,
+              private marketFairsService: MarketFairsService,
+              private commonService: CommonService) { }
+
+  ngOnInit(): void {
+    this.loadMasterData();
+    this.marketFairsService.initializeSelected();
   }
 
-  //
-  sendSelectedData() {
-    this.marketFairsService.setZonesSelected( this.getZonesSelected() );
-    this.marketFairsService.setActivitiesSelected( this.getActivitiesSelected() );
-
-    // Log selected results to check everything is ok! These logs should be deleted
-    console.log( 'Zones Selected: ', this.marketFairsService.zoneSelected );
-    console.log( 'Activities Selected: ', this.marketFairsService.activitiesSelected );
+  ngOnDestroy() {
+    if (this.zones$ != undefined) this.zones$.unsubscribe();
   }
 
-  getZonesSelected(): ZoneModel[]{
-    return this.zones.filter( (zone, i) => {
-      if( this.getFormArr('zonesForm').controls[i].value ){
-        return zone
-      }
-      return
-    })
+  loadMasterData() {
+    this.zones$ = this.commonService.getZones().subscribe(resp => {
+      resp.results.forEach((element: any) => {
+        const bcnZone: ZoneModel = new ZoneModel(element);
+        this.bcnZones.push(bcnZone);
+      });
+    });
   }
 
-  getActivitiesSelected(): EconomicActivityModel[]{
-    return this.activities.filter( (activity, i) => {
-      if( this.getFormArr('activitiesForm').controls[i].value ){
-        return activity
-      }
-      return
-    })
+  marketFairsZonesSelected(zoneSelected: ZoneModel, event: any) {
+    if (event.checked) {
+      this.marketFairsService.addZonesSelected(zoneSelected);
+    } else {
+      this.marketFairsService.deleteZoneSelected(zoneSelected);
+    }
+    console.log(this.bcnZonesSelected);
+  }
+
+  marketFairsSearch() {
+    this.commonService.municipalMarketsClicked=true;
+    this.marketFairsService.sendSelectedData()
+        .subscribe((resp: any) => {
+          console.log(resp)
+        });
+
   }
 }
 
