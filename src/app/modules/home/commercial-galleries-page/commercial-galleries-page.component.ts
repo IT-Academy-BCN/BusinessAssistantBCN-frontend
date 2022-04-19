@@ -46,20 +46,20 @@ export class CommercialGalleriesPageComponent implements OnInit, OnDestroy {
   activities$!: Subscription;
 
   //Form
-  bigMallsForm: FormGroup = this.fb.group({
+  commercialGalleriesForm: FormGroup = this.fb.group({
     zonesForm: this.fb.array([]),
     activitiesForm: this.fb.array([])
   })
 
   addFormArr( form: string, itemsArr: any[] ){
-    const formArr = this.bigMallsForm.get( form ) as FormArray;
+    const formArr = this.commercialGalleriesForm.get( form ) as FormArray;
     itemsArr.forEach( (_) => {
       formArr.push( this.fb.control(false) )
     })
   }
 
   getFormArr( formArr: string ){
-    return this.bigMallsForm.get( formArr ) as FormArray;
+    return this.commercialGalleriesForm.get( formArr ) as FormArray;
   }
 
   // 
