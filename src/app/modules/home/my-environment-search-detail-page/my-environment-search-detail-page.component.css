@@ -6,10 +6,12 @@
     overflow-x: visible;
     height:305px;
   }
+
   
   button{
     font-size: 1rem;
   }
+
 
   .text-small{
     font-size: .8rem;
@@ -18,4 +20,5 @@
   .text-grey{
     color:rgb(90, 90, 91);
   }
+
 
