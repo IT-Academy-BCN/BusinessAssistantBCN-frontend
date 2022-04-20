@@ -1,5 +1,5 @@
 
-import { Injectable } from "@angular/core";
+import { EventEmitter, Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { environment } from '../../environments/environment';
@@ -10,6 +10,7 @@ import { environment } from '../../environments/environment';
 })
 
 export class LargeStablishmentsService {
+  stablishmentActive$ = new EventEmitter<string>();
 
   // private bcnZonesSelected: number[] = [];
   // private activitiesSelected: number[] = [];
@@ -34,9 +35,9 @@ export class LargeStablishmentsService {
   }
 
   //recibir data filtrada
-   getLargeStablishmentsData(){
+    getLargeStablishmentsData(){
     return this.http.get(`${environment.BACKEND_BASE_URL}${environment.BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS}`);
-   }
+    }
 
 
 }

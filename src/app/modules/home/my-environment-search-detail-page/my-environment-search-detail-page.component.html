@@ -12,8 +12,8 @@
 
         <!-- data -->
         <div class="data p-5" *ngIf="true" id="pdfData">
-          <div class="d-flex flex-column mb-4 text-small" *ngFor="let ls of LargeEstablishmentsData">
-            <h6 class="details text-grey"><b>{{ ls.name }}</b></h6>
+          <div class="d-flex flex-column mb-4 text-small" *ngFor="let ls of LargeEstablishmentsData" (click)="stablishmentSelected(ls)">
+            <h6 class="details text-grey" [class.active] ="stablishmentActive == ls.name"><b>{{ ls.name }}</b></h6>
             <ul class="result-container list-unstyled" *ngFor="let address of ls.addresses">
 
               <!--*ngFor must be added!-->
@@ -57,17 +57,11 @@
               </li>
             </ul>
           </div>
-
         </div>
-
-
-
       </div>
-
     </div>
 
     <!-- canvas  2 -->
-
     <div class="col-12 col-md-6 p-3">
       <div class=" bg-light text-center shadow">
         <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->

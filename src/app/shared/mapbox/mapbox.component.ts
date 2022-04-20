@@ -1,7 +1,9 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
 import Mapboxgl, { LngLatBounds, NavigationControl, GeolocateControl, Map, Popup, Marker } from "mapbox-gl";
+import { Subscription } from "rxjs";
 import { environment } from "src/environments/environment";
 import { LargeStablishmentModel } from '../../models/large-stablishment.model';
+import { LargeStablishmentsService } from '../../services/large-stablishments.service';
 
 @Component({
   selector: "app-mapbox",
@@ -14,8 +16,13 @@ export class MapboxComponent implements AfterViewInit {
   @Input() filteredResultsToPrintOnMap!: LargeStablishmentModel[];
   private map!: Map;
   private currentMarkers: Marker[] = [];
+  stablishmentActive:string = '';
 
-  constructor() { }
+
+  constructor( private _largeStablishmentService:LargeStablishmentsService) {
+
+
+  }
 
   ngAfterViewInit(): void {
     // Generate map with basic config
@@ -25,14 +32,27 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   ngOnChanges() {
+
     this.filteredResultsToPrintOnMap.forEach((result) => {
       // Create a marker for each result and add it to the map
       this.createANewMarker("orange", result);
+      this._largeStablishmentService.stablishmentActive$.subscribe(data =>{
+        this.stablishmentActive = data;
+
+        if(!(data == result.name)){
+          this.createANewMarker("orange", result);
+        }else{
+          this.createANewMarker("#74b2f0", result);
+        }
+      })
+
+
     });
   }
 
   ngOnDestroy() {
     this.currentMarkers.forEach(marker => marker.remove());
+
   }
 
   generateMap() {

@@ -30,3 +30,11 @@
     background: #5cb85c;
   }
 
+  .data{
+    cursor:pointer;
+  }
+
+  .active {
+    color:#74b2f0;
+  }
+
