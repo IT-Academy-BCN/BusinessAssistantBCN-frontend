@@ -6,15 +6,15 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 // import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginModule } from './modules/login/login.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
+import { SharedModule } from './shared/shared.module';
 import { RegisterModule } from './modules/register/register.module';
+import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
 
 
 
