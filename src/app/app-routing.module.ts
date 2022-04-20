@@ -12,7 +12,6 @@ import { BigMallsPageComponent } from './modules/home/big-malls-page/big-malls-p
 import { MunicipalMarketsPageComponent } from './modules/home/municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './modules/home/market-fairs-page/market-fairs-page.component';
 import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
-import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
 import { VirtualAssistantPageComponent } from './modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component';
 
 
