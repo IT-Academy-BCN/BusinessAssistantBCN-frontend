@@ -4,6 +4,7 @@ import {ZoneModel} from "../models/common/zone.model";
 import {environment} from "../../environments/environment";
 import {Router} from "@angular/router";
 import {CommercialGalleryModel} from "../models/commercial-gallery.model";
+import {EconomicActivityModel} from "../models/common/economic-activity.model";
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ import {CommercialGalleryModel} from "../models/commercial-gallery.model";
 export class CommercialGalleriesService {
   //Options checked
   private _bcnZonesSelected: number[] = [];
+  private _activitiesSelected:EconomicActivityModel[]=[]
 
 
   private _commercialGalleries: CommercialGalleryModel[]=[];
@@ -18,8 +20,11 @@ export class CommercialGalleriesService {
   get bcnZonesSelected(): number[] {
     return [...this._bcnZonesSelected];
   }
+  get activitiesSelected(){
+    return [...this._activitiesSelected]
+  }
 
-  get municipalMarkets():CommercialGalleryModel[]{
+  get commercialGalleries():CommercialGalleryModel[]{
     return [...this._commercialGalleries];
   }
 
@@ -39,8 +44,21 @@ export class CommercialGalleriesService {
     });
   }
 
+  addActivitySelected( activitySelected: EconomicActivityModel ){
+    this._activitiesSelected.push( activitySelected );
+  }
+
+  deleteActivitySelected( activitySelected: EconomicActivityModel ){
+    this._activitiesSelected.map((activity, index) => {
+      if (activity === activitySelected ) {
+        this._activitiesSelected.splice(index, 1);
+      }
+    });
+  }
+
   initializeSelected() {
     this._bcnZonesSelected = [];
+    this._activitiesSelected=[]
   }
 
   // pass data to backend

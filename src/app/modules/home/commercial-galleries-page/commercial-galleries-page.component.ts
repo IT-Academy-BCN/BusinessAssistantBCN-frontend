@@ -6,6 +6,7 @@ import { ZoneModel } from 'src/app/models/common/zone.model';
 import { CommonService } from 'src/app/services/common.service';
 import {CommercialGalleriesService} from "../../../services/commercial-galleries.service";
 import {ActivatedRoute , Router} from "@angular/router";
+import {EconomicActivityModel} from "../../../models/common/economic-activity.model";
 
 
 @Component({
@@ -17,10 +18,12 @@ export class CommercialGalleriesPageComponent implements OnInit{
 
   //Subscriptions
   zones$!: Subscription;
+  activities$!:Subscription;
   commercialGalleries$!: Subscription;
 
   //Other elements
   bcnZones: ZoneModel[] = [];
+  modelActivities:EconomicActivityModel[]=[]
 
   get bcnZonesSelected() {
     return this.commercialGalleriesService.bcnZonesSelected;
@@ -47,6 +50,15 @@ export class CommercialGalleriesPageComponent implements OnInit{
         this.bcnZones.push(bcnZone);
       });
     });
+    this.activities$=this.commonService.getEconomicActivities().subscribe(
+        resp =>{
+          resp.results.forEach((result:any) => {
+            const activity:EconomicActivityModel = new EconomicActivityModel(result);
+            this.modelActivities.push(activity)
+
+          })
+        }
+    )
   }
 
   commercialGalleriesZonesSelected(zoneSelected: ZoneModel, event: any) {
