@@ -12,7 +12,7 @@ export const environment = {
   BACKEND_LARGE_STABLISHMENTS_SEARCH_URL: '../../assets/dummy/large-establishments_dummy.json',
   BACKEND_SAVED_SEARCHES_URL: '../../assets/dummy/saved-search-large-establishments_dummy.json',
   BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS: '../../assets/dummy/large_establishments_fake_filtered_results.json',
-  BACKEND_BIG_MALLS_URL: '../assets/dummy/big-malls_dummy.json',
+  BACKEND_BIG_MALLS_URL: '../assets/dummy/full/big-malls_dummy.json',
   BACKEND_BIG_MALLS_FAKE_FILTERED_RESULTS: '../assets/dummy/big-malls_fake_filtered_results.json',
   BACKEND_MUNICIPAL_MARKETS:'../../assets/dummy/municipal-markets_dummy.json',
   BACKEND_COMMERCIAL_GALLERIES:'../../assets/dummy/commercial-galleries_dummy.json',
