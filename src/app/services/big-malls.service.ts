@@ -22,14 +22,6 @@ export class BigMallsService {
     return [...this._activitiesSelected]
   }
 
-  // setZonesSelected( zonesArr: ZoneModel[] ){
-  //   this._zonesSelected = zonesArr;
-  // }
-
-  // setActivitiesSelected( activitiesArr: EconomicActivityModel[] ){
-  //   this._activitiesSelected = activitiesArr
-  // }
-
   addZonesSelected(zoneSelected: ZoneModel) {
     this._zonesSelected.push(zoneSelected.idZone)
   }

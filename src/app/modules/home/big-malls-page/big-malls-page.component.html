@@ -33,8 +33,9 @@
             <div class="form-check">          
               <label class="form-check-label" >
               <input class="form-check-input" 
-                  type="checkbox">
-                  {{ activity.activityName }}
+                    type="checkbox"
+                    (change)="bigMallsActivitiesSelected( activity, $event.target )">
+                    {{ activity.activityName }}
               </label>
             </div>
           </div>

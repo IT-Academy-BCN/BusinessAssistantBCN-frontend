@@ -41,6 +41,10 @@ export class BigMallsPageComponent implements OnInit, OnDestroy {
     return this.bigMallsService.zoneSelected
   }
 
+  get activitiesSelected(){
+    return this.bigMallsService.activitiesSelected
+  }
+
   loadMasterData() {
     this.zones$ = this.commonService.getZones().subscribe( resp => {
       resp.results.forEach( (item: any) => {
@@ -63,6 +67,15 @@ export class BigMallsPageComponent implements OnInit, OnDestroy {
       this.bigMallsService.deleteZoneSelected( zoneSelected );
     }
     console.log( this.zonesSelected );
+  }
+
+  bigMallsActivitiesSelected( activitySelected: EconomicActivityModel, event: any ){
+    if( event.checked ){
+      this.bigMallsService.addActivitySelected( activitySelected );
+    } else {
+      this.bigMallsService.deleteActivitySelected( activitySelected );
+    }
+    console.log( this.activitiesSelected );
   }
 
   bigMallsSearch() {
