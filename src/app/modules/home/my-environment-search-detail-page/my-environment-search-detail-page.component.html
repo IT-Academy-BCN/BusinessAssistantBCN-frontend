@@ -1,14 +1,16 @@
 
 <div class="container mb-lg-5 main-container">
-  <div class="row d-flex justify-content-center align-items-center py-4">
+  <div class="row d-flex justify-content-center align-items-center wrapp py-4">
 
 
     <!-- canvas 1 -->
-    <div class="col-12 col-lg-6 py-3">
-      <div class=" shadow pb-2">
-        <h3 class="ms-2 p-3 fw-bold text-grey">
+    <div class="col-12 col-md-6 p-3 mh-600">
+      <div class=" shadow">
+        <h3 class="ms-2 p-3 fw-bold">
           {{ "common.title.results" | translate }}
         </h3>
+
+        <!-- data -->
         <div class="data p-5" *ngIf="true" id="pdfData">
           <div class="d-flex flex-column mb-4 text-small" *ngFor="let ls of LargeEstablishmentsData">
             <h6 class="details text-grey"><b>{{ ls.name }}</b></h6>
@@ -29,18 +31,16 @@
           </div>
         </div>
 
-        <div class="ps-2 pe-4 d-lg-flex">
 
-          <button style="background: #2c5e8f"
-            class="btn btn-lg w-100 text-white my-1 fw-bolder rounded-0 btn-guardar"
+
+        <div class="ps-3 pe-4 pb-2 pt-4 d-lg-flex">
+          <button
+            class="btn btn-lg w-100 bg-blue text-white my-1 fw-bolder rounded-0 btn-guardar"
             (click)="open(saveSearch)" type="button">
             {{ "common.button.save-results" | translate }}
           </button>
 
-
-
-
-          <div class="dropdown w-100 d-flex justify-content-center ms-lg-1 my-1" style="background: #5cb85c">
+          <div class="dropdown w-100 my-1 d-flex justify-content-center ms-lg-1 bg-green" >
             <button 
               class="btn btn-lg text-center text-white fw-bolder rounded-0 dropdown-toggle"
               type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,9 +68,8 @@
 
     <!-- canvas  2 -->
 
-    <div class="col-12 col-lg-6 p-2">
+    <div class="col-12 col-md-6 p-3">
       <div class=" bg-light text-center shadow">
-
         <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
         <app-mapbox [filteredResultsToPrintOnMap]="LargeEstablishmentsData"></app-mapbox>
       </div>
