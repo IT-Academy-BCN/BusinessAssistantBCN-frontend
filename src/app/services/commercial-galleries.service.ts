@@ -73,7 +73,7 @@ export class CommercialGalleriesService {
     )
   }
 
-  addMunicipalMarkets(element: CommercialGalleryModel) {
+  addCommercialGalleries(element: CommercialGalleryModel) {
     this._commercialGalleries.push(element);
   }
 }

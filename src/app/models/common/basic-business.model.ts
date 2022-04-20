@@ -12,7 +12,7 @@ export interface BasicBusinessModel {
 
 interface Address {
     street_name: string;
-    number: string | number;
+    street_number: string | number;
     zip_code: string;
     district_id: string;
     town: string;

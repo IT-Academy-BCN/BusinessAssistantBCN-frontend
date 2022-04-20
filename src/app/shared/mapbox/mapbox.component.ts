@@ -62,7 +62,7 @@ export class MapboxComponent implements AfterViewInit {
 
     // Create a popup with the business's basic information
     const popup = new Popup().setHTML(
-      `<b>${business?.name}</b> </br> ${business?.addresses[0].street_name} , ${business?.addresses[0].number}`
+      `<b>${business?.name}</b> </br> ${business?.addresses[0].street_name} , ${business?.addresses[0].street_number}`
     );
 
     if (coord) { // If user has accepted to share their location

@@ -27,7 +27,7 @@ export const environment = {
     addresses: [
       {
         street_name: "Roc Boronat",
-        number: "117-127",
+        street_number: "117-127",
         zip_code: "08018",
         district_id: "04",
         town: "BARCELONA",

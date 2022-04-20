@@ -123,7 +123,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
             values.push(element.web);
             values.push(element.email);
             //create a string from the address object
-            values.push(`${element.addresses[0].street_name} ${element.addresses[0].number}, ${element.addresses[0].zip_code}, ${element.addresses[0].town}`)
+            values.push(`${element.addresses[0].street_name} ${element.addresses[0].street_number}, ${element.addresses[0].zip_code}, ${element.addresses[0].town}`)
             dataArray.push(values)
         })
         //first element is an array of the table headers
