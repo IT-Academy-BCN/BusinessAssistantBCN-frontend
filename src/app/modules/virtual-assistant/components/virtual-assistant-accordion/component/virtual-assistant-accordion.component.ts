@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Category } from 'src/app/models/business-assistant.model';
 
 @Component({
-  selector: 'app-virtual-assistant-page',
-  templateUrl: './virtual-assistant-page.component.html',
-  styleUrls: ['./virtual-assistant-page.component.css']
+  selector: 'app-virtual-assistant-accordion',
+  templateUrl: './virtual-assistant-accordion.component.html',
+  styleUrls: ['./virtual-assistant-accordion.component.css']
 })
-export class VirtualAssistantPageComponent {
+export class VirtualAssistantAccordionComponent {
 
   dataSend: any[] = []
   data : Category[] = [
@@ -169,7 +169,27 @@ export class VirtualAssistantPageComponent {
     },
   ];
 
-
+  item: number = 0
+  isOpen: boolean = false;
+  
   constructor() { }
-   
+
+  items(title: number){
+    if(this.item != title){
+      this.isOpen = true
+    }else{
+      this.isOpen = !this.isOpen
+    }
+    this.item = title
+
+  }
+
+  saveData( item: string){
+ 
+    if(!this.dataSend.includes(item)){
+      this.dataSend.push(item)
+    }
+
+  }
+
 }
