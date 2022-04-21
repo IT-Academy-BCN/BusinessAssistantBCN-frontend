@@ -7,11 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class VirtualAssistantAccordionComponent {
 
-  @Input('accordionDataInput') dataInput: any[] = [];
+  @Input('accordionDataInput') dataInput: any[] = []; // TODO improve typing any[]
 
-  @Output('accordionDataOutput') dataToOuput: EventEmitter<any[]> = new EventEmitter<any[]>();
+  @Output('accordionDataOutput') dataToOuput: EventEmitter<any[]> = new EventEmitter<any[]>(); // TODO improve typing any[]
 
-  dataSend: any[] = [];
+  dataSend: any[] = []; // TODO improve typing any[]
 
 
   item: number = 0

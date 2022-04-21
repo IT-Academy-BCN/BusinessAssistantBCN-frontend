@@ -8,7 +8,7 @@ import { Category } from 'src/app/models/business-assistant.model';
 })
 export class VirtualAssistantPageComponent {
 
-  dataSend: any[] = []
+  dataSend: any[] = [] // TODO improve typing any[]
   
   data : Category[] = [
     {
@@ -172,7 +172,7 @@ export class VirtualAssistantPageComponent {
 
   constructor() { }
 
-  getDataToAccordion(event: any[]) {
+  getDataToAccordion(event: any[]) {  // TODO improve typing any[]
     this.dataSend = [ ...event ];
   }
    

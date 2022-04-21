@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class VirtualAssistantDataSaveComponent {
 
-  @Input() data: any []=[];
+  @Input() data: any []=[]; // TODO improve typing any[]
 
   constructor() { }
 
