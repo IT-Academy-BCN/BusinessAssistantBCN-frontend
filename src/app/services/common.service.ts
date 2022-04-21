@@ -3,12 +3,17 @@ import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
+import {ZoneModel} from "../models/common/zone.model";
+import {EconomicActivityModel} from "../models/common/economic-activity.model";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class CommonService {
+
+  zones:ZoneModel[]=[];
+  activities:EconomicActivityModel[]=[]
 
   constructor(private router:Router,
               private http: HttpClient) {
