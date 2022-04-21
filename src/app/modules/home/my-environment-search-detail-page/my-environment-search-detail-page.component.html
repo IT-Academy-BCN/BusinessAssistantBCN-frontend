@@ -10,7 +10,7 @@
         <div class="data" *ngIf="true" id="pdfData">
           <div
             class="d-flex flex-column mb-4"
-            *ngFor="let ls of LargeEstablishmentsData"
+            *ngFor="let ls of businessModels"
           >
             <h5 class="details">{{ ls.name }}</h5>
             <ul
@@ -71,7 +71,7 @@
       <div class="p-3 border bg-light text-center">
         <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
         <app-mapbox
-          [filteredResultsToPrintOnMap]="LargeEstablishmentsData"
+          [filteredResultsToPrintOnMap]="businessModels"
         ></app-mapbox>
       </div>
     </div>

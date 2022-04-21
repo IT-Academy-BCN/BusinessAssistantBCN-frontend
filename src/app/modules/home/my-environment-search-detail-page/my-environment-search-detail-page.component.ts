@@ -2,17 +2,12 @@ import { Component, OnInit, TemplateRef } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
-import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { MunicipalMarketsService } from 'src/app/services/municipal-markets.service';
-import { MunicipalMarketModel } from 'src/app/models/municipal-market.model';
 import { CommonService } from 'src/app/services/common.service';
-import {CommercialGalleriesService} from "../../../services/commercial-galleries.service";
-import {MarketFairsService} from "../../../services/market-fairs.service";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from 'pdfmake/build/vfs_fonts';
-import { BigMallsService } from 'src/app/services/big-malls.service';
+import {BasicBusinessModel} from "../../../models/common/basic-business.model";
 
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -24,56 +19,19 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 })
 export class MyEnvironmentSearchDetailPageComponent implements OnInit {
 
-  LargeEstablishmentsData: LargeStablishmentModel[] = []
-  municipalMarketsData: MunicipalMarketModel[]=[]
+  businessModels: BasicBusinessModel[] = []
+
 
   constructor(
     private LargeEstablishmentService: LargeStablishmentsService,
     private auth: AuthenticationService,
     private modalService: NgbModal,
     private fb:FormBuilder,
-    private municipalMarketsService: MunicipalMarketsService,
-    private commercialGalleriesService:CommercialGalleriesService,
-    private marketFairsService:MarketFairsService,
-    private bigMallsService: BigMallsService,
     private commonService: CommonService
-  ) {}
+  ) { this.businessModels=commonService.results}
 
   ngOnInit(): void {
-    if(this.commonService.largeStablishmentsClicked===true){
-    this.LargeEstablishmentService.getLargeStablishmentsData()
-      .subscribe((resp: any) => {
-        this.LargeEstablishmentsData = resp.results;
-        console.log("resp desde detail page: ",resp.results)
-      });
-    }
-    if(this.commonService.municipalMarketsClicked===true){
-      this.municipalMarketsService.sendSelectedData()
-      .subscribe((resp: any) => {
-        this.LargeEstablishmentsData = resp.results;
-        console.log("resp desde detail page: ",resp.results)
-      });
-    }
-      if(this.commonService.commercialGalleriesClicked===true){
-          this.commercialGalleriesService.sendSelectedData()
-              .subscribe((resp: any) => {
-                  this.LargeEstablishmentsData = resp.results;
-                  console.log("resp desde detail page: ",resp.results)
-              });
-      }
-      if(this.commonService.marketFairsClicked===true){
-          this.marketFairsService.sendSelectedData()
-              .subscribe((resp: any) => {
-                  this.LargeEstablishmentsData = resp.results;
-                  console.log("resp desde detail page: ",resp.results)
-              });
-      }
-      if( this.commonService.bigMalssClicked ){
-        this.bigMallsService.sendSelectedData().subscribe( (resp: any) => {
-          this.LargeEstablishmentsData = resp.results;
-          console.log("resp desde detail page: ",resp.results)
-        })
-      }
+
   }
 
     ngOnDestroy() {
@@ -117,7 +75,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     generateDocument() {
         //definition of content array for the pdf table
         const dataArray: string[][] = [];
-        this.LargeEstablishmentsData.forEach(element => {
+        this.businessModels.forEach(element => {
             const values:any[]=[];
             values.push(element.name);
             values.push(element.web);

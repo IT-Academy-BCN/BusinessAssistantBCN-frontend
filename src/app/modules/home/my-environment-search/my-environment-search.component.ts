@@ -61,7 +61,9 @@ export class MyEnvironmentSearchComponent implements OnInit {
   }
 
   search(businessModel:string){
-    this.commonService.getEnvironments(businessModel);
+    this.commonService.getEnvironments(businessModel).subscribe((response:any)=>{
+      this.commonService.results=response.results;
+    });
   }
 
 }
