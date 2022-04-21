@@ -10,10 +10,10 @@ export class MyEnvironmentPageComponent implements OnInit {
 
 
   largeStablishmentsPic = "assets/img/shopping-mall.png";
-  shoppingMallPic = "assets/img/market.png";
-  shoppingCartPic = "assets/img/mall-shopping-cart.png";
-  comercialMarketPic = "assets/img/shop.png";
-  fairMarketsPic = "assets/img/cans.png"
+  commercialGalleriesPic = "assets/img/market.png";
+  bigMallsPic = "assets/img/mall-shopping-cart.png";
+  municipalMarketsPic = "assets/img/shop.png";
+  marketFairsPic = "assets/img/cans.png"
 
   constructor(private router: Router) { }
 
