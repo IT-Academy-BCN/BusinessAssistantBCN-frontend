@@ -17,6 +17,7 @@ import { CommercialGalleriesPageComponent } from './commercial-galleries-page/co
 import { BigMallsPageComponent } from './big-malls-page/big-malls-page.component';
 import { MunicipalMarketsPageComponent } from './municipal-markets-page/municipal-markets-page.component';
 import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.component';
+import { MyEnvironmentSearchComponent } from './my-environment-search/my-environment-search.component';
 
 
 
@@ -34,7 +35,8 @@ import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.
     BigMallsPageComponent,
     MunicipalMarketsPageComponent,
     MarketFairsPageComponent,
-    SavedSearchesComponent
+    SavedSearchesComponent,
+    MyEnvironmentSearchComponent
 
   ],
   imports: [
