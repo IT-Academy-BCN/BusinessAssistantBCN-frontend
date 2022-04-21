@@ -14,6 +14,7 @@ export class CommonService {
 
   zones:ZoneModel[]=[];
   activities:EconomicActivityModel[]=[]
+  API_ENDPOINT:string = '../../assets/dummy/full/'
 
   constructor(private router:Router,
               private http: HttpClient) {
@@ -37,6 +38,10 @@ export class CommonService {
           'Content-Type': 'application/json'
         }
       });
+  }
+
+  getEnvironments<T>(path:string):Observable<T>{
+    return this.http.get<T>(this.API_ENDPOINT + path);
   }
 
   largeStablishmentsClicked:boolean=false;
