@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
 import Mapboxgl, { LngLatBounds, NavigationControl, GeolocateControl, Map, Popup, Marker } from "mapbox-gl";
 import { BusinessWithAddressModel } from "src/app/models/common/businessWithAddressModel.model";
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: "app-mapbox",
@@ -14,10 +15,7 @@ export class MapboxComponent implements AfterViewInit {
   private map!: Map;
   private currentMarkers: Marker[] = [];
 
-  private MAPBOX_TOKEN: string = 'pk.eyJ1IjoianZyZnJlZWxhbmNlZGV2ZWxvcGVyIiwiYSI6ImNreTl4czUzMTAwNGQydnFsdmRhYXRvbDUifQ.TVL-2T184QdfXbze6VNw4A';
-  private MAPBOX_STYLE: string = 'mapbox://styles/mapbox/streets-v11';
-  private MAPBOX_ZOOM: number = 8;
-  private MAPBOX_ITAcademy_OBJECT: BusinessWithAddressModel = {
+  private MAPBOX_INIT_LOCATION: BusinessWithAddressModel = {
     name: "IT Academy",
     web: "bcn.cat/barcelonactiva",
     email: "itacademy@barcelonactiva.cat",
@@ -59,12 +57,12 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   generateMap() {
-    Mapboxgl.accessToken = this.MAPBOX_TOKEN;
+    Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
     this.map = new Map({
       container: this.mapDivElement.nativeElement,
-      style: this.MAPBOX_STYLE,  // style URL }
-      center: [this.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, this.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], // starting center so it doesn't start from Germany
-      zoom: this.MAPBOX_ZOOM
+      style: environment.MAPBOX_STYLE,
+      center: [this.MAPBOX_INIT_LOCATION.addresses[0].location.x, this.MAPBOX_INIT_LOCATION.addresses[0].location.y], // starting center so it doesn't start from Germany
+      zoom: environment.MAPBOX_ZOOM
     });
 
     this.map.addControl(new NavigationControl());
@@ -105,7 +103,7 @@ export class MapboxComponent implements AfterViewInit {
     // Initial point 0
     const bounds = new LngLatBounds();
 
-    // Add all the markers to the map's bounds. 
+    // Add all the markers to the map's bounds.
     this.currentMarkers.forEach(marker =>
       bounds.extend(marker.getLngLat()));
 
@@ -126,7 +124,7 @@ export class MapboxComponent implements AfterViewInit {
       () => {
         // this.map.flyTo(
         //   { center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], zoom: 11 })
-        this.createANewMarker("red", this.MAPBOX_ITAcademy_OBJECT);
+        this.createANewMarker("red", this.MAPBOX_INIT_LOCATION);
       }
     );
   }
