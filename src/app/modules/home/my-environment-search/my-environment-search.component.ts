@@ -53,4 +53,8 @@ export class MyEnvironmentSearchComponent implements OnInit {
     })
   }
 
+  search(businessModel:string){
+    this.commonService.getEnvironments(businessModel);
+  }
+
 }
