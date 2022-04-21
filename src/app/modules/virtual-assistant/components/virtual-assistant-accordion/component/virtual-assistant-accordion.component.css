@@ -1,14 +1,7 @@
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
-
-.baList {
-    cursor    : pointer;
-    height    : 395px;
-    max-height: 395px;
-    overflow-y: scroll;
-}
 
 .margin-list {
     margin-bottom: 3px;
