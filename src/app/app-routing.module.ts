@@ -17,18 +17,9 @@ const routes: Routes = [
   // { path: "login", component: LoginFormComponent },
   { path: "my-environment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAssistantComponent },
-<<<<<<< HEAD
   { path: "my-environment-search", component: MyEnvironmentSearchComponent },
-  { path: "large-stablishments", component: LargeStablishmentsPageComponent },
-  { path: "commercial-galleries", component: CommercialGalleriesPageComponent },
-  { path: "big-malls", component: BigMallsPageComponent },
-  { path: "municipal-markets", component: MunicipalMarketsPageComponent },
-  { path: "market-fairs", component: MarketFairsPageComponent },
-=======
->>>>>>> f4b07f58022febf4b418a438407c2f56ef6b2580
   { path: "my-environment-search-detail", component: MyEnvironmentSearchDetailPageComponent },
   { path: "saved-searches", component: SavedSearchesComponent },
-
 ];
 
 @NgModule({
