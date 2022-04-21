@@ -9,8 +9,8 @@ import {EconomicActivityModel} from "../../../models/common/economic-activity.mo
   styleUrls: ['./my-environment-search.component.css']
 })
 export class MyEnvironmentSearchComponent implements OnInit {
-  zones:ZoneModel[]; //zones will store all the available zones before any selection
-  activities:EconomicActivityModel[]; //activities will store all the available economic activities before any selection
+  zones:ZoneModel[] = []; //zones will store all the available zones before any selection
+  activities:EconomicActivityModel[] =[]; //activities will store all the available economic activities before any selection
 
   constructor(
       private commonService:CommonService
