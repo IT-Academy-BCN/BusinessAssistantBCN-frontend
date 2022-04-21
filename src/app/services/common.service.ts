@@ -1,10 +1,11 @@
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient , HttpParams} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
 import {ZoneModel} from "../models/common/zone.model";
 import {EconomicActivityModel} from "../models/common/economic-activity.model";
+import {BasicBusinessModel} from "../models/common/basic-business.model";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class CommonService {
   zones:ZoneModel[]=[];
   activities:EconomicActivityModel[]=[]
   API_ENDPOINT:string = '../../assets/dummy/full/'
+  results:BasicBusinessModel[]=[]
 
   constructor(private router:Router,
               private http: HttpClient) {
@@ -40,13 +42,13 @@ export class CommonService {
       });
   }
 
-  getEnvironments<T>(path:string):Observable<T>{
-    return this.http.get<T>(this.API_ENDPOINT + path);
+  getEnvironments<T>(businessModel:string):Observable<T>{
+    let params = new HttpParams();
+
+    params = params.append('zones', JSON.stringify(this.zones))
+
+    params = params.append('activities', JSON.stringify(this.activities));
+    return this.http.get<T>(`${this.API_ENDPOINT}${businessModel}_dummy.json`,{params:params});
   }
 
-  largeStablishmentsClicked:boolean=false;
-  municipalMarketsClicked:boolean=false;
-  commercialGalleriesClicked:boolean=false;
-  marketFairsClicked:boolean=false;
-  bigMalssClicked: boolean = false;
 }
