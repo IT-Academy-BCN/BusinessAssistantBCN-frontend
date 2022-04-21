@@ -5,7 +5,7 @@ import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-
 //Angular Material
 import {MatExpansionModule} from '@angular/material/expansion';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { VirtualAssistantTreeModule } from './components/virtual-assistant-tree/virtual-assistant-tree.module';
+import { VirtualAssistantComponentsModule } from './components/virtual-assistant-components.module';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { VirtualAssistantTreeModule } from './components/virtual-assistant-tree/
     CommonModule,
     MatExpansionModule,
     SharedModule,
-    VirtualAssistantTreeModule
+    VirtualAssistantComponentsModule
   ]
 })
 export class VirtualAssistantModule { }
