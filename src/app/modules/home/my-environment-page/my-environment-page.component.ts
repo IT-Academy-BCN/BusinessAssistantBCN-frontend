@@ -22,8 +22,7 @@ export class MyEnvironmentPageComponent implements OnInit {
 
 
   showBusinessModelPage(businessModel:string){
-    this.router.navigate(['my-environment-search'])
-  
+    this.router.navigate([`my-environment-search/${businessModel}`])
   }
 
 }

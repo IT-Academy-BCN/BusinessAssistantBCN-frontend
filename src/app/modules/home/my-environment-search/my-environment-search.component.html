@@ -24,6 +24,14 @@
                         </label>
                     </div>
                 </div>
+                <div *ngIf="municipalMarkets || marketFairs" class="d-grid gap-2 d-md-flex justify-content-md-end pt-4">
+                    <button (click)="search('sampleBusinessModel')"
+                            routerLink="/my-environment-search-detail"
+                            class="search-button"
+                            type="submit">
+                        {{'common.button.search' | translate}}
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -44,18 +52,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end pt-4">
+                    <button (click)="search('sampleBusinessModel')"
+                            routerLink="/my-environment-search-detail"
+                            class="search-button"
+                            type="submit">
+                        {{'common.button.search' | translate}}
+                    </button>
+                </div>
             </div>
 
         </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end pt-4">
-            <button (click)="search('sampleBusinessModel')"
-                    routerLink="/my-environment-search-detail"
-                    class="search-button"
-                    type="submit">
-                {{'common.button.search' | translate}}
-            </button>
 
-        </div>
     </div>
 
 </div>

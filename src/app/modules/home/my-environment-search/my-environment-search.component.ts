@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {CommonService} from "../../../services/common.service";
 import {ZoneModel} from "../../../models/common/zone.model";
 import {EconomicActivityModel} from "../../../models/common/economic-activity.model";
+
 
 @Component({
   selector: 'app-my-environment-search',
@@ -10,7 +12,7 @@ import {EconomicActivityModel} from "../../../models/common/economic-activity.mo
 })
 export class MyEnvironmentSearchComponent implements OnInit {
 
-  largeStablishments:boolean = true;
+  largeStablishments:boolean = false;
   municipalMarkets:boolean = false;
   commercialGalleries:boolean = false;
   marketFairs:boolean = false;
@@ -19,9 +21,17 @@ export class MyEnvironmentSearchComponent implements OnInit {
   zones:ZoneModel[] = []; //zones will store all the available zones before any selection
   activities:EconomicActivityModel[] =[]; //activities will store all the available economic activities before any selection
 
-  constructor(
-      private commonService:CommonService
-  ) { }
+  constructor(private commonService:CommonService,
+              private activatedRoute:ActivatedRoute
+              ) {
+      this.activatedRoute.params.subscribe(params => {
+        if(params['id']==='large-stablishments') this.largeStablishments=true;
+        if(params['id']==='commercial-galleries') this.commercialGalleries=true;
+        if(params['id']==='big-malls') this.bigMalls=true;
+        if(params['id']==='municipal-markets') this.municipalMarkets=true;
+        if(params['id']==='market-fairs') this.marketFairs=true;
+      })          
+   }
 
   ngOnInit(): void {
     this.getAllActivities() //gets all the activities available from the common service

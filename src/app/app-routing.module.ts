@@ -17,7 +17,7 @@ const routes: Routes = [
   // { path: "login", component: LoginFormComponent },
   { path: "my-environment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAssistantComponent },
-  { path: "my-environment-search", component: MyEnvironmentSearchComponent },
+  { path: "my-environment-search/:id", component: MyEnvironmentSearchComponent },
   { path: "my-environment-search-detail", component: MyEnvironmentSearchDetailPageComponent },
   { path: "saved-searches", component: SavedSearchesComponent },
 ];
