@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-environment-page',
@@ -8,15 +9,21 @@ import { Component, OnInit } from '@angular/core';
 export class MyEnvironmentPageComponent implements OnInit {
 
 
-  largeStablihsments = "assets/img/shopping-mall.png";
-  shoppingMall = "assets/img/market.png";
-  shoppingCart = "assets/img/mall-shopping-cart.png";
-  comercialMarket = "assets/img/shop.png";
-  fairMarkets = "assets/img/cans.png"
+  largeStablishmentsPic = "assets/img/shopping-mall.png";
+  shoppingMallPic = "assets/img/market.png";
+  shoppingCartPic = "assets/img/mall-shopping-cart.png";
+  comercialMarketPic = "assets/img/shop.png";
+  fairMarketsPic = "assets/img/cans.png"
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+
+  showBusinessModelPage(businessModel:string){
+    this.router.navigate(['my-environment-search'])
+  
   }
 
 }

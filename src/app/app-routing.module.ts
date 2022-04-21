@@ -4,6 +4,7 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { JwtInterceptor } from "./helpers/JwtInterceptor";
 import { HomePageComponent } from './modules/home/home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './modules/home/my-environment-page/my-environment-page.component';
+import { MyEnvironmentSearchComponent } from './modules/home/my-environment-search/my-environment-search.component';
 import { LoginFormComponent } from './modules/login/login-form/login-form.component';
 import { LargeStablishmentsPageComponent } from './modules/home/large-stablishments-page/large-stablishments-page.component';
 import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   // { path: "login", component: LoginFormComponent },
   { path: "my-environment", component: MyEnvironmentPageComponent },
   { path: "virtual-assistant", component: VirtualAssistantComponent },
+  { path: "my-environment-search", component: MyEnvironmentSearchComponent },
   { path: "large-stablishments", component: LargeStablishmentsPageComponent },
   { path: "commercial-galleries", component: CommercialGalleriesPageComponent },
   { path: "big-malls", component: BigMallsPageComponent },

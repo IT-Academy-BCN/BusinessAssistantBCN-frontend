@@ -8,28 +8,28 @@
                 <div class="container mt-1 mb-4 d-flex justify-content-center">
                     <div class="row g-0">
                         <div class="col-md-4 border-right">
-                            <div class="cards" routerLink="/large-stablishments">
+                            <div class="cards" routerLink="/large-stablishments" (click)="showBusinessModelPage('largeStablishments')">
                                 <div class="first bg-white p-4 text-center"> 
                                     <img class="icon-size btn"
-                                        [src]=" largeStablihsments" 
+                                        [src]=" largeStablishmentsPic" 
                                         type="button">
                                     <h5>{{'common.button.big-stablish' | translate}}</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 border-right">
-                            <div class="cards" routerLink="/commercial-galleries">
+                            <div class="cards" routerLink="/commercial-galleries" (click)="showBusinessModelPage('commercialGalleries')">
                                 <div class=" second bg-white p-4 text-center"> <img class="icon-size"
-                                        [src]=" shoppingMall">
+                                        [src]=" shoppingMallPic">
                                     <h5>{{'common.button.gallery-market' | translate}}</h5>
 
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="cards" routerLink="/big-malls">
+                            <div class="cards" routerLink="/big-malls" (click)="showBusinessModelPage('bigMalls')">
                                 <div class=" third bg-white p-4 text-center"> <img class="icon-size"
-                                        [src]=" shoppingCart">
+                                        [src]=" shoppingCartPic">
                                     <h5>{{'common.button.mall' | translate}}</h5>
 
                                 </div>
@@ -37,18 +37,18 @@
                         </div>
                         <div class="d-md-flex justify-content-center ">
                             <div class="col-md-4">
-                                <div class="cards" routerLink="/municipal-markets">
+                                <div class="cards" routerLink="/municipal-markets" (click)="showBusinessModelPage('municipalMarkets')">
                                     <div class=" third bg-white p-4 text-center"> <img class="icon-size"
-                                            [src]="   comercialMarket ">
+                                            [src]="   comercialMarketPic ">
                                         <h5>{{'common.button.public-market' | translate}}</h5>
 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="cards" routerLink="/market-fairs">
+                                <div class="cards" routerLink="/market-fairs" (click)="showBusinessModelPage('marketFairs')">
                                     <div class=" third bg-white p-4 text-center"><img class="icon-size"
-                                            [src]=" fairMarkets">
+                                            [src]=" fairMarketsPic">
                                         <h5>{{'common.button.market-fair' | translate}}</h5>
                                     </div>
                                 </div>
