@@ -9,6 +9,7 @@ import { Category } from 'src/app/models/business-assistant.model';
 export class VirtualAssistantPageComponent {
 
   dataSend: any[] = []
+  
   data : Category[] = [
     {
       title: 'pages.business-assistant.section1.title',
@@ -169,7 +170,10 @@ export class VirtualAssistantPageComponent {
     },
   ];
 
-
   constructor() { }
+
+  getDataToAccordion(event: any[]) {
+    this.dataSend = [ ...event ];
+  }
    
 }
