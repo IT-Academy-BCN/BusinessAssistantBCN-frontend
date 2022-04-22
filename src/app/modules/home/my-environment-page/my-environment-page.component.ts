@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from "../../../services/common.service";
 
 @Component({
   selector: 'app-my-environment-page',
@@ -8,15 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class MyEnvironmentPageComponent implements OnInit {
 
 
-  largeStablihsments = "assets/img/shopping-mall.png";
+  largeEstablishment = "assets/img/shopping-mall.png";
   shoppingMall = "assets/img/market.png";
   shoppingCart = "assets/img/mall-shopping-cart.png";
-  comercialMarket = "assets/img/shop.png";
+  commercialMarket = "assets/img/shop.png";
   fairMarkets = "assets/img/cans.png"
 
-  constructor() { }
+  constructor(private commonService:CommonService) { }
 
   ngOnInit(): void {
+  }
+
+  setCurrentBusiness(businessModel:string){
+    this.commonService.currentBusiness.next(businessModel)
+    console.log(businessModel)
   }
 
 }
