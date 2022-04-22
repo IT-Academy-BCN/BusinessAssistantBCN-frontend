@@ -10,8 +10,7 @@ import { Category } from '../models/business-assistant.model';
 
 @Component({
   selector: 'app-virtual-assistant-page',
-  templateUrl: './virtual-assistant-page.component.html',
-  styleUrls: ['./virtual-assistant-page.component.css']
+  templateUrl: './virtual-assistant-page.component.html'
 })
 export class VirtualAssistantPageComponent {
 
