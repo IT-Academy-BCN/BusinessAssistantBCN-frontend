@@ -181,7 +181,7 @@ export class VirtualAssistantPageComponent {
 
   /**
    * Get the output data from accordion-component.
-   * @param accordionData The obtained data is shared by the component in the input of VirtualAssistantDataSave.
+   * @param accordionData The obtained data is shared by the component in the input of VirtualAssistantList.
    */
   getDataFromAccordion(accordionData: any[]) {  // TODO improve typing any[]
     this.dataShared = [...accordionData];

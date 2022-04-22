@@ -4,20 +4,20 @@ import { CommonModule } from '@angular/common';
 // SHARED-MODULE
 import { SharedModule } from 'src/app/shared/shared.module';
 
-// COMPONENT VIRTUAL-ASSISTANT-DATA-SAVE
-import { VirtualAssistantDataSaveComponent } from './component/virtual-assistant-data-save.component';
+// COMPONENT VIRTUAL-ASSISTANT-LIST
+import { VirtualAssistantListComponent } from './component/virtual-assistant-list.component';
 
 
 @NgModule({
   declarations: [
-    VirtualAssistantDataSaveComponent
+    VirtualAssistantListComponent
   ],
   imports: [
     CommonModule,
     SharedModule
   ],
   exports: [
-    VirtualAssistantDataSaveComponent
+    VirtualAssistantListComponent
   ]
 })
-export class VirtualAssistantDataSaveModule { }
+export class VirtualAssistantListModule { }
