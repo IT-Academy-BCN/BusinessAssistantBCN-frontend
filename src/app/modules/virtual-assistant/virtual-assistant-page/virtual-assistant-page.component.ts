@@ -189,4 +189,20 @@ export class VirtualAssistantPageComponent {
   getDataFromAccordion(accordionData: any[]) {  // TODO improve typing any[]
     this.dataShared = [...accordionData];
   }
+
+  /**
+   * Click on the resume button.
+   * It needs to be a callback function (it will be used as a parameter).
+   */
+  onClickResumeButton = (): void => {
+    console.log("Ver resumen");
+  }
+
+  /**
+   * Click on the save button.
+   * It needs to be a callback function (it will be used as a parameter).
+   */
+  onClickSaveButton = (): void => {
+    console.log("Guardar");
+  }
 }

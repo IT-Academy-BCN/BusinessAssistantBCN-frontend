@@ -14,9 +14,16 @@
         </div>
 
         <div class="col-12 col-md-6">
-            <div class="card baList">
-                <div class="card-body">
-                    
+
+            <!-- APP-VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
+            <app-virtual-assistant-buttons-container
+                mainButtonText="{{ 'common.button.save' | translate }}"
+                mainButtonBackground="primary"
+                [mainButtonFunction]="onClickSaveButton" 
+                secondaryButtonText="Ver Resumen" 
+                secondaryButtonBackground=""
+                [secondaryButtonFunction]="onClickResumeButton">
+
                     <!-- APP-VIRTUAL-ASSISTANT-TREE -->
                     <app-virtual-assistant-tree
                         [treeDataInput]="dataSourceCategory">
@@ -28,12 +35,10 @@
                         [listDataInput]="dataShared">
                     </app-virtual-assistant-list>
                     <!-- END APP-VIRTUAL-ASSISTANT-LIST -->
+                
+            </app-virtual-assistant-buttons-container>
+            <!-- END APP-VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
 
-                </div>
-                <div>
-                    <button class="btn btn-success float-end m-4 px-5">{{ 'common.button.save' | translate }}</button>
-                </div>
-            </div>
         </div>
     </div>
 </div>

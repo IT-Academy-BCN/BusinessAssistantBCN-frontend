@@ -21,6 +21,7 @@ import { VirtualAssistantTreeModule } from './virtual-assistant-tree/virtual-ass
 
     // MODULE COMPONENTS VIRTUAL-ASSISTANT visibles for VIRTUAL-ASSISTANT-PAGES
     VirtualAssistantAccordionModule,
+    VirtualAssistantButtonsContainerModule,
     VirtualAssistantListModule,
     VirtualAssistantTreeModule
   ]
