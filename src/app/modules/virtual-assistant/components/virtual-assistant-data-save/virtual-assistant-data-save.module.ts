@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// SHARED MODULE
+// SHARED-MODULE
 import { SharedModule } from 'src/app/shared/shared.module';
 
-// COMPONENT
+// COMPONENT VIRTUAL-ASSISTANT-DATA-SAVE
 import { VirtualAssistantDataSaveComponent } from './component/virtual-assistant-data-save.component';
 
 

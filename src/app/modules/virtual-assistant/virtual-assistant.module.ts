@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// SHARED MODULE
+// SHARED-MODULE
 import { SharedModule } from 'src/app/shared/shared.module';
 
-// VIRTUAL-ASSISTANT COMPONENTS
+// VIRTUAL-ASSISTANT-COMPONENTS-MODULE
 import { VirtualAssistantComponentsModule } from './components/virtual-assistant-components.module';
 
-// VIRTUAL-ASSISTANT PAGE
+// VIRTUAL-ASSISTANT-PAGE
 import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-assistant-page.component';
 
 
-// ARRAY WITH VIRTUAL-ASSISTANT APPLICATION PAGES
+// ARRAY with VIRTUAL-ASSISTANT APPLICATION PAGES
 const VirtualAssistantPages = [
   VirtualAssistantPageComponent
 ];
@@ -24,6 +24,8 @@ const VirtualAssistantPages = [
   imports: [
     CommonModule,
     SharedModule,
+
+    //VIRTUAL-ASSISTANT-COMPONENTS-MODULE
     VirtualAssistantComponentsModule
   ],
   exports: [
