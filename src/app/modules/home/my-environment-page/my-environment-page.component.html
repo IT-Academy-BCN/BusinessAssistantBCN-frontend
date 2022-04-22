@@ -8,17 +8,18 @@
                 <div class="container mt-1 mb-4 d-flex justify-content-center">
                     <div class="row g-0">
                         <div class="col-md-4 border-right">
-                            <div class="cards" routerLink="/large-stablishments">
+                            <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('large-establishments')">
                                 <div class="first bg-white p-4 text-center"> 
                                     <img class="icon-size btn"
-                                        [src]=" largeStablihsments" 
-                                        type="button">
+                                        [src]=" largeEstablishment"
+                                        type="button"
+                                    >
                                     <h5>{{'common.button.big-stablish' | translate}}</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 border-right">
-                            <div class="cards" routerLink="/commercial-galleries">
+                            <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('commercial-galleries')">
                                 <div class=" second bg-white p-4 text-center"> <img class="icon-size"
                                         [src]=" shoppingMall">
                                     <h5>{{'common.button.gallery-market' | translate}}</h5>
@@ -27,7 +28,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="cards" routerLink="/big-malls">
+                            <div class="cards" routerLink="/my-environment-search"(click)="setCurrentBusiness('big-malls')">
                                 <div class=" third bg-white p-4 text-center"> <img class="icon-size"
                                         [src]=" shoppingCart">
                                     <h5>{{'common.button.mall' | translate}}</h5>
@@ -37,16 +38,16 @@
                         </div>
                         <div class="d-md-flex justify-content-center ">
                             <div class="col-md-4">
-                                <div class="cards" routerLink="/municipal-markets">
+                                <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('municipal-markets')">
                                     <div class=" third bg-white p-4 text-center"> <img class="icon-size"
-                                            [src]="   comercialMarket ">
+                                            [src]="   commercialMarket ">
                                         <h5>{{'common.button.public-market' | translate}}</h5>
 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="cards" routerLink="/market-fairs">
+                                <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('market-fairs')">
                                     <div class=" third bg-white p-4 text-center"><img class="icon-size"
                                             [src]=" fairMarkets">
                                         <h5>{{'common.button.market-fair' | translate}}</h5>
