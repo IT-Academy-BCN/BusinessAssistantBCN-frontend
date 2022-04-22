@@ -9,7 +9,7 @@ import {CommonService} from "../../../services/common.service";
 export class MyEnvironmentPageComponent implements OnInit {
 
 
-  largeStablishmentsPic = "assets/img/shopping-mall.png";
+  largeEstablishment = "assets/img/shopping-mall.png";
   commercialGalleriesPic = "assets/img/market.png";
   bigMallsPic = "assets/img/mall-shopping-cart.png";
   municipalMarketsPic = "assets/img/shop.png";
