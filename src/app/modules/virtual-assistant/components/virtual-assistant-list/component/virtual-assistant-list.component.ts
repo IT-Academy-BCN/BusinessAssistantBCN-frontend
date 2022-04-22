@@ -4,8 +4,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-virtual-assistant-list',
-  templateUrl: './virtual-assistant-list.component.html',
-  styleUrls: ['./virtual-assistant-list.component.css']
+  templateUrl: './virtual-assistant-list.component.html'
 })
 export class VirtualAssistantListComponent {
 
