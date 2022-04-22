@@ -23,20 +23,19 @@ export class MyEnvironmentSearchComponent implements OnInit {
   currentBusiness:string = '';
 
   constructor(private commonService:CommonService,
-              private activatedRoute:ActivatedRoute
+
               ) {
-      this.activatedRoute.params.subscribe(params => {
-        if(params['id']==='large-stablishments') this.largeStablishments=true;
-        if(params['id']==='commercial-galleries') this.commercialGalleries=true;
-        if(params['id']==='big-malls') this.bigMalls=true;
-        if(params['id']==='municipal-markets') this.municipalMarkets=true;
-        if(params['id']==='market-fairs') this.marketFairs=true;
-      })          
+
    }
 
   ngOnInit(): void {
     this.commonService.currentBusiness.asObservable().subscribe((business:string)=>{
       this.commonService.businessModel=business
+      if(business==='large-establishments') this.largeStablishments=true;
+      if(business==='commercial-galleries') this.commercialGalleries=true;
+      if(business==='big-malls') this.bigMalls=true;
+      if(business==='municipal-markets') this.municipalMarkets=true;
+      if(business==='market-fairs') this.marketFairs=true;
     })
     this.getAllActivities() //gets all the activities available from the common service
     this.getAllZones() //gets all the zones available from the common service
