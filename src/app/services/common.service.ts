@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
 import {HttpClient , HttpParams} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {Observable} from "rxjs";
+import {BehaviorSubject , Observable , Subject} from "rxjs";
 import {ZoneModel} from "../models/common/zone.model";
 import {EconomicActivityModel} from "../models/common/economic-activity.model";
 import {BasicBusinessModel} from "../models/common/basic-business.model";
@@ -16,7 +16,9 @@ export class CommonService {
   zones:ZoneModel[]=[];
   activities:EconomicActivityModel[]=[]
   API_ENDPOINT:string = '../../assets/dummy/full/'
-  results:BasicBusinessModel[]=[]
+  results = new Subject<BasicBusinessModel[]>()
+  currentBusiness =  new BehaviorSubject<string>('');
+  businessModel:string=''
 
   constructor(private router:Router,
               private http: HttpClient) {
@@ -42,13 +44,30 @@ export class CommonService {
       });
   }
 
-  getEnvironments<T>(businessModel:string):Observable<T>{
+  getEnvironments(){
     let params = new HttpParams();
 
     params = params.append('zones', JSON.stringify(this.zones))
 
     params = params.append('activities', JSON.stringify(this.activities));
-    return this.http.get<T>(`${this.API_ENDPOINT}${businessModel}_dummy.json`,{params:params});
+    //return this.http.get<T>(`${this.API_ENDPOINT}${businessModel}_dummy.json`,{params:params});
+
+
+    switch (this.businessModel){
+      case 'large-establishments':
+        return this.http.get(`${environment.BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS}`,{params})
+      case 'commercial-galleries':
+        return this.http.get(`${environment.BACKEND_COMMERCIAL_GALLERIES}`,{params})
+      case 'big-malls':
+        return this.http.get(`${environment.BACKEND_BIG_MALLS_FAKE_FILTERED_RESULTS}`,{params})
+      case 'municipal-markets':
+        return this.http.get(`${environment.BACKEND_MUNICIPAL_MARKETS}`,{params})
+      case 'market-fairs':
+        return this.http.get(`${environment.BACKEND_MARKET_FAIRS}`,{params})
+      default:
+        return this.http.get(`${environment.BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS}`,{params})
+    }
+
   }
 
 }
