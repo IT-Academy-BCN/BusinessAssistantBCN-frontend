@@ -2,7 +2,10 @@
 import { Component } from '@angular/core';
 
 // MODELS - APP > MODELS > business-assistant.model
-import { Category } from 'src/app/models/business-assistant.model';
+// import { Category } from 'src/app/models/business-assistant.model';
+
+// VIRTUAL-ASSISTANT MODELS - BUSINESS ASISSTANT CATEGORY
+import { Category } from '../models/business-assistant.model';
 
 
 @Component({
