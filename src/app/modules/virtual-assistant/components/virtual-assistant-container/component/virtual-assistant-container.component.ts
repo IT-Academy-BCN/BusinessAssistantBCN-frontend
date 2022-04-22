@@ -9,16 +9,16 @@ import { Component, Input } from '@angular/core';
 })
 export class VirtualAssistantContainerComponent {
 
-  // MAIN DIV CONTAINER '.component-container'
+  // Main div container '.component-container'
   @Input('containerHeigh') containerHeigh: string;
   @Input('containerBackgroundColor') containerBackgroundColor: string;
   @Input('containerElevationInactive') containerElevationInactive: number;
   @Input('containerElevationActive') containerElevationActive: number;
 
-  // INNER DIV CONTAINER '.content-container'
+  // Inner div container '.content-container'
   @Input('containerInnerPadding') containerInnerPadding: string;
 
-  // SETTINGS 
+  // Settings 
   @Input('containerIsActive') containerIsActive: boolean;
 
   /** Returns the background color of the main div 'component-container'. */

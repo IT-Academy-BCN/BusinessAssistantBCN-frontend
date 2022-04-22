@@ -7,10 +7,10 @@
             <!-- APP-VIRTUAL-ASSISTANT-CONTAINER -->
             <app-virtual-assistant-container
                 [containerHeigh]="'395px'"
-                [containerInnerPadding]="'0px'"
                 [containerBackgroundColor]="'transparent'"
                 [containerElevationInactive]=0
-                [containerElevationActive]=0>
+                [containerElevationActive]=0
+                [containerInnerPadding]="'0px'">
 
                     <!-- APP-VIRTUAL-ASSISTANT-ACCORDION -->
                     <app-virtual-assistant-accordion 
@@ -28,6 +28,8 @@
 
             <!-- APP-VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
             <app-virtual-assistant-buttons-container
+                [containerHeigh]="'395px'"
+                [containerInnerPadding]="'0px'"
                 mainButtonText="{{ 'common.button.save' | translate }}"
                 mainButtonBackground="primary"
                 [mainButtonFunction]="onClickSaveButton" 

@@ -1,25 +1,43 @@
-<div class="component-container mat-elevation-z4">
+<!-- MAIN CONTAINER -->
+<div class="component-container" 
+    [ngClass]="
+        containerIsActive ? 
+        'mat-elevation-z' + containerElevationActive 
+        : 'mat-elevation-z' + containerElevationInactive "
+    [ngStyle]="{
+        backgroundColor: getContainerBackgroundColor, 
+        height: getContainerHeigh
+    }">
 
-    <!-- Content -->
-    <div class="content-container">
-        <ng-content></ng-content>
+    <!-- CONTENT -->
+    <div class="content-container"
+        [ngStyle]="{ 'padding': containerInnerPadding }">
+            <ng-content></ng-content>
     </div>
+    <!-- END CONTENT -->
 
-    <!-- Buttons -->
-    <div class="buttons-container">
+    <!-- BUTTONS -->
+    <div class="buttons-container"
+        [ngStyle]="{
+            backgroundColor: getButtonsContainerBackgroundColor, 
+            gap: getButtonsContainerGap,
+            padding: getButtonsContainerPadding
+        }">
 
-        <!-- Primary Button -->
-        <button mat-raised-button [disabled]="mainButtonDisabled" [color]="mainButtonBackground"
-            (click)="onMainButtonClick()">
-            {{ mainButtonText }}
-        </button>
+            <!-- Primary Button -->
+            <button mat-raised-button [disabled]="mainButtonDisabled" [color]="mainButtonBackground"
+                (click)="onMainButtonClick()">
+                {{ mainButtonText }}
+            </button>
 
-        <!-- Secondary Button -->
-        <button mat-raised-button [disabled]="secondaryButtonDisabled" [color]="secondaryButtonBackground"
-            (click)="onSecondaryButtonClick()">
-            {{ secondaryButtonText }}
-        </button>
+            <!-- Secondary Button -->
+            <button mat-raised-button [disabled]="secondaryButtonDisabled" [color]="secondaryButtonBackground"
+                (click)="onSecondaryButtonClick()">
+                {{ secondaryButtonText }}
+            </button>
 
     </div>
+    <!-- END BUTTONS -->
 
 </div>
+<!-- END MAIN CONTAINER -->
