@@ -1,10 +1,16 @@
+<!-- MAT-ACCORDION -->
 <mat-accordion *ngFor="let category of dataInput; let i=index">
+
+    <!-- MAT-EXPANSION-PANEL -->
     <mat-expansion-panel hideToggle class="margin-list">
+
+        <!-- MAT-EXPANSION-PANEL-HEADER -->
         <mat-expansion-panel-header class="list-height fs-5">
             <mat-panel-title class="text-white">
                 {{category.title | translate}}
             </mat-panel-title>
         </mat-expansion-panel-header>
+        <!-- END MAT-EXPANSION-PANEL-HEADER -->
 
         <div class="fw-bold fs-6 m-4" *ngFor="let subcat of category.subcategory; let e=index">
             <div (click)="items(e)">
@@ -17,4 +23,7 @@
             </div>
         </div>
     </mat-expansion-panel>
+    <!-- END MAT-EXPANSION-PANEL -->
+
 </mat-accordion>
+<!-- END MAT-ACCORDION -->
