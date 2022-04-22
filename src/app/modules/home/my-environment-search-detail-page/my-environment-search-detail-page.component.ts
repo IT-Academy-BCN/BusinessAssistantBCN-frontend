@@ -28,9 +28,12 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     private modalService: NgbModal,
     private fb:FormBuilder,
     private commonService: CommonService
-  ) { this.businessModels=commonService.results}
+  ) { }
 
   ngOnInit(): void {
+      this.commonService.results.asObservable().subscribe((results:BasicBusinessModel[])=>{
+          this.businessModels=results;
+      })
 
   }
 
