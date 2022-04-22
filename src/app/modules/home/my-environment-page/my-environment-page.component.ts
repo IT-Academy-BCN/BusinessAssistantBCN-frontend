@@ -9,11 +9,11 @@ import {CommonService} from "../../../services/common.service";
 export class MyEnvironmentPageComponent implements OnInit {
 
 
-  largeEstablishment = "assets/img/shopping-mall.png";
-  shoppingMall = "assets/img/market.png";
-  shoppingCart = "assets/img/mall-shopping-cart.png";
-  commercialMarket = "assets/img/shop.png";
-  fairMarkets = "assets/img/cans.png"
+  largeStablishmentsPic = "assets/img/shopping-mall.png";
+  commercialGalleriesPic = "assets/img/market.png";
+  bigMallsPic = "assets/img/mall-shopping-cart.png";
+  municipalMarketsPic = "assets/img/shop.png";
+  marketFairsPic = "assets/img/cans.png"
 
   constructor(private commonService:CommonService) { }
 

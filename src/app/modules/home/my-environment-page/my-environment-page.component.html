@@ -30,7 +30,7 @@
                         <div class="col-md-4">
                             <div class="cards" routerLink="/my-environment-search"(click)="setCurrentBusiness('big-malls')">
                                 <div class=" third bg-white p-4 text-center"> <img class="icon-size"
-                                        [src]=" shoppingCart">
+                                        [src]="bigMallsPic">
                                     <h5>{{'common.button.mall' | translate}}</h5>
 
                                 </div>
@@ -49,7 +49,7 @@
                             <div class="col-md-4">
                                 <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('market-fairs')">
                                     <div class=" third bg-white p-4 text-center"><img class="icon-size"
-                                            [src]=" fairMarkets">
+                                            [src]="marketFairsPic">
                                         <h5>{{'common.button.market-fair' | translate}}</h5>
                                     </div>
                                 </div>
@@ -65,3 +65,4 @@
 
 <!--Footer-->
 <app-footer></app-footer>
+

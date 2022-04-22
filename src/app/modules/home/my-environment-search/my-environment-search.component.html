@@ -3,7 +3,11 @@
 <div class="container-lg mt-3 mb-5">
     <div class="row">
         <div class="col">
-            <h1 class="display-3 p-3 text-center" id="resultsTitle">{{'common.button.gallery-market' | translate}}</h1>
+            <h1 *ngIf="largeStablishments" class="display-3 p-3 text-center" id="resultsTitle">{{'common.button.big-stablish' | translate}}</h1>
+            <h1 *ngIf="commercialGalleries" class="display-3 p-3 text-center" id="resultsTitle">{{'common.button.gallery-market' | translate}}</h1>
+            <h1 *ngIf="bigMalls" class="display-3 p-3 text-center" id="resultsTitle" >{{'common.button.mall' | translate}}</h1>
+            <h1 *ngIf="municipalMarkets" class="display-3 p-3 text-center" id="resultsTitle">{{'common.button.public-market' | translate}}</h1>
+            <h1 *ngIf="marketFairs" class="display-3 p-3 text-center" id="resultsTitle">{{'common.button.market-fair' | translate}}</h1>
         </div>
     </div>
 
@@ -20,10 +24,18 @@
                         </label>
                     </div>
                 </div>
+                <div *ngIf="municipalMarkets || marketFairs" class="d-grid gap-2 d-md-flex justify-content-md-end pt-4">
+                    <button (click)="search('sampleBusinessModel')"
+                            routerLink="/my-environment-search-detail"
+                            class="search-button"
+                            type="submit">
+                        {{'common.button.search' | translate}}
+                    </button>
+                </div>
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div *ngIf="largeStablishments || commercialGalleries || bigMalls" class="col-12 col-md-6">
             <h2 class=" title-right ps-5 pt-4 fw-bold mb-3">{{'pages.big-stablish.section2.title' | translate}}</h2>
             <div class="p-3 border bg-light card-contents">
                 <div class="data">
@@ -40,7 +52,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end pt-4">
                     <button (click)="search()"
                             routerLink="/my-environment-search-detail"
@@ -48,11 +59,11 @@
                             type="submit">
                         {{'common.button.search' | translate}}
                     </button>
-
                 </div>
             </div>
 
         </div>
+
     </div>
 
 </div>
