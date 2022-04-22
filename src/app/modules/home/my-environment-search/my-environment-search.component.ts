@@ -11,14 +11,19 @@ import {EconomicActivityModel} from "../../../models/common/economic-activity.mo
 export class MyEnvironmentSearchComponent implements OnInit {
   zones:ZoneModel[] = []; //zones will store all the available zones before any selection
   activities:EconomicActivityModel[] =[]; //activities will store all the available economic activities before any selection
+  currentBusiness:string = '';
 
   constructor(
       private commonService:CommonService
   ) { }
 
   ngOnInit(): void {
+    this.commonService.currentBusiness.asObservable().subscribe((business:string)=>{
+      this.commonService.businessModel=business
+    })
     this.getAllActivities() //gets all the activities available from the common service
     this.getAllZones() //gets all the zones available from the common service
+
   }
 
   checkZones(zoneSelected: ZoneModel, event: any) {
@@ -53,10 +58,13 @@ export class MyEnvironmentSearchComponent implements OnInit {
     })
   }
 
-  search(businessModel:string){
-    this.commonService.getEnvironments(businessModel).subscribe((response:any)=>{
-      this.commonService.results=response.results;
+  search(){
+    this.commonService.getEnvironments().subscribe((response:any)=>{
+      this.commonService.results.next(response.results)
+      console.log(response.results)
     });
   }
+
+
 
 }
