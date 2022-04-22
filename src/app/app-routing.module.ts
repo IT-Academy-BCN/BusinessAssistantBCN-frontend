@@ -8,6 +8,7 @@ import { LoginFormComponent } from './modules/login/login-form/login-form.compon
 import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
 import { MyEnvironmentSearchDetailPageComponent } from './modules/home/my-environment-search-detail-page/my-environment-search-detail-page.component';
 import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
+import {MyEnvironmentSearchComponent} from "./modules/home/my-environment-search/my-environment-search.component";
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "virtual-assistant", component: VirtualAssistantComponent },
   { path: "my-environment-search-detail", component: MyEnvironmentSearchDetailPageComponent },
   { path: "saved-searches", component: SavedSearchesComponent },
+  {path: "my-environment-search",component:MyEnvironmentSearchComponent}
 
 ];
 
