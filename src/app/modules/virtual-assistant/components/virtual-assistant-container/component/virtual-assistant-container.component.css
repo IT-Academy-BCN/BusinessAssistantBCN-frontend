@@ -1,0 +1,9 @@
+.component-container {
+    width  : 100%;
+    display: flex;
+}
+
+.content-container {
+    flex-grow: 1;
+    overflow : auto;
+}

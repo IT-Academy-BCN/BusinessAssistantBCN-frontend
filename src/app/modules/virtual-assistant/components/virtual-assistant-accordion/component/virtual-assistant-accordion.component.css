@@ -5,6 +5,7 @@
 
 .margin-list {
     margin-bottom: 3px;
+    cursor: pointer;
 }
 
 .list-height {
