@@ -7,21 +7,31 @@
         <!-- MAT-EXPANSION-PANEL-HEADER -->
         <mat-expansion-panel-header class="list-height fs-5">
             <mat-panel-title class="text-white">
-                {{category.title | translate}}
+                {{ category.title | translate }}
             </mat-panel-title>
         </mat-expansion-panel-header>
         <!-- END MAT-EXPANSION-PANEL-HEADER -->
 
+        <!-- SUBCATEGORIES -->
         <div class="fw-bold fs-6 m-4" *ngFor="let subcat of category.subcategory; let e=index">
-            <div (click)="items(e)">
-                {{subcat.title | translate}}
+
+            <!-- SUBCATEGORY TITLE -->
+            <div (click)="onClickItems(e)">
+                {{ subcat.title | translate }}
             </div>
-            <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="saveData(items.item)">
-                <div *ngIf="item == e && isOpen">
-                    {{ items.item | translate}}
+            <!-- END SUBCATEGORIES TITLE -->
+
+            <!-- SUBCATEGORY ITEMS -->
+            <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="onClickItemSaveData(items.item)">
+                <div *ngIf="itemAccordion == e && isItemOpen">
+                    {{ items.item | translate }}
                 </div>
             </div>
+            <!-- END SUBCATEGORIES ITEMS -->
+
         </div>
+        <!-- END SUBCATEGORIES -->
+
     </mat-expansion-panel>
     <!-- END MAT-EXPANSION-PANEL -->
 

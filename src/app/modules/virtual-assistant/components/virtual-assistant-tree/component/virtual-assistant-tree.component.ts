@@ -24,7 +24,7 @@ import { ChecklistDatabase } from '../service/checklist-data-base.service';
 })
 export class VirtualAssistantTreeComponent implements AfterViewInit {
 
-  @Input('dataToShow') data: {} = {};  // TODO improve typing {}
+  @Input('treeDataInput') data: {} = {};  // TODO improve typing {}
 
   get getData(): {} {
     return this.data;

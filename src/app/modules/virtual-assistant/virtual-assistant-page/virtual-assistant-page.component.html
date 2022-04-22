@@ -6,8 +6,8 @@
 
             <!-- APP-VIRTUAL-ASSISTANT-ACCORDION -->
             <app-virtual-assistant-accordion 
-                [accordionDataInput]="data"
-                (accordionDataOutput)="getDataToAccordion($event)">
+                [accordionDataInput]="dataSourceCategory"
+                (accordionDataOutput)="getDataFromAccordion($event)">
             </app-virtual-assistant-accordion>
             <!-- END APP-VIRTUAL-ASSISTANT-ACCORDION -->
 
@@ -19,19 +19,19 @@
 
                     <!-- APP-VIRTUAL-ASSISTANT-TREE -->
                     <app-virtual-assistant-tree
-                        [dataToShow]="data">
+                        [treeDataInput]="dataSourceCategory">
                     </app-virtual-assistant-tree>
                     <!-- END APP-VIRTUAL-ASSISTANT-TREE -->
 
                     <!-- APP-VIRTUAL-ASSISTANT-DATA-SAVE -->
                     <app-virtual-assistant-data-save
-                        [data]="dataSend">
+                        [dataSaveDataInput]="dataShared">
                     </app-virtual-assistant-data-save>
                     <!-- END APP-VIRTUAL-ASSISTANT-DATA-SAVE -->
 
                 </div>
                 <div>
-                    <button class="btn btn-success float-end m-4 px-5">{{'common.button.save' | translate}}</button>
+                    <button class="btn btn-success float-end m-4 px-5">{{ 'common.button.save' | translate }}</button>
                 </div>
             </div>
         </div>

@@ -1,4 +1,6 @@
+// ANGULAR CORE
 import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-virtual-assistant-data-save',
@@ -7,8 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class VirtualAssistantDataSaveComponent {
 
-  @Input() data: any []=[]; // TODO improve typing any[]
+  // Data to show in ul > li {{ info | translate }}.
+  @Input('dataSaveDataInput') dataInput: any[] = []; // TODO improve typing any[]
 
+  // Not delete this empty constructor to make implementations easier to understand.
   constructor() { }
 
 }
