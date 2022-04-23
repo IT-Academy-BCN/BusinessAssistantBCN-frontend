@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 @Component({
-  selector: 'app-virtual-assistant-accordion',
+  selector: 'virtual-assistant-accordion',
   templateUrl: './virtual-assistant-accordion.component.html',
   styleUrls: ['./virtual-assistant-accordion.component.css']
 })

@@ -4,30 +4,30 @@
     <div class="row">
         <div class="col-12 col-md-6 mb-5">
 
-            <!-- APP-VIRTUAL-ASSISTANT-CONTAINER -->
-            <app-virtual-assistant-container
+            <!-- VIRTUAL-ASSISTANT-CONTAINER -->
+            <virtual-assistant-container
                 [containerHeigh]="'395px'"
                 [containerBackgroundColor]="'transparent'"
                 [containerElevationInactive]=0
                 [containerElevationActive]=0
                 [containerInnerPadding]="'0px'">
 
-                    <!-- APP-VIRTUAL-ASSISTANT-ACCORDION -->
-                    <app-virtual-assistant-accordion 
+                    <!-- VIRTUAL-ASSISTANT-ACCORDION -->
+                    <virtual-assistant-accordion 
                         [accordionDataInput]="dataSourceCategory"
                         (accordionDataOutput)="getDataFromAccordion($event)">
-                    </app-virtual-assistant-accordion>
-                    <!-- END APP-VIRTUAL-ASSISTANT-ACCORDION -->
+                    </virtual-assistant-accordion>
+                    <!-- END VIRTUAL-ASSISTANT-ACCORDION -->
 
-            </app-virtual-assistant-container>
-            <!-- END APP-VIRTUAL-ASSISTANT-CONTAINER -->
+            </virtual-assistant-container>
+            <!-- END VIRTUAL-ASSISTANT-CONTAINER -->
 
         </div>
         
         <div class="col-12 col-md-6">
 
-            <!-- APP-VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
-            <app-virtual-assistant-buttons-container
+            <!-- VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
+            <virtual-assistant-buttons-container
                 [containerHeigh]="'395px'"
                 [containerInnerPadding]="'0px'"
                 mainButtonText="{{ 'common.button.save' | translate }}"
@@ -37,20 +37,20 @@
                 secondaryButtonBackground=""
                 [secondaryButtonFunction]="onClickResumeButton">
 
-                    <!-- APP-VIRTUAL-ASSISTANT-TREE -->
-                    <app-virtual-assistant-tree
+                    <!-- VIRTUAL-ASSISTANT-TREE -->
+                    <virtual-assistant-tree
                         [treeDataInput]="dataSourceCategory">
-                    </app-virtual-assistant-tree>
-                    <!-- END APP-VIRTUAL-ASSISTANT-TREE -->
+                    </virtual-assistant-tree>
+                    <!-- END VIRTUAL-ASSISTANT-TREE -->
 
-                    <!-- APP-VIRTUAL-ASSISTANT-LIST -->
-                    <app-virtual-assistant-list
+                    <!-- VIRTUAL-ASSISTANT-LIST -->
+                    <virtual-assistant-list
                         [listDataInput]="dataShared">
-                    </app-virtual-assistant-list>
-                    <!-- END APP-VIRTUAL-ASSISTANT-LIST -->
+                    </virtual-assistant-list>
+                    <!-- END VIRTUAL-ASSISTANT-LIST -->
                 
-            </app-virtual-assistant-buttons-container>
-            <!-- END APP-VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
+            </virtual-assistant-buttons-container>
+            <!-- END VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
 
         </div>
     </div>

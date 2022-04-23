@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 
 
 @Component({
-  selector: 'app-virtual-assistant-list',
+  selector: 'virtual-assistant-list',
   templateUrl: './virtual-assistant-list.component.html'
 })
 export class VirtualAssistantListComponent {

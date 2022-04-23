@@ -17,7 +17,7 @@ import { ChecklistDatabase } from '../service/checklist-data-base.service';
 
 
 @Component({
-  selector: 'app-virtual-assistant-tree',
+  selector: 'virtual-assistant-tree',
   templateUrl: './virtual-assistant-tree.component.html',
   providers: [ChecklistDatabase]
 })
