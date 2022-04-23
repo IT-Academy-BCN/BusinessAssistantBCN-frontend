@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {CommonService} from "../../../services/common.service";
 import {ZoneModel} from "../../../models/common/zone.model";
 import {EconomicActivityModel} from "../../../models/common/economic-activity.model";
+import { BreadcrumbService } from '../../../services/breadcrumb.service';
 
 
 @Component({
@@ -23,10 +24,11 @@ export class MyEnvironmentSearchComponent implements OnInit {
   currentBusiness:string = '';
 
   constructor(private commonService:CommonService,
-
-              ) {
-
-   }
+              private breadcrumbService: BreadcrumbService
+              ) {}
+  get breadcrumbs(){
+    return this.breadcrumbService.breadcrumbs;
+  }
 
   ngOnInit(): void {
     this.commonService.currentBusiness.asObservable().subscribe((business:string)=>{
