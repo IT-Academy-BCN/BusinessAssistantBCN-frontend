@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CommonService} from "../../../services/common.service";
+import { BreadcrumbService } from '../../../services/breadcrumb.service';
 
 @Component({
   selector: 'app-my-environment-page',
@@ -15,7 +16,12 @@ export class MyEnvironmentPageComponent implements OnInit {
   municipalMarketsPic = "assets/img/shop.png";
   marketFairsPic = "assets/img/cans.png"
 
-  constructor(private commonService:CommonService) { }
+  constructor(private commonService:CommonService,private breadcrumbService: BreadcrumbService) { }
+  get breadcrumbs(){
+    return this.breadcrumbService.breadcrumbs;
+  }
+
+
 
   ngOnInit(): void {
   }

@@ -4,13 +4,35 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { JwtInterceptor } from "./helpers/JwtInterceptor";
 import { HomePageComponent } from './modules/home/home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './modules/home/my-environment-page/my-environment-page.component';
-import { LoginFormComponent } from './modules/login/login-form/login-form.component';
 import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
 import { MyEnvironmentSearchDetailPageComponent } from './modules/home/my-environment-search-detail-page/my-environment-search-detail-page.component';
 import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
 import {MyEnvironmentSearchComponent} from "./modules/home/my-environment-search/my-environment-search.component";
 
 
+// FUNCIONA 
+const routes: Routes = [
+    { path: 'home', component: HomePageComponent, data: { breadcrumb: null } },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    // { path: "login", component: LoginFormComponent },
+    { path: 'my-environment', component: MyEnvironmentPageComponent, data: { breadcrumb: 'my-enviroment' },
+      children: [
+          {path:'my-environment-search',component:MyEnvironmentSearchComponent,data: {breadcrumb:'search'},
+            children:[
+                { path:'my-environment-search-detail',component:MyEnvironmentSearchDetailPageComponent,data:{breadcrumb:'results'} }
+            ]
+          }
+
+      ]
+    },
+    { path: 'virtual-assistant', component: VirtualAssistantComponent, data: { breadcrumb: 'assistant' } },
+    { path: "saved-searches", component: SavedSearchesComponent, data: { breadcrumb: 'save-results' } },
+    { path: '**', component: HomePageComponent }
+];
+
+
+
+/*
 const routes: Routes = [
   { path: "", redirectTo: 'home', pathMatch: 'full' },
   { path: "home", component: HomePageComponent },
@@ -21,7 +43,7 @@ const routes: Routes = [
   { path: "saved-searches", component: SavedSearchesComponent },
   {path: "my-environment-search",component:MyEnvironmentSearchComponent}
 
-];
+];*/
 
 @NgModule({
   imports: [

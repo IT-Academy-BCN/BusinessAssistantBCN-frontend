@@ -1,7 +1,9 @@
-<!--Header/Navbar-->
+<!-- Header/Navbar -->
 <app-header></app-header>
 
-<div class="virtual-container">
+<router-outlet></router-outlet>
+
+<div class="virtual-container" *ngIf="breadcrumbs.length === 1">
     <div class="">
         <div class="col-md-6 py-0 text-container">
             <div class="">
@@ -9,10 +11,11 @@
                     <div class="row g-0">
                         <div class="col-md-4 border-right">
                             <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('large-establishments')">
-                                <div class="first bg-white p-4 text-center"> 
+                                <div class="first bg-white p-4 text-center">
                                     <img class="icon-size btn"
                                         [src]=" largeEstablishment"
                                         type="button"
+                                         alt=""
                                     >
                                     <h5>{{'common.button.big-stablish' | translate}}</h5>
                                 </div>
@@ -21,16 +24,16 @@
                         <div class="col-md-4 border-right">
                             <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('commercial-galleries')">
                                 <div class=" second bg-white p-4 text-center"> <img class="icon-size"
-                                        [src]="commercialGalleriesPic">
+                                        [src]="commercialGalleriesPic" alt="">
                                     <h5>{{'common.button.gallery-market' | translate}}</h5>
 
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="cards" routerLink="/my-environment-search"(click)="setCurrentBusiness('big-malls')">
+                            <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('big-malls')">
                                 <div class=" third bg-white p-4 text-center"> <img class="icon-size"
-                                        [src]="bigMallsPic">
+                                        [src]="bigMallsPic" alt="">
                                     <h5>{{'common.button.mall' | translate}}</h5>
 
                                 </div>
@@ -40,7 +43,7 @@
                             <div class="col-md-4">
                                 <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('municipal-markets')">
                                     <div class=" third bg-white p-4 text-center"> <img class="icon-size"
-                                            [src]="municipalMarketsPic">
+                                            [src]="municipalMarketsPic" alt="">
                                         <h5>{{'common.button.public-market' | translate}}</h5>
 
                                     </div>
@@ -49,7 +52,7 @@
                             <div class="col-md-4">
                                 <div class="cards" routerLink="/my-environment-search" (click)="setCurrentBusiness('market-fairs')">
                                     <div class=" third bg-white p-4 text-center"><img class="icon-size"
-                                            [src]="marketFairsPic">
+                                            [src]="marketFairsPic" alt="">
                                         <h5>{{'common.button.market-fair' | translate}}</h5>
                                     </div>
                                 </div>

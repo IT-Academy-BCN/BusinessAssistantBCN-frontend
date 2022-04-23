@@ -6,12 +6,13 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { LanguageChangerComponent } from './language-changer/language-changer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {ObserverIntersectionDirective} from "./directives/observer-interceptor.directive";
 import {MapboxComponent} from "./mapbox/mapbox.component";
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -22,11 +23,13 @@ import {MapboxComponent} from "./mapbox/mapbox.component";
     MenuComponent,
     LanguageChangerComponent,
       ObserverIntersectionDirective,
+      BreadcrumbComponent,
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
     RouterModule,
+    FontAwesomeModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -40,7 +43,8 @@ import {MapboxComponent} from "./mapbox/mapbox.component";
     FooterComponent,
     TranslateModule,
     ObserverIntersectionDirective,
-      MapboxComponent
+    MapboxComponent,
+    BreadcrumbComponent,
   ]
 })
 export class SharedModule { 
