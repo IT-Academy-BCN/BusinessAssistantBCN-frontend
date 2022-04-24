@@ -2,6 +2,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular
 import Mapboxgl, { LngLatBounds, NavigationControl, GeolocateControl, Map, Popup, Marker } from "mapbox-gl";
 import { environment } from "src/environments/environment";
 import { LargeStablishmentModel } from '../../models/large-stablishment.model';
+import {BasicBusinessModel} from "../../models/common/basic-business.model";
 
 @Component({
   selector: "app-mapbox",
@@ -11,7 +12,7 @@ import { LargeStablishmentModel } from '../../models/large-stablishment.model';
 export class MapboxComponent implements AfterViewInit {
   @ViewChild("mapDiv")
   mapDivElement!: ElementRef;
-  @Input() filteredResultsToPrintOnMap!: LargeStablishmentModel[];
+  @Input() filteredResultsToPrintOnMap!: BasicBusinessModel[];
   private map!: Map;
   private currentMarkers: Marker[] = [];
 
