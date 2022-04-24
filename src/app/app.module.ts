@@ -10,7 +10,9 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginModule } from './modules/login/login.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterModule } from './modules/register/register.module';
+import { VirtualAssistantModule } from './modules/virtual-assistant/virtual-assistant.module';
 
 
 
@@ -31,11 +33,13 @@ import { RegisterModule } from './modules/register/register.module';
       }
     }),
     FontAwesomeModule,
-    SweetAlert2Module.forRoot(),
+    // SweetAlert2Module.forRoot(),
     SharedModule,
     HomeModule,
     LoginModule,
     RegisterModule,
+    VirtualAssistantModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],

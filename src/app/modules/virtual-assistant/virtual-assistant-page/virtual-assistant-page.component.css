@@ -1,0 +1,31 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.baList {
+    cursor: pointer;
+    height: 395px;
+    max-height: 395px;
+    overflow-y: scroll;
+}
+
+.margin-list{
+    margin-bottom: 3px;
+}
+
+.list-height {
+    padding: 31px;
+    background-color: #3B79BF;
+    font-family: 'Open Sans', sans-serif;
+}
+.list-height:hover{
+    background-color: #3B79BF !important;
+}
+.list-height:focus{
+    background-color: #3B79BF !important;
+}
+
+.itemSelected:hover {
+    text-decoration: underline;
+}

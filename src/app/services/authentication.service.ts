@@ -14,6 +14,7 @@ export class AuthenticationService {
   auth_api: any = environment.BACKEND_BASE_URL;
   endpoint: string = environment.BACKEND_LOGIN_URL;
   endpoint_register: string = environment.BACKEND_REGISTER_URL;
+
   private _userLogged: boolean = false; // To be replace when user login works
 
   httpOptions = {
@@ -57,5 +58,6 @@ export class AuthenticationService {
       })
       );
   }
+
 }
 

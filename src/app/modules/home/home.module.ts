@@ -5,11 +5,8 @@ import { MyEnvironmentPageComponent } from './my-environment-page/my-environment
 
 import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
-import { VirtualAssistantComponent } from './home-components/virtual-assistant/virtual-assistant.component';
 import { RouterModule } from '@angular/router';
-
 import { SavedSearchesComponent } from './saved-searches/saved-searches.component';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyEnvironmentSearchDetailPageComponent } from './my-environment-search-detail-page/my-environment-search-detail-page.component';
@@ -20,12 +17,14 @@ import { MyEnvironmentSearchComponent } from './my-environment-search/my-environ
 
 
 
+
+
+
 @NgModule({
   declarations: [
     HomePageComponent,
     MyEnvironmentPageComponent,
     InformationNavComponent,
-    VirtualAssistantComponent,
     MyEnvironmentSearchDetailPageComponent,
     SavedSearchesComponent,
     MyEnvironmentSearchComponent
@@ -35,8 +34,7 @@ import { MyEnvironmentSearchComponent } from './my-environment-search/my-environ
     CommonModule,
     SharedModule,
     RouterModule,
-    NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     HomePageComponent

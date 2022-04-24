@@ -4,7 +4,7 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { JwtInterceptor } from "./helpers/JwtInterceptor";
 import { HomePageComponent } from './modules/home/home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './modules/home/my-environment-page/my-environment-page.component';
-import { VirtualAssistantComponent } from './modules/home/home-components/virtual-assistant/virtual-assistant.component';
+import {VirtualAssistantPageComponent} from "./modules/virtual-assistant/virtual-assistant-page/virtual-assistant-page.component";
 import { MyEnvironmentSearchDetailPageComponent } from './modules/home/my-environment-search-detail-page/my-environment-search-detail-page.component';
 import { SavedSearchesComponent } from './modules/home/saved-searches/saved-searches.component';
 import {MyEnvironmentSearchComponent} from "./modules/home/my-environment-search/my-environment-search.component";
@@ -25,7 +25,7 @@ const routes: Routes = [
 
       ]
     },
-    { path: 'virtual-assistant', component: VirtualAssistantComponent, data: { breadcrumb: 'assistant' } },
+    { path: 'virtual-assistant', component: VirtualAssistantPageComponent, data: { breadcrumb: 'assistant' } },
     { path: "saved-searches", component: SavedSearchesComponent, data: { breadcrumb: 'save-results' } },
     { path: '**', component: HomePageComponent }
 ];

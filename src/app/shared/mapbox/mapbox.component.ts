@@ -16,6 +16,27 @@ export class MapboxComponent implements AfterViewInit {
   private map!: Map;
   private currentMarkers: Marker[] = [];
 
+  private MAPBOX_INIT_LOCATION: BasicBusinessModel = {
+    name: "IT Academy",
+    web: "bcn.cat/barcelonactiva",
+    email: "itacademy@barcelonactiva.cat",
+    phone: '932917610',
+    activities: [],
+    addresses: [
+      {
+        street_name: "Roc Boronat",
+        street_number: "117-127",
+        zip_code: "08018",
+        district_id: "04",
+        town: "BARCELONA",
+        location: {
+          x: 2.194060007737955,
+          y: 41.40389733660671,
+        },
+      },
+    ],
+  }
+
   constructor() { }
 
   ngAfterViewInit(): void {
@@ -40,9 +61,9 @@ export class MapboxComponent implements AfterViewInit {
     Mapboxgl.accessToken = environment.MAPBOX_TOKEN;
     this.map = new Map({
       container: this.mapDivElement.nativeElement,
-      style: "mapbox://styles/mapbox/streets-v11", // style URL }
-      center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], // starting center so it doesn't start from Germany
-      zoom: 8
+      style: environment.MAPBOX_STYLE,
+      center: [this.MAPBOX_INIT_LOCATION.addresses[0].location.x, this.MAPBOX_INIT_LOCATION.addresses[0].location.y], // starting center so it doesn't start from Germany
+      zoom: environment.MAPBOX_ZOOM
     });
 
     this.map.addControl(new NavigationControl());
@@ -59,7 +80,7 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   // Function to create a single marker (with the marker's colour and the business (or user's coords) as parameters)
-  createANewMarker(markerColor: string, business?: LargeStablishmentModel, coord?: GeolocationCoordinates): void {
+  createANewMarker(markerColor: string, business?: BasicBusinessModel, coord?: GeolocationCoordinates): void {
 
     // Create a popup with the business's basic information
     const popup = new Popup().setHTML(
@@ -83,7 +104,7 @@ export class MapboxComponent implements AfterViewInit {
     // Initial point 0
     const bounds = new LngLatBounds();
 
-    // Add all the markers to the map's bounds. 
+    // Add all the markers to the map's bounds.
     this.currentMarkers.forEach(marker =>
       bounds.extend(marker.getLngLat()));
 
@@ -104,7 +125,7 @@ export class MapboxComponent implements AfterViewInit {
       () => {
         // this.map.flyTo(
         //   { center: [environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.x, environment.MAPBOX_ITAcademy_OBJECT.addresses[0].location.y], zoom: 11 })
-        this.createANewMarker("red", environment.MAPBOX_ITAcademy_OBJECT,);
+        this.createANewMarker("red", this.MAPBOX_INIT_LOCATION);
       }
     );
   }
