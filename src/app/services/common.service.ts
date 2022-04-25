@@ -61,9 +61,9 @@ export class CommonService {
       case 'big-malls':
         return this.http.get(`${environment.BACKEND_BIG_MALLS_FAKE_FILTERED_RESULTS}`,{params})
       case 'municipal-markets':
-        return this.http.get(`${environment.BACKEND_MUNICIPAL_MARKETS}`,{params})
+        return this.http.get(`${environment.BACKEND_MUNICIPAL_MARKETS_FAKE_FILTERED_RESULTS}`,{params})
       case 'market-fairs':
-        return this.http.get(`${environment.BACKEND_MARKET_FAIRS}`,{params})
+        return this.http.get(`${environment.BACKEND_MARKET_FAIRS_FAKE_FILTERED_RESULTS}`,{params})
       default:
         return this.http.get(`${environment.BACKEND_LARGE_ESTABLISHMENTS_FAKE_FILTERED_RESULTS}`,{params})
     }
