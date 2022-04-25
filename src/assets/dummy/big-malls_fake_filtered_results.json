@@ -47,15 +47,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Av Diagonal",
+                    "street_name": "Av Diagonal",
                     "street_number": "617*619",
                     "zip_code": "08028",
                     "district_id": "04",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 427089.6056334056,
-                        "y": 4582196.984049929
+                        "x": 2.1279314131380866,
+                        "y": 41.387691974039704
                     }
                 }
             ]
@@ -87,15 +87,15 @@
             "addresses":
             [
                 {
-                    "address_name": "G.V. Corts Catalanes",
+                    "street_name": "G.V. Corts Catalanes",
                     "street_number": "373*385",
                     "zip_code": "08015",
                     "district_id": "02",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 428919.128134815,
-                        "y": 4580850.788577912
+                        "x": 2.149414585900613,
+                        "y": 41.3763324277334
                     }
                 }
             ]
@@ -119,15 +119,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Pg Potosí",
+                    "street_name": "Pg Potosí",
                     "street_number": "2",
                     "zip_code": "08030",
                     "district_id": "09",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 433034.39665564324,
-                        "y": 4588197.656780293
+                        "x": 2.1984907729629657,
+                        "y": 41.44089978596891
                     }
                 }
             ]
@@ -159,15 +159,15 @@
             "addresses":
             [
                 {
-                    "address_name": "C Salvador Espriu",
+                    "street_name": "C Salvador Espriu",
                     "street_number": "61",
                     "zip_code": "08005",
                     "district_id": "10",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 432939.40871910215,
-                        "y": 4582465.578640014
+                        "x": 2.197726236356532,
+                        "y": 41.391133829087046
                     }
                 }
             ]
@@ -255,15 +255,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Av Diagonal",
+                    "street_name": "Av Diagonal",
                     "street_number": "555*559",
                     "zip_code": "08029",
                     "district_id": "04",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 427675.4938963018,
-                        "y": 4582393.626257071
+                        "x": 2.136191210304512,
+                        "y": 41.390096303049
                     }
                 }
             ]
@@ -323,15 +323,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Av Portal de l'Àngel",
+                    "street_name": "Av Portal de l'Àngel",
                     "street_number": "19*21",
                     "zip_code": "08002",
                     "district_id": "01",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430817.0904579748,
-                        "y": 4581924.688490288
+                        "x": 2.1724814348731663,
+                        "y": 41.38578399391745
                     }
                 }
             ]
@@ -363,15 +363,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Av Diagonal",
+                    "street_name": "Av Diagonal",
                     "street_number": "3",
                     "zip_code": "08019",
                     "district_id": "10",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 434510.2090325903,
-                        "y": 4584619.5799381975
+                        "x": 2.216520426631882,
+                        "y": 41.41007208364905
                     }
                 }
             ]
@@ -395,15 +395,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Canuda",
+                    "street_name": "Canuda",
                     "street_number": "20",
                     "zip_code": "08002",
                     "district_id": "01",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430840.91625275905,
-                        "y": 4581796.285748212
+                        "x": 2.1726244656950082,
+                        "y": 41.38496568732961
                     }
                 }
             ]
@@ -451,15 +451,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Passeig de la Zona Franca",
+                    "street_name": "Passeig de la Zona Franca",
                     "street_number": "123",
                     "zip_code": "08038",
                     "district_id": "03",
                     "town": "Barcelona",
                     "location":
                     {
-                        "x": 428107.4654593939,
-                        "y": 4578830.10113759
+                        "x": 2.140364584301677,
+                        "y": 41.357943464343286
                     }
                 }
             ]
@@ -503,15 +503,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Pl Catalunya",
+                    "street_name": "Pl Catalunya",
                     "street_number": "14",
                     "zip_code": "08002",
                     "district_id": "02",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 430708.5304682953,
-                        "y": 4582143.131336454
+                        "x": 2.1712046843024857,
+                        "y": 41.38803661887734
                     }
                 }
             ]
@@ -543,15 +543,15 @@
             "addresses":
             [
                 {
-                    "address_name": "Av Rio de Janeiro",
+                    "street_name": "Av Rio de Janeiro",
                     "street_number": "42",
                     "zip_code": "08016",
                     "district_id": "08",
                     "town": "BARCELONA",
                     "location":
                     {
-                        "x": 431579.0119413545,
-                        "y": 4587385.475400657
+                        "x": 2.180420062025259,
+                        "y": 41.435330613933566
                     }
                 }
             ]
