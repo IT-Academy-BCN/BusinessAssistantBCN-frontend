@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core'
+import {Component , OnDestroy , OnInit , TemplateRef} from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
@@ -8,6 +8,7 @@ import { CommonService } from 'src/app/services/common.service';
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 import {BasicBusinessModel} from "../../../models/common/basic-business.model";
+import {Subscription} from "rxjs";
 
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -17,9 +18,10 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   templateUrl: './my-environment-search-detail-page.component.html',
   styleUrls: ['./my-environment-search-detail-page.component.css']
 })
-export class MyEnvironmentSearchDetailPageComponent implements OnInit {
+export class MyEnvironmentSearchDetailPageComponent implements OnInit,OnDestroy {
 
-  businessModels: BasicBusinessModel[] = []
+  businessModels: BasicBusinessModel[] = [];
+  modelsSub:Subscription;
 
 
   constructor(
@@ -31,14 +33,14 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-      this.commonService.results.asObservable().subscribe((results:BasicBusinessModel[])=>{
+      this.modelsSub=this.commonService.results.asObservable().subscribe((results:BasicBusinessModel[])=>{
           this.businessModels=results;
       })
 
   }
 
     ngOnDestroy() {
-        // if( this.zones$ != undefined ) this.zones$.unsubscribe();
+        this.modelsSub.unsubscribe();
     }
 
   // This function opens login component modal service
@@ -161,5 +163,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     }
     return true
   }
+
+
   
 }

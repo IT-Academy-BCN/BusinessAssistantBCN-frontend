@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component , OnDestroy , OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {CommonService} from "../../../services/common.service";
 import {ZoneModel} from "../../../models/common/zone.model";
 import {EconomicActivityModel} from "../../../models/common/economic-activity.model";
 import { BreadcrumbService } from '../../../services/breadcrumb.service';
+import {Subscription} from "rxjs";
 
 
 @Component({
@@ -11,7 +12,7 @@ import { BreadcrumbService } from '../../../services/breadcrumb.service';
   templateUrl: './my-environment-search.component.html',
   styleUrls: ['./my-environment-search.component.css']
 })
-export class MyEnvironmentSearchComponent implements OnInit {
+export class MyEnvironmentSearchComponent implements OnInit,OnDestroy {
 
   largeStablishments:boolean = false;
   municipalMarkets:boolean = false;
@@ -21,7 +22,10 @@ export class MyEnvironmentSearchComponent implements OnInit {
   
   zones:ZoneModel[] = []; //zones will store all the available zones before any selection
   activities:EconomicActivityModel[] =[]; //activities will store all the available economic activities before any selection
-  currentBusiness:string = '';
+  currentBusiness:Subscription;
+  environments:Subscription;
+  activitiesSub:Subscription;
+  zonesSub:Subscription;
 
   constructor(private commonService:CommonService,
               private breadcrumbService: BreadcrumbService
@@ -31,7 +35,7 @@ export class MyEnvironmentSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.commonService.currentBusiness.asObservable().subscribe((business:string)=>{
+    this.currentBusiness=this.commonService.currentBusiness.asObservable().subscribe((business:string)=>{
       this.commonService.businessModel=business
       if(business==='large-establishments') this.largeStablishments=true;
       if(business==='commercial-galleries') this.commercialGalleries=true;
@@ -65,22 +69,29 @@ export class MyEnvironmentSearchComponent implements OnInit {
   }
 
   getAllZones(){
-    this.commonService.getZones().subscribe(response=>{
+    this.zonesSub=this.commonService.getZones().subscribe(response=>{
       this.zones=response.results;
     })
   }
 
   getAllActivities(){
-    this.commonService.getEconomicActivities().subscribe(response=>{
+    this.activitiesSub=this.commonService.getEconomicActivities().subscribe(response=>{
       this.activities=response.results;
     })
   }
 
   search(){
-    this.commonService.getEnvironments().subscribe((response:any)=>{
+    this.environments=this.commonService.getEnvironments().subscribe((response:any)=>{
       this.commonService.results.next(response.results)
       console.log(response.results)
     });
+  }
+
+  ngOnDestroy(){
+    this.currentBusiness.unsubscribe();
+    this.environments.unsubscribe();
+    this.activitiesSub.unsubscribe();
+    this.zonesSub.unsubscribe();
   }
 
 
