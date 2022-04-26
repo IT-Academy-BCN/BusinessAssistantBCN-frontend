@@ -17,7 +17,7 @@ const routes: Routes = [
     // { path: "login", component: LoginFormComponent },
     { path: 'my-environment', component: MyEnvironmentPageComponent, data: { breadcrumb: 'my-enviroment' },
       children: [
-          {path:'my-environment-search',component:MyEnvironmentSearchComponent,data: {breadcrumb:'search'},
+          {path:'search/:id',component:MyEnvironmentSearchComponent,data: {breadcrumb:'search'},
             children:[
                 { path:'my-environment-search-detail',component:MyEnvironmentSearchDetailPageComponent,data:{breadcrumb:'results'} }
             ]
