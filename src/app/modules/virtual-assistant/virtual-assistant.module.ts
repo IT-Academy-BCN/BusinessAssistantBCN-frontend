@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
 // SHARED-MODULE
 import { SharedModule } from 'src/app/shared/shared.module';
 
-// VIRTUAL-ASSISTANT-COMPONENTS-MODULE
-import { VirtualAssistantComponentsModule } from './components/virtual-assistant-components.module';
+// VIRTUAL-ASSISTANT-CONTENTS-MODULE
+import { VirtualAssistantContentsModule } from './contents/virtual-assistant-contents.module';
 
 // VIRTUAL-ASSISTANT-PAGE
 import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-assistant-page.component';
@@ -26,8 +26,9 @@ const VirtualAssistantPages = [
     CommonModule,
     SharedModule,
 
-    //VIRTUAL-ASSISTANT-COMPONENTS-MODULE
-    VirtualAssistantComponentsModule
+    // VIRTUAL-ASSISTANT-CONTENTS-MODULE
+    VirtualAssistantContentsModule
+
   ],
   exports: [
     [...VirtualAssistantPages]
