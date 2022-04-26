@@ -9,6 +9,9 @@ import { VirtualAssistantContainerModule } from './virtual-assistant-container/v
 import { VirtualAssistantListModule } from './virtual-assistant-list/virtual-assistant-list.module';
 import { VirtualAssistantTreeModule } from './virtual-assistant-tree/virtual-assistant-tree.module';
 
+// VIRTUAL-SHOW-COMPONENT-SHOWCASE only for production
+import { VirtualAssistantComponentShowcaseModule } from './showcase/virtual-assistant-component-showcase.module';
+
 
 @NgModule({
   declarations: [],
@@ -18,7 +21,8 @@ import { VirtualAssistantTreeModule } from './virtual-assistant-tree/virtual-ass
     VirtualAssistantButtonsContainerModule,
     VirtualAssistantContainerModule,
     VirtualAssistantListModule,
-    VirtualAssistantTreeModule
+    VirtualAssistantTreeModule,
+    VirtualAssistantComponentShowcaseModule
   ],
   exports: [
 
@@ -27,7 +31,8 @@ import { VirtualAssistantTreeModule } from './virtual-assistant-tree/virtual-ass
     VirtualAssistantButtonsContainerModule,
     VirtualAssistantContainerModule,
     VirtualAssistantListModule,
-    VirtualAssistantTreeModule
+    VirtualAssistantTreeModule,
+    VirtualAssistantComponentShowcaseModule
   ]
 })
 export class VirtualAssistantComponentsModule { }

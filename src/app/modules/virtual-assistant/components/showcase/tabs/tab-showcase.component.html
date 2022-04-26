@@ -1,0 +1,63 @@
+<mat-grid-list [cols]="breakpoint" [rowHeight]="ratio">
+
+	<mat-grid-tile>
+		<virtual-assistant-container vaStyle="theme" containerWidth="400px" containerHeight="400px" [containerElevationInactive]=8>
+			<span class="mat-subheading-2"><b>virtual-assistant-accordion</b></span>
+			<hr>
+			<!-- VIRTUAL-ASSISTANT-ACCORDION -->
+			<virtual-assistant-accordion [accordionDataInput]="accordionData">
+			</virtual-assistant-accordion>
+			<!-- END VIRTUAL-ASSISTANT-ACCORDION -->
+		</virtual-assistant-container>
+	</mat-grid-tile>
+
+	<mat-grid-tile>
+		<virtual-assistant-container vaStyle="theme" containerWidth="400px" containerHeight="400px" [containerElevationInactive]=8>
+			<span class="mat-subheading-2"><b>virtual-assistant-buttons-container</b></span>
+			<hr>
+			<!-- VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
+			<virtual-assistant-buttons-container vaStyle='theme' containerWidth='100%' containerHeight='250px'
+				mainButtonText='say hello' mainButtonColor='accent' [mainButtonFunction]='onHelloButtonClick'
+				secondaryButtonText='say bye' secondaryButtonColor='primary'
+				[secondaryButtonFunction]='onByeButtonClick'>
+				<p>{{ buttonsContainerWord }}</p>
+			</virtual-assistant-buttons-container>
+			<!-- END VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
+		</virtual-assistant-container>
+	</mat-grid-tile>
+
+	<mat-grid-tile>
+		<virtual-assistant-container vaStyle="theme" containerWidth="400px" containerHeight="400px" [containerElevationInactive]=8>
+			<span class="mat-subheading-2"><b>virtual-assistant-container</b></span>
+			<hr>
+			<!-- VIRTUAL-ASSISTANT-CONTAINER -->
+			<virtual-assistant-container containerWidth='100%' containerHeight='100px' vaStyle='theme'
+				containerBackgroundColor='ffffaa'>
+				<p>Hello!</p>
+			</virtual-assistant-container>
+			<!-- END VIRTUAL-ASSISTANT-CONTAINER -->
+		</virtual-assistant-container>
+	</mat-grid-tile>
+
+	<mat-grid-tile>
+		<virtual-assistant-container vaStyle="theme" containerWidth="400px" containerHeight="400px" [containerElevationInactive]=8>
+			<span class="mat-subheading-2"><b>virtual-assistant-list</b></span>
+			<hr>
+			<!-- VIRTUAL-ASSISTANT-LIST -->
+			<virtual-assistant-list [listDataInput]='listData'>
+			</virtual-assistant-list>
+			<!-- END VIRTUAL-ASSISTANT-LIST -->
+		</virtual-assistant-container>
+	</mat-grid-tile>
+
+	<mat-grid-tile>
+		<virtual-assistant-container vaStyle="theme" containerWidth="400px" containerHeight="400px" [containerElevationInactive]=8>
+			<span class="mat-subheading-2"><b>virtual-assistant-tree</b></span>
+			<hr>
+			<!-- VIRTUAL-ASSISTANT-TREE -->
+			<virtual-assistant-tree [treeDataInput]='treeData'>
+			</virtual-assistant-tree>
+			<!-- END VIRTUAL-ASSISTANT-TREE -->
+		</virtual-assistant-container>
+	</mat-grid-tile>
+</mat-grid-list>

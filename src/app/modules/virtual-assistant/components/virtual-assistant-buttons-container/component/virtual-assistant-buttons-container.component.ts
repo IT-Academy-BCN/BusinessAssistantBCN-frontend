@@ -3,7 +3,6 @@ import { Component, Input } from '@angular/core';
 
 // SUPER - BASE-CONTAINER-COMPONENT
 import { BaseContainerComponent } from '../../super/base-container.component';
-import { DefaultValues } from '../../values/default-values';
 
 // COLOR-TOOLS
 import { isHexadecimal } from '../../tools/color-tools';
@@ -20,6 +19,11 @@ export class VirtualAssistantButtonsContainerComponent extends BaseContainerComp
   @Input('buttonsContainerBackgroundColor') buttonsContainerBackgroundColor: string;
   @Input('buttonsContainerGap') buttonsContainerGap: string;
   @Input('buttonsContainerPadding') buttonsContainerPadding: string;
+  @Input('buttonsContainerFlow') buttonsContainerFlow: string;
+  @Input('buttonsContainerPosition') buttonsContainerPosition: string;
+
+  // About buttons
+  @Input('buttonsContainerTotalButtons') buttonsContainerTotalButtons: number;
 
   // Main Button
   @Input('mainButtonText') mainButtonText: string;
@@ -33,24 +37,41 @@ export class VirtualAssistantButtonsContainerComponent extends BaseContainerComp
   @Input('secondaryButtonFunction') secondaryButtonFunction!: () => void;
   @Input('secondaryButtonDisabled') secondaryButtonDisabled: boolean;
 
+  // Extra Button
+  @Input('extraButtonText') extraButtonText: string;
+  @Input('extraButtonColor') extraButtonColor: string;
+  @Input('extraButtonFunction') extraButtonFunction!: () => void;
+  @Input('extraButtonDisabled') extraButtonDisabled: boolean;
+
   constructor() {
     // BaseContainerComponent constructor() as super()
     super();
 
+    this.containerBackgroundColor = "white";
+
     // Buttons container '.buttons-container'
-    this.buttonsContainerBackgroundColor = DefaultValues.VAButtonsContainerBackgroundColor;
-    this.buttonsContainerGap = DefaultValues.VAButtonsContainerGap;
-    this.buttonsContainerPadding = DefaultValues.VAButtonsContainerPadding;
+    this.buttonsContainerBackgroundColor = "white";
+    this.buttonsContainerGap = "15px";
+    this.buttonsContainerPadding = "15px";
+
+    this.buttonsContainerFlow = "reverse";
+    this.buttonsContainerPosition = "start";
+    this.buttonsContainerTotalButtons = 2;
 
     // Main Button
-    this.mainButtonText = DefaultValues.VAButtonsContainerMainButtonText;
-    this.mainButtonColor = DefaultValues.VAButtonsContainerMainButtonColor;
-    this.mainButtonDisabled = DefaultValues.VAButtonsContainerMainButtonDisabled;
+    this.mainButtonText = "Main Button";
+    this.mainButtonColor = "primary";
+    this.mainButtonDisabled = false;
 
     // Secondary Button
-    this.secondaryButtonText = DefaultValues.VAButtonsContainerSecondaryButtonText;
-    this.secondaryButtonColor = DefaultValues.VAButtonsContainerSecondaryButtonColor;
-    this.secondaryButtonDisabled = DefaultValues.VAButtonsContainerSecondaryButtonDisabled;
+    this.secondaryButtonText = "Secondary Button";
+    this.secondaryButtonColor = "";
+    this.secondaryButtonDisabled = false;
+
+    // Extra Button
+    this.extraButtonText = "Extra Button";
+    this.extraButtonColor = "";
+    this.extraButtonDisabled = false;
   }
 
   /** Returns true if 'hexadecimalValue' is a hexadecimal. */
@@ -74,6 +95,41 @@ export class VirtualAssistantButtonsContainerComponent extends BaseContainerComp
     return this.buttonsContainerPadding;
   }
 
+  //** Returns a matrix with the used classes by '.buttons-container'. */
+  get getButtonsClassPosition(): string[] {
+    let buttonsFlow = "";
+    let buttonsPosition = "";
+
+    switch (this.buttonsContainerFlow) {
+      case "row":
+        buttonsFlow = "buttons-container";
+        break;
+      case "reverse":
+        buttonsFlow = "buttons-container-reverse";
+        break;
+    }
+
+    switch (this.buttonsContainerPosition) {
+      case "end":
+        buttonsPosition = "buttons-flex-end";
+        break;
+      case "start":
+        buttonsPosition = "buttons-flex-start";
+        break;
+      case "center":
+        buttonsPosition = "buttons-flex-center";
+        break;
+      case "around":
+        buttonsPosition = "buttons-flex-around";
+        break;
+      case "between":
+        buttonsPosition = "buttons-flex-between";
+        break;
+    }
+
+    return [buttonsFlow, buttonsPosition];
+  }
+
   /** On main button click (located on the right side of the container). */
   onMainButtonClick() {
     if (typeof this.mainButtonFunction === 'function')
@@ -84,5 +140,11 @@ export class VirtualAssistantButtonsContainerComponent extends BaseContainerComp
   onSecondaryButtonClick() {
     if (typeof this.secondaryButtonFunction === 'function')
       this.secondaryButtonFunction();
+  }
+
+  //** On extra button click. */
+  onExtraButtonClick() {
+    if (typeof this.extraButtonFunction === 'function')
+      this.extraButtonFunction();
   }
 }

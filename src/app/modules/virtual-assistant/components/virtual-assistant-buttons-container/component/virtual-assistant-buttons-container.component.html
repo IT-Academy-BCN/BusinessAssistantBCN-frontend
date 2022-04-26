@@ -1,40 +1,49 @@
 <!-- MAIN CONTAINER -->
-<div class="component-container" 
-    [ngClass]="
+<div class="component-container" [ngClass]="
         containerIsActive ? 
         'mat-elevation-z' + containerElevationActive 
-        : 'mat-elevation-z' + containerElevationInactive "
-    [ngStyle]="{
-        backgroundColor: getContainerBackgroundColor, 
-        height: getContainerHeigh
+        : 'mat-elevation-z' + containerElevationInactive " [ngStyle]="{
+        width: getContainerWidth,
+        height: getContainerHeight,
+        backgroundColor: getContainerBackgroundColor 
     }">
 
     <!-- CONTENT -->
-    <div class="content-container"
-        [ngStyle]="{ 'padding': containerInnerPadding }">
-            <ng-content></ng-content>
+    <div class="content-container" [ngStyle]="{ 'padding': containerInnerPadding }">
+        <ng-content></ng-content>
     </div>
     <!-- END CONTENT -->
 
     <!-- BUTTONS -->
-    <div class="buttons-container"
-        [ngStyle]="{
+    <div [ngClass]="getButtonsClassPosition" [ngStyle]="{
             backgroundColor: getButtonsContainerBackgroundColor, 
             gap: getButtonsContainerGap,
             padding: getButtonsContainerPadding
         }">
 
-            <!-- Primary Button -->
-            <button mat-raised-button [disabled]="mainButtonDisabled" [color]="mainButtonColor"
-                (click)="onMainButtonClick()">
-                {{ mainButtonText }}
-            </button>
+        <!-- Primary Button -->
+        <button mat-raised-button [disabled]="mainButtonDisabled" [color]="mainButtonColor"
+            (click)="onMainButtonClick()">
+            {{ mainButtonText }}
+        </button>
 
-            <!-- Secondary Button -->
+        <!-- Secondary Button -->
+        <ng-container *ngIf="buttonsContainerTotalButtons > 1">
             <button mat-raised-button [disabled]="secondaryButtonDisabled" [color]="secondaryButtonColor"
                 (click)="onSecondaryButtonClick()">
                 {{ secondaryButtonText }}
             </button>
+        </ng-container>
+
+        <!-- Extra Button -->
+        <ng-container *ngIf="buttonsContainerTotalButtons == 3">
+            <button mat-raised-button [disabled]="extraButtonDisabled" [color]="extraButtonColor"
+                (click)="onExtraButtonClick()">
+                {{ extraButtonText }}
+            </button>
+        </ng-container>
+
+
 
     </div>
     <!-- END BUTTONS -->

@@ -1,0 +1,18 @@
+<!-- CASE 1 -->
+<showcase-case-title [title]="case1.title" [innerHtmlSubtitle]="case1.subtitle"></showcase-case-title>
+<mat-grid-list [cols]="colTotal" [rowHeight]="rowHeightProp">
+    <mat-grid-tile>
+        <virtual-assistant-container [containerWidth]="'500px'" [containerHeight]="'395px'">
+
+            <!-- VIRTUAL-ASSISTANT-TREE -->
+            <virtual-assistant-tree [treeDataInput]="TREE_DATA">
+            </virtual-assistant-tree>
+            <!-- END VIRTUAL-ASSISTANT-TREE -->
+
+        </virtual-assistant-container>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <showcase-code-copy-container [code]="case1"></showcase-code-copy-container>
+    </mat-grid-tile>
+</mat-grid-list>
+<!-- END CASE 1 -->

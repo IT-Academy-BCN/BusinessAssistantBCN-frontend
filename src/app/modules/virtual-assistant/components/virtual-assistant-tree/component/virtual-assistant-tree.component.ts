@@ -19,6 +19,7 @@ import { ChecklistDatabase } from '../service/checklist-data-base.service';
 @Component({
   selector: 'virtual-assistant-tree',
   templateUrl: './virtual-assistant-tree.component.html',
+  styleUrls: ['./virtual-assistant-tree.component.css'],
   providers: [ChecklistDatabase]
 })
 export class VirtualAssistantTreeComponent implements AfterViewInit {

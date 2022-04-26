@@ -1,58 +1,55 @@
+<!-- APP-HEADER -->
 <app-header></app-header>
+<!-- END APP-HEADER -->
+
+<!-- showcase only for developers  -->
+<virtual-assistant-component-showcase></virtual-assistant-component-showcase>
+<!-- end showcase only for developers -->
+
+<!-- MAIN-CONTENT -->
 <div class="container mb-5 pb-3">
     <h4 class="m-3 fw-bold"> Virtual Assistant </h4>
     <div class="row">
+
         <div class="col-12 col-md-6 mb-5">
 
             <!-- VIRTUAL-ASSISTANT-CONTAINER -->
-            <virtual-assistant-container
-                [containerHeigh]="'395px'"
-                [containerBackgroundColor]="'transparent'"
-                [containerElevationInactive]=0
-                [containerElevationActive]=0
-                [containerInnerPadding]="'0px'">
+            <virtual-assistant-container [containerHeight]="'395px'">
 
-                    <!-- VIRTUAL-ASSISTANT-ACCORDION -->
-                    <virtual-assistant-accordion 
-                        [accordionDataInput]="dataSourceCategory"
-                        (accordionDataOutput)="getDataFromAccordion($event)">
-                    </virtual-assistant-accordion>
-                    <!-- END VIRTUAL-ASSISTANT-ACCORDION -->
+                <!-- VIRTUAL-ASSISTANT-ACCORDION -->
+                <virtual-assistant-accordion [accordionDataInput]="dataSourceCategory"
+                    (accordionDataOutput)="getDataFromAccordion($event)">
+                </virtual-assistant-accordion>
+                <!-- END VIRTUAL-ASSISTANT-ACCORDION -->
 
             </virtual-assistant-container>
             <!-- END VIRTUAL-ASSISTANT-CONTAINER -->
 
         </div>
-        
+
         <div class="col-12 col-md-6">
 
             <!-- VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
-            <virtual-assistant-buttons-container
-                [containerHeigh]="'395px'"
-                [containerInnerPadding]="'0px'"
-                mainButtonText="{{ 'common.button.save' | translate }}"
-                mainButtonColor="primary"
-                [mainButtonFunction]="onClickSaveButton" 
-                secondaryButtonText="Ver Resumen" 
-                secondaryButtonColor=""
-                [secondaryButtonFunction]="onClickResumeButton">
+            <virtual-assistant-buttons-container [containerHeight]="'395px'" vaStyle="theme"
+                mainButtonText="{{ 'common.button.save' | translate }}" [mainButtonFunction]="onClickSaveButton"
+                secondaryButtonText="Ver Resumen" [secondaryButtonFunction]="onClickResumeButton">
 
-                    <!-- VIRTUAL-ASSISTANT-TREE -->
-                    <virtual-assistant-tree
-                        [treeDataInput]="dataSourceCategory">
-                    </virtual-assistant-tree>
-                    <!-- END VIRTUAL-ASSISTANT-TREE -->
+                <!-- VIRTUAL-ASSISTANT-TREE -->
+                <virtual-assistant-tree [treeDataInput]="dataSourceCategory"></virtual-assistant-tree>
+                <!-- END VIRTUAL-ASSISTANT-TREE -->
 
-                    <!-- VIRTUAL-ASSISTANT-LIST -->
-                    <virtual-assistant-list
-                        [listDataInput]="dataShared">
-                    </virtual-assistant-list>
-                    <!-- END VIRTUAL-ASSISTANT-LIST -->
-                
+                <!-- VIRTUAL-ASSISTANT-LIST -->
+                <virtual-assistant-list [listDataInput]="dataShared"></virtual-assistant-list>
+                <!-- END VIRTUAL-ASSISTANT-LIST -->
+
             </virtual-assistant-buttons-container>
             <!-- END VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
 
         </div>
     </div>
 </div>
+<!-- END MAIN-CONTENT -->
+
+<!-- APP-FOOTER -->
 <app-footer></app-footer>
+<!-- END APP-FOOTER -->

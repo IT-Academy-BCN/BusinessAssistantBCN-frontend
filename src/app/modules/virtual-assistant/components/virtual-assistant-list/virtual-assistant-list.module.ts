@@ -2,6 +2,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// MATERIAL
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+
 // SHARED-MODULE
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -15,7 +19,11 @@ import { VirtualAssistantListComponent } from './component/virtual-assistant-lis
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+
+    // MATERIAL
+    MatDividerModule,
+    MatListModule
   ],
   exports: [
     VirtualAssistantListComponent
