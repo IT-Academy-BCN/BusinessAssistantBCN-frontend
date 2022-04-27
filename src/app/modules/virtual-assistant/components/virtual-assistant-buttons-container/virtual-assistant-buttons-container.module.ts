@@ -6,9 +6,6 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 
-// SHARED-MODULE
-import { SharedModule } from 'src/app/shared/shared.module';
-
 // COMPONENT - VIRTUAL-ASSISTANT-BUTTONS-CONTAINER
 import { VirtualAssistantButtonsContainerComponent } from './component/virtual-assistant-buttons-container.component';
 
@@ -19,7 +16,6 @@ import { VirtualAssistantButtonsContainerComponent } from './component/virtual-a
   ],
   imports: [
     CommonModule,
-    SharedModule,
 
     // MATERIAL
     BrowserAnimationsModule,
