@@ -10,6 +10,7 @@ import { VirtualAssistantContentsModule } from './contents/virtual-assistant-con
 
 // VIRTUAL-ASSISTANT-PAGE
 import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-assistant-page.component';
+import { VirtualAssisstantCategoriesService } from './services/virtual-assisstant-categories.service';
 
 
 // ARRAY with VIRTUAL-ASSISTANT APPLICATION PAGES
@@ -33,5 +34,8 @@ const VirtualAssistantPages = [
   exports: [
     [...VirtualAssistantPages]
   ],
+  providers: [
+    VirtualAssisstantCategoriesService
+  ]
 })
 export class VirtualAssistantModule { }
