@@ -1,27 +1,31 @@
-.results-card{
-    min-width: 55%;
-  }
-  
-  
-  .result-container{
-    padding-left: 14%;
-  }
-  .details{
-    padding-left: 12%;
-  }
-  
-  .data{
-    overflow-y: scroll;
-    overflow-x: visible;
-    max-height:300px;
-  }
-  
+
   button{
     font-size: 1rem;
   }
-  
-  @media (max-width:768px) {
-    .ps-5{
-        padding-left: 1.1rem !important;
-    }
+
+  .wrapp-btns{
+    bottom:20px;
   }
+  
+  .data{
+    cursor:pointer;
+  }
+
+.bg-blue {
+  background: #2c5e8f;
+}
+
+.bg-green {
+  background: #5cb85c;
+}
+
+.wrapp-buttons{
+  bottom:0;
+  width:100%;
+  padding:5px 10px;
+}
+
+.details {
+  color:rgb(87, 87, 88);
+}
+  

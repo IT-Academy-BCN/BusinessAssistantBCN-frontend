@@ -227,3 +227,6 @@ input[type="checkbox"]:checked::before {
   overflow-x: visible;
   max-height:350px;
 }
+.min-canvas-heigth{
+  min-height:580px;
+}
