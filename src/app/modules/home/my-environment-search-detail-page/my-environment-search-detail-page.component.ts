@@ -21,7 +21,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export class MyEnvironmentSearchDetailPageComponent implements OnInit,OnDestroy {
 
   businessModels: BasicBusinessModel[] = [];
-  modelsSub:Subscription;
+  modelsSub:Subscription | null = null;
 
 
   constructor(
@@ -40,7 +40,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit,OnDestroy 
   }
 
     ngOnDestroy() {
-        this.modelsSub.unsubscribe();
+        this.modelsSub?.unsubscribe();
     }
 
   // This function opens login component modal service
