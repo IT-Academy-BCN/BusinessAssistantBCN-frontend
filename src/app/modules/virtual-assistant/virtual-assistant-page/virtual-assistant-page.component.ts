@@ -16,7 +16,7 @@ import { VirtualAssisstantCategoriesService } from '../services/virtual-assissta
 export class VirtualAssistantPageComponent implements OnInit {
 
   // Data Source to share with Mat-Accordion from VirtualAssistantAccordionComponent.
-  dataSourceCategory: Category[] = [];
+  dataSourceCategory: Category[];
 
   //** Construtor with VACategoriesService to get all categories to show. */
   constructor( private serviceCategories: VirtualAssisstantCategoriesService) { 

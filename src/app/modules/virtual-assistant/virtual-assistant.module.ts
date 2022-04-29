@@ -10,6 +10,8 @@ import { VirtualAssistantContentsModule } from './contents/virtual-assistant-con
 
 // VIRTUAL-ASSISTANT-PAGE
 import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-assistant-page.component';
+
+// VIRTUAL-ASSISTANT-CATEGORIES-SERVICE
 import { VirtualAssisstantCategoriesService } from './services/virtual-assisstant-categories.service';
 
 
