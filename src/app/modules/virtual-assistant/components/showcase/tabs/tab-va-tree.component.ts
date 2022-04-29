@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Breakpoints } from '@angular/cdk/layout';
+import { Component, Input } from '@angular/core';
 import { Indent } from './microcomponents/code-enum';
 import { Code } from './microcomponents/code-interface';
 import { StyleCode } from './microcomponents/code-style';
@@ -10,11 +11,37 @@ import { StyleCode } from './microcomponents/code-style';
 })
 export class TabVaTreeComponent {
 
-  colTotal: string = "2";
+  @Input('currentBreakpoint') currentBreakpoint: string = "";
 
-  colSpan: string = "2";
+  get breakpoint(): number {
+    if (this.currentBreakpoint == Breakpoints.XSmall
+      || this.currentBreakpoint == Breakpoints.Small) {
+      return 1;
+    } else if (
+      this.currentBreakpoint == Breakpoints.Medium
+      || this.currentBreakpoint == Breakpoints.Large
+      || this.currentBreakpoint == Breakpoints.XLarge) {
+      return 2;
+    } 
+    return 0;
+  }
 
-  rowHeightProp: string = "700px";
+  get ratio(): string {
+    switch (this.currentBreakpoint) {
+      case Breakpoints.XSmall:
+        return "330px";
+      case Breakpoints.Small:
+        return "380px";
+      case Breakpoints.Medium:
+        return "400px";
+      case Breakpoints.Large:
+        return "480px";
+      case Breakpoints.XLarge:
+        return "500px";
+      default:
+        return "520px";
+    }
+  }
 
   showWord: string = "Hello!";
 

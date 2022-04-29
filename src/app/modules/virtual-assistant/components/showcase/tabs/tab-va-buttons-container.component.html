@@ -1,7 +1,7 @@
 <!-- CASE 1 -->
 <showcase-case-title [title]="case1.title" [innerHtmlSubtitle]="case1.subtitle"></showcase-case-title>
-<mat-grid-list [cols]="colTotal" [rowHeight]="rowHeightProp">
-    <mat-grid-tile [colspan]="colSpan">
+<mat-grid-list [cols]="breakpoint" [rowHeight]="ratio">
+    <mat-grid-tile>
 
         <!-- VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
         <virtual-assistant-buttons-container>
@@ -20,8 +20,8 @@
 
 <!-- CASE 2 -->
 <showcase-case-title [title]="case2.title" [innerHtmlSubtitle]="case2.subtitle"></showcase-case-title>
-<mat-grid-list [cols]="colTotal" [rowHeight]="rowHeightProp">
-    <mat-grid-tile [colspan]="colSpan">
+<mat-grid-list [cols]="breakpoint" [rowHeight]="ratio">
+    <mat-grid-tile>
 
         <!-- VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
         <virtual-assistant-buttons-container vaStyle='theme'>
@@ -40,8 +40,8 @@
 
 <!-- CASE 3 -->
 <showcase-case-title [title]="case3.title" [innerHtmlSubtitle]="case3.subtitle"></showcase-case-title>
-<mat-grid-list [cols]="colTotal" [rowHeight]="rowHeightProp">
-    <mat-grid-tile [colspan]="colSpan">
+<mat-grid-list [cols]="breakpoint" [rowHeight]="ratio">
+    <mat-grid-tile>
 
         <!-- VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
         <virtual-assistant-buttons-container 
@@ -70,13 +70,13 @@
 
 <!-- CASE 4 -->
 <showcase-case-title [title]="case4.title" [innerHtmlSubtitle]="case4.subtitle"></showcase-case-title>
-<mat-grid-list [cols]="colTotal" [rowHeight]="rowHeightProp">
-    <mat-grid-tile [colspan]="colSpan">
+<mat-grid-list [cols]="breakpoint" [rowHeight]="ratio">
+    <mat-grid-tile>
 
         <!-- VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->
         <virtual-assistant-buttons-container 
             vaStyle='theme' 
-            containerWidth='550px' 
+            containerWidth='450px' 
             buttonsContainerFlow='row'
             buttonsContainerPosition='center'
             [buttonsContainerTotalButtons]='3'

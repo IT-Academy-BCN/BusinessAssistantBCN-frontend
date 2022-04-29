@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Code } from './microcomponents/code-interface';
 import { StyleCode } from './microcomponents/code-style';
 import { Indent } from './microcomponents/code-enum';
+import { Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'tab-va-container',
@@ -10,12 +11,38 @@ import { Indent } from './microcomponents/code-enum';
 })
 export class TabVaContainerComponent {
 
-  colTotal: string = "3";
+  @Input('currentBreakpoint') currentBreakpoint: string = "";
 
-  colSpan: string = "2";
+  get breakpoint(): number {
+    if (this.currentBreakpoint == Breakpoints.XSmall
+      || this.currentBreakpoint == Breakpoints.Small) {
+      return 1;
+    } else if (
+      this.currentBreakpoint == Breakpoints.Medium
+      || this.currentBreakpoint == Breakpoints.Large
+      || this.currentBreakpoint == Breakpoints.XLarge) {
+      return 2;
+    } 
+    return 0;
+  }
 
-  rowHeightProp: string = "700px";
-
+  get ratio(): string {
+    switch (this.currentBreakpoint) {
+      case Breakpoints.XSmall:
+        return "330px";
+      case Breakpoints.Small:
+        return "380px";
+      case Breakpoints.Medium:
+        return "400px";
+      case Breakpoints.Large:
+        return "480px";
+      case Breakpoints.XLarge:
+        return "500px";
+      default:
+        return "520px";
+    }
+  }
+  
   showWord: string = "Hello!";
 
   mainSelectorComponent: string = "virtual-assistant-container";

@@ -10,7 +10,7 @@ import {
   selector: 'showcase-code-copy-container',
 
   template: `
-    <virtual-assistant-container containerWidth="650px" containerHeight="100%" containerInnerPadding="20px 10px"
+    <virtual-assistant-container containerWidth="100%" containerHeight="100%" containerInnerPadding="20px 10px"
         containerBackgroundColor="#222" [containerElevationInactive]=6 [containerElevationActive]=12 [containerIsActive]="isActive">
         <div class="container">
           <div *ngFor="let item of code.show" [innerHtml]="item"></div>

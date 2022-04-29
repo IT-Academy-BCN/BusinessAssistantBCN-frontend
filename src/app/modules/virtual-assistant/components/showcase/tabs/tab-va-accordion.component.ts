@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Breakpoints } from '@angular/cdk/layout';
+import { Component, Input } from '@angular/core';
 import { Indent } from './microcomponents/code-enum';
 import { Code } from './microcomponents/code-interface';
 import { StyleCode } from './microcomponents/code-style';
@@ -10,11 +11,20 @@ import { StyleCode } from './microcomponents/code-style';
 })
 export class TabVaAccordionComponent {
 
-  colTotal: string = "3";
+  @Input('currentBreakpoint') currentBreakpoint: string = "";
 
-  colSpan: string = "2";
-
-  rowHeightProp: string = "700px";
+  get breakpoint(): number {
+    if (this.currentBreakpoint == Breakpoints.XSmall
+      || this.currentBreakpoint == Breakpoints.Small) {
+      return 1;
+    } else if (
+      this.currentBreakpoint == Breakpoints.Medium
+      || this.currentBreakpoint == Breakpoints.Large
+      || this.currentBreakpoint == Breakpoints.XLarge) {
+      return 2;
+    } 
+    return 0;
+  }
 
   showWord: string = "Hello!";
 
@@ -112,7 +122,7 @@ export class TabVaAccordionComponent {
 
   ]
 
-  getDataFromAccordion(accordionData: any[]) {  
+  getDataFromAccordion(accordionData: any[]) {
     this.dataShared = [...accordionData];
   }
 

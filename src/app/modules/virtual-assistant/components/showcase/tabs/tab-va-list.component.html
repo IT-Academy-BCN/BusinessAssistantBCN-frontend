@@ -1,7 +1,7 @@
 <!-- CASE 1 -->
 <showcase-case-title [title]="case1.title" [innerHtmlSubtitle]="case1.subtitle"></showcase-case-title>
-<mat-grid-list [cols]="colTotal" [rowHeight]="rowHeightProp">
-    <mat-grid-tile [colspan]="colSpan">
+<mat-grid-list [cols]="breakpoint" [rowHeight]="ratio">
+    <mat-grid-tile>
         <virtual-assistant-container [containerHeight]="'395px'">
 
             <!-- VIRTUAL-ASSISTANT-LIST -->

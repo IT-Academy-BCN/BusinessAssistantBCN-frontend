@@ -22,31 +22,31 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
         <!-- selectedIndex="2" -->
         <mat-tab label="VA ACCORDION">
-            <tab-va-accordion></tab-va-accordion>
+            <tab-va-accordion [currentBreakpoint]="currentBreakpoint"></tab-va-accordion>
         </mat-tab>
         <!-- end selectedIndex="2" -->
 
         <!-- selectedIndex="3" -->
         <mat-tab label="VA BUTTONS-CONTAINER">
-            <tab-va-buttons-container></tab-va-buttons-container>
+            <tab-va-buttons-container [currentBreakpoint]="currentBreakpoint"></tab-va-buttons-container>
         </mat-tab>
         <!-- end selectedIndex="3" -->
 
         <!-- selectedIndex="4" -->
         <mat-tab label="VA CONTAINER">
-            <tab-va-container></tab-va-container>
+            <tab-va-container [currentBreakpoint]="currentBreakpoint"></tab-va-container>
         </mat-tab>
         <!-- end selectedIndex="4" -->
 
         <!-- selectedIndex="5" -->
         <mat-tab label="VA LIST">
-            <tab-va-list></tab-va-list>
+            <tab-va-list [currentBreakpoint]="currentBreakpoint"></tab-va-list>
         </mat-tab>
         <!-- end selectedIndex="5" -->
 
         <!-- selectedIndex="6" -->
         <mat-tab label="VA TREE">
-            <tab-va-tree></tab-va-tree>
+            <tab-va-tree [currentBreakpoint]="currentBreakpoint"></tab-va-tree>
         </mat-tab>
         <!-- end selectedIndex="6" -->
 
