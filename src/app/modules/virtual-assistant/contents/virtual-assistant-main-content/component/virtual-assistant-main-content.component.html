@@ -31,13 +31,13 @@
                 mainButtonText="{{ 'common.button.save' | translate }}" [mainButtonFunction]="onClickSaveButton"
                 secondaryButtonText="Ver Resumen" [secondaryButtonFunction]="onClickResumeButton">
 
-                <!-- VIRTUAL-ASSISTANT-TREE -->
-                <virtual-assistant-tree [treeDataInput]="dataSourceCategory"></virtual-assistant-tree>
-                <!-- END VIRTUAL-ASSISTANT-TREE -->
-
                 <!-- VIRTUAL-ASSISTANT-LIST -->
                 <virtual-assistant-list [listDataInput]="dataShared"></virtual-assistant-list>
                 <!-- END VIRTUAL-ASSISTANT-LIST -->
+
+                <!-- VIRTUAL-ASSISTANT-TREE -->
+                <virtual-assistant-tree [treeDataInput]="dataSourceCategory"></virtual-assistant-tree>
+                <!-- END VIRTUAL-ASSISTANT-TREE -->
 
             </virtual-assistant-buttons-container>
             <!-- END VIRTUAL-ASSISTANT-BUTTONS-CONTAINER -->

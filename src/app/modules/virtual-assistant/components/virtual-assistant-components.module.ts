@@ -16,13 +16,7 @@ import { VirtualAssistantComponentShowcaseModule } from './showcase/virtual-assi
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    VirtualAssistantAccordionModule,
-    VirtualAssistantButtonsContainerModule,
-    VirtualAssistantContainerModule,
-    VirtualAssistantListModule,
-    VirtualAssistantTreeModule,
-    VirtualAssistantComponentShowcaseModule
+    CommonModule
   ],
   exports: [
 

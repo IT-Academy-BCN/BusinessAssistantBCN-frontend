@@ -2,29 +2,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// SHARED-MODULE
-import { SharedModule } from 'src/app/shared/shared.module';
-
-// VIRTUAL-ASSISTANT-COMPONENTS-MODULE
-import { VirtualAssistantComponentsModule } from '../components/virtual-assistant-components.module';
-
-// VIRTUAL-ASSISTANT-MAIN-CONTENT-COMPONENT
-import { VirtualAssistantMainContentComponent } from './virtual-assistant-main-content/virtual-assistant-main-content.component';
+// VIRTUAL-ASSISTANT-MAIN-CONTENT-MODULE
+import { VirtualAssistantMainContentModule } from './virtual-assistant-main-content/virtual-assistant-main-content.module';
 
 
 @NgModule({
-  declarations: [
-    VirtualAssistantMainContentComponent
-  ],
+  declarations: [],
   imports: [
-    CommonModule,
-    SharedModule,
-
-    //VIRTUAL-ASSISTANT-COMPONENTS-MODULE
-    VirtualAssistantComponentsModule
+    CommonModule
   ],
   exports: [
-    VirtualAssistantMainContentComponent
+    VirtualAssistantMainContentModule
   ]
 })
 export class VirtualAssistantContentsModule { }

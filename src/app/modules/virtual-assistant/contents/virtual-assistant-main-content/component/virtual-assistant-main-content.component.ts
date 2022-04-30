@@ -1,8 +1,15 @@
 // ANGULAR CORE
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, Input } from '@angular/core';
 
+// MATERIAL
+import { MatDialog } from '@angular/material/dialog';
+
 // VIRTUAL-ASSISTANT MODELS - BUSINESS ASISSTANT CATEGORY
-import { Category } from '../../models/business-assistant.model';
+import { Category } from '../../../models/business-assistant.model';
+
+// RESUME-DIALOG-COMPONENT
+import { ResumeDialogComponent } from '../dialogs/resume-dialog/resume-dialog.component';
 
 
 @Component({
@@ -11,14 +18,14 @@ import { Category } from '../../models/business-assistant.model';
 })
 export class VirtualAssistantMainContentComponent {
 
-  // Data Shared with VirtualAssistantDataSaveComponent.
+  // Data Shared with VirtualAssistantListComponent.
   dataShared: any[] = [] // TODO improve typing any[]
 
   // Data Source to share with Mat-Accordion from VirtualAssistantAccordionComponent.
   @Input('inputDataMain') dataSourceCategory: Category[] = [];
 
   // Not delete this empty constructor to make implementations easier to understand.
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   /**
    * Get the output data from accordion-component.
@@ -33,7 +40,11 @@ export class VirtualAssistantMainContentComponent {
    * It needs to be a callback function (it will be used as a parameter).
    */
   onClickResumeButton = (): void => {
-    console.log("Ver resumen");
+    this.dialog.open(ResumeDialogComponent, {
+      // width: '500px', // sample use
+      // height: '500px', // sample use
+      data:this.dataShared
+    });
   }
 
   /**
@@ -41,7 +52,8 @@ export class VirtualAssistantMainContentComponent {
    * It needs to be a callback function (it will be used as a parameter).
    */
   onClickSaveButton = (): void => {
-    console.log("Guardar");
+    // TODO implement onClickSaveButton
   }
 
 }
+
