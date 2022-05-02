@@ -21,7 +21,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export class MyEnvironmentSearchDetailPageComponent implements OnInit,OnDestroy {
 
   businessModels: BasicBusinessModel[] = [];
-  modelsSub:Subscription;
+  modelsSub!:Subscription;
 
 
   constructor(

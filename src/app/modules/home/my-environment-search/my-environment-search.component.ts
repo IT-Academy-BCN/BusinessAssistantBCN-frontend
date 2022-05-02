@@ -22,10 +22,10 @@ export class MyEnvironmentSearchComponent implements OnInit,OnDestroy {
   
   zones:ZoneModel[] = []; //zones will store all the available zones before any selection
   activities:EconomicActivityModel[] =[]; //activities will store all the available economic activities before any selection
-  currentBusiness:Subscription;
-  environments:Subscription;
-  activitiesSub:Subscription;
-  zonesSub:Subscription;
+  currentBusiness!:Subscription;
+  environments!:Subscription;
+  activitiesSub!:Subscription;
+  zonesSub!:Subscription;
 
   constructor(private commonService:CommonService,
               private breadcrumbService: BreadcrumbService
