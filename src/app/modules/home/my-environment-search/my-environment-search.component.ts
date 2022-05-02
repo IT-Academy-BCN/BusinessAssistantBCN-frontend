@@ -22,10 +22,10 @@ export class MyEnvironmentSearchComponent implements OnInit,OnDestroy {
   
   zones:ZoneModel[] = []; //zones will store all the available zones before any selection
   activities:EconomicActivityModel[] =[]; //activities will store all the available economic activities before any selection
-  currentBusiness!:Subscription;
-  environments!:Subscription;
-  activitiesSub!:Subscription;
-  zonesSub!:Subscription;
+  currentBusiness:Subscription | null = null;
+  environments:Subscription | null = null;
+  activitiesSub:Subscription | null= null;
+  zonesSub:Subscription | null= null;
 
   constructor(private commonService:CommonService,
               private breadcrumbService: BreadcrumbService
@@ -88,10 +88,10 @@ export class MyEnvironmentSearchComponent implements OnInit,OnDestroy {
   }
 
   ngOnDestroy(){
-    this.currentBusiness.unsubscribe();
-    this.environments.unsubscribe();
-    this.activitiesSub.unsubscribe();
-    this.zonesSub.unsubscribe();
+    this.currentBusiness?.unsubscribe();
+    this.environments?.unsubscribe();
+    this.activitiesSub?.unsubscribe();
+    this.zonesSub?.unsubscribe();
   }
 
 
