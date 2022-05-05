@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MyEnvironmentPageComponent } from './my-environment-page/my-environment-page.component';
-import { LargeStablishmentsPageComponent } from './large-stablishments-page/large-stablishments-page.component';
+
 import { HttpLoaderFactory, SharedModule } from 'src/app/shared/shared.module';
 import { InformationNavComponent } from './home-components/information-nav/information-nav.component';
 import { RouterModule } from '@angular/router';
@@ -10,10 +10,8 @@ import { SavedSearchesComponent } from './saved-searches/saved-searches.componen
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyEnvironmentSearchDetailPageComponent } from './my-environment-search-detail-page/my-environment-search-detail-page.component';
-import { CommercialGalleriesPageComponent } from './commercial-galleries-page/commercial-galleries-page.component';
-import { BigMallsPageComponent } from './big-malls-page/big-malls-page.component';
-import { MunicipalMarketsPageComponent } from './municipal-markets-page/municipal-markets-page.component';
-import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.component';
+
+import { MyEnvironmentSearchComponent } from './my-environment-search/my-environment-search.component';
 
 
 
@@ -26,14 +24,11 @@ import { MarketFairsPageComponent } from './market-fairs-page/market-fairs-page.
   declarations: [
     HomePageComponent,
     MyEnvironmentPageComponent,
-    LargeStablishmentsPageComponent,
     InformationNavComponent,
     MyEnvironmentSearchDetailPageComponent,
-    CommercialGalleriesPageComponent,
-    BigMallsPageComponent,
-    MunicipalMarketsPageComponent,
-    MarketFairsPageComponent,
-    SavedSearchesComponent
+    SavedSearchesComponent,
+    MyEnvironmentSearchComponent
+
   ],
   imports: [
     CommonModule,

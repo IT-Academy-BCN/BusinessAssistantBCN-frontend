@@ -1,16 +1,15 @@
-import { Component, OnInit, TemplateRef } from '@angular/core'
+import {Component , OnDestroy , OnInit , TemplateRef} from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LargeStablishmentsService } from 'src/app/services/large-stablishments.service'
-import { LargeStablishmentModel } from '../../../models/large-stablishment.model';
 import { LoginFormComponent } from 'src/app/modules/login/login-form/login-form.component';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { MunicipalMarketsService } from 'src/app/services/municipal-markets.service';
-import { MunicipalMarketModel } from 'src/app/models/municipal-market.model';
 import { CommonService } from 'src/app/services/common.service';
-
 import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
+import pdfFonts from 'pdfmake/build/vfs_fonts';
+import {BasicBusinessModel} from "../../../models/common/basic-business.model";
+import {Subscription} from "rxjs";
+
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -19,39 +18,29 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   templateUrl: './my-environment-search-detail-page.component.html',
   styleUrls: ['./my-environment-search-detail-page.component.css']
 })
-export class MyEnvironmentSearchDetailPageComponent implements OnInit {
+export class MyEnvironmentSearchDetailPageComponent implements OnInit,OnDestroy {
 
-  LargeEstablishmentsData: LargeStablishmentModel[] = []
-  municipalMarketsData: MunicipalMarketModel[]=[]
+  businessModels: BasicBusinessModel[] = [];
+  modelsSub:Subscription | null = null;
+
 
   constructor(
     private LargeEstablishmentService: LargeStablishmentsService,
     private auth: AuthenticationService,
     private modalService: NgbModal,
     private fb:FormBuilder,
-    private municipalMarketsService: MunicipalMarketsService,
     private commonService: CommonService
   ) {}
 
   ngOnInit(): void {
-    if(this.commonService.largeStablishmentsClicked===true){
-    this.LargeEstablishmentService.sendSelectedData()
-      .subscribe((resp: any) => {
-        this.LargeEstablishmentsData = resp.results;
-        console.log("resp desde detail page: ",resp.results)
-      });
-    }
-    if(this.commonService.municipalMarketsClicked===true){
-      this.municipalMarketsService.sendSelectedData()
-      .subscribe((resp: any) => {
-        this.LargeEstablishmentsData = resp.results;
-        console.log("resp desde detail page: ",resp.results)
-      });
-    }
+      this.modelsSub=this.commonService.results.asObservable().subscribe((results:BasicBusinessModel[])=>{
+          this.businessModels=results;
+      })
+
   }
 
     ngOnDestroy() {
-        // if( this.zones$ != undefined ) this.zones$.unsubscribe();
+        this.modelsSub?.unsubscribe();
     }
 
   // This function opens login component modal service
@@ -91,13 +80,13 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     generateDocument() {
         //definition of content array for the pdf table
         const dataArray: string[][] = [];
-        this.LargeEstablishmentsData.forEach(element => {
+        this.businessModels.forEach(element => {
             const values:any[]=[];
             values.push(element.name);
             values.push(element.web);
             values.push(element.email);
             //create a string from the address object
-            values.push(`${element.addresses[0].street_name} ${element.addresses[0].number}, ${element.addresses[0].zip_code}, ${element.addresses[0].town}`)
+            values.push(`${element.addresses[0].street_name} ${element.addresses[0].street_number}, ${element.addresses[0].zip_code}, ${element.addresses[0].town}`)
             dataArray.push(values)
         })
         //first element is an array of the table headers
@@ -174,5 +163,7 @@ export class MyEnvironmentSearchDetailPageComponent implements OnInit {
     }
     return true
   }
+
+
   
 }

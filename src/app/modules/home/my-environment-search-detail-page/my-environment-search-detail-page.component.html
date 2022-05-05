@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="container mb-lg-5 main-container">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-12 col-sm-6 m-5 me-0 ms-3 results-card">
@@ -6,12 +7,15 @@
           {{ "common.title.results" | translate }}
         </h2>
         <div class="data" *ngIf="true" id="pdfData">
-          <div class="d-flex flex-column mb-4" *ngFor="let ls of LargeEstablishmentsData">
+          <div
+            class="d-flex flex-column mb-4"
+            *ngFor="let ls of businessModels"
+          >
             <h5 class="details">{{ ls.name }}</h5>
             <ul class="result-container list-unstyled" *ngFor="let address of ls.addresses">
               <!--*ngFor must be added!-->
               <li *ngIf="address.street_name">
-                {{ address.street_name }}, {{ address.number }}
+                {{ address.street_name }}, {{ address.street_number }}
               </li>
               <li *ngIf="address.town">
                 {{ address.zip_code }} {{ address.town }}
@@ -53,7 +57,9 @@
     <div class="col-12 col-sm-4 m-5 mx-3">
       <div class="p-3 border bg-light text-center">
         <!-- ARRAY PROVISIONAL. FILTRAT I ENVIAT -->
-        <app-mapbox [filteredResultsToPrintOnMap]="LargeEstablishmentsData"></app-mapbox>
+        <app-mapbox
+          [filteredResultsToPrintOnMap]="businessModels"
+        ></app-mapbox>
       </div>
     </div>
   </div>

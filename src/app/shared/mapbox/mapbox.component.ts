@@ -1,7 +1,8 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
 import Mapboxgl, { LngLatBounds, NavigationControl, GeolocateControl, Map, Popup, Marker } from "mapbox-gl";
-import { BusinessWithAddressModel } from "src/app/models/common/businessWithAddressModel.model";
-import {environment} from "../../../environments/environment";
+import { environment } from "src/environments/environment";
+import { LargeStablishmentModel } from '../../models/large-stablishment.model';
+import {BasicBusinessModel} from "../../models/common/basic-business.model";
 
 @Component({
   selector: "app-mapbox",
@@ -11,20 +12,20 @@ import {environment} from "../../../environments/environment";
 export class MapboxComponent implements AfterViewInit {
   @ViewChild("mapDiv")
   mapDivElement!: ElementRef;
-  @Input() filteredResultsToPrintOnMap!: BusinessWithAddressModel[];
+  @Input() filteredResultsToPrintOnMap!: BasicBusinessModel[];
   private map!: Map;
   private currentMarkers: Marker[] = [];
 
-  private MAPBOX_INIT_LOCATION: BusinessWithAddressModel = {
+  private MAPBOX_INIT_LOCATION: BasicBusinessModel = {
     name: "IT Academy",
     web: "bcn.cat/barcelonactiva",
     email: "itacademy@barcelonactiva.cat",
-    phone: 932917610,
+    phone: '932917610',
     activities: [],
     addresses: [
       {
         street_name: "Roc Boronat",
-        number: "117-127",
+        street_number: "117-127",
         zip_code: "08018",
         district_id: "04",
         town: "BARCELONA",
@@ -79,11 +80,11 @@ export class MapboxComponent implements AfterViewInit {
   }
 
   // Function to create a single marker (with the marker's colour and the business (or user's coords) as parameters)
-  createANewMarker(markerColor: string, business?: BusinessWithAddressModel, coord?: GeolocationCoordinates): void {
+  createANewMarker(markerColor: string, business?: BasicBusinessModel, coord?: GeolocationCoordinates): void {
 
     // Create a popup with the business's basic information
     const popup = new Popup().setHTML(
-      `<b>${business?.name}</b> </br> ${business?.addresses[0].street_name} , ${business?.addresses[0].number}`
+      `<b>${business?.name}</b> </br> ${business?.addresses[0].street_name} , ${business?.addresses[0].street_number}`
     );
 
     if (coord) { // If user has accepted to share their location

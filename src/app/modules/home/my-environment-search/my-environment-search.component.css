@@ -1,3 +1,6 @@
+/* Environment Search Pages style */
+
+
 .form-check-label {
     font-family: system-ui, sans-serif;
     font-size: 1rem;
@@ -15,7 +18,7 @@
   }
   
   .card-contents{
-    min-height:480px;
+    min-height:410px;
   }
   
   .form-check {
@@ -103,5 +106,5 @@
   .data{
     overflow-y: scroll;
     overflow-x: visible;
-    max-height:350px;
+    max-height:300px;
   }

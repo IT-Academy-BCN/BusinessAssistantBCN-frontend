@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from "../../../services/common.service";
 import { BreadcrumbService } from '../../../services/breadcrumb.service';
 
 @Component({
@@ -8,19 +9,26 @@ import { BreadcrumbService } from '../../../services/breadcrumb.service';
 })
 export class MyEnvironmentPageComponent implements OnInit {
 
-  largeStablihsments = "assets/img/shopping-mall.png";
-  shoppingMall = "assets/img/market.png";
-  shoppingCart = "assets/img/mall-shopping-cart.png";
-  comercialMarket = "assets/img/shop.png";
-  fairMarkets = "assets/img/cans.png";
 
+  largeEstablishment = "assets/img/shopping-mall.png";
+  commercialGalleriesPic = "assets/img/market.png";
+  bigMallsPic = "assets/img/mall-shopping-cart.png";
+  municipalMarketsPic = "assets/img/shop.png";
+  marketFairsPic = "assets/img/cans.png"
+
+  constructor(private commonService:CommonService,private breadcrumbService: BreadcrumbService) { }
   get breadcrumbs(){
     return this.breadcrumbService.breadcrumbs;
   }
 
-  constructor(private breadcrumbService: BreadcrumbService) {}
+
 
   ngOnInit(): void {
+  }
+
+  setCurrentBusiness(businessModel:string){
+    this.commonService.currentBusiness.next(businessModel)
+    console.log(businessModel)
   }
 
 }
