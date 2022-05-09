@@ -1,25 +1,43 @@
+// ANGULAR CORE & COMMON
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VirtualAssistantDataSaveComponent } from './virtual-assistant-data-save/virtual-assistant-data-save.component';
-import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-assistant-page.component';
-//Angular Material
-import {MatExpansionModule} from '@angular/material/expansion';
+
+// SHARED-MODULE
 import { SharedModule } from 'src/app/shared/shared.module';
+
+// VIRTUAL-ASSISTANT-CONTENTS-MODULE
+import { VirtualAssistantContentsModule } from './contents/virtual-assistant-contents.module';
+
+// VIRTUAL-ASSISTANT-PAGE
+import { VirtualAssistantPageComponent } from './virtual-assistant-page/virtual-assistant-page.component';
+
+// VIRTUAL-ASSISTANT-CATEGORIES-SERVICE
+import { VirtualAssisstantCategoriesService } from './services/virtual-assisstant-categories.service';
+
+
+// ARRAY with VIRTUAL-ASSISTANT APPLICATION PAGES
+const VirtualAssistantPages = [
+  VirtualAssistantPageComponent
+];
 
 
 @NgModule({
   declarations: [
-    VirtualAssistantDataSaveComponent,
-    VirtualAssistantPageComponent
-  ],
-  exports: [
-    VirtualAssistantDataSaveComponent,
-    VirtualAssistantPageComponent
+    [...VirtualAssistantPages]
   ],
   imports: [
     CommonModule,
-    MatExpansionModule,
-    SharedModule
+    SharedModule,
+
+    // VIRTUAL-ASSISTANT-CONTENTS-MODULE
+    VirtualAssistantContentsModule
+
+  ],
+  exports: [
+    [...VirtualAssistantPages]
+  ],
+  providers: [
+    VirtualAssisstantCategoriesService
   ]
 })
 export class VirtualAssistantModule { }

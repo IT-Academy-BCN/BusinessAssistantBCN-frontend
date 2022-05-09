@@ -1,45 +1,11 @@
+<!-- APP-HEADER -->
 <app-header></app-header>
+<!-- END APP-HEADER -->
 
-<div class="container mb-5 pb-3">
+<!-- VIRTUAL-ASSISTANT-PAGE-MAIN-CONTENT -->
+<virtual-assistant-page-main-content [inputDataMain]="dataSourceCategory" ></virtual-assistant-page-main-content>
+<!-- END VIRTUAL-ASSISTANT-PAGE-MAIN-CONTENT -->
 
-    <h4 class="m-3 fw-bold"> Virtual Assistant </h4>
-    <div class="row">
-        <div class="col-12 col-md-6 mb-5 baList">
-
-            <mat-accordion *ngFor="let category of data; let i=index">
-                <mat-expansion-panel hideToggle class="margin-list">
-                  <mat-expansion-panel-header class="list-height fs-5" >
-                    <mat-panel-title class="text-white">
-                        {{category.title | translate}}                    
-                    </mat-panel-title>
-                  </mat-expansion-panel-header>
-
-                  <div class="fw-bold fs-6 m-4" *ngFor="let subcat of category.subcategory; let e=index" >
-                        <div (click)="items(e)">
-                          {{subcat.title | translate}}
-                        </div>
-                        <div *ngFor="let items of subcat.items" class="itemSelected fw-normal m-4" (click)="saveData(items.item)">
-                            <div *ngIf="item == e && isOpen">
-                            {{ items.item | translate}}                           
-                            </div>
-                        </div>
-                  </div>
-                </mat-expansion-panel>
-            </mat-accordion>
-              
-        </div>
-
-        <div class="col-12 col-md-6">
-            <div class="card baList">
-                <div class="card-body">
-                    <app-virtual-assistant-data-save [data]="dataSend"></app-virtual-assistant-data-save>
-                </div>
-                <div>
-                    <button class="btn btn-success float-end m-4 px-5">{{'common.button.save' | translate}}</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+<!-- APP-FOOTER -->
 <app-footer></app-footer>
+<!-- END APP-FOOTER -->

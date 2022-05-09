@@ -1,0 +1,27 @@
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+
+.margin-list {
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.list-height {
+    padding         : 31px;
+    background-color: #3B79BF;
+    font-family     : 'Open Sans', sans-serif;
+}
+
+.list-height:hover {
+    background-color: #3B79BF !important;
+}
+
+.list-height:focus {
+    background-color: #3B79BF !important;
+}
+
+.itemSelected:hover {
+    text-decoration: underline;
+}

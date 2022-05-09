@@ -1,0 +1,47 @@
+<!-- CASE 1 -->
+<showcase-case-title [title]="case1.title" [innerHtmlSubtitle]="case1.subtitle"></showcase-case-title>
+<mat-grid-list [cols]="breakpoint" [rowHeight]="'400px'">
+    <mat-grid-tile>
+
+        <!-- VIRTUAL-ASSISTANT-CONTAINER -->
+        <virtual-assistant-container [containerHeight]="'350px'" [containerWidth]="'100%'">
+
+            <!-- VIRTUAL-ASSISTANT-ACCORDION -->
+            <virtual-assistant-accordion 
+                [accordionDataInput]="dataSource"
+                (accordionDataOutput)="getDataFromAccordion($event)">
+            </virtual-assistant-accordion>
+            <!-- END VIRTUAL-ASSISTANT-ACCORDION -->
+
+        </virtual-assistant-container>
+        <!-- END VIRTUAL-ASSISTANT-CONTAINER -->
+
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+
+        <!-- VIRTUAL-ASSISTANT-CONTAINER -->
+        <virtual-assistant-container>
+
+            <!-- VIRTUAL-ASSISTANT-LIST -->
+            <virtual-assistant-list [listDataInput]="dataShared">
+            </virtual-assistant-list>
+            <!-- END VIRTUAL-ASSISTANT-LIST -->
+
+        </virtual-assistant-container>
+        <!-- END VIRTUAL-ASSISTANT-CONTAINER -->
+
+    </mat-grid-tile>
+    <mat-grid-tile>
+
+        <!-- VIRTUAL-ASSISTANT-CONTAINER -->
+        <virtual-assistant-container>
+
+            <showcase-code-copy-container [code]="case1"></showcase-code-copy-container>
+
+        </virtual-assistant-container>
+        <!-- END VIRTUAL-ASSISTANT-CONTAINER -->
+        
+    </mat-grid-tile>
+</mat-grid-list>
+<!-- END CASE 1 -->
